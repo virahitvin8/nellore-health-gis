@@ -42,6 +42,15 @@ let layerHospitals;
 let layerNDVI;
 let layerRBK;
 
+// Mapbox 3D Markers Registry for Layer Sync
+let mapboxTankMarkers = [];
+let mapboxSourceMarkers = [];
+let mapboxWaterMarkers = [];
+let mapboxVegMarkers = [];
+let mapboxMarketMarkers = [];
+let mapboxHospitalMarkers = [];
+let mapboxRbkMarkers = [];
+
 // 3D & Animation States
 let is3DTilt = false;
 let isDroneMode = false;
@@ -359,7 +368,7 @@ function initVectorLayers() {
   }).addTo(map);
 
   // I. Vegetable Markets & Rythu Bazaars
-  layerVegMarkets = L.geoJSON(allData.vegetable_markets, {
+  layerVegMarkets = L.geoJSON(allData.veg_markets || allData.vegetable_markets, {
     pointToLayer: (feature, latlng) => {
       return L.marker(latlng, {
         icon: L.divIcon({
@@ -615,7 +624,7 @@ function initMapbox3D() {
         el.addEventListener('click', () => {
           inspectTank(p);
         });
-        new mapboxgl.Marker(el)
+        const marker = new mapboxgl.Marker(el)
           .setLngLat([p.lon, p.lat])
           .setPopup(new mapboxgl.Popup({ offset: 25 }).setHTML(`
             <strong style="color:#0ea5e9;">${p.name}</strong><br>
@@ -623,6 +632,7 @@ function initMapbox3D() {
             Supplies: ${p.supply_population.toLocaleString()} citizens
           `))
           .addTo(mapbox3d);
+        mapboxTankMarkers.push(marker);
       });
     }
 
@@ -640,7 +650,7 @@ function initMapbox3D() {
         el.addEventListener('click', () => {
           inspectSource(p);
         });
-        new mapboxgl.Marker(el)
+        const marker = new mapboxgl.Marker(el)
           .setLngLat([p.lon, p.lat])
           .setPopup(new mapboxgl.Popup({ offset: 25 }).setHTML(`
             <strong style="color:#0284c7;">${p.name}</strong><br>
@@ -648,6 +658,7 @@ function initMapbox3D() {
             Aquifer: ${p.aquifer_source}
           `))
           .addTo(mapbox3d);
+        mapboxSourceMarkers.push(marker);
       });
     }
 
@@ -692,7 +703,7 @@ function initMapbox3D() {
         el.addEventListener('click', () => {
           inspectRBK(p);
         });
-        new mapboxgl.Marker(el)
+        const marker = new mapboxgl.Marker(el)
           .setLngLat([p.lon, p.lat])
           .setPopup(new mapboxgl.Popup({ offset: 25 }).setHTML(`
             <strong style="color:#10b981;">🏢 ${p.name}</strong><br>
@@ -701,8 +712,137 @@ function initMapbox3D() {
             Ayacut: ${p.ayacut_acres} Acres • Crop: ${p.primary_crop}
           `))
           .addTo(mapbox3d);
+        mapboxRbkMarkers.push(marker);
       });
     }
+
+    // 10. Waterbodies (Pennar River & Irrigation Canals) 3D Surface
+    if (allData && allData.waterbodies) {
+      mapbox3d.addSource('waterbodies-3d-source', {
+        type: 'geojson',
+        data: allData.waterbodies
+      });
+      mapbox3d.addLayer({
+        id: 'waterbodies-3d-fill',
+        type: 'fill',
+        source: 'waterbodies-3d-source',
+        paint: {
+          'fill-color': '#0284c7',
+          'fill-opacity': 0.55
+        }
+      });
+      mapbox3d.addLayer({
+        id: 'waterbodies-3d-line',
+        type: 'line',
+        source: 'waterbodies-3d-source',
+        paint: {
+          'line-color': '#38bdf8',
+          'line-width': 2.5
+        }
+      });
+    }
+
+    // 11. Open Sullage Sewage Drainage Channels 3D
+    if (allData && allData.drainage) {
+      mapbox3d.addSource('drainage-3d-source', {
+        type: 'geojson',
+        data: allData.drainage
+      });
+      mapbox3d.addLayer({
+        id: 'drainage-3d-line',
+        type: 'line',
+        source: 'drainage-3d-source',
+        paint: {
+          'line-color': '#ef4444',
+          'line-width': 3.5,
+          'line-dasharray': [3, 2]
+        }
+      });
+    }
+
+    // 12. Mineral Water RO Plants & Public Taps 3D Pins
+    if (allData && allData.water_points) {
+      allData.water_points.features.forEach(feat => {
+        const p = feat.properties;
+        const el = document.createElement('div');
+        el.className = 'mapbox-3d-marker';
+        el.innerHTML = `<div class="mapbox-water-pin" title="${p.name}"><i class="fa-solid fa-glass-water-droplet"></i></div>`;
+        el.addEventListener('click', () => inspectWaterPoint(p));
+        const marker = new mapboxgl.Marker(el)
+          .setLngLat([p.lon, p.lat])
+          .setPopup(new mapboxgl.Popup({ offset: 20 }).setHTML(`
+            <strong style="color:#38bdf8;">💧 ${p.name}</strong><br>
+            ${p.type} • TDS: <strong>${p.tds_ppm} ppm</strong> (${p.potability})
+          `))
+          .addTo(mapbox3d);
+        mapboxWaterMarkers.push(marker);
+      });
+    }
+
+    // 13. Vegetable Markets & Rythu Bazaars 3D Pins
+    const vegData = allData.veg_markets || allData.vegetable_markets;
+    if (allData && vegData) {
+      vegData.features.forEach(feat => {
+        const p = feat.properties;
+        const el = document.createElement('div');
+        el.className = 'mapbox-3d-marker';
+        el.innerHTML = `<div class="mapbox-veg-pin" title="${p.market_name}"><i class="fa-solid fa-carrot"></i></div>`;
+        el.addEventListener('click', () => inspectVegMarket(p));
+        const marker = new mapboxgl.Marker(el)
+          .setLngLat([p.lon, p.lat])
+          .setPopup(new mapboxgl.Popup({ offset: 20 }).setHTML(`
+            <strong style="color:#10b981;">🥦 ${p.market_name}</strong><br>
+            ${p.type} • Stalls: ${p.stalls_count}<br>
+            Footfall: ${p.daily_footfall ? p.daily_footfall.toLocaleString() : '3,500'}/day
+          `))
+          .addTo(mapbox3d);
+        mapboxVegMarkers.push(marker);
+      });
+    }
+
+    // 14. Wet Meat & Fish Markets 3D Pins
+    if (allData && allData.markets) {
+      allData.markets.features.forEach(feat => {
+        const p = feat.properties;
+        const coords = feat.geometry.coordinates;
+        const el = document.createElement('div');
+        el.className = 'mapbox-3d-marker';
+        el.innerHTML = `<div class="mapbox-market-pin" title="${p.shop_name}"><i class="fa-solid fa-store"></i></div>`;
+        el.addEventListener('click', () => inspectMarket(p.shop_id));
+        const marker = new mapboxgl.Marker(el)
+          .setLngLat([coords[0], coords[1]])
+          .setPopup(new mapboxgl.Popup({ offset: 20 }).setHTML(`
+            <strong style="color:#f59e0b;">🏪 ${p.shop_name}</strong><br>
+            ${p.category} • Drain Dist: ${p.distance_to_drain_m}m<br>
+            Risk: <strong>${p.risk_level}</strong>
+          `))
+          .addTo(mapbox3d);
+        mapboxMarketMarkers.push(marker);
+      });
+    }
+
+    // 15. Healthcare Hospitals 3D Pins
+    if (allData && allData.hospitals) {
+      allData.hospitals.features.forEach(feat => {
+        const p = feat.properties;
+        const el = document.createElement('div');
+        el.className = 'mapbox-3d-marker';
+        el.innerHTML = `<div class="mapbox-hospital-pin" title="${p.name}"><i class="fa-solid fa-hospital"></i></div>`;
+        el.addEventListener('click', () => inspectHospital(p));
+        const marker = new mapboxgl.Marker(el)
+          .setLngLat([p.lon, p.lat])
+          .setPopup(new mapboxgl.Popup({ offset: 25 }).setHTML(`
+            <strong style="color:#f43f5e;">🏥 ${p.name}</strong><br>
+            ${p.sector} • Beds: <strong>${p.beds}</strong><br>
+            Emergency: ${p.emergency_icu}
+          `))
+          .addTo(mapbox3d);
+        mapboxHospitalMarkers.push(marker);
+      });
+    }
+
+    // Initial sync of Mapbox 3D layer visibility with sidebar checkboxes
+    syncMapboxLayerVisibility();
   });
 }
 
@@ -725,6 +865,7 @@ function switchEngine(engine) {
       initMapbox3D();
     } else {
       mapbox3d.resize();
+      syncMapboxLayerVisibility();
     }
   } else {
     btn2D.classList.add('active');
@@ -2232,13 +2373,33 @@ function setupEventListeners() {
   });
   document.getElementById("btn-save-keys").addEventListener("click", saveAPIKeys);
 
-  // Analytics & Export Modals
-  document.getElementById("btn-toggle-analytics").addEventListener("click", () => {
-    document.getElementById("analytics-modal").classList.remove("hidden");
-  });
-  document.getElementById("btn-close-analytics").addEventListener("click", () => {
-    document.getElementById("analytics-modal").classList.add("hidden");
-  });
+  // Analytics Dashboard Modal Wiring
+  const btnAnalytics = document.getElementById("btn-toggle-analytics");
+  const modalAnalytics = document.getElementById("analytics-modal");
+  const btnCloseAnalytics = document.getElementById("btn-close-analytics");
+
+  if (btnAnalytics && modalAnalytics) {
+    btnAnalytics.addEventListener("click", () => {
+      modalAnalytics.classList.remove("hidden");
+      const aoiSelect = document.getElementById("dash-aoi-filter");
+      const aoi = aoiSelect ? aoiSelect.value : "ALL";
+      if (typeof refreshDashboardCharts === "function") {
+        refreshDashboardCharts(aoi);
+      }
+      setTimeout(() => {
+        if (typeof activeDashCharts !== "undefined") {
+          Object.keys(activeDashCharts).forEach(id => {
+            if (activeDashCharts[id]) activeDashCharts[id].resize();
+          });
+        }
+      }, 70);
+    });
+  }
+  if (btnCloseAnalytics && modalAnalytics) {
+    btnCloseAnalytics.addEventListener("click", () => {
+      modalAnalytics.classList.add("hidden");
+    });
+  }
 
   document.getElementById("btn-export-data").addEventListener("click", () => {
     document.getElementById("export-modal").classList.remove("hidden");
@@ -2251,22 +2412,39 @@ function setupEventListeners() {
     document.getElementById("street-modal").classList.add("hidden");
   });
 
-  // Layer toggles
-  document.getElementById("layer-water-flow").addEventListener("change", (e) => toggleLayer(layerFlowNetwork, e.target.checked));
-  document.getElementById("layer-tanks").addEventListener("change", (e) => toggleLayer(layerTanks, e.target.checked));
-  document.getElementById("layer-sources").addEventListener("change", (e) => toggleLayer(layerSources, e.target.checked));
-  document.getElementById("layer-water-points").addEventListener("change", (e) => toggleLayer(layerWaterPoints, e.target.checked));
-  document.getElementById("layer-river").addEventListener("change", (e) => toggleLayer(layerRiver, e.target.checked));
-  document.getElementById("layer-drainage").addEventListener("change", (e) => toggleLayer(layerDrainage, e.target.checked));
-  document.getElementById("layer-veg-markets").addEventListener("change", (e) => toggleLayer(layerVegMarkets, e.target.checked));
-  document.getElementById("layer-markets").addEventListener("change", (e) => toggleLayer(layerMarkets, e.target.checked));
-  document.getElementById("layer-hospitals").addEventListener("change", (e) => toggleLayer(layerHospitals, e.target.checked));
-  document.getElementById("layer-boundaries").addEventListener("change", (e) => toggleLayer(layerBoundaries, e.target.checked));
+  // Master Layer On / Off Buttons
+  const btnAllOn = document.getElementById("btn-layers-all-on");
+  if (btnAllOn) {
+    btnAllOn.addEventListener("click", () => {
+      const allKeys = ["flow", "tanks", "sources", "water-points", "river", "drainage", "veg-markets", "markets", "hospitals", "boundaries", "ndvi", "rbk"];
+      allKeys.forEach(k => toggleLayer(k, true));
+    });
+  }
+
+  const btnAllOff = document.getElementById("btn-layers-all-off");
+  if (btnAllOff) {
+    btnAllOff.addEventListener("click", () => {
+      const allKeys = ["flow", "tanks", "sources", "water-points", "river", "drainage", "veg-markets", "markets", "hospitals", "boundaries", "ndvi", "rbk"];
+      allKeys.forEach(k => toggleLayer(k, false));
+    });
+  }
+
+  // Individual Layer toggles (Synced across 2D Leaflet & 3D Mapbox GL)
+  document.getElementById("layer-water-flow").addEventListener("change", (e) => toggleLayer("flow", e.target.checked));
+  document.getElementById("layer-tanks").addEventListener("change", (e) => toggleLayer("tanks", e.target.checked));
+  document.getElementById("layer-sources").addEventListener("change", (e) => toggleLayer("sources", e.target.checked));
+  document.getElementById("layer-water-points").addEventListener("change", (e) => toggleLayer("water-points", e.target.checked));
+  document.getElementById("layer-river").addEventListener("change", (e) => toggleLayer("river", e.target.checked));
+  document.getElementById("layer-drainage").addEventListener("change", (e) => toggleLayer("drainage", e.target.checked));
+  document.getElementById("layer-veg-markets").addEventListener("change", (e) => toggleLayer("veg-markets", e.target.checked));
+  document.getElementById("layer-markets").addEventListener("change", (e) => toggleLayer("markets", e.target.checked));
+  document.getElementById("layer-hospitals").addEventListener("change", (e) => toggleLayer("hospitals", e.target.checked));
+  document.getElementById("layer-boundaries").addEventListener("change", (e) => toggleLayer("boundaries", e.target.checked));
 
   const cbNDVI = document.getElementById("layer-ndvi");
-  if (cbNDVI) cbNDVI.addEventListener("change", (e) => toggleLayer(layerNDVI, e.target.checked));
+  if (cbNDVI) cbNDVI.addEventListener("change", (e) => toggleLayer("ndvi", e.target.checked));
   const cbRBK = document.getElementById("layer-rbk");
-  if (cbRBK) cbRBK.addEventListener("change", (e) => toggleLayer(layerRBK, e.target.checked));
+  if (cbRBK) cbRBK.addEventListener("change", (e) => toggleLayer("rbk", e.target.checked));
 
   // Farmer Portal Modal Wiring
   const btnFarmer = document.getElementById("btn-farmer-portal");
@@ -2371,74 +2549,97 @@ function setupEventListeners() {
     });
   });
 
-  // Mask toggle
-  document.getElementById("filter-mask").addEventListener("change", (e) => {
-    if (e.target.value === "DARK") {
-      layerMask.setStyle({ fillOpacity: 0.72 });
-    } else {
-      layerMask.setStyle({ fillOpacity: 0.15 });
-    }
-  });
+  // Outside Mask Filter
+  const filterMask = document.getElementById("filter-mask");
+  if (filterMask) {
+    filterMask.addEventListener("change", (e) => {
+      const isDark = e.target.value === "DARK";
+      if (layerMask) layerMask.setStyle({ fillOpacity: isDark ? 0.72 : 0.15 });
+      if (mapbox3d && mapbox3d.getLayer("mask-layer")) {
+        mapbox3d.setPaintProperty("mask-layer", "fill-opacity", isDark ? 0.88 : 0.20);
+      }
+    });
+  }
 
-  // Network Focus Filter
-  document.getElementById("filter-network-focus").addEventListener("change", (e) => {
-    const focus = e.target.value;
-    if (focus === "AGRICULTURE") {
-      if (layerNDVI) map.addLayer(layerNDVI);
-      if (layerRBK) map.addLayer(layerRBK);
-      if (layerRiver) map.addLayer(layerRiver);
-      map.removeLayer(layerMarkets);
-      map.removeLayer(layerHospitals);
-      map.removeLayer(layerFlowNetwork);
-      map.setView([14.50, 79.98], 13, { animate: true });
-    } else if (focus === "CITIZEN_EMERGENCY") {
-      if (layerWaterPoints) map.addLayer(layerWaterPoints);
-      if (layerHospitals) map.addLayer(layerHospitals);
-      if (layerTanks) map.addLayer(layerTanks);
-      if (layerNDVI) map.removeLayer(layerNDVI);
-      if (layerMarkets) map.removeLayer(layerMarkets);
-      map.setView([14.45, 79.98], 14, { animate: true });
-    } else if (focus === "WATER_FLOW") {
-      map.addLayer(layerFlowNetwork);
-      map.addLayer(layerTanks);
-      map.addLayer(layerSources);
-      map.removeLayer(layerMarkets);
-      map.removeLayer(layerVegMarkets);
-      map.removeLayer(layerHospitals);
-    } else if (focus === "STORAGE_TANKS") {
-      map.addLayer(layerTanks);
-      map.removeLayer(layerMarkets);
-      map.removeLayer(layerFlowNetwork);
-    } else if (focus === "ALL") {
-      map.addLayer(layerFlowNetwork);
-      map.addLayer(layerTanks);
-      map.addLayer(layerSources);
-      map.addLayer(layerWaterPoints);
-      map.addLayer(layerMarkets);
-      map.addLayer(layerVegMarkets);
-      map.addLayer(layerHospitals);
-      if (layerRBK) map.addLayer(layerRBK);
-    }
-  });
+  // Boundary Focus Filter (All AOI vs NMC vs Kovur)
+  const filterBoundary = document.getElementById("filter-boundary");
+  if (filterBoundary) {
+    filterBoundary.addEventListener("change", (e) => {
+      const val = e.target.value;
+      if (val === "ALL") {
+        if (map) map.setView([14.460, 79.980], 13, { animate: true });
+        if (mapbox3d) mapbox3d.flyTo({ center: [79.980, 14.460], zoom: 12.8, pitch: 48, bearing: -15, duration: 1800 });
+      } else if (val === "NMC") {
+        if (map) map.setView([14.4426, 79.9865], 14, { animate: true });
+        if (mapbox3d) mapbox3d.flyTo({ center: [79.9865, 14.4426], zoom: 14.2, pitch: 55, bearing: -10, duration: 1800 });
+      } else if (val === "KOVUR") {
+        if (map) map.setView([14.4920, 79.9750], 14, { animate: true });
+        if (mapbox3d) mapbox3d.flyTo({ center: [79.9750, 14.4920], zoom: 14.2, pitch: 55, bearing: 15, duration: 1800 });
+      }
+    });
+  }
 
-  // Search
+  // Network Focus Filter (8 Comprehensive Regimes)
+  const filterFocus = document.getElementById("filter-network-focus");
+  if (filterFocus) {
+    filterFocus.addEventListener("change", (e) => {
+      const focus = e.target.value;
+      const allKeys = ["flow", "tanks", "sources", "water-points", "river", "drainage", "veg-markets", "markets", "hospitals", "boundaries", "ndvi", "rbk"];
+
+      if (focus === "ALL") {
+        allKeys.forEach(k => toggleLayer(k, true));
+        if (map) map.setView([14.460, 79.980], 13, { animate: true });
+        if (mapbox3d) mapbox3d.flyTo({ center: [79.980, 14.460], zoom: 12.8, pitch: 48, duration: 1800 });
+      } else if (focus === "AGRICULTURE") {
+        allKeys.forEach(k => toggleLayer(k, ["ndvi", "rbk", "river", "boundaries"].includes(k)));
+        if (map) map.setView([14.50, 79.98], 13, { animate: true });
+        if (mapbox3d) mapbox3d.flyTo({ center: [79.98, 14.50], zoom: 13.5, pitch: 55, duration: 1800 });
+      } else if (focus === "CITIZEN_EMERGENCY") {
+        allKeys.forEach(k => toggleLayer(k, ["water-points", "hospitals", "tanks", "boundaries"].includes(k)));
+        if (map) map.setView([14.45, 79.98], 14, { animate: true });
+        if (mapbox3d) mapbox3d.flyTo({ center: [79.98, 14.45], zoom: 14.2, pitch: 55, duration: 1800 });
+      } else if (focus === "WATER_FLOW") {
+        allKeys.forEach(k => toggleLayer(k, ["flow", "tanks", "sources", "boundaries"].includes(k)));
+        if (map) map.setView([14.455, 79.985], 14, { animate: true });
+        if (mapbox3d) mapbox3d.flyTo({ center: [79.985, 14.455], zoom: 14.2, pitch: 60, duration: 1800 });
+      } else if (focus === "STORAGE_TANKS") {
+        allKeys.forEach(k => toggleLayer(k, ["tanks", "flow", "boundaries"].includes(k)));
+        if (map) map.setView([14.4508, 79.9918], 14, { animate: true });
+        if (mapbox3d) mapbox3d.flyTo({ center: [79.9918, 14.4508], zoom: 15.0, pitch: 60, duration: 1800 });
+      } else if (focus === "RIVER_WELLS") {
+        allKeys.forEach(k => toggleLayer(k, ["sources", "river", "boundaries"].includes(k)));
+        if (map) map.setView([14.468, 79.978], 14, { animate: true });
+        if (mapbox3d) mapbox3d.flyTo({ center: [79.978, 14.468], zoom: 14.8, pitch: 60, duration: 1800 });
+      } else if (focus === "MARKETS_FOOD") {
+        allKeys.forEach(k => toggleLayer(k, ["veg-markets", "markets", "drainage", "boundaries"].includes(k)));
+        if (map) map.setView([14.450, 79.991], 15, { animate: true });
+        if (mapbox3d) mapbox3d.flyTo({ center: [79.991, 14.450], zoom: 15.2, pitch: 60, duration: 1800 });
+      } else if (focus === "HEALTHCARE") {
+        allKeys.forEach(k => toggleLayer(k, ["hospitals", "water-points", "boundaries"].includes(k)));
+        if (map) map.setView([14.440, 79.982], 14, { animate: true });
+        if (mapbox3d) mapbox3d.flyTo({ center: [79.982, 14.440], zoom: 14.8, pitch: 55, duration: 1800 });
+      }
+    });
+  }
+
+  // Comprehensive Search across all layers
   document.getElementById("search-input").addEventListener("input", (e) => {
     const query = e.target.value.toLowerCase().trim();
     if (!query) return;
 
-    const tankMatch = allData.overhead_tanks.features.find(f => f.properties.name.toLowerCase().includes(query));
+    const tankMatch = allData.overhead_tanks?.features.find(f => f.properties.name.toLowerCase().includes(query));
     if (tankMatch) {
       inspectTank(tankMatch.properties);
       return;
     }
 
-    const srcMatch = allData.underground_sources.features.find(f => f.properties.name.toLowerCase().includes(query));
+    const srcMatch = allData.underground_sources?.features.find(f => f.properties.name.toLowerCase().includes(query));
     if (srcMatch) {
       inspectSource(srcMatch.properties);
       return;
     }
 
-    const pipeMatch = allData.flow_network.features.find(f => f.properties.name.toLowerCase().includes(query));
+    const pipeMatch = allData.flow_network?.features.find(f => f.properties.name.toLowerCase().includes(query) || f.properties.pipe_id.toLowerCase().includes(query));
     if (pipeMatch) {
       inspectFlowPipe(pipeMatch.properties);
       return;
@@ -2456,6 +2657,39 @@ function setupEventListeners() {
       const ndviMatch = allData.ndvi_zones.features.find(f => f.properties.name.toLowerCase().includes(query) || f.properties.crop_type.toLowerCase().includes(query));
       if (ndviMatch) {
         inspectNDVIZone(ndviMatch.properties);
+        return;
+      }
+    }
+
+    if (allData.hospitals) {
+      const hospMatch = allData.hospitals.features.find(f => f.properties.name.toLowerCase().includes(query));
+      if (hospMatch) {
+        inspectHospital(hospMatch.properties);
+        return;
+      }
+    }
+
+    const vegData = allData.veg_markets || allData.vegetable_markets;
+    if (vegData) {
+      const vegMatch = vegData.features.find(f => f.properties.market_name.toLowerCase().includes(query));
+      if (vegMatch) {
+        inspectVegMarket(vegMatch.properties);
+        return;
+      }
+    }
+
+    if (allData.water_points) {
+      const wpMatch = allData.water_points.features.find(f => f.properties.name.toLowerCase().includes(query) || f.properties.type.toLowerCase().includes(query));
+      if (wpMatch) {
+        inspectWaterPoint(wpMatch.properties);
+        return;
+      }
+    }
+
+    if (allData.markets) {
+      const mktMatch = allData.markets.features.find(f => f.properties.shop_name.toLowerCase().includes(query) || f.properties.category.toLowerCase().includes(query));
+      if (mktMatch) {
+        inspectMarket(mktMatch.properties.shop_id);
         return;
       }
     }
@@ -2505,10 +2739,137 @@ function setupEventListeners() {
   }
 }
 
-function toggleLayer(layer, isChecked) {
-  if (!layer) return;
-  if (isChecked) map.addLayer(layer);
-  else map.removeLayer(layer);
+// ---------------- LAYER UTILITIES & 2D/3D SYNCHRONIZATION ---------------- //
+
+function getLayerKey(layerOrKey) {
+  if (typeof layerOrKey === "string") return layerOrKey;
+  if (layerOrKey === layerFlowNetwork) return "flow";
+  if (layerOrKey === layerTanks) return "tanks";
+  if (layerOrKey === layerSources) return "sources";
+  if (layerOrKey === layerWaterPoints) return "water-points";
+  if (layerOrKey === layerRiver) return "river";
+  if (layerOrKey === layerDrainage) return "drainage";
+  if (layerOrKey === layerVegMarkets) return "veg-markets";
+  if (layerOrKey === layerMarkets) return "markets";
+  if (layerOrKey === layerHospitals) return "hospitals";
+  if (layerOrKey === layerBoundaries) return "boundaries";
+  if (layerOrKey === layerNDVI) return "ndvi";
+  if (layerOrKey === layerRBK) return "rbk";
+  return null;
+}
+
+function toggleLayer(layerOrKey, isChecked) {
+  const key = getLayerKey(layerOrKey);
+  const leafletMap = {
+    "flow": layerFlowNetwork,
+    "tanks": layerTanks,
+    "sources": layerSources,
+    "water-points": layerWaterPoints,
+    "river": layerRiver,
+    "drainage": layerDrainage,
+    "veg-markets": layerVegMarkets,
+    "markets": layerMarkets,
+    "hospitals": layerHospitals,
+    "boundaries": layerBoundaries,
+    "ndvi": layerNDVI,
+    "rbk": layerRBK
+  };
+  const targetLayer = typeof layerOrKey === "object" && layerOrKey ? layerOrKey : leafletMap[key];
+
+  // 1. 2D Leaflet map sync
+  if (targetLayer && map) {
+    if (isChecked) {
+      if (!map.hasLayer(targetLayer)) map.addLayer(targetLayer);
+    } else {
+      if (map.hasLayer(targetLayer)) map.removeLayer(targetLayer);
+    }
+  }
+
+  // 2. 3D Mapbox GL sync
+  if (key) {
+    toggleMapboxLayer(key, isChecked);
+  }
+
+  // 3. Keep sidebar checkbox in sync
+  const cbId = key === "flow" ? "layer-water-flow" : `layer-${key}`;
+  const cb = document.getElementById(cbId);
+  if (cb && cb.checked !== isChecked) {
+    cb.checked = isChecked;
+  }
+}
+
+function toggleMapboxLayer(key, isChecked) {
+  if (!mapbox3d) return;
+
+  const setLayerVisibility = (layerId, visible) => {
+    if (mapbox3d.getLayer(layerId)) {
+      mapbox3d.setLayoutProperty(layerId, 'visibility', visible ? 'visible' : 'none');
+    }
+  };
+
+  const setMarkersVisibility = (markers, visible) => {
+    if (!markers) return;
+    markers.forEach(m => {
+      const el = m.getElement();
+      if (el) el.style.display = visible ? '' : 'none';
+    });
+  };
+
+  switch (key) {
+    case "flow":
+      setLayerVisibility('flow-pipes-glow', isChecked);
+      setLayerVisibility('flow-pipes-core', isChecked);
+      break;
+    case "tanks":
+      setMarkersVisibility(mapboxTankMarkers, isChecked);
+      break;
+    case "sources":
+      setMarkersVisibility(mapboxSourceMarkers, isChecked);
+      break;
+    case "water-points":
+      setMarkersVisibility(mapboxWaterMarkers, isChecked);
+      break;
+    case "river":
+      setLayerVisibility('waterbodies-3d-fill', isChecked);
+      setLayerVisibility('waterbodies-3d-line', isChecked);
+      break;
+    case "drainage":
+      setLayerVisibility('drainage-3d-line', isChecked);
+      break;
+    case "veg-markets":
+      setMarkersVisibility(mapboxVegMarkers, isChecked);
+      break;
+    case "markets":
+      setMarkersVisibility(mapboxMarketMarkers, isChecked);
+      break;
+    case "hospitals":
+      setMarkersVisibility(mapboxHospitalMarkers, isChecked);
+      break;
+    case "boundaries":
+      setLayerVisibility('gadm-3d-curtain', isChecked);
+      setLayerVisibility('gadm-curtain-rim', isChecked);
+      break;
+    case "ndvi":
+      setLayerVisibility('ndvi-3d-polygon', isChecked);
+      setLayerVisibility('ndvi-3d-line', isChecked);
+      break;
+    case "rbk":
+      setMarkersVisibility(mapboxRbkMarkers, isChecked);
+      break;
+  }
+}
+
+function syncMapboxLayerVisibility() {
+  const keys = [
+    "flow", "tanks", "sources", "water-points", "river", "drainage",
+    "veg-markets", "markets", "hospitals", "boundaries", "ndvi", "rbk"
+  ];
+  keys.forEach(k => {
+    const cbId = k === "flow" ? "layer-water-flow" : `layer-${k}`;
+    const cb = document.getElementById(cbId);
+    const isChecked = cb ? cb.checked : (k !== "ndvi");
+    toggleMapboxLayer(k, isChecked);
+  });
 }
 
 function downloadFile(content, fileName, contentType) {
@@ -2681,8 +3042,8 @@ function generateCopilotResponse(query) {
         </ul>
       `,
       actionsHtml: `
-        <button class="copilot-action-pill red" onclick="toggleLayer(layerDrainage, true); toggleLayer(layerMarkets, true); map.setView([14.450, 79.991], 16);"><i class="fa-solid fa-triangle-exclamation"></i> Highlight Drain Hazards</button>
-        <button class="copilot-action-pill green" onclick="inspectVegMarket(allData.vegetable_markets.features[0].properties)"><i class="fa-solid fa-carrot"></i> View Rythu Bazaar</button>
+        <button class="copilot-action-pill red" onclick="toggleLayer('drainage', true); toggleLayer('markets', true); map.setView([14.450, 79.991], 16);"><i class="fa-solid fa-triangle-exclamation"></i> Highlight Drain Hazards</button>
+        <button class="copilot-action-pill green" onclick="inspectVegMarket((allData.veg_markets || allData.vegetable_markets).features[0].properties)"><i class="fa-solid fa-carrot"></i> View Rythu Bazaar</button>
       `,
       autoAction: () => {
         if (layerDrainage && !map.hasLayer(layerDrainage)) map.addLayer(layerDrainage);

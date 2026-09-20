@@ -84,8 +84,8 @@
       <button class="nav-btn btn-keys" id="btn-api-keys" title="Configure Google Maps & Sentinel API Keys">
         <i class="fa-solid fa-shield-halved"></i> Credentials <span class="status-indicator-dot online"></span>
       </button>
-      <button class="nav-btn btn-analytics" id="btn-toggle-analytics">
-        <i class="fa-solid fa-chart-pie"></i> Analytics
+      <button class="nav-btn btn-analytics" id="btn-toggle-analytics" title="Open Smart Infrastructure, Agriculture & Health GIS Dashboard">
+        <i class="fa-solid fa-chart-line"></i> Dashboard
       </button>
       <button class="nav-btn btn-export" id="btn-export-data">
         <i class="fa-solid fa-download"></i> Shapefiles
@@ -144,7 +144,13 @@
 
       <!-- Spatial Infrastructure Layers List -->
       <div class="sidebar-section layer-panel">
-        <h3 class="section-title"><i class="fa-solid fa-layer-group"></i> Spatial Network Layers</h3>
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+          <h3 class="section-title" style="margin:0;"><i class="fa-solid fa-layer-group"></i> Spatial Network Layers</h3>
+          <div style="display:flex; gap:6px;">
+            <button id="btn-layers-all-on" class="btn-micro" title="Turn all 12 layers on">All On</button>
+            <button id="btn-layers-all-off" class="btn-micro" title="Turn all 12 layers off">All Off</button>
+          </div>
+        </div>
         
         <!-- Animated Water Flow Pipelines -->
         <div class="layer-item">
@@ -243,6 +249,18 @@
 
       <!-- 3D Digital Twin WebGL Container (Mapbox GL 3D Terrain) -->
       <div id="map-3d" style="display:none;"></div>
+
+      <!-- Live On-Map Mini Stats HUD Widget -->
+      <div class="map-stats-widget" id="map-stats-widget">
+        <div class="msw-item"><span class="msw-label">Supply:</span> <span class="msw-val" id="msw-supply">50.5 MLD</span></div>
+        <div class="msw-item"><span class="msw-label">ELSR Tanks:</span> <span class="msw-val" id="msw-tanks">8 (12.1 MLD)</span></div>
+        <div class="msw-item"><span class="msw-label">Ayacut:</span> <span class="msw-val" id="msw-ayacut">14.2k Ac</span></div>
+        <div class="msw-item"><span class="msw-label">Crop NDVI:</span> <span class="msw-val" style="color:#34d399;" id="msw-ndvi">+0.64</span></div>
+        <div class="msw-item"><span class="msw-label">ICU Beds:</span> <span class="msw-val" style="color:#f43f5e;" id="msw-beds">185</span></div>
+        <button class="btn-micro" id="btn-open-dash-hud" title="Open Full Dashboard" style="margin-left:4px;">
+          <i class="fa-solid fa-chart-line"></i> Dashboard
+        </button>
+      </div>
 
       <!-- 3D Mapbox Camera Presets & Orbit Control Bar -->
       <div id="mapbox-camera-bar" class="mapbox-camera-bar hidden">
@@ -763,59 +781,236 @@
     </div>
   </div>
 
-  <!-- Analytics Modal Drawer -->
+  <!-- Smart Infrastructure, Agriculture & Health GIS Dashboard Modal -->
   <div id="analytics-modal" class="modal-overlay hidden">
-    <div class="modal-window">
+    <div class="modal-window dashboard-modal-window">
       <div class="modal-header">
-        <h2><i class="fa-solid fa-chart-column"></i> Urban Water Supply & Infrastructure Analytics</h2>
+        <div>
+          <h2><i class="fa-solid fa-chart-line" style="color:#38bdf8;"></i> Smart Infrastructure, Agriculture & Health GIS Dashboard</h2>
+          <p style="margin:2px 0 0 0; font-size:0.75rem; color:#94a3b8;">Nellore Municipal Corporation (NMC) & Kovur Mandal • Live GeoAI & Infrastructure Analytics</p>
+        </div>
         <button class="modal-close" id="btn-close-analytics">&times;</button>
       </div>
       <div class="modal-body">
         
-        <!-- Summary Stats Grid -->
-        <div class="analytics-grid">
+        <!-- Dashboard Top Filter & Action Bar -->
+        <div class="dash-filter-bar">
+          <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
+            <label style="font-size:0.78rem; color:#cbd5e1; font-weight:600;"><i class="fa-solid fa-filter"></i> Jurisdiction Focus:</label>
+            <select id="dash-aoi-filter" class="custom-select" style="padding:4px 10px; font-size:0.8rem; min-width:260px;">
+              <option value="ALL">All AOI (Nellore City + Kovur Mandal)</option>
+              <option value="NMC">Nellore Municipal Corporation (NMC)</option>
+              <option value="KOVUR">Kovur Mandal (Gram Panchayat)</option>
+            </select>
+          </div>
+          <div style="display:flex; gap:8px; align-items:center;">
+            <button class="btn-micro" id="btn-export-dash-csv" title="Export Analytics Summary as CSV">
+              <i class="fa-solid fa-file-csv"></i> Export Summary CSV
+            </button>
+            <button class="btn-micro" id="btn-refresh-dash" title="Refresh Live Data & Charts">
+              <i class="fa-solid fa-rotate-right"></i> Refresh
+            </button>
+          </div>
+        </div>
+
+        <!-- Summary Stats 6-Card KPI Grid -->
+        <div class="kpi-grid-6">
           <div class="kpi-card info">
-            <span class="kpi-label">Total Water Supplied</span>
-            <span class="kpi-value">50.5 MLD</span>
-            <span class="kpi-sub">Pennar Riverbed + Somasila Intake</span>
+            <span class="kpi-label">Total Water Supply</span>
+            <span class="kpi-value" id="kpi-total-water">50.5 MLD</span>
+            <span class="kpi-sub">Pennar Infiltration + Somasila</span>
           </div>
           <div class="kpi-card">
-            <span class="kpi-label">Overhead Storage Tanks</span>
-            <span class="kpi-value">8 ELSRs</span>
-            <span class="kpi-sub">12.1 MLD Total Storage Capacity</span>
+            <span class="kpi-label">Storage Reservoirs</span>
+            <span class="kpi-value" id="kpi-storage-tanks">8 ELSRs</span>
+            <span class="kpi-sub" id="kpi-storage-sub">12.1 MLD Total Capacity</span>
           </div>
           <div class="kpi-card warning">
-            <span class="kpi-label">RO Plants & Safe ATMs</span>
-            <span class="kpi-value">7 Plants</span>
-            <span class="kpi-sub">NTR Sujala Subsidized Mineral Water</span>
+            <span class="kpi-label">Paddy Ayacut</span>
+            <span class="kpi-value" id="kpi-ayacut" style="color:#10b981;">14,200 Ac</span>
+            <span class="kpi-sub">6 RBKs • 8,650 Farmers</span>
           </div>
           <div class="kpi-card danger">
-            <span class="kpi-label">Drain Intersections</span>
-            <span class="kpi-value">4 Lines</span>
-            <span class="kpi-sub">Water mains crossing open sullage sewers</span>
+            <span class="kpi-label">Hospital Beds</span>
+            <span class="kpi-value" id="kpi-hospitals" style="color:#f43f5e;">1,950+ Beds</span>
+            <span class="kpi-sub" id="kpi-icu-sub">185 Emergency ICU Beds</span>
+          </div>
+          <div class="kpi-card info">
+            <span class="kpi-label">Mean Crop NDVI</span>
+            <span class="kpi-value" id="kpi-crop-ndvi" style="color:#34d399;">+0.64</span>
+            <span class="kpi-sub">Healthy Rice Canopy Vigor</span>
+          </div>
+          <div class="kpi-card">
+            <span class="kpi-label">Safe RO Water Plants</span>
+            <span class="kpi-value" id="kpi-safe-taps" style="color:#38bdf8;">7 Plants</span>
+            <span class="kpi-sub">NTR Sujala Subsidized ATMs</span>
           </div>
         </div>
 
-        <!-- Charts Row 1 -->
-        <div class="charts-row">
-          <div class="chart-container half">
-            <h3>Water Storage Capacity by Overhead Tank (ELSR)</h3>
-            <canvas id="chart-risk-dist"></canvas>
+        <!-- Dashboard Domain Tabs -->
+        <div class="dash-tabs-bar">
+          <button class="dash-tab-btn active" data-dashtab="pane-dash-water">
+            <i class="fa-solid fa-faucet-drip"></i> 1. Water Grid & SCADA Hydraulics
+          </button>
+          <button class="dash-tab-btn" data-dashtab="pane-dash-agri">
+            <i class="fa-solid fa-seedling"></i> 2. Precision Agriculture & NDVI
+          </button>
+          <button class="dash-tab-btn" data-dashtab="pane-dash-health">
+            <i class="fa-solid fa-hospital"></i> 3. Public Health & Hospitals
+          </button>
+          <button class="dash-tab-btn" data-dashtab="pane-dash-sanitary">
+            <i class="fa-solid fa-triangle-exclamation"></i> 4. Sanitary & Sewage Hazards
+          </button>
+        </div>
+
+        <!-- Tab Panes -->
+
+        <!-- Pane 1: Water Infrastructure & SCADA Flow -->
+        <div class="dash-tab-pane active" id="pane-dash-water">
+          <div class="dash-charts-grid">
+            <div class="dash-chart-card">
+              <h4><i class="fa-solid fa-monument" style="color:#0284c7;"></i> Overhead Storage Reservoirs (ELSR) Capacity & Staging Height</h4>
+              <div class="dash-chart-sub">Storage capacity (MLD) and structural staging height (meters) across municipal zones</div>
+              <div class="dash-chart-canvas-wrap">
+                <canvas id="chart-tanks-capacity"></canvas>
+              </div>
+            </div>
+            <div class="dash-chart-card">
+              <h4><i class="fa-solid fa-network-wired" style="color:#38bdf8;"></i> Water Distribution Trunk Mains by Material</h4>
+              <div class="dash-chart-sub">Ductile Iron (K9), Mild Steel (MS) and HDPE feeder pipelines breakdown</div>
+              <div class="dash-chart-canvas-wrap">
+                <canvas id="chart-pipe-materials"></canvas>
+              </div>
+            </div>
           </div>
-          <div class="chart-container half">
-            <h3>Commodity & Infrastructure Breakdown</h3>
-            <canvas id="chart-categories"></canvas>
+          <div class="dash-charts-grid">
+            <div class="dash-chart-card">
+              <h4><i class="fa-solid fa-water" style="color:#0ea5e9;"></i> Raw Water Sources & Infiltration Headworks Yields</h4>
+              <div class="dash-chart-sub">Operational yield in Liters Per Hour (LPH) from Pennar riverbed alluvium & Somasila canal</div>
+              <div class="dash-chart-canvas-wrap">
+                <canvas id="chart-source-yields"></canvas>
+              </div>
+            </div>
+            <div class="dash-chart-card" style="justify-content:center;">
+              <h4><i class="fa-solid fa-gauge-high" style="color:#10b981;"></i> SCADA Flow Regimes & Telemetry</h4>
+              <div class="dash-chart-sub">Operational hydraulics across 12 transmission pipelines</div>
+              <div style="font-size:0.8rem; color:#cbd5e1; line-height:1.8;">
+                <div style="display:flex; justify-content:space-between; padding:6px 0; border-bottom:1px solid #1e293b;">
+                  <span>Standard Municipal Supply:</span> <strong style="color:#38bdf8;">50.5 MLD (6.0 hrs/day)</strong>
+                </div>
+                <div style="display:flex; justify-content:space-between; padding:6px 0; border-bottom:1px solid #1e293b;">
+                  <span>Morning Peak Surge Rate:</span> <strong style="color:#f59e0b;">72.0 MLD (06:00 - 09:30 AM)</strong>
+                </div>
+                <div style="display:flex; justify-content:space-between; padding:6px 0; border-bottom:1px solid #1e293b;">
+                  <span>Night Reservoir Fill Rate:</span> <strong style="color:#10b981;">35.0 MLD (10:30 PM - 04:30 AM)</strong>
+                </div>
+                <div style="display:flex; justify-content:space-between; padding:6px 0; border-bottom:1px solid #1e293b;">
+                  <span>Pennar Aquifer Safe Draw:</span> <strong style="color:#a855f7;">18,000 LPH (32m Alluvial Bed)</strong>
+                </div>
+                <div style="display:flex; justify-content:space-between; padding:6px 0;">
+                  <span>Residual Chlorine at Taps:</span> <strong style="color:#38bdf8;">0.2 - 0.5 ppm (WHO Compliant)</strong>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
-        <!-- Recommendations Box -->
-        <div class="recommendations-box">
-          <h3><i class="fa-solid fa-building-shield"></i> Municipal Water Governance Directives (Nellore NMC & Kovur)</h3>
-          <ul>
-            <li><strong>River Infiltration Protection:</strong> Enforce 100m sanitary protection perimeter around the Pennar riverbed infiltration wellfield (`SRC-PEN-S01`) to prevent upstream contamination.</li>
-            <li><strong>ELSR Feeder Pressure Balancing:</strong> Ensure positive pressure maintenance along the 500mm Mild Steel trunk pipeline feeding the Santhapet and Stonehousepet overhead reservoirs to eliminate back-siphonage.</li>
-            <li><strong>Panchayat Water Security:</strong> Provide dedicated chlorination monitoring at Kovur Bazaar Gram Panchayat overhead tank (`ELSR-KVR-01`) during monsoon high-flow events.</li>
-          </ul>
+        <!-- Pane 2: Agriculture & Precision NDVI -->
+        <div class="dash-tab-pane" id="pane-dash-agri">
+          <div class="dash-charts-grid">
+            <div class="dash-chart-card">
+              <h4><i class="fa-solid fa-seedling" style="color:#10b981;"></i> Sentinel-2 Zonal Mean NDVI vs Red-Edge (NDRE) Index</h4>
+              <div class="dash-chart-sub">Copernicus MSI vegetation vigor vs red-edge chlorophyll absorption index across 5 zones</div>
+              <div class="dash-chart-canvas-wrap">
+                <canvas id="chart-ndvi-zones"></canvas>
+              </div>
+            </div>
+            <div class="dash-chart-card">
+              <h4><i class="fa-solid fa-wheat-awn" style="color:#f59e0b;"></i> Rythu Bharosa Kendram (RBK) Ayacut & Farmer Reach</h4>
+              <div class="dash-chart-sub">Registered ayacut acreage and smallholder farmer coverage per agricultural kiosk</div>
+              <div class="dash-chart-canvas-wrap">
+                <canvas id="chart-rbk-ayacut"></canvas>
+              </div>
+            </div>
+          </div>
+          <div class="dash-charts-grid">
+            <div class="dash-chart-card">
+              <h4><i class="fa-solid fa-chart-line" style="color:#34d399;"></i> Seasonal Crop Phenological Health Trajectory</h4>
+              <div class="dash-chart-sub">Nellore Masuri (BPT 5204) growth index from nursery sowing to harvesting</div>
+              <div class="dash-chart-canvas-wrap">
+                <canvas id="chart-crop-phenology"></canvas>
+              </div>
+            </div>
+            <div class="dash-chart-card" style="justify-content:center;">
+              <h4><i class="fa-solid fa-hand-holding-dollar" style="color:#ffd700;"></i> Mandi MSP & Agricultural Extension</h4>
+              <div class="dash-chart-sub">Govt of Andhra Pradesh support prices & inputs</div>
+              <div style="font-size:0.8rem; color:#cbd5e1; line-height:1.8;">
+                <div style="display:flex; justify-content:space-between; padding:6px 0; border-bottom:1px solid #1e293b;">
+                  <span>Nellore Masuri (BPT 5204) MSP:</span> <strong style="color:#ffd700;">₹2,320 / Quintal</strong>
+                </div>
+                <div style="display:flex; justify-content:space-between; padding:6px 0; border-bottom:1px solid #1e293b;">
+                  <span>Active Rice Ayacut (Kovur + NLR):</span> <strong style="color:#10b981;">14,200 Acres</strong>
+                </div>
+                <div style="display:flex; justify-content:space-between; padding:6px 0; border-bottom:1px solid #1e293b;">
+                  <span>Subsidized DAP / MOP Stock:</span> <strong style="color:#38bdf8;">100% Available at all 6 RBKs</strong>
+                </div>
+                <div style="display:flex; justify-content:space-between; padding:6px 0;">
+                  <span>Free Soil Testing Kiosks:</span> <strong style="color:#a855f7;">Operational at Kovur GP & Veguru</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pane 3: Public Health & Hospitals -->
+        <div class="dash-tab-pane" id="pane-dash-health">
+          <div class="dash-charts-grid">
+            <div class="dash-chart-card">
+              <h4><i class="fa-solid fa-hospital" style="color:#f43f5e;"></i> Hospital Bed & Emergency ICU Capacity</h4>
+              <div class="dash-chart-sub">Government medical colleges, district hospitals, and private super-specialty facilities</div>
+              <div class="dash-chart-canvas-wrap">
+                <canvas id="chart-hospital-beds"></canvas>
+              </div>
+            </div>
+            <div class="dash-chart-card">
+              <h4><i class="fa-solid fa-glass-water-droplet" style="color:#38bdf8;"></i> Drinking Water TDS Quality Comparison (ppm)</h4>
+              <div class="dash-chart-sub">Total Dissolved Solids comparison: RO mineral plants vs municipal tap vs deep borewells</div>
+              <div class="dash-chart-canvas-wrap">
+                <canvas id="chart-water-quality"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pane 4: Sanitary & Sewage Hazards -->
+        <div class="dash-tab-pane" id="pane-dash-sanitary">
+          <div class="dash-charts-grid">
+            <div class="dash-chart-card">
+              <h4><i class="fa-solid fa-store" style="color:#f59e0b;"></i> Wet Meat/Fish Markets Cross-Contamination Risk Levels</h4>
+              <div class="dash-chart-sub">Risk classification of 81 meat stalls based on proximity to open sullage sewage outfalls</div>
+              <div class="dash-chart-canvas-wrap">
+                <canvas id="chart-market-risk"></canvas>
+              </div>
+            </div>
+            <div class="dash-chart-card">
+              <h4><i class="fa-solid fa-triangle-exclamation" style="color:#ef4444;"></i> Sewage Outfall Drain Intersections with Water Mains</h4>
+              <div class="dash-chart-sub">Major open sullage sewer channels and pipeline proximity hazards</div>
+              <div class="dash-chart-canvas-wrap">
+                <canvas id="chart-drain-crossings"></canvas>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Recommendations Box -->
+          <div class="recommendations-box" style="margin-top:10px;">
+            <h3><i class="fa-solid fa-building-shield" style="color:#38bdf8;"></i> Municipal Water Governance Directives (Nellore NMC & Kovur)</h3>
+            <ul>
+              <li><strong>River Infiltration Protection:</strong> Enforce 100m sanitary protection perimeter around the Pennar riverbed infiltration wellfield (<code>SRC-PEN-S01</code>) to prevent upstream contamination.</li>
+              <li><strong>ELSR Feeder Pressure Balancing:</strong> Ensure positive pressure maintenance along the 500mm Mild Steel trunk pipeline feeding the Santhapet and Stonehousepet overhead reservoirs to eliminate back-siphonage.</li>
+              <li><strong>Panchayat Water Security:</strong> Provide dedicated chlorination monitoring at Kovur Bazaar Gram Panchayat overhead tank (<code>ELSR-KVR-01</code>) during monsoon high-flow events.</li>
+              <li><strong>Market Waste Segregation:</strong> Divert open sullage drainage away from meat and fish stalls near Stonehousepet to prevent pathogen vectors.</li>
+            </ul>
+          </div>
         </div>
 
       </div>
