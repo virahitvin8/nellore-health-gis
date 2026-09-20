@@ -5255,6 +5255,443 @@ const HEALTH_GIS_DATA = {
       }
     ]
   },
+  "ndvi_zones": {
+    "type": "FeatureCollection",
+    "name": "Sentinel2_NDVI_Crop_Vigor_Zonation",
+    "crs": {
+      "type": "name",
+      "properties": {
+        "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+      }
+    },
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "zone_id": "NDVI-KVR-01",
+          "name": "Kovur North Irrigated Paddy Delta (Nellore Masuri Heartland)",
+          "jurisdiction": "Kovur Mandal",
+          "ndvi_mean": 0.74,
+          "ndre_red_edge": 0.52,
+          "ndvi_class": "High Vegetative Vigor (Optimal)",
+          "crop_type": "Wetland Paddy (Nellore Masuri BPT 5204)",
+          "crop_stage": "Panicle Initiation to Active Flowering",
+          "irrigation_source": "Pennar North Delta Main Canal (450 Cusecs active discharge)",
+          "fill_color": "#1a9850",
+          "biomass_index": "High (4.8 tons/ha)",
+          "chlorophyll_status": "Optimal Leaf Nitrogen Content (SPAD 44)",
+          "soil_moisture_est": "32% Volumetric (Saturated Puddle)",
+          "pest_risk": "Low-Moderate (Blast Risk Alert due to 84% night humidity)",
+          "farmer_advisory": "Maintain 3-5 cm standing water during panicle development. Apply second split of Potassium (MOP @ 25 kg/acre). Inspect leaf blades for blast diamond lesions; prophylactic spray of Tricyclazole 75% WP @ 0.6g/L recommended if night dew persists.",
+          "rbk_assigned": "Kovur Gram RBK-01 (+91 8622-224150)",
+          "mandi_msp_rate": "\u20b92,320 / Quintal (Govt Grade-A MSP)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.94,
+                14.495
+              ],
+              [
+                80.02,
+                14.495
+              ],
+              [
+                80.02,
+                14.54
+              ],
+              [
+                79.94,
+                14.54
+              ],
+              [
+                79.94,
+                14.495
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "zone_id": "NDVI-KVR-02",
+          "name": "Kovur Central Sugarcane & Horticulture Belt",
+          "jurisdiction": "Kovur Mandal",
+          "ndvi_mean": 0.66,
+          "ndre_red_edge": 0.46,
+          "ndvi_class": "Moderate-High Vigor",
+          "crop_type": "Sugarcane (Co 86032) & Robusta Banana Groves",
+          "crop_stage": "Grand Growth Phase (Elongation)",
+          "irrigation_source": "Pennar Delta Distributaries & Borewell Conjunctive Use",
+          "fill_color": "#66bd63",
+          "biomass_index": "Moderate-High (3.9 tons/ha)",
+          "chlorophyll_status": "Good Canopy Photosynthesis",
+          "soil_moisture_est": "26% Volumetric (Adequate Field Capacity)",
+          "pest_risk": "Low (Early shoot borer monitored via pheromone traps)",
+          "farmer_advisory": "Perform earthing up in sugarcane to support cane stalks against coastal winds. For banana groves, provide bunch prop bamboo supports and apply sulphate of potash (SOP) @ 15g/plant for fruit elongation.",
+          "rbk_assigned": "Padugupadu RBK-02 (+91 8622-224810)",
+          "mandi_msp_rate": "\u20b93,150 / Ton (FRP Mill Gate)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.95,
+                14.475
+              ],
+              [
+                80.01,
+                14.475
+              ],
+              [
+                80.01,
+                14.495
+              ],
+              [
+                79.95,
+                14.495
+              ],
+              [
+                79.95,
+                14.475
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "zone_id": "NDVI-PEN-01",
+          "name": "Pennar Riverbed Surface Water & Sand Spits",
+          "jurisdiction": "Pennar River Basin (Nellore NMC / Kovur)",
+          "ndvi_mean": -0.14,
+          "ndre_red_edge": -0.08,
+          "ndvi_class": "Open Water / Alluvial Riverbed Sand",
+          "crop_type": "Non-Vegetated Sandbed & Active Infiltration Channel",
+          "crop_stage": "Subsurface Aquifer Recharge Zone",
+          "irrigation_source": "Pennar River Live Infiltration Basin",
+          "fill_color": "#0077b6",
+          "biomass_index": "Zero / Non-Photosynthetic",
+          "chlorophyll_status": "N/A (Clear Water / Mineral Sand Reflectance)",
+          "soil_moisture_est": "Variable (Subsurface Saturated / Surface Dry Sand)",
+          "pest_risk": "None (Vector mosquito surveillance along stagnant shallows)",
+          "farmer_advisory": "Pennar riverbed sand aquifer supplies drinking water gallery and upstream infiltration wells. Protect riverbed against unscientific sand extraction to safeguard well recharge.",
+          "rbk_assigned": "Nellore Municipal Headworks Sub-Division",
+          "mandi_msp_rate": "N/A (Hydrological Asset)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.93,
+                14.455
+              ],
+              [
+                80.03,
+                14.455
+              ],
+              [
+                80.03,
+                14.472
+              ],
+              [
+                79.93,
+                14.472
+              ],
+              [
+                79.93,
+                14.455
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "zone_id": "NDVI-NMC-01",
+          "name": "Stonehousepet & Central Commercial Core",
+          "jurisdiction": "Nellore Municipal Corporation (NMC)",
+          "ndvi_mean": 0.18,
+          "ndre_red_edge": 0.12,
+          "ndvi_class": "Dense Urban Impervious Surface",
+          "crop_type": "Commercial Stalls, Rythu Bazaar Pavements, Roads",
+          "crop_stage": "Non-Agricultural Built-Up",
+          "irrigation_source": "Municipal Stormwater Drains & Runoff",
+          "fill_color": "#dfc27d",
+          "biomass_index": "Very Low (<0.4 tons/ha)",
+          "chlorophyll_status": "Sparse Ornamental Street Trees Only",
+          "soil_moisture_est": "Low Surface Retention (<12%)",
+          "pest_risk": "Urban Vector Flies / Mosquitoes near open drains",
+          "farmer_advisory": "Stonehousepet Rythu Bazaar serves as the primary direct-to-consumer marketplace for Kovur farmers. 120 dedicated farmer stalls with zero middleman commissions under AP Marketing Dept.",
+          "rbk_assigned": "Stonehousepet Rythu Bazaar Admin Office",
+          "mandi_msp_rate": "Rythu Bazaar Direct Retail"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.97,
+                14.435
+              ],
+              [
+                80.01,
+                14.435
+              ],
+              [
+                80.01,
+                14.455
+              ],
+              [
+                79.97,
+                14.455
+              ],
+              [
+                79.97,
+                14.435
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "zone_id": "NDVI-NMC-02",
+          "name": "Vedayapalem - Dargamitta Suburban Green & Fodder Pockets",
+          "jurisdiction": "Nellore Municipal Corporation (NMC Zone 4)",
+          "ndvi_mean": 0.38,
+          "ndre_red_edge": 0.28,
+          "ndvi_class": "Suburban Canopy & Urban Agriculture",
+          "crop_type": "Hybrid Napier Fodder, Banana Backyards & Vegetable Clusters",
+          "crop_stage": "Continuous Harvest / Ratoon",
+          "irrigation_source": "Treated Wastewater / Private Borewells",
+          "fill_color": "#a6d96a",
+          "biomass_index": "Moderate (1.8 tons/ha)",
+          "chlorophyll_status": "Healthy Urban Green Canopy",
+          "soil_moisture_est": "20% Volumetric",
+          "pest_risk": "Low (Occasional aphid presence on leafy greens)",
+          "farmer_advisory": "Utilize neem seed kernel extract (NSKE 5%) spray for urban kitchen gardens and fodder crops. Excellent linkage with Vedayapalem Milk Cooperative chilling center.",
+          "rbk_assigned": "Vedayapalem Farmer Kiosk (+91 861-2334180)",
+          "mandi_msp_rate": "Daily Vegetable Mandi"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.94,
+                14.415
+              ],
+              [
+                80.0,
+                14.415
+              ],
+              [
+                80.0,
+                14.435
+              ],
+              [
+                79.94,
+                14.435
+              ],
+              [
+                79.94,
+                14.415
+              ]
+            ]
+          ]
+        }
+      }
+    ]
+  },
+  "rbk_centers": {
+    "type": "FeatureCollection",
+    "name": "Nellore_Kovur_Rythu_Bharosa_Kendrams",
+    "crs": {
+      "type": "name",
+      "properties": {
+        "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+      }
+    },
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "rbk_id": "RBK-KVR-01",
+          "name": "Kovur Gram Rythu Bharosa Kendram (RBK-01)",
+          "mandal": "Kovur Mandal",
+          "village": "Kovur Rural",
+          "agri_officer": "Sri B. Sudhakar Rao, Village Agriculture Assistant (VAA)",
+          "phone": "+91 8622-224150",
+          "coverage_farmers": 480,
+          "ayacut_acres": 1250,
+          "primary_crop": "Wetland Paddy (Nellore Masuri BPT 5204)",
+          "services": "Seed Distribution, E-Crop Booking, Soil Testing Lab, Drip Subsidy, CM-APP Price Monitoring",
+          "soil_health": "Alluvial Clay Loam (pH 7.2 \u2022 Organic Carbon 0.62% \u2022 High Available K)",
+          "status": "Operational (Daily 8:00 AM - 6:00 PM)",
+          "mandi_link": "Kovur Agricultural Market Committee Yard",
+          "marker_color": "#10b981",
+          "lat": 14.4965,
+          "lon": 79.9805
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.9805,
+            14.4965
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "rbk_id": "RBK-KVR-02",
+          "name": "Padugupadu Rythu Bharosa Kendram (RBK-02)",
+          "mandal": "Kovur Mandal",
+          "village": "Padugupadu",
+          "agri_officer": "Smt. K. Latha, Village Agriculture Assistant (VAA)",
+          "phone": "+91 8622-224810",
+          "coverage_farmers": 310,
+          "ayacut_acres": 820,
+          "primary_crop": "Sugarcane & Ratoon Crop",
+          "services": "Sugarcane Mill Quota Registration, Trichoderma Bio-Control, Soil Health Cards",
+          "soil_health": "Riverine Sandy Alluvium (pH 7.4 \u2022 High Drainage)",
+          "status": "Operational (Daily 8:00 AM - 6:00 PM)",
+          "mandi_link": "Nellore Cooperative Sugars & Kovur AMC",
+          "marker_color": "#059669",
+          "lat": 14.478,
+          "lon": 79.985
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.985,
+            14.478
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "rbk_id": "RBK-KVR-03",
+          "name": "Inamadugu Model Rythu Bharosa Kendram (RBK-03)",
+          "mandal": "Kovur Mandal",
+          "village": "Inamadugu",
+          "agri_officer": "Sri M. Venkateswarlu, Senior VAA",
+          "phone": "+91 8622-225301",
+          "coverage_farmers": 540,
+          "ayacut_acres": 1480,
+          "primary_crop": "Paddy (Kovur Sannalu) & Banana Plantations",
+          "services": "Pennar Delta Canal Water Rostering, Micro-Nutrient Kits, Solar Feeder Subsidy",
+          "soil_health": "Deep Alluvial Silt Loam (pH 7.1 \u2022 NPK Balanced)",
+          "status": "Operational (Daily 8:00 AM - 6:00 PM)",
+          "mandi_link": "Nellore District Wholesale Rice Mandi",
+          "marker_color": "#10b981",
+          "lat": 14.492,
+          "lon": 80.005
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            80.005,
+            14.492
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "rbk_id": "RBK-KVR-04",
+          "name": "Pottepalem Agro-Service Hub (RBK-04)",
+          "mandal": "Kovur Mandal",
+          "village": "Pottepalem",
+          "agri_officer": "Sri V. Ramanjaneyulu, Village Agriculture Assistant (VAA)",
+          "phone": "+91 8622-226490",
+          "coverage_farmers": 390,
+          "ayacut_acres": 960,
+          "primary_crop": "Wetland Paddy & Horticultural Vegetables",
+          "services": "Zinc Sulphate Micronutrient Subsidy, Community Farm Mechanization Custom Hiring",
+          "soil_health": "Heavy Clayey Delta Loam (pH 7.3 \u2022 Moisture Retentive)",
+          "status": "Operational (Daily 8:00 AM - 6:00 PM)",
+          "mandi_link": "Kovur Rythu Bazaar Direct Stall Pass",
+          "marker_color": "#047857",
+          "lat": 14.481,
+          "lon": 79.952
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.952,
+            14.481
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "rbk_id": "RBK-NMC-01",
+          "name": "Nellore Rural Agri-Advisory Center (Podalakur Road)",
+          "mandal": "Nellore Rural / NMC Fringes",
+          "village": "Podalakur Road Corridor",
+          "agri_officer": "Sri D. Suresh Kumar, Assistant Director of Agriculture (ADA)",
+          "phone": "+91 861-2327090",
+          "coverage_farmers": 420,
+          "ayacut_acres": 890,
+          "primary_crop": "Peri-Urban Floriculture, Vegetables & Mango Orchards",
+          "services": "Rythu Bazaar Direct Vendor Tokens, Cold Storage Facility, Organic Certification",
+          "soil_health": "Red Sandy Loam with Clay Intercalations (pH 6.8)",
+          "status": "Operational (Govt Working Hours)",
+          "mandi_link": "Nellore AC Subba Reddy Rythu Bazaar",
+          "marker_color": "#0284c7",
+          "lat": 14.425,
+          "lon": 79.965
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.965,
+            14.425
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "rbk_id": "RBK-NMC-02",
+          "name": "Vedayapalem Agriculture & Allied Farmer Kiosk",
+          "mandal": "Nellore Municipal Corporation (Zone 4)",
+          "village": "Vedayapalem",
+          "agri_officer": "Dr. S. Anjaneyulu, Veterinary & Agri Extension Officer",
+          "phone": "+91 861-2334180",
+          "coverage_farmers": 280,
+          "ayacut_acres": 610,
+          "primary_crop": "Green Fodder, Urban Dairy, Cluster Vegetables",
+          "services": "Jagananna Palavelluva Testing, Fodder Seed Distribution, Cattle Health Clinic",
+          "soil_health": "Medium Urban Clay Loam (pH 7.0)",
+          "status": "Operational (Daily 8:00 AM - 5:00 PM)",
+          "mandi_link": "Fathekhanpet Vegetable Market",
+          "marker_color": "#0ea5e9",
+          "lat": 14.41,
+          "lon": 79.955
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.955,
+            14.41
+          ]
+        }
+      }
+    ]
+  },
   "flow_network": {
     "type": "FeatureCollection",
     "features": [

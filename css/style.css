@@ -1227,12 +1227,108 @@ body {
   font-family: 'JetBrains Mono', monospace;
 }
 
-/* Band Presets Grid */
+/* Band Presets Grid (5 Multispectral Composites) */
 .band-cards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 12px;
-  margin: 14px 0 22px 0;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 10px;
+  margin: 14px 0 18px 0;
+}
+
+/* NDVI Analytics Panel & Ramp */
+.ndvi-analytics-panel {
+  background: #090d16;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  border-radius: 8px;
+  padding: 14px;
+  margin-bottom: 20px;
+}
+
+.ndvi-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.ndvi-panel-header h4 {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #f8fafc;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ndvi-formula-badge {
+  background: rgba(16, 185, 129, 0.15);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.72rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+}
+
+.ndvi-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.ndvi-stat-card {
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 6px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.ndvi-stat-title {
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #94a3b8;
+}
+
+.ndvi-stat-val {
+  font-size: 1.1rem;
+  font-weight: 800;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.ndvi-stat-desc {
+  font-size: 0.68rem;
+  color: #64748b;
+  line-height: 1.3;
+}
+
+.ndvi-ramp-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.ndvi-ramp-bar {
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+  background: linear-gradient(to right, #0077b6, #8c510a, #dfc27d, #a6d96a, #1a9850, #005a32);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.4);
+}
+
+.ndvi-ramp-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.65rem;
+  color: #94a3b8;
+  font-family: 'JetBrains Mono', monospace;
 }
 
 .band-card {
@@ -1542,4 +1638,802 @@ body {
   color: #090d16;
   font-size: 13px;
   box-shadow: 0 4px 14px rgba(14, 165, 233, 0.8);
+}
+
+.mapbox-rbk-pin {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #047857, #10b981);
+  border: 2px solid #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 14px;
+  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.8);
+}
+
+.rbk-marker-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 7px;
+  background: linear-gradient(135deg, #059669, #10b981);
+  border: 2px solid #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 13px;
+  box-shadow: 0 3px 10px rgba(16, 185, 129, 0.7);
+}
+
+/* Header Buttons for Govt & Citizen Showcase */
+.btn-farmer {
+  background: rgba(16, 185, 129, 0.18) !important;
+  color: #34d399 !important;
+  border-color: rgba(16, 185, 129, 0.45) !important;
+}
+
+.btn-farmer:hover {
+  background: rgba(16, 185, 129, 0.32) !important;
+  box-shadow: 0 0 12px rgba(16, 185, 129, 0.4);
+}
+
+.btn-citizen {
+  background: rgba(2, 132, 199, 0.18) !important;
+  color: #38bdf8 !important;
+  border-color: rgba(2, 132, 199, 0.45) !important;
+}
+
+.btn-citizen:hover {
+  background: rgba(2, 132, 199, 0.32) !important;
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.4);
+}
+
+.btn-copilot {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.22), rgba(56, 189, 248, 0.22)) !important;
+  color: #6ee7b7 !important;
+  border: 1px solid rgba(56, 189, 248, 0.5) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-copilot:hover {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.35), rgba(56, 189, 248, 0.35)) !important;
+  box-shadow: 0 0 16px rgba(56, 189, 248, 0.5);
+}
+
+/* Tabs Navigation for Farmer & Citizen Portals */
+.farmer-tabs-nav {
+  display: flex;
+  gap: 8px;
+  border-bottom: 1px solid #1e293b;
+  padding-bottom: 10px;
+  margin-bottom: 14px;
+  overflow-x: auto;
+}
+
+.farmer-tab-btn, .citizen-tab-btn {
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: 1px solid #1e293b;
+  background: #0f172a;
+  color: #94a3b8;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.farmer-tab-btn:hover, .citizen-tab-btn:hover {
+  border-color: #334155;
+  color: #f1f5f9;
+}
+
+.farmer-tab-btn.active {
+  background: rgba(16, 185, 129, 0.15);
+  border-color: #10b981;
+  color: #34d399;
+}
+
+.citizen-tab-btn.active {
+  background: rgba(2, 132, 199, 0.15);
+  border-color: #38bdf8;
+  color: #38bdf8;
+}
+
+/* Farmer Zonation Grid & Cards */
+.farmer-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.farmer-zone-card {
+  background: #090d16;
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  border-radius: 8px;
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.fzc-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.fzc-header strong {
+  font-size: 0.85rem;
+  color: #f1f5f9;
+}
+
+.fzc-crop {
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: #10b981;
+  margin: 0;
+}
+
+.fzc-desc {
+  font-size: 0.72rem;
+  color: #94a3b8;
+  margin: 0;
+  line-height: 1.35;
+}
+
+.fzc-action {
+  display: flex;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+/* Advisory Card Boxes */
+.advisory-card-box {
+  border-radius: 8px;
+  padding: 12px 14px;
+  border: 1px solid transparent;
+}
+
+.advisory-card-box.warning {
+  background: rgba(245, 158, 11, 0.08);
+  border-color: rgba(245, 158, 11, 0.3);
+}
+
+.advisory-card-box.info {
+  background: rgba(14, 165, 233, 0.08);
+  border-color: rgba(14, 165, 233, 0.3);
+}
+
+.advisory-card-box.success {
+  background: rgba(16, 185, 129, 0.08);
+  border-color: rgba(16, 185, 129, 0.3);
+}
+
+.acb-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.acb-header i {
+  font-size: 18px;
+  margin-top: 2px;
+}
+
+.advisory-card-box.warning .acb-header i { color: #f59e0b; }
+.advisory-card-box.info .acb-header i { color: #38bdf8; }
+.advisory-card-box.success .acb-header i { color: #10b981; }
+
+.acb-header strong {
+  display: block;
+  font-size: 0.88rem;
+  color: #f1f5f9;
+}
+
+.acb-sub {
+  font-size: 0.72rem;
+  color: #94a3b8;
+}
+
+/* Mandi & Rythu Bazaar Rates */
+.mandi-banner {
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  border-radius: 8px;
+  padding: 10px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.mandi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 10px;
+}
+
+.mandi-card {
+  background: #090d16;
+  border: 1px solid #1e293b;
+  border-radius: 8px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.mandi-commodity {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #f1f5f9;
+}
+
+.mandi-rate {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #10b981;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.mandi-rate small {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  font-weight: 400;
+}
+
+.mandi-type {
+  font-size: 0.7rem;
+  color: #94a3b8;
+}
+
+.mandi-procurement {
+  font-size: 0.68rem;
+  color: #cbd5e1;
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Citizen Emergency Helplines */
+.emergency-helplines-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.helpline-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.helpline-card:hover {
+  transform: translateY(-2px);
+}
+
+.helpline-card.alert-red {
+  background: rgba(244, 63, 94, 0.12);
+  border-color: rgba(244, 63, 94, 0.4);
+}
+.helpline-card.alert-red i { color: #f43f5e; font-size: 24px; }
+.helpline-card.alert-red:hover { box-shadow: 0 4px 14px rgba(244, 63, 94, 0.3); }
+
+.helpline-card.alert-blue {
+  background: rgba(2, 132, 199, 0.12);
+  border-color: rgba(2, 132, 199, 0.4);
+}
+.helpline-card.alert-blue i { color: #38bdf8; font-size: 24px; }
+.helpline-card.alert-blue:hover { box-shadow: 0 4px 14px rgba(56, 189, 248, 0.3); }
+
+.helpline-card.alert-cyan {
+  background: rgba(6, 182, 212, 0.12);
+  border-color: rgba(6, 182, 212, 0.4);
+}
+.helpline-card.alert-cyan i { color: #22d3ee; font-size: 24px; }
+.helpline-card.alert-cyan:hover { box-shadow: 0 4px 14px rgba(34, 211, 238, 0.3); }
+
+.helpline-card.alert-green {
+  background: rgba(16, 185, 129, 0.12);
+  border-color: rgba(16, 185, 129, 0.4);
+}
+.helpline-card.alert-green i { color: #10b981; font-size: 24px; }
+.helpline-card.alert-green:hover { box-shadow: 0 4px 14px rgba(16, 185, 129, 0.3); }
+
+.hl-number {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #f8fafc;
+  font-family: 'JetBrains Mono', monospace;
+  line-height: 1.1;
+}
+
+.hl-name {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #e2e8f0;
+}
+
+.hl-eta {
+  display: block;
+  font-size: 0.68rem;
+  color: #94a3b8;
+}
+
+/* RO Safety Guide */
+.ro-safety-guide {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 10px;
+  background: #090d16;
+  border: 1px solid #1e293b;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 12px;
+}
+
+.guide-metric {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.gm-title {
+  font-size: 0.7rem;
+  color: #94a3b8;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.gm-val {
+  font-size: 1.15rem;
+  font-weight: 800;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.gm-sub {
+  font-size: 0.68rem;
+  color: #64748b;
+}
+
+/* Grievance Form */
+.grievance-form-container {
+  background: #090d16;
+  border: 1px solid #1e293b;
+  border-radius: 8px;
+  padding: 14px;
+}
+
+.grievance-intro {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #1e293b;
+  margin-bottom: 14px;
+}
+
+.custom-textarea {
+  width: 100%;
+  background: #0f172a;
+  border: 1px solid #334155;
+  color: #e2e8f0;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  resize: vertical;
+}
+
+.custom-textarea:focus {
+  outline: none;
+  border-color: #38bdf8;
+}
+
+.ticket-result-card {
+  margin-top: 14px;
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid #10b981;
+  border-radius: 8px;
+  padding: 12px 14px;
+}
+
+/* Floating Copilot Trigger Button */
+.floating-copilot-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9998;
+  background: linear-gradient(135deg, #065f46, #0284c7);
+  border: 1px solid rgba(56, 189, 248, 0.6);
+  border-radius: 50px;
+  padding: 10px 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #ffffff;
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6), 0 0 15px rgba(56, 189, 248, 0.35);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.floating-copilot-btn:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7), 0 0 22px rgba(56, 189, 248, 0.55);
+}
+
+.copilot-icon-pulse {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  color: #6ee7b7;
+}
+
+.copilot-btn-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.copilot-btn-text strong {
+  font-size: 0.85rem;
+  color: #f8fafc;
+  line-height: 1.1;
+}
+
+.ai-live-badge {
+  font-size: 0.65rem;
+  color: #34d399;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.ai-live-badge i {
+  font-size: 6px;
+  animation: liveBlink 1.5s infinite;
+}
+
+@keyframes liveBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.2; }
+}
+
+/* Copilot Chat Window (ChatGPT / Gemini Style UI) */
+.copilot-chat-window {
+  position: fixed;
+  bottom: 84px;
+  right: 24px;
+  width: 430px;
+  max-width: calc(100vw - 36px);
+  height: 600px;
+  max-height: calc(100vh - 110px);
+  background: rgba(11, 17, 24, 0.96);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  border-radius: 16px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.75), 0 0 25px rgba(56, 189, 248, 0.2);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 9999;
+  backdrop-filter: blur(20px);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.copilot-header {
+  padding: 12px 16px;
+  background: rgba(15, 23, 42, 0.85);
+  border-bottom: 1px solid rgba(56, 189, 248, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copilot-title-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.copilot-avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #059669, #0284c7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 15px;
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.5);
+}
+
+.copilot-title-group h3 {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #f8fafc;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.copilot-title-group p {
+  font-size: 0.68rem;
+  color: #94a3b8;
+  margin: 2px 0 0 0;
+}
+
+.copilot-actions {
+  display: flex;
+  gap: 6px;
+}
+
+.copilot-hdr-btn {
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  font-size: 14px;
+  cursor: pointer;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+}
+
+.copilot-hdr-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #f1f5f9;
+}
+
+/* Quick Prompt Pills */
+.copilot-pills-row {
+  display: flex;
+  gap: 6px;
+  padding: 8px 12px;
+  overflow-x: auto;
+  background: rgba(15, 23, 42, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  scrollbar-width: none;
+}
+
+.copilot-pills-row::-webkit-scrollbar {
+  display: none;
+}
+
+.copilot-pill {
+  padding: 4px 10px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #cbd5e1;
+  font-size: 0.72rem;
+  font-weight: 500;
+  white-space: nowrap;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.15s ease;
+}
+
+.copilot-pill:hover {
+  background: rgba(56, 189, 248, 0.15);
+  border-color: rgba(56, 189, 248, 0.4);
+  color: #38bdf8;
+}
+
+/* Chat Messages Container */
+.copilot-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.copilot-msg {
+  display: flex;
+  gap: 10px;
+  max-width: 92%;
+}
+
+.copilot-msg.user {
+  align-self: flex-end;
+  flex-direction: row-reverse;
+}
+
+.copilot-msg.assistant {
+  align-self: flex-start;
+}
+
+.copilot-msg-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.copilot-msg.assistant .copilot-msg-avatar {
+  background: linear-gradient(135deg, #059669, #0284c7);
+  color: #ffffff;
+}
+
+.copilot-msg.user .copilot-msg-avatar {
+  background: #334155;
+  color: #e2e8f0;
+}
+
+.copilot-msg-bubble {
+  background: #1e293b;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: #e2e8f0;
+}
+
+.copilot-msg.user .copilot-msg-bubble {
+  background: linear-gradient(135deg, #0284c7, #0369a1);
+  color: #ffffff;
+  border-color: transparent;
+  border-bottom-right-radius: 2px;
+}
+
+.copilot-msg.assistant .copilot-msg-bubble {
+  background: #0f172a;
+  border-color: rgba(56, 189, 248, 0.25);
+  border-bottom-left-radius: 2px;
+}
+
+.copilot-msg-bubble p {
+  margin: 0 0 6px 0;
+}
+
+.copilot-msg-bubble p:last-child {
+  margin-bottom: 0;
+}
+
+.copilot-msg-bubble ul {
+  margin: 4px 0 6px 18px;
+  padding: 0;
+}
+
+.copilot-msg-bubble li {
+  margin-bottom: 3px;
+}
+
+.copilot-action-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 8px;
+  background: rgba(56, 189, 248, 0.15);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  border-radius: 12px;
+  color: #38bdf8;
+  font-size: 0.72rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 4px 4px 2px 0;
+  transition: all 0.15s ease;
+}
+
+.copilot-action-pill:hover {
+  background: rgba(56, 189, 248, 0.3);
+  transform: translateY(-1px);
+}
+
+.copilot-action-pill.green {
+  background: rgba(16, 185, 129, 0.15);
+  border-color: rgba(16, 185, 129, 0.35);
+  color: #34d399;
+}
+
+.copilot-action-pill.green:hover {
+  background: rgba(16, 185, 129, 0.3);
+}
+
+.copilot-action-pill.red {
+  background: rgba(244, 63, 94, 0.15);
+  border-color: rgba(244, 63, 94, 0.35);
+  color: #f43f5e;
+}
+
+.copilot-action-pill.red:hover {
+  background: rgba(244, 63, 94, 0.3);
+}
+
+/* Copilot Input Footer */
+.copilot-input-container {
+  padding: 10px 14px 12px 14px;
+  background: rgba(15, 23, 42, 0.9);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.copilot-input-wrapper {
+  display: flex;
+  align-items: center;
+  background: #090d16;
+  border: 1px solid #334155;
+  border-radius: 24px;
+  padding: 4px 6px 4px 14px;
+  transition: border-color 0.2s ease;
+}
+
+.copilot-input-wrapper:focus-within {
+  border-color: #38bdf8;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.25);
+}
+
+.copilot-input-wrapper input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: #f1f5f9;
+  font-size: 0.82rem;
+  outline: none;
+}
+
+.copilot-input-wrapper input::placeholder {
+  color: #64748b;
+}
+
+#btn-copilot-send {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0ea5e9, #0284c7);
+  border: none;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 13px;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+#btn-copilot-send:hover {
+  transform: scale(1.08);
+  background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+}
+
+.copilot-footer-note {
+  font-size: 0.62rem;
+  color: #64748b;
+  text-align: center;
+  margin-top: 6px;
 }

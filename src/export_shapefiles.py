@@ -136,6 +136,33 @@ def export_water_network_shapefile(water_network):
 
     print("✓ Exported Water Infrastructure Shapefiles")
 
+def export_rbk_shapefiles():
+    rbk_path = os.path.join(DATA_DIR, "infrastructure", "rythu_bharosa_kendrams.geojson")
+    if not os.path.exists(rbk_path):
+        return
+    with open(rbk_path) as f:
+        data = json.load(f)
+
+    shp_path = os.path.join(SHP_DIR, "rythu_bharosa_kendrams")
+    w = shapefile.Writer(shp_path, shapefile.POINT)
+    w.field("RBK_ID", "C", size=20)
+    w.field("NAME", "C", size=60)
+    w.field("MANDAL", "C", size=40)
+    w.field("OFFICER", "C", size=50)
+    w.field("PHONE", "C", size=20)
+    w.field("FARMERS", "N", size=6)
+    w.field("ACRES", "N", size=6)
+    w.field("CROP", "C", size=50)
+
+    for feat in data["features"]:
+        p = feat["properties"]
+        coords = feat["geometry"]["coordinates"]
+        w.point(coords[0], coords[1])
+        w.record(p["rbk_id"], p["name"], p["mandal"], p["agri_officer"], p["phone"], p["coverage_farmers"], p["ayacut_acres"], p["primary_crop"])
+    w.close()
+    write_prj(shp_path + ".prj")
+    print("✓ Exported Rythu Bharosa Kendram (RBK) Shapefiles")
+
 def create_shapefiles_zip():
     zip_filename = os.path.join(SHP_DIR, "nellore_kovur_gis_shapefiles.zip")
     with zipfile.ZipFile(zip_filename, 'w', zipfile.ZIP_DEFLATED) as zipf:
@@ -149,3 +176,5 @@ def create_shapefiles_zip():
 
 if __name__ == "__main__":
     export_boundaries_shapefiles()
+    export_rbk_shapefiles()
+    create_shapefiles_zip()

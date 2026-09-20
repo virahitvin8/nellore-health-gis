@@ -138,6 +138,58 @@ Total Municipal Storage: **12.1 Million Liters per Day (MLD)** across 8 strategi
 
 ---
 
+## 🌾 AP Rythu Bharosa & Satellite Crop Health Studio (Farmer Perspective)
+
+Engineered specifically from a **farmer's point of view** in the Nellore & Kovur agricultural delta (*Rice Bowl of Andhra Pradesh*):
+
+```
+┌─────────────────────────┬──────────────┬───────────────┬────────────────────────────────────────────────────────┐
+│ Agro-Zonal Sector       │ Mean NDVI    │ NDRE Red-Edge │ Phenology & Crop Advisory                              │
+├─────────────────────────┼──────────────┼───────────────┼────────────────────────────────────────────────────────┤
+│ Kovur North Paddy Delta │ +0.74 (High) │ +0.52 (SPAD44)│ Nellore Masuri (BPT 5204) • Panicle Initiation stage.   │
+│                         │              │               │ Apply MOP @ 25 kg/acre. Maintain 3-5cm standing water. │
+│ Kovur Sugarcane Belt    │ +0.66 (Mod)  │ +0.46 (Good)  │ Sugarcane (Co 86032) & Robusta Banana. Earthing up.    │
+│ Pottepalem Delta Clay   │ +0.68 (High) │ +0.48 (SPAD42)│ Wetland Paddy. Zinc Sulphate 0.2% foliar spray alert.  │
+│ Vedayapalem Peri-Urban  │ +0.38 (Mod)  │ +0.28 (Urban) │ Hybrid Napier Fodder & Greens. NSKE 5% organic spray.  │
+└─────────────────────────┴──────────────┴───────────────┴────────────────────────────────────────────────────────┘
+```
+
+- **Multi-Spectral Early Nitrogen Stress Detection**: Utilizes Sentinel-2 MSI **Red-Edge Band 5 (705nm)** to calculate **NDRE** $(B08 - B05)/(B08 + B05)$, detecting nitrogen deficiency and chlorophyll decline up to **10 days before visible leaf yellowing**.
+- **Pest Early Warning (Rice Blast & BPH)**: Sensor & microclimate fusion tracks Kovur night humidity (>85%) and temperature (~24°C) to alert farmers of *Magnaporthe oryzae* (Rice Blast) spore windows with proactive spray advisories (*Tricyclazole 75% WP @ 0.6g/L*).
+- **Rythu Bharosa Kendram (RBK) Directory**: Direct telephone dialer and spatial pins for all village-level RBKs (*Kovur Gram, Padugupadu, Inamadugu, Pottepalem*) with Village Agriculture Assistant (VAA) details.
+- **Live Mandi Minimum Support Price (MSP) Ticker**: Verified procurement rates for Nellore Masuri Paddy (Grade A: ₹2,320/quintal) and Sugarcane (₹3,150/ton).
+
+---
+
+## 🆘 Citizen Services, Need Seekers & 24/7 Public Health Helpdesk
+
+Built for immediate, frictionless access by citizens and emergency seekers:
+
+- **1-Click Emergency Dialers**: Instant direct calls to **108 (Free Emergency Ambulance)**, **104 (Health Info & Doctor on Call)**, and **1916 (NMC Water Supply Grievance)**.
+- **Certified RO Mineral Water Finder**: Real-time potability ratings, TDS ppm levels (165 - 190 ppm), and locations for all municipal NTR Sujala RO Mineral Water ATMs.
+- **Emergency Healthcare Directory**: ACSR Govt General Hospital (750 Beds, 40 ICU, free Aarogyasri care) and Kovur Community Health Center (50 Beds).
+- **Online Water & Drain Grievance Redressal**: Interactive citizen complaint form that dispatches authentic tracking tickets (`NMC-GRV-2026-XXXX`) with 4-hour SLA directly to NMC Ward Sanitary Inspectors.
+
+---
+
+## 💬 Andhra GIS Sahayak — ChatGPT-Style Conversational AI Copilot
+
+Integrated directly into the WebGIS interface with a floating, ChatGPT-style glassmorphism window:
+
+- **Multi-Domain Intelligence**: Understands questions in plain English and Telugu transliteration regarding crop vigor, blast pest spray schedules, safe drinking water TDS, hospital beds, and market sanitation.
+- **Automated Spatial Actions**: The AI copilot does not just answer with text — it **actively drives the map**, auto-zooming to requested farms or tanks, toggling layers, highlighting high-risk drain buffers, and opening detail cards!
+- **Quick-Prompt Suggestion Pills**: 1-click prompts for *"Kovur Crop Vigor"*, *"Clean RO Water"*, *"Emergency 108"*, *"Market Drain Hazard"*, *"Rice Blast Advisory"*, and *"Mandi MSP Rates"*.
+
+---
+
+## 🏛️ Designed for Government of Andhra Pradesh & Govt of India Showcasing
+
+- **Nellore Municipal Corporation (NMC)**: Real-time municipal water grid telemetry, trunk line pressure balancing, and citizen grievance redressal.
+- **AP Department of Agriculture & Cooperation**: District-wide crop health monitoring, E-Crop verification, and RBK service delivery.
+- **AP Disaster Management Authority (APDMA)**: Hydraulic crisis simulations, open sullage sewage flood breach modeling, and emergency healthcare capacity tracking.
+
+---
+
 ## 📦 ESRI Shapefiles Package Included
 
 Pre-packaged genuine ESRI Shapefiles (`.shp`, `.shx`, `.dbf`, `.prj` in WGS84 EPSG:4326):
@@ -149,8 +201,10 @@ Download: **[nellore_kovur_gis_shapefiles.zip](https://virahitvin8.github.io/nel
 3. `water_distribution_pipelines` — Conduits with diameter, material, and discharge
 4. `overhead_storage_tanks` — ELSR/OHT tanks with staging heights & capacity
 5. `underground_wells_sources` — Infiltration galleries & borewells with yields
+6. `rythu_bharosa_kendrams` — RBK agricultural service centers & farmer kiosks
 
 ---
+
 
 ## 👤 Author & Institutional Affiliation
 

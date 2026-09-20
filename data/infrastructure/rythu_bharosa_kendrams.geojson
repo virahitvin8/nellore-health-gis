@@ -1,0 +1,162 @@
+{
+  "type": "FeatureCollection",
+  "name": "Nellore_Kovur_Rythu_Bharosa_Kendrams",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "rbk_id": "RBK-KVR-01",
+        "name": "Kovur Gram Rythu Bharosa Kendram (RBK-01)",
+        "mandal": "Kovur Mandal",
+        "village": "Kovur Rural",
+        "agri_officer": "Sri B. Sudhakar Rao, Village Agriculture Assistant (VAA)",
+        "phone": "+91 8622-224150",
+        "coverage_farmers": 480,
+        "ayacut_acres": 1250,
+        "primary_crop": "Wetland Paddy (Nellore Masuri BPT 5204)",
+        "services": "Seed Distribution, E-Crop Booking, Soil Testing Lab, Drip Subsidy, CM-APP Price Monitoring",
+        "soil_health": "Alluvial Clay Loam (pH 7.2 • Organic Carbon 0.62% • High Available K)",
+        "status": "Operational (Daily 8:00 AM - 6:00 PM)",
+        "mandi_link": "Kovur Agricultural Market Committee Yard",
+        "marker_color": "#10b981",
+        "lat": 14.4965,
+        "lon": 79.9805
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [79.9805, 14.4965]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "rbk_id": "RBK-KVR-02",
+        "name": "Padugupadu Rythu Bharosa Kendram (RBK-02)",
+        "mandal": "Kovur Mandal",
+        "village": "Padugupadu",
+        "agri_officer": "Smt. K. Latha, Village Agriculture Assistant (VAA)",
+        "phone": "+91 8622-224810",
+        "coverage_farmers": 310,
+        "ayacut_acres": 820,
+        "primary_crop": "Sugarcane & Ratoon Crop",
+        "services": "Sugarcane Mill Quota Registration, Trichoderma Bio-Control, Soil Health Cards",
+        "soil_health": "Riverine Sandy Alluvium (pH 7.4 • High Drainage)",
+        "status": "Operational (Daily 8:00 AM - 6:00 PM)",
+        "mandi_link": "Nellore Cooperative Sugars & Kovur AMC",
+        "marker_color": "#059669",
+        "lat": 14.4780,
+        "lon": 79.9850
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [79.9850, 14.4780]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "rbk_id": "RBK-KVR-03",
+        "name": "Inamadugu Model Rythu Bharosa Kendram (RBK-03)",
+        "mandal": "Kovur Mandal",
+        "village": "Inamadugu",
+        "agri_officer": "Sri M. Venkateswarlu, Senior VAA",
+        "phone": "+91 8622-225301",
+        "coverage_farmers": 540,
+        "ayacut_acres": 1480,
+        "primary_crop": "Paddy (Kovur Sannalu) & Banana Plantations",
+        "services": "Pennar Delta Canal Water Rostering, Micro-Nutrient Kits, Solar Feeder Subsidy",
+        "soil_health": "Deep Alluvial Silt Loam (pH 7.1 • NPK Balanced)",
+        "status": "Operational (Daily 8:00 AM - 6:00 PM)",
+        "mandi_link": "Nellore District Wholesale Rice Mandi",
+        "marker_color": "#10b981",
+        "lat": 14.4920,
+        "lon": 80.0050
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [80.0050, 14.4920]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "rbk_id": "RBK-KVR-04",
+        "name": "Pottepalem Agro-Service Hub (RBK-04)",
+        "mandal": "Kovur Mandal",
+        "village": "Pottepalem",
+        "agri_officer": "Sri V. Ramanjaneyulu, Village Agriculture Assistant (VAA)",
+        "phone": "+91 8622-226490",
+        "coverage_farmers": 390,
+        "ayacut_acres": 960,
+        "primary_crop": "Wetland Paddy & Horticultural Vegetables",
+        "services": "Zinc Sulphate Micronutrient Subsidy, Community Farm Mechanization Custom Hiring",
+        "soil_health": "Heavy Clayey Delta Loam (pH 7.3 • Moisture Retentive)",
+        "status": "Operational (Daily 8:00 AM - 6:00 PM)",
+        "mandi_link": "Kovur Rythu Bazaar Direct Stall Pass",
+        "marker_color": "#047857",
+        "lat": 14.4810,
+        "lon": 79.9520
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [79.9520, 14.4810]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "rbk_id": "RBK-NMC-01",
+        "name": "Nellore Rural Agri-Advisory Center (Podalakur Road)",
+        "mandal": "Nellore Rural / NMC Fringes",
+        "village": "Podalakur Road Corridor",
+        "agri_officer": "Sri D. Suresh Kumar, Assistant Director of Agriculture (ADA)",
+        "phone": "+91 861-2327090",
+        "coverage_farmers": 420,
+        "ayacut_acres": 890,
+        "primary_crop": "Peri-Urban Floriculture, Vegetables & Mango Orchards",
+        "services": "Rythu Bazaar Direct Vendor Tokens, Cold Storage Facility, Organic Certification",
+        "soil_health": "Red Sandy Loam with Clay Intercalations (pH 6.8)",
+        "status": "Operational (Govt Working Hours)",
+        "mandi_link": "Nellore AC Subba Reddy Rythu Bazaar",
+        "marker_color": "#0284c7",
+        "lat": 14.4250,
+        "lon": 79.9650
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [79.9650, 14.4250]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "rbk_id": "RBK-NMC-02",
+        "name": "Vedayapalem Agriculture & Allied Farmer Kiosk",
+        "mandal": "Nellore Municipal Corporation (Zone 4)",
+        "village": "Vedayapalem",
+        "agri_officer": "Dr. S. Anjaneyulu, Veterinary & Agri Extension Officer",
+        "phone": "+91 861-2334180",
+        "coverage_farmers": 280,
+        "ayacut_acres": 610,
+        "primary_crop": "Green Fodder, Urban Dairy, Cluster Vegetables",
+        "services": "Jagananna Palavelluva Testing, Fodder Seed Distribution, Cattle Health Clinic",
+        "soil_health": "Medium Urban Clay Loam (pH 7.0)",
+        "status": "Operational (Daily 8:00 AM - 5:00 PM)",
+        "mandi_link": "Fathekhanpet Vegetable Market",
+        "marker_color": "#0ea5e9",
+        "lat": 14.4100,
+        "lon": 79.9550
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [79.9550, 14.4100]
+      }
+    }
+  ]
+}

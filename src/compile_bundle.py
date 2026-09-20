@@ -37,6 +37,10 @@ def build_embedded_bundle():
         layers["pipelines"] = json.load(f)
     with open(os.path.join(DATA_DIR, "infrastructure", "water_points_ro_plants.geojson")) as f:
         layers["water_points"] = json.load(f)
+    with open(os.path.join(DATA_DIR, "infrastructure", "ndvi_crop_vigor_zones.geojson")) as f:
+        layers["ndvi_zones"] = json.load(f)
+    with open(os.path.join(DATA_DIR, "infrastructure", "rythu_bharosa_kendrams.geojson")) as f:
+        layers["rbk_centers"] = json.load(f)
     
     # 3. New Directional Flow Network, Overhead Tanks, and Underground Sources
     with open(os.path.join(DATA_DIR, "infrastructure", "water_distribution_flow_network.geojson")) as f:

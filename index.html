@@ -62,6 +62,17 @@
         </button>
       </div>
 
+      <!-- Govt & Citizen Showcase Modules -->
+      <button class="nav-btn btn-farmer" id="btn-farmer-portal" title="AP Rythu Bharosa & Crop Health Studio for Farmers">
+        <i class="fa-solid fa-wheat-awn"></i> Farmer Crop Hub
+      </button>
+      <button class="nav-btn btn-citizen" id="btn-citizen-portal" title="Citizen Services, Emergency 108/104 & Water Grievances">
+        <i class="fa-solid fa-hand-holding-heart"></i> Citizen Helpdesk
+      </button>
+      <button class="nav-btn btn-copilot" id="btn-open-copilot" title="Open Andhra GIS Sahayak AI Copilot">
+        <i class="fa-solid fa-wand-magic-sparkles"></i> AI Sahayak
+      </button>
+
       <!-- Innovative Modules -->
       <button class="nav-btn btn-sentinel" id="btn-sentinel-studio" title="Copernicus Sentinel-2 Remote Sensing Studio">
         <i class="fa-solid fa-satellite"></i> Sentinel-2 Studio
@@ -99,6 +110,8 @@
           <label><i class="fa-solid fa-network-wired"></i> Infrastructure Network Focus</label>
           <select id="filter-network-focus" class="custom-select">
             <option value="ALL">Complete Urban Infrastructure (All Layers)</option>
+            <option value="AGRICULTURE">🌾 Agriculture & Rythu Kendrams (Crop Vigor & RBKs)</option>
+            <option value="CITIZEN_EMERGENCY">🆘 Citizen Emergency & Safe Water (RO Taps & Hospitals)</option>
             <option value="WATER_FLOW">💧 Water Flow Network (Wells ➔ Tanks ➔ Taps)</option>
             <option value="STORAGE_TANKS">🏰 Overhead Storage Tanks (ELSR / OHT)</option>
             <option value="RIVER_WELLS">🌊 Pennar Infiltration & Underground Wells</option>
@@ -187,7 +200,19 @@
         <!-- Exact Boundaries -->
         <div class="layer-item">
           <input type="checkbox" id="layer-boundaries" checked>
-          <label for="layer-boundaries"><span><i class="fa-solid fa-draw-polygon" style="color:#94a3b8;"></i> Strict Boundaries (Nellore NMC & Kovur)</span></label>
+          <label for="layer-boundaries"><span><i class="fa-solid fa-draw-polygon" style="color:#94a3b8;"></i> Strict Boundaries (GADM 4.1 NMC & Kovur)</span></label>
+        </div>
+
+        <!-- Sentinel-2 NDVI Crop Vigor Heatmap -->
+        <div class="layer-item">
+          <input type="checkbox" id="layer-ndvi">
+          <label for="layer-ndvi"><span><i class="fa-solid fa-seedling" style="color:#10b981;"></i> Sentinel-2 NDVI Crop Vigor Analysis</span></label>
+        </div>
+
+        <!-- Rythu Bharosa Kendrams & Agro Extension -->
+        <div class="layer-item">
+          <input type="checkbox" id="layer-rbk" checked>
+          <label for="layer-rbk"><span><i class="fa-solid fa-wheat-awn" style="color:#059669;"></i> Rythu Bharosa Kendrams (RBKs & Agro Kiosks)</span></label>
         </div>
       </div>
 
@@ -360,6 +385,56 @@
               <h4>Short-Wave IR (Soil Moisture)</h4>
               <p>Penetrates atmospheric aerosol haze; discriminates riverbed moisture from dry alluvial sand.</p>
               <button class="btn-apply-band">Inspect SWIR</button>
+            </div>
+
+            <div class="band-card" data-composite="ndvi">
+              <div class="band-code" style="color:#10b981;">(B08 - B04) / (B08 + B04)</div>
+              <h4>Normalized Veg. Index (NDVI)</h4>
+              <p>Quantifies photosynthetically active biomass, crop health in Kovur, and urban canopy vs built-up areas.</p>
+              <button class="btn-apply-band">Inspect NDVI</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- NDVI Deep Analysis & Zonal Metrics Panel -->
+        <div class="ndvi-analytics-panel" id="ndvi-analytics-panel">
+          <div class="ndvi-panel-header">
+            <h4><i class="fa-solid fa-seedling" style="color:#10b981;"></i> NDVI Vegetation Health & Biomass Index Analysis (Sentinel-2 MSI)</h4>
+            <span class="ndvi-formula-badge">NDVI = (NIR B08 - Red B04) / (NIR B08 + Red B04)</span>
+          </div>
+
+          <div class="ndvi-metrics-grid">
+            <div class="ndvi-stat-card">
+              <span class="ndvi-stat-title">Kovur Rural Agricultural Belt</span>
+              <span class="ndvi-stat-val" style="color:#10b981;">+0.64 Mean NDVI</span>
+              <span class="ndvi-stat-desc">Healthy irrigated paddy, banana groves & sugarcane canopy</span>
+            </div>
+            <div class="ndvi-stat-card">
+              <span class="ndvi-stat-title">Nellore NMC Urban Core</span>
+              <span class="ndvi-stat-val" style="color:#f59e0b;">+0.21 Mean NDVI</span>
+              <span class="ndvi-stat-desc">Impervious concrete surfaces, roads & dense commercial stalls</span>
+            </div>
+            <div class="ndvi-stat-card">
+              <span class="ndvi-stat-title">Pennar Riverbed Sand & Water</span>
+              <span class="ndvi-stat-val" style="color:#38bdf8;">-0.12 Mean NDVI</span>
+              <span class="ndvi-stat-desc">Surface water channel & dry coarse alluvial sand</span>
+            </div>
+            <div class="ndvi-stat-card">
+              <span class="ndvi-stat-title">Vegetative Health Status</span>
+              <span class="ndvi-stat-val alert-green">VIGOROUS / OPTIMAL</span>
+              <span class="ndvi-stat-desc">Delta irrigation scheme maintaining post-monsoon greenness</span>
+            </div>
+          </div>
+
+          <!-- NDVI Continuous Value Color Ramp Bar -->
+          <div class="ndvi-ramp-container">
+            <div class="ndvi-ramp-bar"></div>
+            <div class="ndvi-ramp-labels">
+              <span>-0.2 (Water / Wet Sand)</span>
+              <span>0.0 (Bare Soil)</span>
+              <span>+0.2 (Urban Built-up)</span>
+              <span>+0.5 (Moderate Crops)</span>
+              <span>+0.85 (Dense Canopy)</span>
             </div>
           </div>
         </div>
@@ -685,6 +760,649 @@
             </div>
           </button>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- AP Rythu Bharosa & Satellite Crop Health Studio Modal -->
+  <div id="farmer-modal" class="modal-overlay hidden">
+    <div class="modal-window large-modal">
+      <div class="modal-header">
+        <div style="display:flex; align-items:center; gap:10px;">
+          <div class="logo-badge" style="background:linear-gradient(135deg, #059669, #10b981); width:36px; height:36px; font-size:16px;">
+            <i class="fa-solid fa-wheat-awn"></i>
+          </div>
+          <div>
+            <h2>AP Rythu Bharosa & Satellite Crop Health Studio</h2>
+            <p class="modal-subtitle">Govt of Andhra Pradesh • Agriculture & Cooperation Dept • Kovur Mandal & Nellore Rural Rice Delta</p>
+          </div>
+        </div>
+        <button class="modal-close" id="btn-close-farmer">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <!-- Farmer Live Telemetry Banner -->
+        <div class="telemetry-banner">
+          <div class="telemetry-card">
+            <span class="t-label">Paddy Canopy NDVI</span>
+            <span class="t-val" style="color:#10b981;">+0.74</span>
+            <span class="t-desc">Optimal vegetative vigor in Kovur</span>
+          </div>
+          <div class="telemetry-card">
+            <span class="t-label">Leaf Nitrogen (NDRE)</span>
+            <span class="t-val" style="color:#34d399;">+0.52</span>
+            <span class="t-desc">SPAD 44 Chlorophyll index</span>
+          </div>
+          <div class="telemetry-card">
+            <span class="t-label">Pennar Canal Flow</span>
+            <span class="t-val" style="color:#38bdf8;">450 Cusecs</span>
+            <span class="t-desc">Somasila north delta active feed</span>
+          </div>
+          <div class="telemetry-card">
+            <span class="t-label">Rice Blast Alert</span>
+            <span class="t-val" style="color:#f59e0b;">LOW-MOD</span>
+            <span class="t-desc">84% night humidity window</span>
+          </div>
+        </div>
+
+        <!-- Section Navigation Tabs -->
+        <div class="farmer-tabs-nav">
+          <button class="farmer-tab-btn active" data-tab="tab-crop-health"><i class="fa-solid fa-seedling"></i> Crop Vigor & Zonation</button>
+          <button class="farmer-tab-btn" data-tab="tab-pest-warning"><i class="fa-solid fa-bug"></i> Pest Risk & Advisories</button>
+          <button class="farmer-tab-btn" data-tab="tab-rbk-centers"><i class="fa-solid fa-building-wheat"></i> Rythu Bharosa Kendrams</button>
+          <button class="farmer-tab-btn" data-tab="tab-mandi-prices"><i class="fa-solid fa-scale-balanced"></i> Mandi & Rythu Bazaar Rates</button>
+        </div>
+
+        <!-- Tab 1: Crop Vigor & Zonation -->
+        <div class="farmer-tab-pane active" id="tab-crop-health">
+          <div class="scada-grid" style="margin-bottom:14px;">
+            <div class="scada-panel">
+              <h4><i class="fa-solid fa-satellite-dish"></i> Sentinel-2 MSI Multi-Spectral Crop Diagnosis</h4>
+              <p style="font-size:0.85rem; color:#94a3b8; line-height:1.45; margin-bottom:12px;">
+                Satellite remote sensing uses the red absorption trough (Band 4, 665nm) and near-infrared reflectance plateau (Band 8, 842nm) to calculate <strong>NDVI</strong> for crop biomass. The red-edge band (Band 5, 705nm) calculates <strong>NDRE</strong> to detect nitrogen deficiency and chlorophyll stress up to 10 days before visible leaf yellowing.
+              </p>
+              <div class="ndvi-ramp-container" style="margin-top:8px;">
+                <div class="ndvi-ramp-bar"></div>
+                <div class="ndvi-ramp-labels">
+                  <span>-0.2 (Water)</span>
+                  <span>0.0 (Soil)</span>
+                  <span>+0.3 (Stress)</span>
+                  <span>+0.6 (Healthy)</span>
+                  <span>+0.85 (Peak Paddy)</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="scada-panel">
+              <h4><i class="fa-solid fa-calendar-check"></i> Crop Phenology & Season Progress</h4>
+              <table class="scada-metrics-table">
+                <tr><td>Agricultural Season:</td><td><strong>Rabi / Late Kharif Season 2026</strong></td></tr>
+                <tr><td>Dominant Paddy Variety:</td><td><strong>Nellore Masuri (BPT 5204) / MTU 1010</strong></td></tr>
+                <tr><td>Phenological Stage:</td><td><span class="badge-tag alert-green">Panicle Initiation (PI)</span></td></tr>
+                <tr><td>Irrigation Ayacut:</td><td><strong>18,400 Acres in Kovur Mandal</strong></td></tr>
+                <tr><td>Soil Water Saturation:</td><td><strong>32% Volumetric (Sufficient Puddle)</strong></td></tr>
+              </table>
+            </div>
+          </div>
+
+          <h4 style="color:#e2e8f0; margin:16px 0 10px 0;"><i class="fa-solid fa-map-location-dot"></i> Nellore & Kovur Agricultural Zonation Breakdown</h4>
+          <div class="farmer-cards-grid">
+            <div class="farmer-zone-card">
+              <div class="fzc-header">
+                <strong>Kovur North Irrigated Delta</strong>
+                <span class="risk-badge alert-green">+0.74 NDVI</span>
+              </div>
+              <p class="fzc-crop">Paddy (Nellore Masuri BPT 5204) • Panicle Initiation</p>
+              <p class="fzc-desc">Continuous gravity supply from Pennar North Delta Canal. High biomass accumulation (4.8 t/ha).</p>
+              <div class="fzc-action">
+                <button class="btn-card-action" onclick="focusOnCropZone('NDVI-KVR-01')"><i class="fa-solid fa-crosshairs"></i> Focus on Map</button>
+              </div>
+            </div>
+
+            <div class="farmer-zone-card">
+              <div class="fzc-header">
+                <strong>Kovur Central Sugarcane Belt</strong>
+                <span class="risk-badge" style="background:#059669;">+0.66 NDVI</span>
+              </div>
+              <p class="fzc-crop">Sugarcane (Co 86032) & Robusta Banana Groves</p>
+              <p class="fzc-desc">Grand growth elongation phase. Adequate root zone moisture. Linked with Nellore Sugar Mills.</p>
+              <div class="fzc-action">
+                <button class="btn-card-action" onclick="focusOnCropZone('NDVI-KVR-02')"><i class="fa-solid fa-crosshairs"></i> Focus on Map</button>
+              </div>
+            </div>
+
+            <div class="farmer-zone-card">
+              <div class="fzc-header">
+                <strong>Pottepalem Wetland Alluvium</strong>
+                <span class="risk-badge alert-green">+0.68 NDVI</span>
+              </div>
+              <p class="fzc-crop">Wetland Paddy & Direct Vegetable Stalls</p>
+              <p class="fzc-desc">Moisture-retentive heavy delta clay loam. High available Potassium (K) with balanced NPK.</p>
+              <div class="fzc-action">
+                <button class="btn-card-action" onclick="focusOnCropZone('NDVI-KVR-04')"><i class="fa-solid fa-crosshairs"></i> Focus on Map</button>
+              </div>
+            </div>
+
+            <div class="farmer-zone-card">
+              <div class="fzc-header">
+                <strong>Vedayapalem - Dargamitta Fodder</strong>
+                <span class="risk-badge" style="background:#0ea5e9;">+0.38 NDVI</span>
+              </div>
+              <p class="fzc-crop">Hybrid Napier Dairy Fodder & Urban Greens</p>
+              <p class="fzc-desc">Urban perimeter livestock cluster. Linked with Jagananna Palavelluva milk chilling centers.</p>
+              <div class="fzc-action">
+                <button class="btn-card-action" onclick="focusOnCropZone('NDVI-NMC-02')"><i class="fa-solid fa-crosshairs"></i> Focus on Map</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 2: Pest Risk & Advisories -->
+        <div class="farmer-tab-pane" id="tab-pest-warning" style="display:none;">
+          <div class="advisory-card-box warning">
+            <div class="acb-header">
+              <i class="fa-solid fa-triangle-exclamation"></i>
+              <div>
+                <strong>Rice Blast (Magnaporthe oryzae) Microclimate Alert — Kovur Mandal</strong>
+                <span class="acb-sub">Triggered by: Night temperatures falling below 24°C + Relative Humidity exceeding 85% for >6 hours</span>
+              </div>
+            </div>
+            <p style="font-size:0.85rem; color:#cbd5e1; margin-top:8px; line-height:1.5;">
+              <strong>Symptoms to Watch:</strong> Spindle-shaped diamond lesions with greyish center and brownish margins on upper leaf blades.<br>
+              <strong>Preventive Action:</strong> Maintain 3 cm standing water. Avoid excess basal Urea. Spray <strong>Tricyclazole 75% WP @ 0.6 g/L</strong> or <strong>Isoprothiolane 40% EC @ 1.5 mL/L</strong> during early morning hours.
+            </p>
+          </div>
+
+          <div class="advisory-card-box info" style="margin-top:12px;">
+            <div class="acb-header">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <div>
+                <strong>Brown Plant Hopper (BPH) & Stem Borer Surveillance</strong>
+                <span class="acb-sub">Surveyed across 14 sentinel plots along Inamadugu and Padugupadu</span>
+              </div>
+            </div>
+            <p style="font-size:0.85rem; color:#cbd5e1; margin-top:8px; line-height:1.5;">
+              <strong>Field Status:</strong> Well below Economic Threshold Level (ETL < 5 hoppers per hill).<br>
+              <strong>Advisory:</strong> Practice alternate wetting and drying (AWD). Form alley pathways of 30 cm after every 2 meters in dense crop stands to improve sunlight penetration and air circulation.
+            </p>
+          </div>
+
+          <div class="advisory-card-box success" style="margin-top:12px;">
+            <div class="acb-header">
+              <i class="fa-solid fa-flask-vial"></i>
+              <div>
+                <strong>Fertilizer & Micronutrient Schedule for Panicle Initiation</strong>
+                <span class="acb-sub">Prescription formulated by Regional Agricultural Research Station (RARS)</span>
+              </div>
+            </div>
+            <p style="font-size:0.85rem; color:#cbd5e1; margin-top:8px; line-height:1.5;">
+              Apply second split of <strong>MOP (Muriate of Potash) @ 25 kg/acre</strong> along with <strong>Urea @ 20 kg/acre</strong> before flower emergence. For soils with zinc deficiency history in Kovur, foliar spray of <strong>Zinc Sulphate (ZnSO4 0.2%) + Lime 0.1%</strong> is recommended.
+            </p>
+          </div>
+        </div>
+
+        <!-- Tab 3: Rythu Bharosa Kendrams -->
+        <div class="farmer-tab-pane" id="tab-rbk-centers" style="display:none;">
+          <p style="font-size:0.85rem; color:#94a3b8; margin-bottom:12px;">
+            Rythu Bharosa Kendrams (RBKs) provide one-stop government agricultural services including certified seed distribution, soil testing, E-Crop digital booking, and CM-APP price support.
+          </p>
+          <div class="rbk-table-wrap">
+            <table class="detail-table" style="font-size:0.85rem;">
+              <thead>
+                <tr style="border-bottom:2px solid #334155; color:#38bdf8;">
+                  <th>RBK Center</th>
+                  <th>Mandal / Location</th>
+                  <th>Village Agri Assistant (VAA)</th>
+                  <th>Direct Contact</th>
+                  <th>Key Services</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>RBK-01 (Kovur Gram)</strong></td>
+                  <td>Kovur Rural</td>
+                  <td>Sri B. Sudhakar Rao</td>
+                  <td><a href="tel:+918622224150" style="color:#10b981;">+91 8622-224150</a></td>
+                  <td>Seed distribution, E-Crop booking, Soil test</td>
+                  <td><button class="btn-card-action" onclick="focusOnRBK('RBK-KVR-01')">Locate</button></td>
+                </tr>
+                <tr>
+                  <td><strong>RBK-02 (Padugupadu)</strong></td>
+                  <td>Padugupadu Village</td>
+                  <td>Smt. K. Latha</td>
+                  <td><a href="tel:+918622224810" style="color:#10b981;">+91 8622-224810</a></td>
+                  <td>Sugarcane mill quota, Bio-traps, Soil cards</td>
+                  <td><button class="btn-card-action" onclick="focusOnRBK('RBK-KVR-02')">Locate</button></td>
+                </tr>
+                <tr>
+                  <td><strong>RBK-03 (Inamadugu Model)</strong></td>
+                  <td>Inamadugu</td>
+                  <td>Sri M. Venkateswarlu</td>
+                  <td><a href="tel:+918622225301" style="color:#10b981;">+91 8622-225301</a></td>
+                  <td>Pennar canal rostering, Solar pump subsidy</td>
+                  <td><button class="btn-card-action" onclick="focusOnRBK('RBK-KVR-03')">Locate</button></td>
+                </tr>
+                <tr>
+                  <td><strong>RBK-04 (Pottepalem)</strong></td>
+                  <td>Pottepalem</td>
+                  <td>Sri V. Ramanjaneyulu</td>
+                  <td><a href="tel:+918622226490" style="color:#10b981;">+91 8622-226490</a></td>
+                  <td>Zinc sulphate subsidy, Custom hiring center</td>
+                  <td><button class="btn-card-action" onclick="focusOnRBK('RBK-KVR-04')">Locate</button></td>
+                </tr>
+                <tr>
+                  <td><strong>Agri Extension Hub</strong></td>
+                  <td>Nellore Rural / Podalakur</td>
+                  <td>Sri D. Suresh Kumar (ADA)</td>
+                  <td><a href="tel:+918612327090" style="color:#10b981;">+91 861-2327090</a></td>
+                  <td>Rythu Bazaar tokens, Cold storage pass</td>
+                  <td><button class="btn-card-action" onclick="focusOnRBK('RBK-NMC-01')">Locate</button></td>
+                </tr>
+                <tr>
+                  <td><strong>Vedayapalem Agri Kiosk</strong></td>
+                  <td>NMC Zone 4</td>
+                  <td>Dr. S. Anjaneyulu</td>
+                  <td><a href="tel:+918612334180" style="color:#10b981;">+91 861-2334180</a></td>
+                  <td>Jagananna Palavelluva, Dairy fodder, Vaccines</td>
+                  <td><button class="btn-card-action" onclick="focusOnRBK('RBK-NMC-02')">Locate</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Tab 4: Mandi & Market Prices -->
+        <div class="farmer-tab-pane" id="tab-mandi-prices" style="display:none;">
+          <div class="mandi-banner">
+            <div>
+              <h4 style="color:#10b981; margin:0;"><i class="fa-solid fa-chart-line"></i> AP Agriculture Market Committee (AMC) Fair Prices</h4>
+              <p style="font-size:0.8rem; color:#94a3b8; margin:2px 0 0 0;">Nellore & Kovur Mandi Official Minimum Support Price & Real-time Rythu Bazaar Rates</p>
+            </div>
+            <span class="badge-tag alert-green">CM-APP Verified</span>
+          </div>
+
+          <div class="mandi-grid">
+            <div class="mandi-card">
+              <span class="mandi-commodity">Nellore Masuri Paddy (BPT 5204)</span>
+              <span class="mandi-rate">₹2,320 <small>/ Quintal</small></span>
+              <span class="mandi-type">Govt Grade A MSP (17% Moisture)</span>
+              <span class="mandi-procurement"><i class="fa-solid fa-circle-check" style="color:#10b981;"></i> Procured at Kovur RBK</span>
+            </div>
+
+            <div class="mandi-card">
+              <span class="mandi-commodity">Common Paddy (MTU 1010)</span>
+              <span class="mandi-rate">₹2,300 <small>/ Quintal</small></span>
+              <span class="mandi-type">Govt Minimum Support Price</span>
+              <span class="mandi-procurement"><i class="fa-solid fa-circle-check" style="color:#10b981;"></i> Procured at Inamadugu RBK</span>
+            </div>
+
+            <div class="mandi-card">
+              <span class="mandi-commodity">Sugarcane (Co 86032)</span>
+              <span class="mandi-rate">₹3,150 <small>/ Ton</small></span>
+              <span class="mandi-type">Fair & Remunerative Price (FRP)</span>
+              <span class="mandi-procurement"><i class="fa-solid fa-truck" style="color:#0ea5e9;"></i> Mill Gate Delivery</span>
+            </div>
+
+            <div class="mandi-card">
+              <span class="mandi-commodity">Direct Farm Tomatoes</span>
+              <span class="mandi-rate">₹28 <small>/ Kg</small></span>
+              <span class="mandi-type">Stonehousepet Rythu Bazaar</span>
+              <span class="mandi-procurement"><i class="fa-solid fa-store" style="color:#f59e0b;"></i> Zero Middleman Commission</span>
+            </div>
+
+            <div class="mandi-card">
+              <span class="mandi-commodity">Robusta Banana</span>
+              <span class="mandi-rate">₹35 <small>/ Dozen</small></span>
+              <span class="mandi-type">Kovur Main Market Rate</span>
+              <span class="mandi-procurement"><i class="fa-solid fa-store" style="color:#f59e0b;"></i> Direct Grower Price</span>
+            </div>
+
+            <div class="mandi-card">
+              <span class="mandi-commodity">Green Chillies (G4 Variety)</span>
+              <span class="mandi-rate">₹45 <small>/ Kg</small></span>
+              <span class="mandi-type">AC Subba Reddy Rythu Bazaar</span>
+              <span class="mandi-procurement"><i class="fa-solid fa-store" style="color:#f59e0b;"></i> Daily Mandi Fixation</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Citizen Services & 24/7 Public Health Helpdesk Modal -->
+  <div id="citizen-modal" class="modal-overlay hidden">
+    <div class="modal-window large-modal">
+      <div class="modal-header">
+        <div style="display:flex; align-items:center; gap:10px;">
+          <div class="logo-badge" style="background:linear-gradient(135deg, #0284c7, #38bdf8); width:36px; height:36px; font-size:16px;">
+            <i class="fa-solid fa-hand-holding-heart"></i>
+          </div>
+          <div>
+            <h2>Nellore Municipal Corporation (NMC) Citizen Welfare & Helpdesk</h2>
+            <p class="modal-subtitle">Govt of AP • Sri Potti Sriramulu Nellore District • 24/7 Safe Drinking Water, Hospitals & Grievances</p>
+          </div>
+        </div>
+        <button class="modal-close" id="btn-close-citizen">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <!-- Emergency Helpline 1-Click Dialers Row -->
+        <div class="emergency-helplines-grid">
+          <a class="helpline-card alert-red" href="tel:108">
+            <i class="fa-solid fa-truck-medical"></i>
+            <div>
+              <span class="hl-number">108</span>
+              <span class="hl-name">Free Emergency Ambulance</span>
+              <span class="hl-eta">Nearest dispatch ETA: ~6 mins (ACSR Hospital)</span>
+            </div>
+          </a>
+
+          <a class="helpline-card alert-blue" href="tel:104">
+            <i class="fa-solid fa-user-doctor"></i>
+            <div>
+              <span class="hl-number">104</span>
+              <span class="hl-name">Health Info & Medical Advice</span>
+              <span class="hl-eta">24/7 Tele-doctor consultation & epidemic alerts</span>
+            </div>
+          </a>
+
+          <a class="helpline-card alert-cyan" href="tel:1916">
+            <i class="fa-solid fa-faucet-drip"></i>
+            <div>
+              <span class="hl-number">1916</span>
+              <span class="hl-name">NMC Water Supply Helpline</span>
+              <span class="hl-eta">Report pipe burst, low pressure or muddy water</span>
+            </div>
+          </a>
+
+          <a class="helpline-card alert-green" href="tel:14417">
+            <i class="fa-solid fa-headset"></i>
+            <div>
+              <span class="hl-number">14417</span>
+              <span class="hl-name">AP Citizen Services Call Center</span>
+              <span class="hl-eta">Rythu Bharosa, Pension & Welfare schemes</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Section Navigation Tabs -->
+        <div class="farmer-tabs-nav" style="margin-top:16px;">
+          <button class="citizen-tab-btn active" data-tab="tab-ro-finder"><i class="fa-solid fa-glass-water-droplet"></i> Safe RO Drinking Water</button>
+          <button class="citizen-tab-btn" data-tab="tab-hospital-dir"><i class="fa-solid fa-hospital"></i> Emergency Hospitals & ICUs</button>
+          <button class="citizen-tab-btn" data-tab="tab-file-grievance"><i class="fa-solid fa-clipboard-question"></i> File Water/Sanitation Grievance</button>
+        </div>
+
+        <!-- Citizen Tab 1: Safe RO Drinking Water Finder -->
+        <div class="citizen-tab-pane active" id="tab-ro-finder">
+          <div class="ro-safety-guide">
+            <div class="guide-metric">
+              <span class="gm-title">Safe Potable TDS Range</span>
+              <span class="gm-val" style="color:#10b981;">100 - 250 ppm</span>
+              <span class="gm-sub">WHO & BIS 10500 Compliant</span>
+            </div>
+            <div class="guide-metric">
+              <span class="gm-title">Active Municipal RO ATMs</span>
+              <span class="gm-val" style="color:#38bdf8;">7 Stations</span>
+              <span class="gm-sub">NTR Sujala Subsidized Mineral Water</span>
+            </div>
+            <div class="guide-metric">
+              <span class="gm-title">Public Hand Pumps Tested</span>
+              <span class="gm-val" style="color:#f59e0b;">11 Units</span>
+              <span class="gm-sub">Quarterly bacteriological check</span>
+            </div>
+          </div>
+
+          <h4 style="color:#e2e8f0; margin:14px 0 8px 0;"><i class="fa-solid fa-map-pin"></i> Certified Municipal RO Mineral Water Plants (NMC & Kovur)</h4>
+          <div class="rbk-table-wrap">
+            <table class="detail-table" style="font-size:0.85rem;">
+              <thead>
+                <tr style="border-bottom:2px solid #334155; color:#38bdf8;">
+                  <th>Water Station ID</th>
+                  <th>Location & Landmark</th>
+                  <th>Type</th>
+                  <th>TDS Rating</th>
+                  <th>Potability Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>WP-RO-01</strong></td>
+                  <td>Stonehousepet Rythu Bazaar Complex</td>
+                  <td>Municipal RO Mineral Plant</td>
+                  <td><strong>180 ppm</strong></td>
+                  <td><span class="risk-badge alert-green">Excellent / Safe</span></td>
+                  <td><button class="btn-card-action" onclick="focusOnWaterPoint('WP-RO-01')">Locate</button></td>
+                </tr>
+                <tr>
+                  <td><strong>WP-RO-02</strong></td>
+                  <td>Santhapet Central Municipal School</td>
+                  <td>Municipal RO ATM</td>
+                  <td><strong>165 ppm</strong></td>
+                  <td><span class="risk-badge alert-green">Excellent / Safe</span></td>
+                  <td><button class="btn-card-action" onclick="focusOnWaterPoint('WP-RO-02')">Locate</button></td>
+                </tr>
+                <tr>
+                  <td><strong>WP-RO-03</strong></td>
+                  <td>Kovur Main Commercial Bazaar</td>
+                  <td>Gram Panchayat RO Unit</td>
+                  <td><strong>190 ppm</strong></td>
+                  <td><span class="risk-badge alert-green">Excellent / Safe</span></td>
+                  <td><button class="btn-card-action" onclick="focusOnWaterPoint('WP-RO-03')">Locate</button></td>
+                </tr>
+                <tr>
+                  <td><strong>WP-RO-04</strong></td>
+                  <td>Vedayapalem Railway Gate Hub</td>
+                  <td>NTR Sujala RO Plant</td>
+                  <td><strong>210 ppm</strong></td>
+                  <td><span class="risk-badge alert-green">Potable & Tested</span></td>
+                  <td><button class="btn-card-action" onclick="focusOnWaterPoint('WP-RO-04')">Locate</button></td>
+                </tr>
+                <tr>
+                  <td><strong>WP-RO-05</strong></td>
+                  <td>Padugupadu Old Bus Stand Junction</td>
+                  <td>Gram Panchayat RO ATM</td>
+                  <td><strong>195 ppm</strong></td>
+                  <td><span class="risk-badge alert-green">Excellent / Safe</span></td>
+                  <td><button class="btn-card-action" onclick="focusOnWaterPoint('WP-RO-05')">Locate</button></td>
+                </tr>
+                <tr>
+                  <td><strong>WP-HP-01</strong></td>
+                  <td>Stonehousepet Fish Market Street</td>
+                  <td>Public Hand Pump (Deep Aquifer)</td>
+                  <td><strong>480 ppm</strong></td>
+                  <td><span class="risk-badge" style="background:#f59e0b;">Moderate Hardness</span></td>
+                  <td><button class="btn-card-action" onclick="focusOnWaterPoint('WP-HP-01')">Locate</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Citizen Tab 2: Emergency Hospitals & ICUs -->
+        <div class="citizen-tab-pane" id="tab-hospital-dir" style="display:none;">
+          <div class="farmer-cards-grid">
+            <div class="farmer-zone-card" style="border-color:rgba(244,63,94,0.3);">
+              <div class="fzc-header">
+                <strong>ACSR Govt General Hospital</strong>
+                <span class="risk-badge" style="background:#f43f5e;">750 Beds</span>
+              </div>
+              <p class="fzc-crop">Public Govt Hospital • 24/7 Emergency & Trauma</p>
+              <p class="fzc-desc">40 ICU Beds • Free YSR Aarogyasri Care • 24/7 Blood Bank & Burn Unit • Dargamitta</p>
+              <div class="fzc-action">
+                <a class="btn-card-action alert-red" href="tel:08612328100"><i class="fa-solid fa-phone"></i> 0861-2328100</a>
+                <button class="btn-card-action" onclick="focusOnHospital('HOSP-01')"><i class="fa-solid fa-crosshairs"></i> View on Map</button>
+              </div>
+            </div>
+
+            <div class="farmer-zone-card" style="border-color:rgba(244,63,94,0.3);">
+              <div class="fzc-header">
+                <strong>Kovur Community Health Center</strong>
+                <span class="risk-badge" style="background:#f43f5e;">50 Beds</span>
+              </div>
+              <p class="fzc-crop">Govt CHC • Primary Emergency Care</p>
+              <p class="fzc-desc">6 Emergency Beds • 24/7 Maternity & Minor OT • National Highway 16, Kovur</p>
+              <div class="fzc-action">
+                <a class="btn-card-action alert-red" href="tel:08622224050"><i class="fa-solid fa-phone"></i> 08622-224050</a>
+                <button class="btn-card-action" onclick="focusOnHospital('HOSP-06')"><i class="fa-solid fa-crosshairs"></i> View on Map</button>
+              </div>
+            </div>
+
+            <div class="farmer-zone-card" style="border-color:rgba(56,189,248,0.3);">
+              <div class="fzc-header">
+                <strong>Narayana Super Specialty Hospital</strong>
+                <span class="risk-badge" style="background:#0284c7;">350 Beds</span>
+              </div>
+              <p class="fzc-crop">Private Tertiary • Advanced Cardiology & Neuro</p>
+              <p class="fzc-desc">30 ICU Beds • Comprehensive Dialysis & Pediatric Trauma • Chinthareddypalem</p>
+              <div class="fzc-action">
+                <a class="btn-card-action" href="tel:08612317963"><i class="fa-solid fa-phone"></i> 0861-2317963</a>
+                <button class="btn-card-action" onclick="focusOnHospital('HOSP-02')"><i class="fa-solid fa-crosshairs"></i> View on Map</button>
+              </div>
+            </div>
+
+            <div class="farmer-zone-card" style="border-color:rgba(56,189,248,0.3);">
+              <div class="fzc-header">
+                <strong>Apollo Specialty Clinic & ER</strong>
+                <span class="risk-badge" style="background:#0ea5e9;">40 Beds</span>
+              </div>
+              <p class="fzc-crop">Private Emergency Clinic</p>
+              <p class="fzc-desc">10 ICU Beds • Rapid Ambulance Dispatch • Pogathota, Nellore Core</p>
+              <div class="fzc-action">
+                <a class="btn-card-action" href="tel:08612338000"><i class="fa-solid fa-phone"></i> 0861-2338000</a>
+                <button class="btn-card-action" onclick="focusOnHospital('HOSP-04')"><i class="fa-solid fa-crosshairs"></i> View on Map</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Citizen Tab 3: File Water/Sanitation Grievance -->
+        <div class="citizen-tab-pane" id="tab-file-grievance" style="display:none;">
+          <div class="grievance-form-container">
+            <div class="grievance-intro">
+              <i class="fa-solid fa-clipboard-check" style="font-size:24px; color:#38bdf8;"></i>
+              <div>
+                <strong style="color:#e2e8f0;">NMC 24-Hour Municipal Redressal Cell</strong>
+                <p style="font-size:0.8rem; color:#94a3b8; margin:0;">Submit water contamination, pipe rupture or drain hazards directly to Nellore Municipal Corporation Ward Sanitary Officers.</p>
+              </div>
+            </div>
+
+            <form id="grievance-form" onsubmit="submitCitizenGrievance(event)">
+              <div class="form-row">
+                <div class="form-group half">
+                  <label>Municipal Ward / Jurisdiction</label>
+                  <select id="grv-ward" class="custom-select" required>
+                    <option value="Ward 1 - Stonehousepet Commercial">Ward 1 - Stonehousepet Commercial</option>
+                    <option value="Ward 8 - Santhapet Bazaar">Ward 8 - Santhapet Central Bazaar</option>
+                    <option value="Ward 14 - Ranganayakulapet">Ward 14 - Ranganayakulapet</option>
+                    <option value="Ward 24 - Vedayapalem / Dargamitta">Ward 24 - Vedayapalem / Dargamitta</option>
+                    <option value="Kovur Gram Panchayat - Main Ward">Kovur Gram Panchayat - Main Ward</option>
+                    <option value="Padugupadu Gram Panchayat">Padugupadu Gram Panchayat</option>
+                  </select>
+                </div>
+
+                <div class="form-group half">
+                  <label>Hazard / Grievance Category</label>
+                  <select id="grv-category" class="custom-select" required>
+                    <option value="Water Supply Pipe Leak / Rupture">💧 Water Supply Pipe Leak / Rupture</option>
+                    <option value="Turbid or Discolored Tap Water">⚠️ Turbid or Discolored Tap Water</option>
+                    <option value="Low Pressure from Overhead Reservoir">📉 Low Pressure from Overhead Reservoir</option>
+                    <option value="Open Sewage Drain Overflow near Food Stall">🚫 Open Sewage Overflow near Food/Meat Stall</option>
+                    <option value="Stagnant Drain Water & Mosquito Hazard">🦟 Stagnant Drain & Mosquito Hazard</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group half">
+                  <label>Citizen Name / Contact Mobile</label>
+                  <input type="text" id="grv-contact" class="custom-input" placeholder="e.g. A. Rajesh - 98480xxxxx" required>
+                </div>
+                <div class="form-group half">
+                  <label>Exact Street Landmark / House No.</label>
+                  <input type="text" id="grv-landmark" class="custom-input" placeholder="e.g. Near Stonehousepet Rythu Bazaar Gate 2" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label>Issue Description</label>
+                <textarea id="grv-desc" class="custom-textarea" rows="3" placeholder="Describe the water issue or contamination hazard in detail..."></textarea>
+              </div>
+
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-top:14px;">
+                <span id="grv-status-msg" style="font-size:0.82rem; color:#10b981;"></span>
+                <button type="submit" class="nav-btn btn-farmer" style="padding:8px 20px;">
+                  <i class="fa-solid fa-paper-plane"></i> Dispatch Grievance Ticket
+                </button>
+              </div>
+            </form>
+
+            <div id="grv-result-card" class="ticket-result-card hidden">
+              <!-- Injected via JavaScript upon submit -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Trigger Button for Andhra GIS Sahayak -->
+  <button class="floating-copilot-btn" id="floating-copilot-btn" title="Open Andhra GIS Sahayak AI Copilot">
+    <div class="copilot-icon-pulse">
+      <i class="fa-solid fa-wand-magic-sparkles"></i>
+    </div>
+    <div class="copilot-btn-text">
+      <strong>Andhra GIS Sahayak</strong>
+      <span class="ai-live-badge"><i class="fa-solid fa-circle"></i> AI Copilot Online</span>
+    </div>
+  </button>
+
+  <!-- Andhra GIS Sahayak - ChatGPT-like Conversational AI Widget -->
+  <div class="copilot-chat-window hidden" id="copilot-chat-window">
+    <div class="copilot-header">
+      <div class="copilot-title-group">
+        <div class="copilot-avatar">
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
+        </div>
+        <div>
+          <h3>Andhra GIS Sahayak</h3>
+          <p>Govt of AP & Smart Citizen Copilot • Sentinel-2 + NMC Live GIS</p>
+        </div>
+      </div>
+      <div class="copilot-actions">
+        <button class="copilot-hdr-btn" id="btn-copilot-reset" title="Reset Conversation"><i class="fa-solid fa-rotate-left"></i></button>
+        <button class="copilot-hdr-btn" id="btn-copilot-close" title="Close"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+    </div>
+
+    <!-- Quick Prompt Pills Row (ChatGPT Style) -->
+    <div class="copilot-pills-row" id="copilot-pills-row">
+      <button class="copilot-pill" data-prompt="Check Kovur paddy crop health and NDVI vigor"><i class="fa-solid fa-seedling"></i> Kovur Crop Vigor</button>
+      <button class="copilot-pill" data-prompt="Where is clean RO drinking water near Stonehousepet?"><i class="fa-solid fa-glass-water-droplet"></i> Clean RO Water</button>
+      <button class="copilot-pill" data-prompt="Nearest 24/7 hospital with ICU and emergency ambulance"><i class="fa-solid fa-hospital"></i> Emergency 108</button>
+      <button class="copilot-pill" data-prompt="Which meat markets are located near open sewage drains?"><i class="fa-solid fa-triangle-exclamation"></i> Market Drain Hazard</button>
+      <button class="copilot-pill" data-prompt="Pest risk advisory for rice blast in Kovur paddy delta"><i class="fa-solid fa-bug"></i> Rice Blast Advisory</button>
+      <button class="copilot-pill" data-prompt="What are the live Mandi MSP prices for Nellore Masuri paddy?"><i class="fa-solid fa-indian-rupee-sign"></i> Mandi MSP Rates</button>
+    </div>
+
+    <!-- Chat Messages Stream -->
+    <div class="copilot-messages" id="copilot-messages">
+      <!-- Welcome message injected dynamically on load -->
+    </div>
+
+    <!-- Input Footer (ChatGPT Style) -->
+    <div class="copilot-input-container">
+      <form id="copilot-form" onsubmit="handleCopilotSubmit(event)">
+        <div class="copilot-input-wrapper">
+          <input type="text" id="copilot-input" placeholder="Ask about water, Kovur crops, hospitals, or Nellore GIS..." autocomplete="off">
+          <button type="submit" id="btn-copilot-send" title="Send message">
+            <i class="fa-solid fa-arrow-up"></i>
+          </button>
+        </div>
+      </form>
+      <div class="copilot-footer-note">
+        <span>Powered by Sentinel-2 MSI, GADM 4.1 & Nellore Municipal Corporation GIS Data</span>
       </div>
     </div>
   </div>

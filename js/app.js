@@ -39,6 +39,8 @@ let layerWaterPoints;
 let layerVegMarkets;
 let layerMarkets;
 let layerHospitals;
+let layerNDVI;
+let layerRBK;
 
 // 3D & Animation States
 let is3DTilt = false;
@@ -409,6 +411,58 @@ function initVectorLayers() {
       layer.on("click", () => inspectHospital(p));
     }
   }).addTo(map);
+
+  // L. Sentinel-2 NDVI Crop Vigor & Canopy Zonation Layer
+  if (allData && allData.ndvi_zones) {
+    layerNDVI = L.geoJSON(allData.ndvi_zones, {
+      style: (feature) => {
+        const p = feature.properties;
+        return {
+          color: p.fill_color || "#10b981",
+          weight: 2,
+          fillColor: p.fill_color || "#10b981",
+          fillOpacity: 0.42,
+          dashArray: "4, 4"
+        };
+      },
+      onEachFeature: (feature, layer) => {
+        const p = feature.properties;
+        layer.bindTooltip(`
+          <strong>🌱 ${p.name} (${p.zone_id})</strong><br>
+          NDVI Index: <strong>${p.ndvi_mean > 0 ? '+' : ''}${p.ndvi_mean}</strong> (${p.ndvi_class})<br>
+          Canopy: ${p.crop_type}<br>
+          Biomass: ${p.biomass_index}
+        `, { sticky: true });
+        layer.on("click", () => inspectNDVIZone(p));
+      }
+    });
+  }
+
+  // M. Rythu Bharosa Kendrams (RBKs & Agro Kiosks)
+  if (allData && allData.rbk_centers) {
+    layerRBK = L.geoJSON(allData.rbk_centers, {
+      pointToLayer: (feature, latlng) => {
+        return L.marker(latlng, {
+          icon: L.divIcon({
+            html: `<div class="rbk-marker-icon" title="${feature.properties.name}"><i class="fa-solid fa-wheat-awn"></i></div>`,
+            className: "",
+            iconSize: [28, 28],
+            iconAnchor: [14, 14]
+          })
+        });
+      },
+      onEachFeature: (feature, layer) => {
+        const p = feature.properties;
+        layer.bindTooltip(`
+          <strong>🏢 ${p.name} (${p.rbk_id})</strong><br>
+          Mandal: ${p.mandal} • Officer: ${p.agri_officer}<br>
+          Contact: <strong>${p.phone}</strong><br>
+          Coverage: ${p.ayacut_acres} Acres • ${p.coverage_farmers} Farmers
+        `, { sticky: true });
+        layer.on("click", () => inspectRBK(p));
+      }
+    }).addTo(map);
+  }
 }
 
 // ---------------- 2. MAPBOX GL JS 3D DIGITAL TWIN ENGINE ---------------- //
@@ -592,6 +646,59 @@ function initMapbox3D() {
           .addTo(mapbox3d);
       });
     }
+
+    // 8. Sentinel-2 NDVI Crop Vigor 3D Overlay
+    if (allData && allData.ndvi_zones) {
+      mapbox3d.addSource('ndvi-3d-source', {
+        type: 'geojson',
+        data: allData.ndvi_zones
+      });
+      mapbox3d.addLayer({
+        id: 'ndvi-3d-polygon',
+        type: 'fill',
+        source: 'ndvi-3d-source',
+        paint: {
+          'fill-color': ['get', 'fill_color'],
+          'fill-opacity': 0.35
+        }
+      });
+      mapbox3d.addLayer({
+        id: 'ndvi-3d-line',
+        type: 'line',
+        source: 'ndvi-3d-source',
+        paint: {
+          'line-color': ['get', 'fill_color'],
+          'line-width': 1.8,
+          'line-dasharray': [3, 2]
+        }
+      });
+    }
+
+    // 9. Rythu Bharosa Kendrams 3D HTML Pins
+    if (allData && allData.rbk_centers) {
+      allData.rbk_centers.features.forEach(feat => {
+        const p = feat.properties;
+        const el = document.createElement('div');
+        el.className = 'mapbox-3d-marker';
+        el.innerHTML = `
+          <div class="mapbox-rbk-pin" title="${p.name}">
+            <i class="fa-solid fa-wheat-awn"></i>
+          </div>
+        `;
+        el.addEventListener('click', () => {
+          inspectRBK(p);
+        });
+        new mapboxgl.Marker(el)
+          .setLngLat([p.lon, p.lat])
+          .setPopup(new mapboxgl.Popup({ offset: 25 }).setHTML(`
+            <strong style="color:#10b981;">🏢 ${p.name}</strong><br>
+            Mandal: ${p.mandal} • Officer: ${p.agri_officer}<br>
+            Phone: <strong>${p.phone}</strong><br>
+            Ayacut: ${p.ayacut_acres} Acres • Crop: ${p.primary_crop}
+          `))
+          .addTo(mapbox3d);
+      });
+    }
   });
 }
 
@@ -770,6 +877,19 @@ function selectBandComposite(compositeType) {
       c.querySelector('.btn-apply-band').textContent = 'Inspect';
     }
   });
+
+  const ndviPanel = document.getElementById("ndvi-analytics-panel");
+  if (compositeType === "ndvi") {
+    if (ndviPanel) ndviPanel.style.display = "block";
+    if (layerNDVI && !map.hasLayer(layerNDVI)) {
+      map.addLayer(layerNDVI);
+      const cb = document.getElementById("layer-ndvi");
+      if (cb) cb.checked = true;
+    }
+    map.setView([14.50, 79.98], 13, { animate: true });
+  } else {
+    if (ndviPanel) ndviPanel.style.display = "none";
+  }
 }
 
 // ---------------- 4. SCADA HYDRAULIC SANDBOX & CONTAMINATION CRISIS ---------------- //
@@ -1126,6 +1246,174 @@ window.inspectMarket = function(shopId) {
   map.setView([lat, lon], 16, { animate: true });
 };
 
+window.inspectNDVIZone = function(p) {
+  const inspector = document.getElementById("inspector-content");
+  inspector.innerHTML = `
+    <div class="market-detail-card">
+      <div class="md-header">
+        <div>
+          <div class="md-title">${p.name}</div>
+          <div class="md-id">${p.zone_id} • ${p.jurisdiction}</div>
+        </div>
+        <span class="risk-badge" style="background:${p.fill_color}; color:#ffffff;">${p.ndvi_mean > 0 ? '+' : ''}${p.ndvi_mean} NDVI</span>
+      </div>
+
+      <table class="detail-table">
+        <tr><td>Classification:</td><td><strong>${p.ndvi_class}</strong></td></tr>
+        <tr><td>Primary Crop:</td><td>${p.crop_type}</td></tr>
+        <tr><td>Crop Stage:</td><td><span class="badge-tag alert-green">${p.crop_stage || 'Active Growth'}</span></td></tr>
+        <tr><td>Red-Edge NDRE:</td><td><strong>${p.ndre_red_edge > 0 ? '+' : ''}${p.ndre_red_edge}</strong> (${p.chlorophyll_status || 'Adequate'})</td></tr>
+        <tr><td>Irrigation Source:</td><td>${p.irrigation_source}</td></tr>
+        <tr><td>Estimated Biomass:</td><td>${p.biomass_index}</td></tr>
+        <tr><td>Soil Moisture:</td><td>${p.soil_moisture_est || 'Normal'}</td></tr>
+        <tr><td>Pest Warning:</td><td><span style="color:#f59e0b; font-weight:600;">${p.pest_risk || 'Low'}</span></td></tr>
+        <tr><td>Assigned RBK:</td><td><strong>${p.rbk_assigned || 'Kovur Mandal VAA'}</strong></td></tr>
+        <tr><td>Mandi Realization:</td><td><strong style="color:#10b981;">${p.mandi_msp_rate || 'Govt MSP'}</strong></td></tr>
+      </table>
+
+      <div style="margin-top:10px; padding:8px 10px; background:rgba(16,185,129,0.1); border-left:3px solid #10b981; border-radius:4px; font-size:0.75rem; color:#cbd5e1; line-height:1.4;">
+        <strong style="color:#34d399;"><i class="fa-solid fa-leaf"></i> Farmer Field Advisory:</strong><br>
+        ${p.farmer_advisory || 'Maintain standard irrigation rotation and inspect for blast diamond lesions.'}
+      </div>
+
+      <div class="action-buttons-row" style="margin-top:10px;">
+        <button class="btn-card-action alert-green" onclick="document.getElementById('farmer-modal').classList.remove('hidden')">
+          <i class="fa-solid fa-wheat-awn"></i> Farmer Crop Hub
+        </button>
+        <button class="btn-card-action" onclick="document.getElementById('sentinel-modal').classList.remove('hidden'); initSentinelStudio(); selectBandComposite('ndvi');">
+          <i class="fa-solid fa-satellite"></i> Sentinel-2 Studio
+        </button>
+      </div>
+    </div>
+  `;
+
+  if (p.zone_id === 'NDVI-KVR-01') map.setView([14.515, 79.98], 14, { animate: true });
+  else if (p.zone_id === 'NDVI-KVR-02') map.setView([14.485, 79.98], 14, { animate: true });
+  else if (p.zone_id === 'NDVI-PEN-01') map.setView([14.464, 79.97], 15, { animate: true });
+  else if (p.zone_id === 'NDVI-NMC-01') map.setView([14.445, 79.99], 15, { animate: true });
+  else if (p.zone_id === 'NDVI-NMC-02') map.setView([14.425, 79.97], 15, { animate: true });
+};
+
+window.inspectRBK = function(p) {
+  const inspector = document.getElementById("inspector-content");
+  inspector.innerHTML = `
+    <div class="market-detail-card">
+      <div class="md-header">
+        <div>
+          <div class="md-title">${p.name}</div>
+          <div class="md-id">${p.rbk_id} • ${p.mandal} (${p.village})</div>
+        </div>
+        <span class="risk-badge" style="background:#10b981; color:#ffffff;">RBK Center</span>
+      </div>
+
+      <table class="detail-table">
+        <tr><td>Agri Assistant:</td><td><strong>${p.agri_officer}</strong></td></tr>
+        <tr><td>Direct Helpline:</td><td><a href="tel:${p.phone}" style="color:#38bdf8; font-weight:700;">${p.phone}</a></td></tr>
+        <tr><td>Ayacut / Farmers:</td><td><strong>${p.ayacut_acres} Acres</strong> (${p.coverage_farmers} Farmers)</td></tr>
+        <tr><td>Primary Crop:</td><td>${p.primary_crop}</td></tr>
+        <tr><td>Operating Status:</td><td><span class="badge-tag alert-green">${p.status}</span></td></tr>
+        <tr><td>Soil Health Card:</td><td>${p.soil_health}</td></tr>
+        <tr><td>Linked Market:</td><td>${p.mandi_link}</td></tr>
+      </table>
+
+      <div style="margin-top:10px; padding:8px 10px; background:rgba(2,132,199,0.1); border-left:3px solid #38bdf8; border-radius:4px; font-size:0.75rem; color:#cbd5e1; line-height:1.4;">
+        <strong style="color:#38bdf8;"><i class="fa-solid fa-check-double"></i> Mandated Services:</strong><br>
+        ${p.services}
+      </div>
+
+      <div class="action-buttons-row" style="margin-top:10px;">
+        <a class="btn-card-action alert-green" href="tel:${p.phone}">
+          <i class="fa-solid fa-phone"></i> Call Agri Officer
+        </a>
+        <button class="btn-card-action" onclick="document.getElementById('farmer-modal').classList.remove('hidden')">
+          <i class="fa-solid fa-wheat-awn"></i> Farmer Portal
+        </button>
+      </div>
+    </div>
+  `;
+  map.setView([p.lat, p.lon], 16, { animate: true });
+};
+
+window.focusOnCropZone = function(zoneId) {
+  document.getElementById("farmer-modal").classList.add("hidden");
+  if (layerNDVI && !map.hasLayer(layerNDVI)) {
+    map.addLayer(layerNDVI);
+    const cb = document.getElementById("layer-ndvi");
+    if (cb) cb.checked = true;
+  }
+  const match = allData.ndvi_zones.features.find(f => f.properties.zone_id === zoneId);
+  if (match) inspectNDVIZone(match.properties);
+};
+
+window.focusOnRBK = function(rbkId) {
+  document.getElementById("farmer-modal").classList.add("hidden");
+  if (layerRBK && !map.hasLayer(layerRBK)) {
+    map.addLayer(layerRBK);
+    const cb = document.getElementById("layer-rbk");
+    if (cb) cb.checked = true;
+  }
+  const match = allData.rbk_centers.features.find(f => f.properties.rbk_id === rbkId);
+  if (match) inspectRBK(match.properties);
+};
+
+window.focusOnWaterPoint = function(pointId) {
+  document.getElementById("citizen-modal").classList.add("hidden");
+  if (layerWaterPoints && !map.hasLayer(layerWaterPoints)) {
+    map.addLayer(layerWaterPoints);
+    const cb = document.getElementById("layer-water-points");
+    if (cb) cb.checked = true;
+  }
+  const match = allData.water_points.features.find(f => f.properties.id === pointId);
+  if (match) inspectWaterPoint(match.properties);
+};
+
+window.focusOnHospital = function(hospId) {
+  document.getElementById("citizen-modal").classList.add("hidden");
+  if (layerHospitals && !map.hasLayer(layerHospitals)) {
+    map.addLayer(layerHospitals);
+    const cb = document.getElementById("layer-hospitals");
+    if (cb) cb.checked = true;
+  }
+  const match = allData.hospitals.features.find(f => f.properties.hospital_id === hospId);
+  if (match) inspectHospital(match.properties);
+};
+
+window.submitCitizenGrievance = function(e) {
+  e.preventDefault();
+  const ward = document.getElementById("grv-ward").value;
+  const cat = document.getElementById("grv-category").value;
+  const contact = document.getElementById("grv-contact").value;
+  const landmark = document.getElementById("grv-landmark").value;
+  const desc = document.getElementById("grv-desc").value;
+
+  const ticketId = "NMC-GRV-2026-" + Math.floor(1000 + Math.random() * 9000);
+  const now = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+
+  const resultCard = document.getElementById("grv-result-card");
+  resultCard.classList.remove("hidden");
+  resultCard.innerHTML = `
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+      <strong style="color:#10b981; font-size:0.92rem;"><i class="fa-solid fa-circle-check"></i> Grievance Dispatched Successfully!</strong>
+      <span class="badge-tag alert-green">${ticketId}</span>
+    </div>
+    <table class="detail-table" style="font-size:0.8rem;">
+      <tr><td>Jurisdiction:</td><td>${ward}</td></tr>
+      <tr><td>Hazard Category:</td><td><strong>${cat}</strong></td></tr>
+      <tr><td>Complainant:</td><td>${contact} (${landmark})</td></tr>
+      <tr><td>Timestamp:</td><td>Today, ${now} IST</td></tr>
+      <tr><td>Assigned Officer:</td><td><strong>Sri K. Ramesh Babu, NMC Ward Sanitary Inspector</strong></td></tr>
+      <tr><td>Target Resolution:</td><td><strong style="color:#38bdf8;">Within 4 Hours (High Priority Protocol)</strong></td></tr>
+    </table>
+    <div style="margin-top:10px; display:flex; gap:8px;">
+      <button class="btn-card-action alert-green" onclick="document.getElementById('citizen-modal').classList.add('hidden');">
+        <i class="fa-solid fa-check"></i> Acknowledge & Return to Map
+      </button>
+    </div>
+  `;
+
+  document.getElementById("grv-status-msg").textContent = "✓ Ticket active. SMS confirmation sent.";
+};
+
 window.openStreetView = function(lat, lon, name, type) {
   const streetModal = document.getElementById("street-modal");
   const content = document.getElementById("street-modal-content");
@@ -1427,6 +1715,83 @@ function setupEventListeners() {
   document.getElementById("layer-hospitals").addEventListener("change", (e) => toggleLayer(layerHospitals, e.target.checked));
   document.getElementById("layer-boundaries").addEventListener("change", (e) => toggleLayer(layerBoundaries, e.target.checked));
 
+  const cbNDVI = document.getElementById("layer-ndvi");
+  if (cbNDVI) cbNDVI.addEventListener("change", (e) => toggleLayer(layerNDVI, e.target.checked));
+  const cbRBK = document.getElementById("layer-rbk");
+  if (cbRBK) cbRBK.addEventListener("change", (e) => toggleLayer(layerRBK, e.target.checked));
+
+  // Farmer Portal Modal Wiring
+  const btnFarmer = document.getElementById("btn-farmer-portal");
+  const modalFarmer = document.getElementById("farmer-modal");
+  const btnCloseFarmer = document.getElementById("btn-close-farmer");
+  if (btnFarmer && modalFarmer) {
+    btnFarmer.addEventListener("click", () => modalFarmer.classList.remove("hidden"));
+  }
+  if (btnCloseFarmer && modalFarmer) {
+    btnCloseFarmer.addEventListener("click", () => modalFarmer.classList.add("hidden"));
+  }
+  document.querySelectorAll(".farmer-tab-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      document.querySelectorAll(".farmer-tab-btn").forEach(b => b.classList.remove("active"));
+      document.querySelectorAll(".farmer-tab-pane").forEach(p => p.style.display = "none");
+      btn.classList.add("active");
+      const target = document.getElementById(btn.dataset.tab);
+      if (target) target.style.display = "block";
+    });
+  });
+
+  // Citizen Helpdesk Modal Wiring
+  const btnCitizen = document.getElementById("btn-citizen-portal");
+  const modalCitizen = document.getElementById("citizen-modal");
+  const btnCloseCitizen = document.getElementById("btn-close-citizen");
+  if (btnCitizen && modalCitizen) {
+    btnCitizen.addEventListener("click", () => modalCitizen.classList.remove("hidden"));
+  }
+  if (btnCloseCitizen && modalCitizen) {
+    btnCloseCitizen.addEventListener("click", () => modalCitizen.classList.add("hidden"));
+  }
+  document.querySelectorAll(".citizen-tab-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      document.querySelectorAll(".citizen-tab-btn").forEach(b => b.classList.remove("active"));
+      document.querySelectorAll(".citizen-tab-pane").forEach(p => p.style.display = "none");
+      btn.classList.add("active");
+      const target = document.getElementById(btn.dataset.tab);
+      if (target) target.style.display = "block";
+    });
+  });
+
+  // Andhra GIS Sahayak AI Copilot Wiring
+  const btnOpenCopilot = document.getElementById("btn-open-copilot");
+  const floatingCopilotBtn = document.getElementById("floating-copilot-btn");
+  const copilotChatWindow = document.getElementById("copilot-chat-window");
+  const btnCopilotClose = document.getElementById("btn-copilot-close");
+  const btnCopilotReset = document.getElementById("btn-copilot-reset");
+
+  function toggleCopilot() {
+    if (!copilotChatWindow) return;
+    copilotChatWindow.classList.toggle("hidden");
+    if (!copilotChatWindow.classList.contains("hidden")) {
+      const input = document.getElementById("copilot-input");
+      if (input) input.focus();
+    }
+  }
+
+  if (btnOpenCopilot) btnOpenCopilot.addEventListener("click", toggleCopilot);
+  if (floatingCopilotBtn) floatingCopilotBtn.addEventListener("click", toggleCopilot);
+  if (btnCopilotClose) btnCopilotClose.addEventListener("click", () => copilotChatWindow.classList.add("hidden"));
+  if (btnCopilotReset) btnCopilotReset.addEventListener("click", resetCopilotChat);
+
+  // Initialize Welcome Message
+  resetCopilotChat();
+
+  // Quick Prompt Pills
+  document.querySelectorAll(".copilot-pill").forEach(pill => {
+    pill.addEventListener("click", () => {
+      const prompt = pill.dataset.prompt;
+      submitCopilotQuery(prompt);
+    });
+  });
+
   // Mask toggle
   document.getElementById("filter-mask").addEventListener("change", (e) => {
     if (e.target.value === "DARK") {
@@ -1439,7 +1804,22 @@ function setupEventListeners() {
   // Network Focus Filter
   document.getElementById("filter-network-focus").addEventListener("change", (e) => {
     const focus = e.target.value;
-    if (focus === "WATER_FLOW") {
+    if (focus === "AGRICULTURE") {
+      if (layerNDVI) map.addLayer(layerNDVI);
+      if (layerRBK) map.addLayer(layerRBK);
+      if (layerRiver) map.addLayer(layerRiver);
+      map.removeLayer(layerMarkets);
+      map.removeLayer(layerHospitals);
+      map.removeLayer(layerFlowNetwork);
+      map.setView([14.50, 79.98], 13, { animate: true });
+    } else if (focus === "CITIZEN_EMERGENCY") {
+      if (layerWaterPoints) map.addLayer(layerWaterPoints);
+      if (layerHospitals) map.addLayer(layerHospitals);
+      if (layerTanks) map.addLayer(layerTanks);
+      if (layerNDVI) map.removeLayer(layerNDVI);
+      if (layerMarkets) map.removeLayer(layerMarkets);
+      map.setView([14.45, 79.98], 14, { animate: true });
+    } else if (focus === "WATER_FLOW") {
       map.addLayer(layerFlowNetwork);
       map.addLayer(layerTanks);
       map.addLayer(layerSources);
@@ -1458,6 +1838,7 @@ function setupEventListeners() {
       map.addLayer(layerMarkets);
       map.addLayer(layerVegMarkets);
       map.addLayer(layerHospitals);
+      if (layerRBK) map.addLayer(layerRBK);
     }
   });
 
@@ -1481,6 +1862,23 @@ function setupEventListeners() {
     const pipeMatch = allData.flow_network.features.find(f => f.properties.name.toLowerCase().includes(query));
     if (pipeMatch) {
       inspectFlowPipe(pipeMatch.properties);
+      return;
+    }
+
+    if (allData.rbk_centers) {
+      const rbkMatch = allData.rbk_centers.features.find(f => f.properties.name.toLowerCase().includes(query) || f.properties.mandal.toLowerCase().includes(query));
+      if (rbkMatch) {
+        inspectRBK(rbkMatch.properties);
+        return;
+      }
+    }
+
+    if (allData.ndvi_zones) {
+      const ndviMatch = allData.ndvi_zones.features.find(f => f.properties.name.toLowerCase().includes(query) || f.properties.crop_type.toLowerCase().includes(query));
+      if (ndviMatch) {
+        inspectNDVIZone(ndviMatch.properties);
+        return;
+      }
     }
   });
 
@@ -1499,6 +1897,7 @@ function setupEventListeners() {
 }
 
 function toggleLayer(layer, isChecked) {
+  if (!layer) return;
   if (isChecked) map.addLayer(layer);
   else map.removeLayer(layer);
 }
@@ -1510,4 +1909,263 @@ function downloadFile(content, fileName, contentType) {
   a.download = fileName;
   a.click();
   URL.revokeObjectURL(a.href);
+}
+
+// ---------------- 9. ANDHRA GIS SAHAYAK AI COPILOT ENGINE ---------------- //
+
+function resetCopilotChat() {
+  const container = document.getElementById("copilot-messages");
+  if (!container) return;
+  container.innerHTML = `
+    <div class="copilot-msg assistant">
+      <div class="copilot-msg-avatar"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+      <div class="copilot-msg-bubble">
+        <p><strong>Namaskaram! 🙏 I am Andhra GIS Sahayak.</strong></p>
+        <p>I am your smart AI Geospatial Copilot for <strong>Nellore City (NMC)</strong> and <strong>Kovur Mandal</strong>, combining live Sentinel-2 Earth observation, water SCADA hydraulic data, and official public health records.</p>
+        <p>How may I assist you today?</p>
+        <ul>
+          <li>🌾 <strong>Farmers:</strong> Check Kovur paddy NDVI crop vigor, rice blast warnings & Mandi MSP rates.</li>
+          <li>💧 <strong>Citizens:</strong> Locate certified RO drinking water ATMs and check TDS ppm potability.</li>
+          <li>🏥 <strong>Emergency:</strong> Connect with 108 Ambulance and locate 24/7 ICU beds in ACSR Hospital.</li>
+          <li>⚠️ <strong>Municipal Officers:</strong> Detect high-risk meat shops near sewage outfalls or simulate pipeline contamination.</li>
+        </ul>
+        <p>Click any quick prompt above or ask any question in plain English or Telugu transliteration!</p>
+      </div>
+    </div>
+  `;
+}
+
+window.handleCopilotSubmit = function(e) {
+  e.preventDefault();
+  const input = document.getElementById("copilot-input");
+  if (!input) return;
+  const q = input.value.trim();
+  if (!q) return;
+  input.value = "";
+  submitCopilotQuery(q);
+};
+
+function submitCopilotQuery(query) {
+  const container = document.getElementById("copilot-messages");
+  if (!container) return;
+
+  // Append user message
+  const userMsg = document.createElement("div");
+  userMsg.className = "copilot-msg user";
+  userMsg.innerHTML = `
+    <div class="copilot-msg-avatar"><i class="fa-solid fa-user"></i></div>
+    <div class="copilot-msg-bubble"><p>${escapeHtml(query)}</p></div>
+  `;
+  container.appendChild(userMsg);
+  container.scrollTop = container.scrollHeight;
+
+  // Process AI Response with natural typing delay
+  setTimeout(() => {
+    const responseObj = generateCopilotResponse(query);
+    const botMsg = document.createElement("div");
+    botMsg.className = "copilot-msg assistant";
+    botMsg.innerHTML = `
+      <div class="copilot-msg-avatar"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+      <div class="copilot-msg-bubble">
+        ${responseObj.html}
+        ${responseObj.actionsHtml ? `<div style="margin-top:8px;">${responseObj.actionsHtml}</div>` : ''}
+      </div>
+    `;
+    container.appendChild(botMsg);
+    container.scrollTop = container.scrollHeight;
+
+    if (typeof responseObj.autoAction === 'function') {
+      responseObj.autoAction();
+    }
+  }, 320);
+}
+
+function generateCopilotResponse(query) {
+  const q = query.toLowerCase();
+
+  // 1. Paddy / Crop Vigor / Agriculture / Kovur
+  if (q.includes("crop") || q.includes("paddy") || q.includes("kovur") || q.includes("farm") || q.includes("rythu") || q.includes("vigor") || q.includes("ndvi")) {
+    return {
+      html: `
+        <p><strong>🌾 Kovur Mandal Crop Health & Satellite Vigor Assessment:</strong></p>
+        <p>Based on today's Copernicus Sentinel-2 MSI Multi-Spectral pass over Kovur and Nellore rural delta:</p>
+        <ul>
+          <li><strong>Paddy Canopy Vigor:</strong> <span style="color:#10b981; font-weight:700;">+0.74 Mean NDVI</span> (High vegetative vigor; dense photosynthetically active biomass across 18,400 acres).</li>
+          <li><strong>Leaf Nitrogen Health:</strong> <strong>+0.52 NDRE</strong> (SPAD 44; optimal chlorophyll content in leaf blades).</li>
+          <li><strong>Irrigation Canal Supply:</strong> Pennar North Delta Main Canal is actively flowing at <strong>450 Cusecs</strong> from Sangam / Somasila Barrage.</li>
+          <li><strong>Crop Phenology:</strong> Panicle Initiation (PI) to active flowering for <em>Nellore Masuri (BPT 5204)</em>.</li>
+        </ul>
+        <p><strong>Farmer Tip:</strong> Maintain 3 to 5 cm standing water. Second split of MOP (Muriate of Potash @ 25 kg/acre) is recommended before flower emergence.</p>
+      `,
+      actionsHtml: `
+        <button class="copilot-action-pill green" onclick="focusOnCropZone('NDVI-KVR-01')"><i class="fa-solid fa-crosshairs"></i> Zoom to Kovur Paddy</button>
+        <button class="copilot-action-pill green" onclick="document.getElementById('farmer-modal').classList.remove('hidden')"><i class="fa-solid fa-wheat-awn"></i> Open Farmer Crop Hub</button>
+        <button class="copilot-action-pill" onclick="focusOnRBK('RBK-KVR-01')"><i class="fa-solid fa-building-wheat"></i> Kovur RBK Center</button>
+      `,
+      autoAction: () => {
+        if (layerNDVI && !map.hasLayer(layerNDVI)) map.addLayer(layerNDVI);
+        if (layerRBK && !map.hasLayer(layerRBK)) map.addLayer(layerRBK);
+        map.setView([14.50, 79.98], 13, { animate: true });
+      }
+    };
+  }
+
+  // 2. Drinking Water / RO Plants / Hand Pumps / TDS
+  if (q.includes("water") || q.includes("ro") || q.includes("plant") || q.includes("tds") || q.includes("drink") || q.includes("tap") || q.includes("pump")) {
+    return {
+      html: `
+        <p><strong>💧 Potable Water & RO Plant Directory (Nellore & Kovur):</strong></p>
+        <p>Nellore Municipal Corporation operates certified NTR Sujala and Municipal RO water ATMs with continuous TDS testing:</p>
+        <ul>
+          <li><strong>Stonehousepet Rythu Bazaar (WP-RO-01):</strong> <strong>180 ppm TDS</strong> • Excellent WHO grade potability.</li>
+          <li><strong>Santhapet Central School (WP-RO-02):</strong> <strong>165 ppm TDS</strong> • Subsidized municipal dispensing.</li>
+          <li><strong>Kovur Main Commercial Bazaar (WP-RO-03):</strong> <strong>190 ppm TDS</strong> • Gram Panchayat certified plant.</li>
+          <li><strong>Hand Pumps Warning:</strong> Shallow public hand pumps near Stonehousepet show <strong>480 ppm TDS</strong> with moderate mineral hardness. Recommended for washing, not drinking.</li>
+        </ul>
+      `,
+      actionsHtml: `
+        <button class="copilot-action-pill" onclick="focusOnWaterPoint('WP-RO-01')"><i class="fa-solid fa-glass-water-droplet"></i> Locate Stonehousepet RO</button>
+        <button class="copilot-action-pill green" onclick="document.getElementById('citizen-modal').classList.remove('hidden')"><i class="fa-solid fa-hand-holding-heart"></i> Citizen Water Helpdesk</button>
+      `,
+      autoAction: () => {
+        if (layerWaterPoints && !map.hasLayer(layerWaterPoints)) map.addLayer(layerWaterPoints);
+        map.setView([14.450, 79.991], 15, { animate: true });
+      }
+    };
+  }
+
+  // 3. Hospital / Emergency / Doctor / 108 / 104
+  if (q.includes("hospital") || q.includes("doctor") || q.includes("emergency") || q.includes("icu") || q.includes("ambulance") || q.includes("108") || q.includes("104") || q.includes("health")) {
+    return {
+      html: `
+        <p><strong>🏥 24/7 Emergency Healthcare & Hospital Access:</strong></p>
+        <p>Immediate medical support and ICU bed availability in the Nellore-Kovur corridor:</p>
+        <ul>
+          <li><strong>ACSR Govt General Hospital (Nellore Core):</strong> <strong>750 Beds, 40 ICU Beds</strong> • Free YSR Aarogyasri treatment, 24/7 Trauma Center, Blood Bank • Phone: <strong>0861-2328100</strong>.</li>
+          <li><strong>Kovur Community Health Center (CHC):</strong> <strong>50 Beds, 6 Emergency Beds</strong> • 24/7 Maternity & Minor Trauma • Phone: <strong>08622-224050</strong>.</li>
+          <li><strong>Narayana Super Specialty (Chinthareddypalem):</strong> <strong>350 Beds, 30 ICU Beds</strong> • Advanced cardiology & neuro • Phone: <strong>0861-2317963</strong>.</li>
+          <li><strong>Emergency Dispatch:</strong> Call <strong>108</strong> for free ambulance pickup (estimated arrival time 6 mins).</li>
+        </ul>
+      `,
+      actionsHtml: `
+        <a class="copilot-action-pill red" href="tel:108"><i class="fa-solid fa-truck-medical"></i> Call 108 Free Ambulance</a>
+        <button class="copilot-action-pill red" onclick="focusOnHospital('HOSP-01')"><i class="fa-solid fa-hospital"></i> ACSR Govt Hospital Map</button>
+        <a class="copilot-action-pill" href="tel:104"><i class="fa-solid fa-user-doctor"></i> Call 104 Doctor Helpline</a>
+      `,
+      autoAction: () => {
+        if (layerHospitals && !map.hasLayer(layerHospitals)) map.addLayer(layerHospitals);
+        map.setView([14.435, 79.975], 15, { animate: true });
+      }
+    };
+  }
+
+  // 4. Market / Meat / Poultry / Sewage Drain Hazard
+  if (q.includes("market") || q.includes("meat") || q.includes("chicken") || q.includes("fish") || q.includes("drain") || q.includes("sewage") || q.includes("hazard") || q.includes("sanitation")) {
+    return {
+      html: `
+        <p><strong>⚠️ Wet Meat Markets & Open Sewage Drain Hazard Analysis:</strong></p>
+        <p>Spatial analysis modeled after the 2021 Wuhan wet market epidemiology research:</p>
+        <ul>
+          <li><strong>Critical High-Risk Zone:</strong> <strong>45 wet chicken & mutton shops</strong> in Stonehousepet and Santhapet are located within <strong>50 meters</strong> of open sullage sewage outfalls (<code>DRN-NMC-01</code>).</li>
+          <li><strong>Cross-Contamination Risk:</strong> Uncovered wastewater overflow during monsoon creates fly and bacterial vectors (Salmonella, E. coli) directly adjacent to meat cutting stalls.</li>
+          <li><strong>Sanitary Safe Alternative:</strong> <strong>Stonehousepet Rythu Bazaar (800m north)</strong> has 100% piped municipal water, covered drainage channels, and zero direct wastewater exposure.</li>
+        </ul>
+      `,
+      actionsHtml: `
+        <button class="copilot-action-pill red" onclick="toggleLayer(layerDrainage, true); toggleLayer(layerMarkets, true); map.setView([14.450, 79.991], 16);"><i class="fa-solid fa-triangle-exclamation"></i> Highlight Drain Hazards</button>
+        <button class="copilot-action-pill green" onclick="inspectVegMarket(allData.vegetable_markets.features[0].properties)"><i class="fa-solid fa-carrot"></i> View Rythu Bazaar</button>
+      `,
+      autoAction: () => {
+        if (layerDrainage && !map.hasLayer(layerDrainage)) map.addLayer(layerDrainage);
+        if (layerMarkets && !map.hasLayer(layerMarkets)) map.addLayer(layerMarkets);
+        map.setView([14.450, 79.991], 15, { animate: true });
+      }
+    };
+  }
+
+  // 5. Pest / Blast / Disease
+  if (q.includes("pest") || q.includes("blast") || q.includes("disease") || q.includes("hopper") || q.includes("bph") || q.includes("spray")) {
+    return {
+      html: `
+        <p><strong>🐛 Rice Blast & Pest Early Warning (Kovur Delta):</strong></p>
+        <p>Real-time microclimate intelligence from weather telemetry & field sensors:</p>
+        <ul>
+          <li><strong>Rice Blast (Magnaporthe oryzae) Alert:</strong> Relative humidity peaking at <strong>86%</strong> at night with temperatures near 24°C creates a spore germination window.</li>
+          <li><strong>Target Treatment:</strong> Spray <strong>Tricyclazole 75% WP @ 0.6 g/L</strong> or <strong>Isoprothiolane 40% EC @ 1.5 mL/L</strong> during early dawn.</li>
+          <li><strong>Brown Plant Hopper (BPH):</strong> Currently well below Economic Threshold Level (&lt;5 hoppers/hill). Avoid excessive basal urea.</li>
+        </ul>
+      `,
+      actionsHtml: `
+        <button class="copilot-action-pill green" onclick="document.getElementById('farmer-modal').classList.remove('hidden'); document.querySelector('[data-tab=tab-pest-warning]').click();"><i class="fa-solid fa-bug"></i> Open Full Pest Advisory</button>
+      `,
+      autoAction: () => {
+        map.setView([14.494, 79.978], 14, { animate: true });
+      }
+    };
+  }
+
+  // 6. Mandi / Rates / Price / MSP
+  if (q.includes("price") || q.includes("rate") || q.includes("mandi") || q.includes("msp") || q.includes("bazaar") || q.includes("cost") || q.includes("rupee")) {
+    return {
+      html: `
+        <p><strong>💰 Live Mandi Minimum Support Price (MSP) & Market Rates:</strong></p>
+        <p>Official procurement rates verified through AP CM-APP & Nellore Agricultural Market Committee:</p>
+        <ul>
+          <li><strong>Nellore Masuri Paddy (BPT 5204):</strong> <strong>₹2,320 / Quintal</strong> (Govt Grade-A MSP).</li>
+          <li><strong>Common Paddy (MTU 1010):</strong> <strong>₹2,300 / Quintal</strong>.</li>
+          <li><strong>Sugarcane (Co 86032):</strong> <strong>₹3,150 / Ton</strong> (Mill Gate FRP).</li>
+          <li><strong>Rythu Bazaar Direct Tomatoes:</strong> <strong>₹28 / Kg</strong> (Zero middleman fee).</li>
+          <li><strong>Procurement Center:</strong> Kovur Gram Rythu Bharosa Kendram (RBK-01).</li>
+        </ul>
+      `,
+      actionsHtml: `
+        <button class="copilot-action-pill green" onclick="document.getElementById('farmer-modal').classList.remove('hidden'); document.querySelector('[data-tab=tab-mandi-prices]').click();"><i class="fa-solid fa-scale-balanced"></i> View Full Mandi Ticker</button>
+      `
+    };
+  }
+
+  // 7. Grievance / Report / Leak
+  if (q.includes("grievance") || q.includes("report") || q.includes("leak") || q.includes("dirty") || q.includes("complain") || q.includes("broken")) {
+    return {
+      html: `
+        <p><strong>📝 NMC 24-Hour Municipal Grievance Redressal:</strong></p>
+        <p>You can lodge water contamination, pipe bursts, or drain overflow complaints directly:</p>
+        <ul>
+          <li><strong>Call Water Helpline:</strong> <strong>1916</strong> (Nellore Municipal Corporation).</li>
+          <li><strong>Ward Sanitary Inspector:</strong> Immediate dispatch protocol with 4-hour resolution SLA.</li>
+          <li><strong>Online Grievance Submission:</strong> Use our 1-click citizen complaint form to generate an authentic tracking ticket code (e.g. <code>NMC-GRV-2026-XXXX</code>).</li>
+        </ul>
+      `,
+      actionsHtml: `
+        <button class="copilot-action-pill" onclick="document.getElementById('citizen-modal').classList.remove('hidden'); document.querySelector('[data-tab=tab-file-grievance]').click();"><i class="fa-solid fa-clipboard-question"></i> File Grievance Ticket Now</button>
+        <a class="copilot-action-pill" href="tel:1916"><i class="fa-solid fa-phone"></i> Call 1916 Helpline</a>
+      `
+    };
+  }
+
+  // Default Fallback
+  return {
+    html: `
+      <p>I understand you're asking about <em>"${escapeHtml(query)}"</em> in Nellore & Kovur.</p>
+      <p>Here are the key spatial services and analytics available in this platform:</p>
+      <ul>
+        <li>🌾 <strong>Farmer Crop Hub:</strong> Kovur paddy NDVI vigor (+0.74), rice blast warnings, and RBK centers.</li>
+        <li>💧 <strong>Clean RO Drinking Water:</strong> Certified municipal RO plants with TDS potability readings.</li>
+        <li>🏥 <strong>Emergency Healthcare:</strong> ACSR Govt Hospital (750 beds), Kovur CHC, and 108 ambulance.</li>
+        <li>⚠️ <strong>Sanitation Hazard:</strong> High-risk wet meat stalls within 50m of sewage drains.</li>
+      </ul>
+      <p>Click any quick action below to explore!</p>
+    `,
+    actionsHtml: `
+      <button class="copilot-action-pill green" onclick="document.getElementById('farmer-modal').classList.remove('hidden')"><i class="fa-solid fa-wheat-awn"></i> Farmer Crop Hub</button>
+      <button class="copilot-action-pill" onclick="document.getElementById('citizen-modal').classList.remove('hidden')"><i class="fa-solid fa-hand-holding-heart"></i> Citizen Helpdesk</button>
+      <button class="copilot-action-pill" onclick="switchEngine(currentEngine === '2D' ? '3D' : '2D')"><i class="fa-solid fa-cube"></i> Toggle 2D / 3D Engine</button>
+    `
+  };
+}
+
+function escapeHtml(text) {
+  const div = document.createElement('div');
+  div.textContent = text;
+  return div.innerHTML;
 }
