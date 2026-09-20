@@ -533,6 +533,46 @@
           </div>
         </div>
 
+        <!-- Multi-Spectral Interactive Split-Screen Swipe Comparison Tool -->
+        <div class="spectral-profile-section" style="margin-top:20px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; flex-wrap:wrap; gap:8px;">
+            <div>
+              <h3><i class="fa-solid fa-arrows-split-up-and-left"></i> Multi-Spectral Split-Screen Satellite Swipe Inspector</h3>
+              <p class="export-desc" style="margin:0;">Drag the vertical divider below to swipe between Natural True Color (RGB) and false-color chlorophyll / vegetation index modes:</p>
+            </div>
+            <div style="display:flex; gap:6px; flex-wrap:wrap;">
+              <button class="mci-quick-btn active" id="btn-swipe-cir" onclick="setSwipeMode('cir')">Swipe RGB vs CIR (Paddy)</button>
+              <button class="mci-quick-btn" id="btn-swipe-ndvi" onclick="setSwipeMode('ndvi')">Swipe RGB vs NDVI Vigor</button>
+              <button class="mci-quick-btn" id="btn-swipe-ndwi" onclick="setSwipeMode('ndwi')">Swipe RGB vs NDWI Water</button>
+            </div>
+          </div>
+
+          <!-- Split Screen Canvas / Visualizer Box -->
+          <div class="swipe-viewport" id="swipe-viewport">
+            <div class="swipe-layer swipe-layer-under" id="swipe-layer-under">
+              <!-- True Color Underlay -->
+              <div class="swipe-overlay-content true-color-sim">
+                <span class="swipe-tag left"><i class="fa-solid fa-image"></i> Natural True Color (RGB: B04, B03, B02)</span>
+              </div>
+            </div>
+            <div class="swipe-layer swipe-layer-over" id="swipe-layer-over" style="width: 50%;">
+              <!-- False Color Overlay clipped by divider -->
+              <div class="swipe-overlay-content cir-sim" id="swipe-overlay-dynamic">
+                <span class="swipe-tag right" id="swipe-right-tag"><i class="fa-solid fa-palette"></i> Color Infrared (CIR: B08, B04, B03)</span>
+              </div>
+            </div>
+            <div class="swipe-divider" id="swipe-divider" style="left: 50%;">
+              <div class="swipe-handle">
+                <i class="fa-solid fa-arrows-left-right"></i>
+              </div>
+            </div>
+          </div>
+          <div style="display:flex; justify-content:space-between; font-size:0.72rem; color:#94a3b8; margin-top:6px; font-family:'JetBrains Mono',monospace;">
+            <span>◀ Drag divider left to reveal False-Color</span>
+            <span>Drag divider right to reveal True-Color ▶</span>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>

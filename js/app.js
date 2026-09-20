@@ -1043,6 +1043,9 @@ function initSentinelStudio() {
     updateZonalSpectralCalculator(selZone.value);
   }
 
+  // Initialize Multi-Spectral Split-Screen Swipe Divider
+  initSwipeDivider();
+
   // Sync with current composite
   selectBandComposite(currentCompositeType);
 }
@@ -1210,6 +1213,78 @@ function highlightSpectralBands(bandIndices) {
     ds.pointHoverRadius = ds.data.map((_, idx) => indices.includes(idx) ? 9 : 5);
   });
   spectralChart.update('none');
+}
+
+// Multi-Spectral Split-Screen Satellite Swipe Inspector
+let currentSwipeMode = "cir";
+
+function setSwipeMode(mode) {
+  currentSwipeMode = mode;
+  document.querySelectorAll("[id^='btn-swipe-']").forEach(b => b.classList.remove("active"));
+  const activeBtn = document.getElementById("btn-swipe-" + mode);
+  if (activeBtn) activeBtn.classList.add("active");
+
+  const overlay = document.getElementById("swipe-overlay-dynamic");
+  const tag = document.getElementById("swipe-right-tag");
+  if (!overlay || !tag) return;
+
+  overlay.className = "swipe-overlay-content " + mode + "-sim";
+
+  if (mode === "cir") {
+    tag.innerHTML = '<i class="fa-solid fa-palette"></i> Color Infrared (CIR: B08, B04, B03)';
+  } else if (mode === "ndvi") {
+    tag.innerHTML = '<i class="fa-solid fa-seedling"></i> NDVI Vigor Continuous Ramp (-0.2 to +0.85)';
+  } else if (mode === "ndwi") {
+    tag.innerHTML = '<i class="fa-solid fa-droplet"></i> Normalized Water Index (NDWI: B03, B08)';
+  }
+}
+
+function initSwipeDivider() {
+  const viewport = document.getElementById("swipe-viewport");
+  const overLayer = document.getElementById("swipe-layer-over");
+  const divider = document.getElementById("swipe-divider");
+  if (!viewport || !overLayer || !divider) return;
+
+  let isDragging = false;
+
+  function setSwipePosition(clientX) {
+    const rect = viewport.getBoundingClientRect();
+    let x = clientX - rect.left;
+    if (x < 15) x = 15;
+    if (x > rect.width - 15) x = rect.width - 15;
+    const pct = (x / rect.width) * 100;
+    overLayer.style.width = pct + "%";
+    divider.style.left = pct + "%";
+  }
+
+  viewport.addEventListener("mousedown", (e) => {
+    isDragging = true;
+    setSwipePosition(e.clientX);
+  });
+
+  window.addEventListener("mousemove", (e) => {
+    if (!isDragging) return;
+    setSwipePosition(e.clientX);
+  });
+
+  window.addEventListener("mouseup", () => {
+    isDragging = false;
+  });
+
+  // Mobile / touch screen events
+  viewport.addEventListener("touchstart", (e) => {
+    isDragging = true;
+    if (e.touches && e.touches[0]) setSwipePosition(e.touches[0].clientX);
+  });
+
+  window.addEventListener("touchmove", (e) => {
+    if (!isDragging) return;
+    if (e.touches && e.touches[0]) setSwipePosition(e.touches[0].clientX);
+  });
+
+  window.addEventListener("touchend", () => {
+    isDragging = false;
+  });
 }
 
 // ---------------- 4. SCADA HYDRAULIC SANDBOX & CONTAMINATION CRISIS ---------------- //

@@ -2760,3 +2760,121 @@ body {
   flex-wrap: wrap;
   gap: 8px;
 }
+
+/* ---------------- MULTI-SPECTRAL SPLIT-SCREEN SWIPE INSPECTOR ---------------- */
+
+.swipe-viewport {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  background: #090d16;
+  border: 1px solid #1e293b;
+  border-radius: 8px;
+  overflow: hidden;
+  user-select: none;
+  cursor: ew-resize;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.swipe-layer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.swipe-layer-under {
+  z-index: 1;
+}
+
+.swipe-layer-over {
+  z-index: 2;
+  width: 50%;
+  overflow: hidden;
+  border-right: 2px solid #38bdf8;
+}
+
+.swipe-overlay-content {
+  width: 100%;
+  height: 100%;
+  min-width: 800px;
+  display: flex;
+  align-items: flex-start;
+  padding: 12px;
+  position: relative;
+  transition: background 0.3s ease;
+}
+
+.true-color-sim {
+  background: linear-gradient(135deg, #15803d 0%, #166534 35%, #ca8a04 55%, #0284c7 70%, #475569 100%);
+  opacity: 0.92;
+}
+
+.cir-sim {
+  background: linear-gradient(135deg, #e11d48 0%, #be123c 35%, #0284c7 55%, #0f172a 70%, #64748b 100%);
+  opacity: 0.95;
+}
+
+.ndvi-sim {
+  background: linear-gradient(135deg, #1a9850 0%, #66bd63 35%, #dfc27d 55%, #0077b6 70%, #dfc27d 100%);
+  opacity: 0.95;
+}
+
+.ndwi-sim {
+  background: linear-gradient(135deg, #334155 0%, #475569 35%, #00f0ff 55%, #0284c7 70%, #57534e 100%);
+  opacity: 0.95;
+}
+
+.swipe-tag {
+  position: absolute;
+  bottom: 10px;
+  background: rgba(9, 13, 22, 0.88);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  font-family: 'JetBrains Mono', monospace;
+  color: #f1f5f9;
+}
+
+.swipe-tag.left {
+  left: 12px;
+}
+
+.swipe-tag.right {
+  right: 12px;
+}
+
+.swipe-divider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: #38bdf8;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.swipe-handle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #0284c7;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  box-shadow: 0 0 14px rgba(2, 132, 199, 0.9);
+}
+
