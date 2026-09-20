@@ -2540,6 +2540,34 @@ function generateCopilotResponse(query) {
     };
   }
 
+  // 9. Multi-Spectral Composites / False Color / CIR / NDRE / NDWI / SWIR / Sentinel
+  if (q.includes("composite") || q.includes("false") || q.includes("cir") || q.includes("infrared") || q.includes("spectral") || q.includes("sentinel") || q.includes("ndre") || q.includes("ndwi") || q.includes("swir") || q.includes("reflectance") || q.includes("band")) {
+    const targetComp = q.includes("ndre") ? "ndre" : (q.includes("ndwi") ? "ndwi" : (q.includes("swir") ? "swir" : (q.includes("rgb") ? "true-color" : "cir")));
+    return {
+      html: `
+        <p><strong>🛰️ Copernicus Sentinel-2 Multi-Spectral & False-Color Composites:</strong></p>
+        <p>Direct radiometric Earth observation across Tile <code>T44NNC</code> (10m spatial resolution) synchronized with persistent NDVI biomass analytics:</p>
+        <ul>
+          <li>🌸 <strong>Color Infrared (CIR - B08/B04/B03):</strong> Maps NIR to Red channel. High-chlorophyll Kovur paddy illuminates in <strong>radiant magenta/crimson</strong>, directly proving the high NIR/Red ratio ($+0.74$ NDVI).</li>
+          <li>🌿 <strong>Red-Edge Chlorophyll (NDRE - B08/B05):</strong> Overcomes dense canopy NDVI saturation in mature sugarcane and late-tillering paddy.</li>
+          <li>🌊 <strong>Normalized Water Index (NDWI - B03/B08):</strong> Segregates Pennar River surface water ($+0.84$) from irrigated vegetative banks.</li>
+          <li>🌾 <strong>Short-Wave IR (SWIR - B12/B8A/B04):</strong> Measures root-zone soil moisture and discriminates wet alluvium from dry river sand.</li>
+        </ul>
+        <p>I have automatically activated the <strong>${targetComp.toUpperCase()}</strong> multi-spectral composite layer on your map!</p>
+      `,
+      actionsHtml: `
+        <button class="copilot-action-pill green" onclick="selectBandComposite('cir')"><i class="fa-solid fa-palette"></i> Color Infrared (CIR)</button>
+        <button class="copilot-action-pill green" onclick="selectBandComposite('ndre')"><i class="fa-solid fa-seedling"></i> Red-Edge (NDRE)</button>
+        <button class="copilot-action-pill" onclick="selectBandComposite('ndwi')"><i class="fa-solid fa-droplet"></i> Water Index (NDWI)</button>
+        <button class="copilot-action-pill" onclick="document.getElementById('sentinel-modal').classList.remove('hidden'); initSentinelStudio();"><i class="fa-solid fa-sliders"></i> Open Sentinel Studio</button>
+      `,
+      autoAction: () => {
+        selectBandComposite(targetComp);
+        map.setView([14.50, 79.98], 13, { animate: true });
+      }
+    };
+  }
+
   // Default Fallback
   return {
     html: `
