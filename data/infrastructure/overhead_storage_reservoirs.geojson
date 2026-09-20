@@ -1,0 +1,181 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ELSR-NMC-01",
+        "name": "Stonehousepet Elevated Level Service Reservoir (ELSR)",
+        "zone": "Stonehousepet (NMC)",
+        "capacity_mld": 1.8,
+        "staging_height_m": 18,
+        "supply_population": 42000,
+        "operational_status": "Active (Dual Daily Distribution)",
+        "fed_by": "HW-NMC-01",
+        "lat": 14.45,
+        "lon": 79.991
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.991,
+          14.45
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ELSR-NMC-02",
+        "name": "Santhapet Central Municipal Overhead Tank",
+        "zone": "Santhapet Commercial Ward (NMC)",
+        "capacity_mld": 2.2,
+        "staging_height_m": 20,
+        "supply_population": 55000,
+        "operational_status": "Active (Pressure Balanced)",
+        "fed_by": "HW-NMC-01",
+        "lat": 14.439,
+        "lon": 79.981
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.981,
+          14.439
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ELSR-NMC-03",
+        "name": "Ranganayakulapet Riverside Overhead Reservoir",
+        "zone": "Ranganayakulapet (NMC)",
+        "capacity_mld": 1.2,
+        "staging_height_m": 16,
+        "supply_population": 28000,
+        "operational_status": "Active",
+        "fed_by": "HW-NMC-01",
+        "lat": 14.454,
+        "lon": 79.987
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.987,
+          14.454
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ELSR-NMC-04",
+        "name": "Vedayapalem - Ramalingapuram High-Level Reservoir",
+        "zone": "Vedayapalem (NMC)",
+        "capacity_mld": 2.5,
+        "staging_height_m": 22,
+        "supply_population": 62000,
+        "operational_status": "Active (Supplies South Corridor)",
+        "fed_by": "BST-NMC-01",
+        "lat": 14.417,
+        "lon": 79.967
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.967,
+          14.417
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ELSR-NMC-05",
+        "name": "Dargamitta Municipal Water Tower",
+        "zone": "Dargamitta / Magunta Layout (NMC)",
+        "capacity_mld": 1.5,
+        "staging_height_m": 18,
+        "supply_population": 36000,
+        "operational_status": "Active",
+        "fed_by": "BST-NMC-01",
+        "lat": 14.431,
+        "lon": 79.975
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.975,
+          14.431
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ELSR-KVR-01",
+        "name": "Kovur Main Bazaar Gram Panchayat Elevated Reservoir",
+        "zone": "Kovur Bazaar (GP)",
+        "capacity_mld": 1.4,
+        "staging_height_m": 18,
+        "supply_population": 32000,
+        "operational_status": "Active (Gram Panchayat Core)",
+        "fed_by": "HW-KVR-01",
+        "lat": 14.4945,
+        "lon": 79.9785
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.9785,
+          14.4945
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ELSR-KVR-02",
+        "name": "Padugupadu Railway Colony Overhead Tank",
+        "zone": "Padugupadu (GP)",
+        "capacity_mld": 0.9,
+        "staging_height_m": 16,
+        "supply_population": 19000,
+        "operational_status": "Active",
+        "fed_by": "HW-KVR-01",
+        "lat": 14.4755,
+        "lon": 79.984
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.984,
+          14.4755
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ELSR-KVR-03",
+        "name": "Inamadugu Rural Gram Panchayat Water Tower",
+        "zone": "Inamadugu (GP)",
+        "capacity_mld": 0.6,
+        "staging_height_m": 15,
+        "supply_population": 14000,
+        "operational_status": "Active (Solar Pumping Assisted)",
+        "fed_by": "HW-KVR-01",
+        "lat": 14.491,
+        "lon": 80.0035
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.0035,
+          14.491
+        ]
+      }
+    }
+  ]
+}

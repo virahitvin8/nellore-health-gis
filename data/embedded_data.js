@@ -243,6 +243,125 @@ const HEALTH_GIS_DATA = {
       }
     ]
   },
+  "inverted_mask": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Nellore & Kovur Exclusion Mask",
+          "purpose": "Focus display strictly on study area"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                -180.0,
+                -90.0
+              ],
+              [
+                180.0,
+                -90.0
+              ],
+              [
+                180.0,
+                90.0
+              ],
+              [
+                -180.0,
+                90.0
+              ],
+              [
+                -180.0,
+                -90.0
+              ]
+            ],
+            [
+              [
+                79.945,
+                14.46
+              ],
+              [
+                79.965,
+                14.462
+              ],
+              [
+                79.99,
+                14.458
+              ],
+              [
+                80.015,
+                14.452
+              ],
+              [
+                80.025,
+                14.43
+              ],
+              [
+                80.015,
+                14.405
+              ],
+              [
+                79.98,
+                14.395
+              ],
+              [
+                79.95,
+                14.408
+              ],
+              [
+                79.935,
+                14.43
+              ],
+              [
+                79.945,
+                14.46
+              ]
+            ],
+            [
+              [
+                79.94,
+                14.468
+              ],
+              [
+                79.97,
+                14.471
+              ],
+              [
+                80.005,
+                14.469
+              ],
+              [
+                80.03,
+                14.485
+              ],
+              [
+                80.02,
+                14.525
+              ],
+              [
+                79.98,
+                14.54
+              ],
+              [
+                79.945,
+                14.52
+              ],
+              [
+                79.935,
+                14.485
+              ],
+              [
+                79.94,
+                14.468
+              ]
+            ]
+          ]
+        }
+      }
+    ]
+  },
   "waterbodies": {
     "type": "FeatureCollection",
     "features": [
@@ -1576,6 +1695,839 @@ const HEALTH_GIS_DATA = {
           "coordinates": [
             80.0042,
             14.4895
+          ]
+        }
+      }
+    ]
+  },
+  "flow_network": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "pipe_id": "PL-RAW-01",
+          "name": "Pennar River Infiltration Wells \u2794 NMC Central Headworks",
+          "from_node": "Pennar South Riverbed Infiltration Wellfield (SRC-PEN-S01)",
+          "to_node": "NMC Central Water Headworks (HW-NMC-01)",
+          "flow_direction": "River Infiltration \u2794 Municipal Treatment",
+          "flow_hierarchy": "Primary Raw Intake Main",
+          "diameter_mm": 600,
+          "material": "Ductile Iron (DI K9)",
+          "discharge_mld": 18.0,
+          "pressure_bar": 3.8,
+          "coordinates": [
+            [
+              79.97,
+              14.464
+            ],
+            [
+              79.9725,
+              14.462
+            ],
+            [
+              79.975,
+              14.46
+            ]
+          ]
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              79.97,
+              14.464
+            ],
+            [
+              79.9725,
+              14.462
+            ],
+            [
+              79.975,
+              14.46
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "pipe_id": "PL-FEED-01",
+          "name": "NMC Central Headworks \u2794 Stonehousepet ELSR Feeder",
+          "from_node": "NMC Central Water Headworks (HW-NMC-01)",
+          "to_node": "Stonehousepet ELSR (ELSR-NMC-01)",
+          "flow_direction": "Treatment Headworks \u2794 Stonehousepet Overhead Tank",
+          "flow_hierarchy": "Secondary Treated Pumping Main",
+          "diameter_mm": 450,
+          "material": "Ductile Iron (DI)",
+          "discharge_mld": 6.5,
+          "pressure_bar": 4.2,
+          "coordinates": [
+            [
+              79.975,
+              14.46
+            ],
+            [
+              79.981,
+              14.455
+            ],
+            [
+              79.987,
+              14.452
+            ],
+            [
+              79.991,
+              14.45
+            ]
+          ]
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              79.975,
+              14.46
+            ],
+            [
+              79.981,
+              14.455
+            ],
+            [
+              79.987,
+              14.452
+            ],
+            [
+              79.991,
+              14.45
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "pipe_id": "PL-FEED-02",
+          "name": "NMC Central Headworks \u2794 Santhapet Central ELSR Feeder",
+          "from_node": "NMC Central Water Headworks (HW-NMC-01)",
+          "to_node": "Santhapet Central Municipal Overhead Tank (ELSR-NMC-02)",
+          "flow_direction": "Treatment Headworks \u2794 Santhapet Overhead Tank",
+          "flow_hierarchy": "Secondary Treated Pumping Main",
+          "diameter_mm": 500,
+          "material": "Mild Steel (MS)",
+          "discharge_mld": 8.0,
+          "pressure_bar": 4.5,
+          "coordinates": [
+            [
+              79.975,
+              14.46
+            ],
+            [
+              79.977,
+              14.452
+            ],
+            [
+              79.979,
+              14.445
+            ],
+            [
+              79.981,
+              14.439
+            ]
+          ]
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              79.975,
+              14.46
+            ],
+            [
+              79.977,
+              14.452
+            ],
+            [
+              79.979,
+              14.445
+            ],
+            [
+              79.981,
+              14.439
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "pipe_id": "PL-FEED-03",
+          "name": "NMC Central Headworks \u2794 Ranganayakulapet ELSR Branch",
+          "from_node": "NMC Central Water Headworks (HW-NMC-01)",
+          "to_node": "Ranganayakulapet Riverside Overhead Reservoir (ELSR-NMC-03)",
+          "flow_direction": "Treatment Headworks \u2794 Ranganayakulapet Overhead Tank",
+          "flow_hierarchy": "Secondary Treated Pumping Main",
+          "diameter_mm": 350,
+          "material": "Ductile Iron (DI)",
+          "discharge_mld": 3.5,
+          "pressure_bar": 3.6,
+          "coordinates": [
+            [
+              79.975,
+              14.46
+            ],
+            [
+              79.98,
+              14.458
+            ],
+            [
+              79.984,
+              14.456
+            ],
+            [
+              79.987,
+              14.454
+            ]
+          ]
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              79.975,
+              14.46
+            ],
+            [
+              79.98,
+              14.458
+            ],
+            [
+              79.984,
+              14.456
+            ],
+            [
+              79.987,
+              14.454
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "pipe_id": "PL-RAW-02",
+          "name": "Somasila Canal Gravity Intake \u2794 Vedayapalem Booster Station",
+          "from_node": "Somasila Canal Intake (SRC-SOM-01)",
+          "to_node": "Vedayapalem Booster Station (BST-NMC-01)",
+          "flow_direction": "Surface Canal Intake \u2794 Southern Booster Station",
+          "flow_hierarchy": "Primary Raw Gravity Conduit",
+          "diameter_mm": 700,
+          "material": "Prestressed Concrete (PSC)",
+          "discharge_mld": 15.0,
+          "pressure_bar": 3.2,
+          "coordinates": [
+            [
+              79.94,
+              14.45
+            ],
+            [
+              79.948,
+              14.442
+            ],
+            [
+              79.955,
+              14.435
+            ]
+          ]
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              79.94,
+              14.45
+            ],
+            [
+              79.948,
+              14.442
+            ],
+            [
+              79.955,
+              14.435
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "pipe_id": "PL-FEED-04",
+          "name": "Vedayapalem Booster Station \u2794 Vedayapalem High-Level ELSR",
+          "from_node": "Vedayapalem Booster Station (BST-NMC-01)",
+          "to_node": "Vedayapalem High-Level Reservoir (ELSR-NMC-04)",
+          "flow_direction": "Booster Pump \u2794 Vedayapalem High-Level Tank",
+          "flow_hierarchy": "Secondary Treated Pumping Main",
+          "diameter_mm": 450,
+          "material": "HDPE PN-10",
+          "discharge_mld": 7.0,
+          "pressure_bar": 4.0,
+          "coordinates": [
+            [
+              79.955,
+              14.435
+            ],
+            [
+              79.961,
+              14.426
+            ],
+            [
+              79.967,
+              14.417
+            ]
+          ]
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              79.955,
+              14.435
+            ],
+            [
+              79.961,
+              14.426
+            ],
+            [
+              79.967,
+              14.417
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "pipe_id": "PL-FEED-05",
+          "name": "Vedayapalem Booster Station \u2794 Dargamitta Municipal Tower",
+          "from_node": "Vedayapalem Booster Station (BST-NMC-01)",
+          "to_node": "Dargamitta Municipal Water Tower (ELSR-NMC-05)",
+          "flow_direction": "Booster Pump \u2794 Dargamitta Elevated Tower",
+          "flow_hierarchy": "Secondary Treated Pumping Main",
+          "diameter_mm": 400,
+          "material": "Ductile Iron (DI)",
+          "discharge_mld": 5.0,
+          "pressure_bar": 3.8,
+          "coordinates": [
+            [
+              79.955,
+              14.435
+            ],
+            [
+              79.965,
+              14.433
+            ],
+            [
+              79.975,
+              14.431
+            ]
+          ]
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              79.955,
+              14.435
+            ],
+            [
+              79.965,
+              14.433
+            ],
+            [
+              79.975,
+              14.431
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "pipe_id": "PL-DIST-01",
+          "name": "Stonehousepet ELSR \u2794 Ward Distribution & RO Water ATM Points",
+          "from_node": "Stonehousepet ELSR (ELSR-NMC-01)",
+          "to_node": "Stonehousepet Ward Distribution & NTR Sujala RO ATMs",
+          "flow_direction": "Overhead Tank \u2794 Ward Street Consumer Taps",
+          "flow_hierarchy": "Tertiary Reticulation Network",
+          "diameter_mm": 300,
+          "material": "HDPE PN-6",
+          "discharge_mld": 1.8,
+          "pressure_bar": 2.2,
+          "coordinates": [
+            [
+              79.991,
+              14.45
+            ],
+            [
+              79.9925,
+              14.448
+            ],
+            [
+              79.994,
+              14.445
+            ]
+          ]
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              79.991,
+              14.45
+            ],
+            [
+              79.9925,
+              14.448
+            ],
+            [
+              79.994,
+              14.445
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "pipe_id": "PL-KVR-01",
+          "name": "Kovur North Infiltration Wells \u2794 Kovur Treatment Headworks",
+          "from_node": "Kovur North Bank Riverbed Infiltration Wells (SRC-PEN-N01)",
+          "to_node": "Kovur Treatment Headworks (HW-KVR-01)",
+          "flow_direction": "River Infiltration \u2794 Kovur Treatment Plant",
+          "flow_hierarchy": "Primary Raw Infiltration Main",
+          "diameter_mm": 350,
+          "material": "Ductile Iron (DI)",
+          "discharge_mld": 5.5,
+          "pressure_bar": 3.0,
+          "coordinates": [
+            [
+              79.972,
+              14.469
+            ],
+            [
+              79.9735,
+              14.472
+            ],
+            [
+              79.975,
+              14.475
+            ]
+          ]
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              79.972,
+              14.469
+            ],
+            [
+              79.9735,
+              14.472
+            ],
+            [
+              79.975,
+              14.475
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "pipe_id": "PL-KVR-02",
+          "name": "Kovur Treatment Headworks \u2794 Kovur Main Bazaar ELSR",
+          "from_node": "Kovur Treatment Headworks (HW-KVR-01)",
+          "to_node": "Kovur Main Bazaar Gram Panchayat Reservoir (ELSR-KVR-01)",
+          "flow_direction": "Treatment Plant \u2794 Kovur Main Bazaar Tank",
+          "flow_hierarchy": "Secondary Treated Pumping Main",
+          "diameter_mm": 300,
+          "material": "Ductile Iron (DI)",
+          "discharge_mld": 3.0,
+          "pressure_bar": 3.5,
+          "coordinates": [
+            [
+              79.975,
+              14.475
+            ],
+            [
+              79.9765,
+              14.485
+            ],
+            [
+              79.9785,
+              14.4945
+            ]
+          ]
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              79.975,
+              14.475
+            ],
+            [
+              79.9765,
+              14.485
+            ],
+            [
+              79.9785,
+              14.4945
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "pipe_id": "PL-KVR-03",
+          "name": "Kovur Treatment Headworks \u2794 Padugupadu Railway OHT",
+          "from_node": "Kovur Treatment Headworks (HW-KVR-01)",
+          "to_node": "Padugupadu Railway Colony Overhead Tank (ELSR-KVR-02)",
+          "flow_direction": "Treatment Plant \u2794 Padugupadu Water Tower",
+          "flow_hierarchy": "Secondary Treated Pumping Main",
+          "diameter_mm": 200,
+          "material": "HDPE PN-6",
+          "discharge_mld": 1.8,
+          "pressure_bar": 2.8,
+          "coordinates": [
+            [
+              79.975,
+              14.475
+            ],
+            [
+              79.979,
+              14.4752
+            ],
+            [
+              79.984,
+              14.4755
+            ]
+          ]
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              79.975,
+              14.475
+            ],
+            [
+              79.979,
+              14.4752
+            ],
+            [
+              79.984,
+              14.4755
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "pipe_id": "PL-KVR-04",
+          "name": "Kovur Treatment Headworks \u2794 Inamadugu Rural OHT Feeder",
+          "from_node": "Kovur Treatment Headworks (HW-KVR-01)",
+          "to_node": "Inamadugu Rural Elevated Water Reservoir (ELSR-KVR-03)",
+          "flow_direction": "Treatment Plant \u2794 Inamadugu Rural Water Tower",
+          "flow_hierarchy": "Secondary Rural Feeder Conduit",
+          "diameter_mm": 160,
+          "material": "HDPE PN-6",
+          "discharge_mld": 0.9,
+          "pressure_bar": 2.5,
+          "coordinates": [
+            [
+              79.975,
+              14.475
+            ],
+            [
+              79.988,
+              14.484
+            ],
+            [
+              80.0035,
+              14.491
+            ]
+          ]
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              79.975,
+              14.475
+            ],
+            [
+              79.988,
+              14.484
+            ],
+            [
+              80.0035,
+              14.491
+            ]
+          ]
+        }
+      }
+    ]
+  },
+  "overhead_tanks": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "ELSR-NMC-01",
+          "name": "Stonehousepet Elevated Level Service Reservoir (ELSR)",
+          "zone": "Stonehousepet (NMC)",
+          "capacity_mld": 1.8,
+          "staging_height_m": 18,
+          "supply_population": 42000,
+          "operational_status": "Active (Dual Daily Distribution)",
+          "fed_by": "HW-NMC-01",
+          "lat": 14.45,
+          "lon": 79.991
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.991,
+            14.45
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "ELSR-NMC-02",
+          "name": "Santhapet Central Municipal Overhead Tank",
+          "zone": "Santhapet Commercial Ward (NMC)",
+          "capacity_mld": 2.2,
+          "staging_height_m": 20,
+          "supply_population": 55000,
+          "operational_status": "Active (Pressure Balanced)",
+          "fed_by": "HW-NMC-01",
+          "lat": 14.439,
+          "lon": 79.981
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.981,
+            14.439
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "ELSR-NMC-03",
+          "name": "Ranganayakulapet Riverside Overhead Reservoir",
+          "zone": "Ranganayakulapet (NMC)",
+          "capacity_mld": 1.2,
+          "staging_height_m": 16,
+          "supply_population": 28000,
+          "operational_status": "Active",
+          "fed_by": "HW-NMC-01",
+          "lat": 14.454,
+          "lon": 79.987
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.987,
+            14.454
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "ELSR-NMC-04",
+          "name": "Vedayapalem - Ramalingapuram High-Level Reservoir",
+          "zone": "Vedayapalem (NMC)",
+          "capacity_mld": 2.5,
+          "staging_height_m": 22,
+          "supply_population": 62000,
+          "operational_status": "Active (Supplies South Corridor)",
+          "fed_by": "BST-NMC-01",
+          "lat": 14.417,
+          "lon": 79.967
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.967,
+            14.417
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "ELSR-NMC-05",
+          "name": "Dargamitta Municipal Water Tower",
+          "zone": "Dargamitta / Magunta Layout (NMC)",
+          "capacity_mld": 1.5,
+          "staging_height_m": 18,
+          "supply_population": 36000,
+          "operational_status": "Active",
+          "fed_by": "BST-NMC-01",
+          "lat": 14.431,
+          "lon": 79.975
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.975,
+            14.431
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "ELSR-KVR-01",
+          "name": "Kovur Main Bazaar Gram Panchayat Elevated Reservoir",
+          "zone": "Kovur Bazaar (GP)",
+          "capacity_mld": 1.4,
+          "staging_height_m": 18,
+          "supply_population": 32000,
+          "operational_status": "Active (Gram Panchayat Core)",
+          "fed_by": "HW-KVR-01",
+          "lat": 14.4945,
+          "lon": 79.9785
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.9785,
+            14.4945
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "ELSR-KVR-02",
+          "name": "Padugupadu Railway Colony Overhead Tank",
+          "zone": "Padugupadu (GP)",
+          "capacity_mld": 0.9,
+          "staging_height_m": 16,
+          "supply_population": 19000,
+          "operational_status": "Active",
+          "fed_by": "HW-KVR-01",
+          "lat": 14.4755,
+          "lon": 79.984
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.984,
+            14.4755
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "ELSR-KVR-03",
+          "name": "Inamadugu Rural Gram Panchayat Water Tower",
+          "zone": "Inamadugu (GP)",
+          "capacity_mld": 0.6,
+          "staging_height_m": 15,
+          "supply_population": 14000,
+          "operational_status": "Active (Solar Pumping Assisted)",
+          "fed_by": "HW-KVR-01",
+          "lat": 14.491,
+          "lon": 80.0035
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            80.0035,
+            14.491
+          ]
+        }
+      }
+    ]
+  },
+  "underground_sources": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "SRC-PEN-S01",
+          "name": "Pennar South Riverbed Infiltration Wellfield",
+          "type": "Riverbed Infiltration Gallery & Deep Borewell Array",
+          "zone": "Pennar River Basin (NMC)",
+          "aquifer_source": "Pennar Deep Sand Alluvial Aquifer",
+          "depth_m": 32,
+          "yield_lph": 18000,
+          "lat": 14.464,
+          "lon": 79.97,
+          "supplies_to": "Nellore Municipal Central Headworks (HW-NMC-01)"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.97,
+            14.464
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "SRC-SOM-01",
+          "name": "Somasila Drinking Water Scheme - West Canal Intake",
+          "type": "Surface Reservoir Gravity Intake & Pipeline",
+          "zone": "Somasila Pipeline Corridor",
+          "aquifer_source": "Somasila Reservoir Storage Basin",
+          "depth_m": 0,
+          "yield_lph": 35000,
+          "lat": 14.45,
+          "lon": 79.94,
+          "supplies_to": "Vedayapalem Booster Pumping Station (BST-NMC-01)"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.94,
+            14.45
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "SRC-PEN-N01",
+          "name": "Kovur North Bank Riverbed Infiltration Wells",
+          "type": "Riverbed Radial Collector & Infiltration Wells",
+          "zone": "Pennar North Bank (Kovur GP)",
+          "aquifer_source": "Pennar North Alluvial Sandbed",
+          "depth_m": 28,
+          "yield_lph": 12000,
+          "lat": 14.469,
+          "lon": 79.972,
+          "supplies_to": "Kovur Gram Panchayat Treatment Plant (HW-KVR-01)"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.972,
+            14.469
           ]
         }
       }

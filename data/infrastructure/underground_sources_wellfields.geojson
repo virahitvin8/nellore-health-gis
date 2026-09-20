@@ -1,0 +1,71 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "SRC-PEN-S01",
+        "name": "Pennar South Riverbed Infiltration Wellfield",
+        "type": "Riverbed Infiltration Gallery & Deep Borewell Array",
+        "zone": "Pennar River Basin (NMC)",
+        "aquifer_source": "Pennar Deep Sand Alluvial Aquifer",
+        "depth_m": 32,
+        "yield_lph": 18000,
+        "lat": 14.464,
+        "lon": 79.97,
+        "supplies_to": "Nellore Municipal Central Headworks (HW-NMC-01)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.97,
+          14.464
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "SRC-SOM-01",
+        "name": "Somasila Drinking Water Scheme - West Canal Intake",
+        "type": "Surface Reservoir Gravity Intake & Pipeline",
+        "zone": "Somasila Pipeline Corridor",
+        "aquifer_source": "Somasila Reservoir Storage Basin",
+        "depth_m": 0,
+        "yield_lph": 35000,
+        "lat": 14.45,
+        "lon": 79.94,
+        "supplies_to": "Vedayapalem Booster Pumping Station (BST-NMC-01)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.94,
+          14.45
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "SRC-PEN-N01",
+        "name": "Kovur North Bank Riverbed Infiltration Wells",
+        "type": "Riverbed Radial Collector & Infiltration Wells",
+        "zone": "Pennar North Bank (Kovur GP)",
+        "aquifer_source": "Pennar North Alluvial Sandbed",
+        "depth_m": 28,
+        "yield_lph": 12000,
+        "lat": 14.469,
+        "lon": 79.972,
+        "supplies_to": "Kovur Gram Panchayat Treatment Plant (HW-KVR-01)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.972,
+          14.469
+        ]
+      }
+    }
+  ]
+}

@@ -1,69 +1,69 @@
 /**
- * Main WebGIS Application Controller
- * Health GIS & Urban Infrastructure Sentinel: Nellore City & Kovur Mandal
- * Features: Wet Markets, Water Pipelines, RO Plants/Hand Pumps, Vegetable Markets, Hospitals,
- * Drone Flyover, Motorcycle Delivery Commute, and Street View Integration.
+ * Main WebGIS Application Controller - Enhanced Infrastructure Edition
+ * Nellore City (NMC) & Kovur Mandal Water Supply Flow, Overhead Tanks & Strict AOI
  */
 
 let map;
 let allData = null;
 
 // Layer Groups
+let layerMask;
 let layerBoundaries;
 let layerRiver;
 let layerDrainage;
-let layerHospitals;
-let layerMarkets;
-let layerVegMarkets;
-let layerPipelines;
+let layerFlowNetwork;
+let layerTanks;
+let layerSources;
 let layerWaterPoints;
-let layerBuffers250;
-let layerBuffers500;
+let layerVegMarkets;
+let layerMarkets;
+let layerHospitals;
 
-// Simulation & Interactive Animation States
-let simMarker = null;
-let isSimulationMode = false;
-
-// Drone Flyover State
+// 3D & Animation States
+let is3DTilt = false;
 let isDroneMode = false;
 let droneStep = 0;
 let droneTimer = null;
 let droneMarker = null;
 
-// Bike Commute State
-let isBikeMode = false;
-let bikeTimer = null;
-let bikeMarker = null;
-let bikeProgress = 0;
+let isCommuteMode = false;
+let commuteTimer = null;
+let commuteMarker = null;
+let commuteStep = 0;
 
-// Drone Flight Checkpoints
+// Strict Bounding Box for Nellore City & Kovur Mandal
+const STRICT_BOUNDS = L.latLngBounds(
+  [14.3600, 79.9100], // Southwest
+  [14.5600, 80.0500]  // Northeast
+);
+
+// Drone Checkpoints along Water Flow & Major Landmarks
 const DRONE_CHECKPOINTS = [
-  { name: "Vedayapalem South Corridor (NMC)", lat: 14.4175, lon: 79.9675, zoom: 15, alt: "160m AGL", speed: "55 km/h", hazard: "MODERATE", note: "Suburban livestock stalls & southern drainage outfall channel." },
-  { name: "Santhapet Central Commercial Bazaar", lat: 14.4395, lon: 79.9805, zoom: 16, alt: "110m AGL", speed: "42 km/h", hazard: "HIGH", note: "Dense bazaar congestion; water pipeline crossing under open drain." },
-  { name: "Stonehousepet Fish & Mutton Wholesale Hub", lat: 14.4495, lon: 79.9910, zoom: 17, alt: "70m AGL", speed: "30 km/h", hazard: "CRITICAL", note: "Heavy live slaughter directly over open masonry outfall sewer." },
-  { name: "Pennar River Infiltration Gallery & Wells", lat: 14.4635, lon: 79.9750, zoom: 15, alt: "210m AGL", speed: "65 km/h", hazard: "WATCH", note: "Primary municipal drinking water source for Nellore city." },
-  { name: "Padugupadu Railway & Bridge Entry (Kovur)", lat: 14.4755, lon: 79.9840, zoom: 16, alt: "120m AGL", speed: "48 km/h", hazard: "HIGH", note: "Inter-mandal gateway; railway slum open sullage channels." },
-  { name: "Kovur Main Bazaar & Gram Panchayat Market", lat: 14.4945, lon: 79.9785, zoom: 17, alt: "80m AGL", speed: "35 km/h", hazard: "CRITICAL", note: "Open roadside sludge gutter submerged directly beneath market." },
-  { name: "Inamadugu Rural Livestock & Produce Shandy", lat: 14.4910, lon: 80.0035, zoom: 15, alt: "140m AGL", speed: "50 km/h", hazard: "NORMAL", note: "Multi-village rural poultry shandy & agricultural wellfield." }
+  { name: "Pennar River Infiltration Gallery (Source)", lat: 14.4640, lon: 79.9700, zoom: 16, alt: "180m AGL", rate: "18.0 MLD", note: "Riverbed sand aquifer extraction supplying NMC central headworks." },
+  { name: "Nellore Municipal Central Headworks & Treatment", lat: 14.4600, lon: 79.9750, zoom: 17, alt: "120m AGL", rate: "32.0 MLD", note: "Rapid sand filtration & primary chlorination distribution hub." },
+  { name: "Stonehousepet Overhead Tank (ELSR-NMC-01)", lat: 14.4500, lon: 79.9910, zoom: 17, alt: "90m AGL", rate: "1.8 MLD", note: "18m staging height; gravity feed to 42,000 ward consumers & Rythu Bazaar." },
+  { name: "Santhapet Central Municipal Water Tower", lat: 14.4390, lon: 79.9810, zoom: 17, alt: "100m AGL", rate: "2.2 MLD", note: "20m elevated reservoir supplying historic central commercial bazaar." },
+  { name: "Historic Pennar River Bridge Crossing", lat: 14.4650, lon: 79.9848, zoom: 15, alt: "220m AGL", rate: "River Corridor", note: "Inter-mandal transit connecting Nellore City with Kovur Mandal." },
+  { name: "Kovur Gram Panchayat Overhead Tank (ELSR-KVR-01)", lat: 14.4945, lon: 79.9785, zoom: 17, alt: "90m AGL", rate: "1.4 MLD", note: "18m elevated reservoir supplying Kovur Main Bazaar & surrounding wards." },
+  { name: "Inamadugu Rural Elevated Reservoir (ELSR-KVR-03)", lat: 14.4910, lon: 80.0035, zoom: 16, alt: "130m AGL", rate: "0.6 MLD", note: "Solar-assisted overhead tank serving agricultural & livestock community." }
 ];
 
-// Bike Supply Commute Route (North bank farm to South bank Stonehousepet)
-const BIKE_ROUTE = [
-  [14.4945, 79.9785], // Kovur Bazaar
-  [14.4880, 79.9810],
-  [14.4810, 79.9830],
+const COMMUTE_ROUTE = [
+  [14.4640, 79.9700], // Pennar Infiltration
+  [14.4600, 79.9750], // Headworks
+  [14.4550, 79.9810],
+  [14.4500, 79.9910], // Stonehousepet ELSR
+  [14.4508, 79.9918], // Stonehousepet Rythu Bazaar
+  [14.4535, 79.9875], // Ranganayakulapet
+  [14.4650, 79.9848], // Pennar Bridge
   [14.4755, 79.9840], // Padugupadu
-  [14.4700, 79.9845], // Pennar Bridge North End
-  [14.4650, 79.9848], // Crossing Pennar River
-  [14.4600, 79.9850], // Pennar Bridge South End
-  [14.4550, 79.9870], // Ranganayakulapet
-  [14.4510, 79.9895], // Stonehousepet Entrance
-  [14.4495, 79.9910]  // Stonehousepet Fish Market Hub
+  [14.4945, 79.9785]  // Kovur Bazaar ELSR
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
   initDataAndMap();
   setupEventListeners();
+  loadSavedAPIKeys();
 });
 
 function initDataAndMap() {
@@ -76,19 +76,21 @@ function initDataAndMap() {
         allData = HEALTH_GIS_DATA;
         buildWebGIS();
       } else {
-        alert("Unable to load spatial data. Please ensure data/embedded_data.js is present.");
+        alert("Spatial data loading. Please refresh.");
       }
-    }, 500);
+    }, 400);
   }
 }
 
 function buildWebGIS() {
-  // 1. Initialize Map
+  // 1. Initialize Map with strict bounds
   map = L.map("map", {
-    center: [14.455, 79.985],
+    center: [14.460, 79.982],
     zoom: 13,
-    minZoom: 11,
+    minZoom: 12,
     maxZoom: 18,
+    maxBounds: STRICT_BOUNDS,
+    maxBoundsViscosity: 0.9,
     zoomControl: false
   });
 
@@ -102,36 +104,29 @@ function buildWebGIS() {
     maxZoom: 19
   }).addTo(map);
 
+  const esriSatellite = L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}", {
+    attribution: 'Tiles &copy; Esri &mdash; DigitalGlobe, GeoEye',
+    maxZoom: 18
+  });
+
   const positron = L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
     attribution: '&copy; CARTO &copy; OSM',
     subdomains: "abcd",
     maxZoom: 19
   });
 
-  const osmStandard = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-    attribution: '&copy; OpenStreetMap contributors',
-    maxZoom: 19
-  });
-
-  const esriSatellite = L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}", {
-    attribution: 'Tiles &copy; Esri &mdash; DigitalGlobe, GeoEye, Earthstar Geographics',
-    maxZoom: 18
-  });
-
   const baseMaps = {
-    "CartoDB Dark Theme": darkMatter,
-    "Esri Satellite Imagery": esriSatellite,
-    "CartoDB Light Theme": positron,
-    "OpenStreetMap Standard": osmStandard
+    "CartoDB Dark Theme (Default)": darkMatter,
+    "Esri World Satellite Imagery": esriSatellite,
+    "CartoDB Light Theme": positron
   };
-
   L.control.layers(baseMaps, null, { position: "topright" }).addTo(map);
 
-  // 3. Initialize Feature Layers
-  initAllVectorLayers();
+  // 3. Initialize Vectors & Mask
+  initVectorLayers();
 
-  // 4. Update Header KPIs
-  updateHeaderKPIs();
+  // 4. Update Header Stats
+  updateStats();
 
   // 5. Initialize Charts
   if (typeof initAnalyticsCharts === "function") {
@@ -139,17 +134,27 @@ function buildWebGIS() {
   }
 }
 
-function initAllVectorLayers() {
-  // A. Boundaries
+function initVectorLayers() {
+  // A. Inverted Mask (Dims out everything outside Nellore & Kovur)
+  layerMask = L.geoJSON(allData.inverted_mask, {
+    style: {
+      color: "transparent",
+      fillColor: "#090d16",
+      fillOpacity: 0.72,
+      interactive: false
+    }
+  }).addTo(map);
+
+  // B. Boundaries (Nellore NMC & Kovur Mandal)
   layerBoundaries = L.geoJSON(allData.aoi, {
     style: (feature) => {
       const isNellore = feature.properties.name.includes("Nellore");
       return {
-        color: isNellore ? "#38bdf8" : "#a855f7",
-        weight: 2,
+        color: isNellore ? "#38bdf8" : "#0284c7",
+        weight: 2.5,
         dashArray: "6, 6",
-        fillColor: isNellore ? "#0284c7" : "#9333ea",
-        fillOpacity: 0.08
+        fillColor: isNellore ? "#0284c7" : "#0ea5e9",
+        fillOpacity: 0.05
       };
     },
     onEachFeature: (feature, layer) => {
@@ -158,14 +163,14 @@ function initAllVectorLayers() {
     }
   }).addTo(map);
 
-  // B. River Basin & Canals
+  // C. Pennar River Basin & Canals
   layerRiver = L.geoJSON(allData.waterbodies, {
     style: (feature) => {
       const isRiver = feature.geometry.type === "Polygon";
       return {
-        color: "#0284c7",
+        color: "#0077b6",
         weight: isRiver ? 1.5 : 3.5,
-        fillColor: "#0ea5e9",
+        fillColor: "#0284c7",
         fillOpacity: 0.35,
         dashArray: isRiver ? "" : "4, 4"
       };
@@ -176,11 +181,11 @@ function initAllVectorLayers() {
     }
   }).addTo(map);
 
-  // C. Open Drainage Network
+  // D. Open Sullage & Sewage Outfalls (Red dashed)
   layerDrainage = L.geoJSON(allData.drainage, {
     style: {
       color: "#ef4444",
-      weight: 3.5,
+      weight: 3.2,
       dashArray: "5, 5",
       opacity: 0.95
     },
@@ -190,68 +195,66 @@ function initAllVectorLayers() {
         <div style="font-size:12px;">
           <strong style="color:#ef4444;">🚨 ${p.drain_name}</strong><br>
           Type: ${p.drain_type}<br>
-          Bio-Hazard: ${p.bio_hazard_rating}
+          Hazard: ${p.bio_hazard_rating}
         </div>
       `, { sticky: true });
     }
   }).addTo(map);
 
-  // D. Drinking Water Pipelines (NMC & Panchayati)
-  layerPipelines = L.geoJSON(allData.pipelines, {
+  // E. Animated Water Flow Network (Pipelines with pulses)
+  layerFlowNetwork = L.geoJSON(allData.flow_network, {
     style: (feature) => {
       const p = feature.properties;
-      const isHighRisk = p.cross_contamination_risk.includes("High");
+      const isIntake = p.flow_hierarchy.includes("Intake");
+      const isPumping = p.flow_hierarchy.includes("Pumping");
       return {
-        color: isHighRisk ? "#38bdf8" : "#0284c7",
-        weight: Math.max(2.5, p.diameter_mm / 100),
-        dashArray: isHighRisk ? "6, 4" : "",
-        opacity: 0.9
+        color: isIntake ? "#38bdf8" : isPumping ? "#0ea5e9" : "#0284c7",
+        weight: Math.max(3, p.diameter_mm / 100),
+        className: "animated-water-pipe",
+        opacity: 0.95
       };
     },
     onEachFeature: (feature, layer) => {
       const p = feature.properties;
       layer.bindTooltip(`
         <div style="font-size:12px;">
-          <strong style="color:#38bdf8;">💧 ${p.pipe_id}: ${p.name}</strong><br>
-          Source: ${p.water_source}<br>
-          Dia: <strong>${p.diameter_mm}mm</strong> (${p.material})<br>
-          Contamination Risk: <em>${p.cross_contamination_risk}</em>
+          <strong style="color:#38bdf8;">💧 ${p.name}</strong><br>
+          From: <em>${p.from_node}</em><br>
+          To: <strong>${p.to_node}</strong><br>
+          Discharge: <strong>${p.discharge_mld} MLD</strong> • Dia: ${p.diameter_mm}mm (${p.material})
         </div>
       `, { sticky: true });
-      layer.on("click", () => inspectPipeline(p));
+      layer.on("click", () => inspectFlowPipe(p));
     }
   }).addTo(map);
 
-  // E. Drinking Water Points (RO Plants, Borewells, Hand Pumps)
-  layerWaterPoints = L.geoJSON(allData.water_points, {
+  // F. Overhead Storage Reservoirs (ELSR / OHT)
+  layerTanks = L.geoJSON(allData.overhead_tanks, {
     pointToLayer: (feature, latlng) => {
       const p = feature.properties;
-      const isCritical = p.risk.includes("CRITICAL");
-      const iconColor = isCritical ? "#ef4444" : p.type.includes("RO") ? "#0ea5e9" : "#0284c7";
-      const iconSymbol = p.type.includes("RO") ? "fa-glass-water-droplet" : p.type.includes("Pump") ? "fa-faucet" : "fa-water";
-
       const html = `
-        <div class="water-marker-icon" style="background:${iconColor}; border-color:${isCritical ? '#fee2e2' : '#ffffff'}; width:24px; height:24px;">
-          <i class="fa-solid ${iconSymbol}" style="font-size:11px;"></i>
+        <div class="tank-marker-icon" style="width:28px; height:28px;" title="${p.name}">
+          <i class="fa-solid fa-monument"></i>
         </div>
       `;
       return L.marker(latlng, {
-        icon: L.divIcon({ html: html, className: "", iconSize: [24, 24], iconAnchor: [12, 12] })
+        icon: L.divIcon({ html: html, className: "", iconSize: [28, 28], iconAnchor: [14, 14] })
       });
     },
     onEachFeature: (feature, layer) => {
       const p = feature.properties;
-      layer.on("click", () => inspectWaterPoint(p));
+      layer.bindTooltip(`<strong>🏰 ${p.name}</strong><br>Capacity: ${p.capacity_mld} MLD • Height: ${p.staging_height_m}m`, { sticky: true });
+      layer.on("click", () => inspectTank(p));
     }
   }).addTo(map);
 
-  // F. Vegetable Markets & Rythu Bazaars
-  layerVegMarkets = L.geoJSON(allData.veg_markets, {
+  // G. Underground Wells & River Infiltration Sources
+  layerSources = L.geoJSON(allData.underground_sources, {
     pointToLayer: (feature, latlng) => {
       const p = feature.properties;
       const html = `
-        <div class="veg-marker-icon" style="width:26px; height:26px;">
-          <i class="fa-solid fa-carrot" style="font-size:12px;"></i>
+        <div class="source-marker-icon" style="width:26px; height:26px;" title="${p.name}">
+          <i class="fa-solid fa-water"></i>
         </div>
       `;
       return L.marker(latlng, {
@@ -260,11 +263,69 @@ function initAllVectorLayers() {
     },
     onEachFeature: (feature, layer) => {
       const p = feature.properties;
+      layer.bindTooltip(`<strong>🌊 ${p.name}</strong><br>Yield: ${p.yield_lph.toLocaleString()} LPH • Aquifer: ${p.aquifer_source}`, { sticky: true });
+      layer.on("click", () => inspectSource(p));
+    }
+  }).addTo(map);
+
+  // H. Mineral Water RO Plants & Public Hand Pumps
+  layerWaterPoints = L.geoJSON(allData.water_points, {
+    pointToLayer: (feature, latlng) => {
+      const p = feature.properties;
+      const isCritical = p.risk.includes("CRITICAL");
+      const html = `
+        <div class="water-marker-icon" style="background:${isCritical ? '#ef4444' : '#38bdf8'}; width:22px; height:22px;">
+          <i class="fa-solid ${p.type.includes('RO') ? 'fa-glass-water-droplet' : 'fa-faucet'}" style="font-size:10px;"></i>
+        </div>
+      `;
+      return L.marker(latlng, {
+        icon: L.divIcon({ html: html, className: "", iconSize: [22, 22], iconAnchor: [11, 11] })
+      });
+    },
+    onEachFeature: (feature, layer) => {
+      const p = feature.properties;
+      layer.on("click", () => inspectWaterPoint(p));
+    }
+  }).addTo(map);
+
+  // I. Vegetable Markets & Rythu Bazaars
+  layerVegMarkets = L.geoJSON(allData.veg_markets, {
+    pointToLayer: (feature, latlng) => {
+      const html = `
+        <div class="veg-marker-icon" style="width:24px; height:24px;">
+          <i class="fa-solid fa-carrot" style="font-size:11px;"></i>
+        </div>
+      `;
+      return L.marker(latlng, {
+        icon: L.divIcon({ html: html, className: "", iconSize: [24, 24], iconAnchor: [12, 12] })
+      });
+    },
+    onEachFeature: (feature, layer) => {
+      const p = feature.properties;
       layer.on("click", () => inspectVegMarket(p));
     }
   }).addTo(map);
 
-  // G. Healthcare Facilities (Govt + Private)
+  // J. Wet Meat/Fish Markets
+  layerMarkets = L.geoJSON(allData.markets, {
+    pointToLayer: (feature, latlng) => {
+      const p = feature.properties;
+      const html = `
+        <div class="market-marker-icon" style="background:${p.marker_color}; width:20px; height:20px;">
+          <i class="fa-solid fa-store" style="font-size:9px;"></i>
+        </div>
+      `;
+      return L.marker(latlng, {
+        icon: L.divIcon({ html: html, className: "", iconSize: [20, 20], iconAnchor: [10, 10] })
+      });
+    },
+    onEachFeature: (feature, layer) => {
+      const p = feature.properties;
+      layer.on("click", () => inspectMarket(p.shop_id));
+    }
+  }).addTo(map);
+
+  // K. Hospitals
   layerHospitals = L.geoJSON(allData.hospitals, {
     pointToLayer: (feature, latlng) => {
       const p = feature.properties;
@@ -283,128 +344,154 @@ function initAllVectorLayers() {
       layer.on("click", () => inspectHospital(p));
     }
   }).addTo(map);
-
-  // H. Risk Exposure Buffers (250m & 500m)
-  layerBuffers250 = L.geoJSON(allData.buffers_250, {
-    style: (feature) => {
-      const isVeryHigh = feature.properties.risk_level === "Very High Risk";
-      return {
-        color: isVeryHigh ? "#d90429" : "#f77f00",
-        weight: 1.5,
-        fillColor: isVeryHigh ? "#d90429" : "#f77f00",
-        fillOpacity: 0.18,
-        dashArray: "3, 3"
-      };
-    }
-  });
-
-  layerBuffers500 = L.geoJSON(allData.buffers_500, {
-    style: {
-      color: "#f59e0b",
-      weight: 1,
-      fillColor: "#f59e0b",
-      fillOpacity: 0.08,
-      dashArray: "4, 6"
-    }
-  });
-
-  // I. Wet Markets Layer
-  layerMarkets = L.layerGroup().addTo(map);
-  renderMarketMarkers(allData.markets.features);
 }
 
-function renderMarketMarkers(features) {
-  layerMarkets.clearLayers();
+// ---------------- Inspector Detail Renderers ---------------- //
 
-  features.forEach(feat => {
-    const p = feat.properties;
-    const [lon, lat] = feat.geometry.coordinates;
-
-    const iconHtml = `
-      <div class="market-marker-icon" style="background:${p.marker_color}; width:24px; height:24px;">
-        <i class="fa-solid fa-store" style="font-size:10px;"></i>
-      </div>
-    `;
-
-    const icon = L.divIcon({
-      html: iconHtml,
-      className: "",
-      iconSize: [24, 24],
-      iconAnchor: [12, 12]
-    });
-
-    const marker = L.marker([lat, lon], { icon: icon });
-
-    marker.bindTooltip(`<strong>${p.shop_name}</strong><br>GRI Score: ${p.composite_geo_risk_score}/100 (${p.risk_level})`, { sticky: true });
-    marker.on("click", () => inspectMarket(p.shop_id));
-
-    layerMarkets.addLayer(marker);
-  });
-}
-
-// ---------------- Inspector Functions ---------------- //
-
-window.inspectMarket = function(shopId) {
-  const item = allData.markets.features.find(f => f.properties.shop_id === shopId);
-  if (!item) return;
-
-  const p = item.properties;
-  const [lon, lat] = item.geometry.coordinates;
+window.inspectFlowPipe = function(p) {
   const inspector = document.getElementById("inspector-content");
-
   inspector.innerHTML = `
     <div class="market-detail-card">
       <div class="md-header">
         <div>
-          <div class="md-title">${p.shop_name}</div>
-          <div class="md-id">${p.shop_id} • ${p.mandal_zone} (${p.cluster_hub})</div>
+          <div class="md-title">${p.name}</div>
+          <div class="md-id">Conduit ID: ${p.pipe_id} • ${p.flow_hierarchy}</div>
         </div>
-        <span class="risk-badge" style="background:${p.marker_color}">${p.risk_level}</span>
+        <span class="risk-badge" style="background:#0ea5e9;">Water Main</span>
       </div>
 
-      <div class="score-meter">
-        <div class="meter-label">
-          <span>Geo-Risk Index Score</span>
-          <span style="color:${p.marker_color}">${p.composite_geo_risk_score} / 100</span>
-        </div>
-        <div class="progress-bar-bg">
-          <div class="progress-bar-fill" style="width:${p.composite_geo_risk_score}%; background:${p.marker_color};"></div>
-        </div>
-        <div class="ai-prediction-pill">
-          <i class="fa-solid fa-robot"></i> AI Prediction: <strong>${p.ai_predicted_risk}</strong> (${p.ai_prediction_confidence}% Conf.)
+      <div class="flow-connectivity-box">
+        <div class="flow-node-title"><i class="fa-solid fa-diagram-project"></i> Supply Connectivity Route:</div>
+        <div class="flow-arrow-display">
+          <span>${p.from_node}</span>
+          <i class="fa-solid fa-arrow-right-long"></i>
+          <span>${p.to_node}</span>
         </div>
       </div>
 
       <table class="detail-table">
-        <tr><td>Commodity:</td><td>${p.category}</td></tr>
-        <tr><td>Daily Throughput:</td><td>${p.daily_animals_handled} units/day</td></tr>
-        <tr><td>Supply Origin:</td><td>${p.animal_origin}</td></tr>
-        <tr><td>Destination:</td><td>${p.animal_destination}</td></tr>
-        <tr><td>Live On-Site Slaughter:</td><td><strong style="color:${p.slaughter_on_site === 'Yes' ? '#f87171' : '#4ade80'}">${p.slaughter_on_site}</strong></td></tr>
-        <tr><td>Refrigeration Available:</td><td><strong style="color:${p.refrigeration_available === 'Yes' ? '#4ade80' : '#f87171'}">${p.refrigeration_available}</strong></td></tr>
-        <tr><td>Waste Disposal:</td><td>${p.waste_disposal_method}</td></tr>
-        <tr><td>Distance to Open Drain:</td><td><strong style="color:${p.distance_to_drain_m < 50 ? '#ef4444' : '#e2e8f0'}">${p.distance_to_drain_m} meters</strong></td></tr>
-        <tr><td>Nearest Health Centre:</td><td>${p.distance_to_hospital_m} meters</td></tr>
-        <tr><td>Crowd Density Index:</td><td>${p.market_crowd_index} / 10</td></tr>
+        <tr><td>Flow Direction:</td><td>${p.flow_direction}</td></tr>
+        <tr><td>Daily Discharge:</td><td><strong>${p.discharge_mld} MLD</strong></td></tr>
+        <tr><td>Pipe Diameter:</td><td><strong>${p.diameter_mm} mm</strong></td></tr>
+        <tr><td>Conduit Material:</td><td>${p.material}</td></tr>
+        <tr><td>Operating Pressure:</td><td>${p.pressure_bar} Bar</td></tr>
       </table>
 
       <div class="intervention-alert">
-        <strong><i class="fa-solid fa-triangle-exclamation"></i> Municipal Action Required:</strong>
-        ${p.recommended_intervention}
+        <strong><i class="fa-solid fa-faucet-drip"></i> Municipal Water Grid Role:</strong>
+        Maintains positive pressure distribution from source treatment headworks directly into elevated service reservoirs.
+      </div>
+    </div>
+  `;
+};
+
+window.inspectTank = function(p) {
+  const inspector = document.getElementById("inspector-content");
+  inspector.innerHTML = `
+    <div class="market-detail-card">
+      <div class="md-header">
+        <div>
+          <div class="md-title">${p.name}</div>
+          <div class="md-id">${p.id} • ${p.zone}</div>
+        </div>
+        <span class="risk-badge" style="background:#0284c7;">Overhead Tank</span>
       </div>
 
+      <div class="flow-connectivity-box">
+        <div class="flow-node-title"><i class="fa-solid fa-arrow-down-up-across-line"></i> Storage & Staging:</div>
+        <div class="flow-arrow-display">
+          <span>Fed By: ${p.fed_by}</span>
+          <i class="fa-solid fa-arrow-down"></i>
+          <span>Gravity Supply to Wards</span>
+        </div>
+      </div>
+
+      <table class="detail-table">
+        <tr><td>Storage Capacity:</td><td><strong>${p.capacity_mld} MLD</strong></td></tr>
+        <tr><td>Staging Elevation Height:</td><td><strong>${p.staging_height_m} meters</strong></td></tr>
+        <tr><td>Consumer Population:</td><td>${p.supply_population.toLocaleString()} citizens</td></tr>
+        <tr><td>Operational Schedule:</td><td>${p.operational_status}</td></tr>
+      </table>
+
       <div class="action-buttons-row">
-        <button class="btn-card-action" onclick="openStreetView(${lat}, ${lon}, '${p.shop_name.replace(/'/g, "\\'")}', 'Wet Market')">
-          <i class="fa-solid fa-person-walking"></i> Street Walk View
+        <button class="btn-card-action" onclick="openStreetView(${p.lat}, ${p.lon}, '${p.name.replace(/'/g, "\\'")}', 'Overhead Tank')">
+          <i class="fa-solid fa-person-walking"></i> Ground Perspective
         </button>
-        <a class="btn-card-action btn-google-maps" href="https://www.google.com/maps/search/?api=1&query=${lat},${lon}" target="_blank">
-          <i class="fa-brands fa-google"></i> Google Maps 3D
+        <a class="btn-card-action btn-google-maps" href="https://www.google.com/maps/search/?api=1&query=${p.lat},${p.lon}" target="_blank">
+          <i class="fa-brands fa-google"></i> Google 3D
         </a>
       </div>
     </div>
   `;
+  map.setView([p.lat, p.lon], 16, { animate: true });
+};
 
-  map.setView([lat, lon], 16, { animate: true });
+window.inspectSource = function(p) {
+  const inspector = document.getElementById("inspector-content");
+  inspector.innerHTML = `
+    <div class="market-detail-card">
+      <div class="md-header">
+        <div>
+          <div class="md-title">${p.name}</div>
+          <div class="md-id">${p.id} • ${p.zone}</div>
+        </div>
+        <span class="risk-badge" style="background:#0ea5e9;">Water Origin</span>
+      </div>
+
+      <div class="flow-connectivity-box">
+        <div class="flow-node-title"><i class="fa-solid fa-water"></i> Raw Extraction Destination:</div>
+        <div class="flow-arrow-display">
+          <span>Underground Aquifer</span>
+          <i class="fa-solid fa-arrow-right-long"></i>
+          <span>${p.supplies_to}</span>
+        </div>
+      </div>
+
+      <table class="detail-table">
+        <tr><td>Extraction Type:</td><td>${p.type}</td></tr>
+        <tr><td>Aquifer Formation:</td><td>${p.aquifer_source}</td></tr>
+        <tr><td>Wellfield Yield:</td><td><strong>${p.yield_lph.toLocaleString()} Liters/Hour</strong></td></tr>
+        <tr><td>Depth:</td><td>${p.depth_m} meters</td></tr>
+      </table>
+
+      <div class="action-buttons-row">
+        <a class="btn-card-action btn-google-maps" href="https://www.google.com/maps/search/?api=1&query=${p.lat},${p.lon}" target="_blank">
+          <i class="fa-brands fa-google"></i> Google 3D
+        </a>
+      </div>
+    </div>
+  `;
+  map.setView([p.lat, p.lon], 16, { animate: true });
+};
+
+window.inspectWaterPoint = function(p) {
+  const inspector = document.getElementById("inspector-content");
+  inspector.innerHTML = `
+    <div class="market-detail-card">
+      <div class="md-header">
+        <div>
+          <div class="md-title">${p.name}</div>
+          <div class="md-id">${p.id} • ${p.ward}</div>
+        </div>
+        <span class="risk-badge" style="background:#38bdf8; color:#090d16;">${p.type}</span>
+      </div>
+
+      <table class="detail-table">
+        <tr><td>Facility Type:</td><td>${p.type}</td></tr>
+        <tr><td>Capacity:</td><td>${p.capacity_lph} LPH</td></tr>
+        <tr><td>TDS Reading:</td><td><strong>${p.tds_ppm} ppm</strong></td></tr>
+        <tr><td>Potability:</td><td>${p.potability}</td></tr>
+        <tr><td>Drain Proximity:</td><td>${p.drain_dist_m} meters</td></tr>
+      </table>
+
+      <div class="action-buttons-row">
+        <a class="btn-card-action btn-google-maps" href="https://www.google.com/maps/search/?api=1&query=${p.lat},${p.lon}" target="_blank">
+          <i class="fa-brands fa-google"></i> Google 3D
+        </a>
+      </div>
+    </div>
+  `;
+  map.setView([p.lat, p.lon], 16, { animate: true });
 };
 
 window.inspectVegMarket = function(p) {
@@ -416,98 +503,19 @@ window.inspectVegMarket = function(p) {
           <div class="md-title">${p.market_name}</div>
           <div class="md-id">${p.market_id} • ${p.jurisdiction}</div>
         </div>
-        <span class="risk-badge" style="background:#10b981;">Vegetable Market</span>
+        <span class="risk-badge" style="background:#10b981;">Produce Hub</span>
       </div>
 
       <table class="detail-table">
         <tr><td>Market Type:</td><td>${p.type}</td></tr>
-        <tr><td>Stalls Count:</td><td><strong>${p.stalls_count} farmer stalls</strong></td></tr>
+        <tr><td>Farmer Stalls:</td><td><strong>${p.stalls_count} stalls</strong></td></tr>
         <tr><td>Daily Footfall:</td><td>${p.daily_footfall.toLocaleString()} consumers/day</td></tr>
         <tr><td>Produce Origin:</td><td>${p.produce_origin}</td></tr>
-        <tr><td>Distance to Meat Stalls:</td><td><strong>${p.proximity_to_meat_fish_m} meters</strong></td></tr>
-        <tr><td>Distance to Open Drain:</td><td>${p.drain_dist_m} meters</td></tr>
-        <tr><td>Waste Management:</td><td>${p.waste_management}</td></tr>
       </table>
-
-      <div class="intervention-alert" style="border-color:#10b981; background:rgba(16,185,129,0.1); color:#6ee7b7;">
-        <strong style="color:#a7f3d0;"><i class="fa-solid fa-leaf"></i> Cross-Contamination Rating: ${p.cross_contamination_rating}</strong>
-        Ensure physical segregation from wet meat/fish stalls and regular daily organic waste composting.
-      </div>
-
-      <div class="action-buttons-row">
-        <button class="btn-card-action" onclick="openStreetView(${p.lat}, ${p.lon}, '${p.market_name.replace(/'/g, "\\'")}', 'Produce Market')">
-          <i class="fa-solid fa-person-walking"></i> Street Walk View
-        </button>
-        <a class="btn-card-action btn-google-maps" href="https://www.google.com/maps/search/?api=1&query=${p.lat},${p.lon}" target="_blank">
-          <i class="fa-brands fa-google"></i> Google Maps 3D
-        </a>
-      </div>
-    </div>
-  `;
-  map.setView([p.lat, p.lon], 16, { animate: true });
-};
-
-window.inspectPipeline = function(p) {
-  const inspector = document.getElementById("inspector-content");
-  const isHighRisk = p.cross_contamination_risk.includes("High");
-
-  inspector.innerHTML = `
-    <div class="market-detail-card">
-      <div class="md-header">
-        <div>
-          <div class="md-title">${p.name}</div>
-          <div class="md-id">Pipeline #${p.pipe_id} • ${p.jurisdiction}</div>
-        </div>
-        <span class="risk-badge" style="background:${isHighRisk ? '#ef4444' : '#0284c7'};">Water Main</span>
-      </div>
-
-      <table class="detail-table">
-        <tr><td>Pipeline ID:</td><td><strong>${p.pipe_id}</strong></td></tr>
-        <tr><td>Water Headworks:</td><td>${p.water_source}</td></tr>
-        <tr><td>Pipe Diameter:</td><td><strong>${p.diameter_mm} mm</strong></td></tr>
-        <tr><td>Material:</td><td>${p.material}</td></tr>
-        <tr><td>Operating Pressure:</td><td>${p.pressure_bar} Bar</td></tr>
-        <tr><td>Commissioning Year:</td><td>${p.laying_year}</td></tr>
-      </table>
-
-      <div class="intervention-alert" style="border-color:${isHighRisk ? '#ef4444' : '#0284c7'};">
-        <strong><i class="fa-solid fa-faucet-drip"></i> Contamination Vulnerability:</strong>
-        ${p.cross_contamination_risk}. Sullage ingress can occur during low water pressure hours.
-      </div>
-    </div>
-  `;
-};
-
-window.inspectWaterPoint = function(p) {
-  const inspector = document.getElementById("inspector-content");
-  const isCritical = p.risk.includes("CRITICAL");
-
-  inspector.innerHTML = `
-    <div class="market-detail-card">
-      <div class="md-header">
-        <div>
-          <div class="md-title">${p.name}</div>
-          <div class="md-id">${p.id} • ${p.ward}</div>
-        </div>
-        <span class="risk-badge" style="background:${isCritical ? '#ef4444' : '#0284c7'};">${p.type}</span>
-      </div>
-
-      <table class="detail-table">
-        <tr><td>Facility Type:</td><td>${p.type}</td></tr>
-        <tr><td>Output Capacity:</td><td>${p.capacity_lph} Liters/Hour</td></tr>
-        <tr><td>TDS Level:</td><td><strong>${p.tds_ppm} ppm</strong></td></tr>
-        <tr><td>Potability Status:</td><td><strong style="color:${isCritical ? '#f87171' : '#4ade80'}">${p.potability}</strong></td></tr>
-        <tr><td>Distance to Open Drain:</td><td><strong style="color:${p.drain_dist_m < 15 ? '#ef4444' : '#e2e8f0'}">${p.drain_dist_m} meters</strong></td></tr>
-      </table>
-
-      <div class="intervention-alert">
-        <strong><i class="fa-solid fa-biohazard"></i> Health Alert (${p.risk}):</strong>
-        ${isCritical ? 'Immediate microbial testing required. Hand pump is directly vulnerable to subsurface sewage percolation.' : 'Water quality within acceptable IS 10500 drinking standards.'}
-      </div>
 
       <div class="action-buttons-row">
         <a class="btn-card-action btn-google-maps" href="https://www.google.com/maps/search/?api=1&query=${p.lat},${p.lon}" target="_blank">
-          <i class="fa-brands fa-google"></i> Google Maps 3D
+          <i class="fa-brands fa-google"></i> Google 3D
         </a>
       </div>
     </div>
@@ -517,8 +525,6 @@ window.inspectWaterPoint = function(p) {
 
 window.inspectHospital = function(p) {
   const inspector = document.getElementById("inspector-content");
-  const isGovt = p.sector === "Government";
-
   inspector.innerHTML = `
     <div class="market-detail-card">
       <div class="md-header">
@@ -526,19 +532,18 @@ window.inspectHospital = function(p) {
           <div class="md-title">${p.name}</div>
           <div class="md-id">${p.sector} • ${p.category}</div>
         </div>
-        <span class="risk-badge" style="background:${isGovt ? '#0284c7' : '#f43f5e'};">Healthcare</span>
+        <span class="risk-badge" style="background:#f43f5e;">Healthcare</span>
       </div>
 
       <table class="detail-table">
         <tr><td>Category:</td><td>${p.category}</td></tr>
-        <tr><td>Inpatient Bed Capacity:</td><td><strong>${p.beds} Beds</strong></td></tr>
-        <tr><td>ICU & Emergency:</td><td>${p.emergency_icu}</td></tr>
-        <tr><td>Ambulance Network:</td><td>${p.ambulance}</td></tr>
+        <tr><td>Bed Capacity:</td><td><strong>${p.beds} Beds</strong></td></tr>
+        <tr><td>Emergency / ICU:</td><td>${p.emergency_icu}</td></tr>
       </table>
 
       <div class="action-buttons-row">
         <a class="btn-card-action btn-google-maps" href="https://www.google.com/maps/search/?api=1&query=${p.lat},${p.lon}" target="_blank">
-          <i class="fa-brands fa-google"></i> Google Maps 3D
+          <i class="fa-brands fa-google"></i> Google 3D
         </a>
       </div>
     </div>
@@ -546,38 +551,59 @@ window.inspectHospital = function(p) {
   map.setView([p.lat, p.lon], 16, { animate: true });
 };
 
-// ---------------- Street View Modal ---------------- //
+window.inspectMarket = function(shopId) {
+  const item = allData.markets.features.find(f => f.properties.shop_id === shopId);
+  if (!item) return;
+  const p = item.properties;
+  const [lon, lat] = item.geometry.coordinates;
+  const inspector = document.getElementById("inspector-content");
 
-window.openStreetView = function(lat, lon, name, type) {
-  const modal = document.getElementById("street-modal");
-  const content = document.getElementById("street-modal-content");
-
-  content.innerHTML = `
-    <div style="text-align:center;">
-      <div style="background:#0f172a; border-radius:8px; padding:18px; border:1px solid #334155; margin-bottom:14px;">
-        <i class="fa-solid fa-street-view" style="font-size:3rem; color:#38bdf8; margin-bottom:10px;"></i>
-        <h3 style="font-size:1.05rem; font-weight:700; color:#fff;">${name}</h3>
-        <p style="font-size:0.8rem; color:#94a3b8; margin-top:4px;">Type: ${type} • Location: ${lat.toFixed(5)}°N, ${lon.toFixed(5)}°E</p>
+  inspector.innerHTML = `
+    <div class="market-detail-card">
+      <div class="md-header">
+        <div>
+          <div class="md-title">${p.shop_name}</div>
+          <div class="md-id">${p.shop_id} • ${p.mandal_zone}</div>
+        </div>
+        <span class="risk-badge" style="background:${p.marker_color}">${p.category.split(' ')[0]}</span>
       </div>
 
-      <p style="font-size:0.82rem; color:#cbd5e1; line-height:1.5; margin-bottom:16px;">
-        Explore the ground-level street view, roadside drainage gutters, market vendor stalls, and underground pipeline corridors directly via Google Maps 3D Earth:
-      </p>
+      <table class="detail-table">
+        <tr><td>Commodity:</td><td>${p.category}</td></tr>
+        <tr><td>Supply Origin:</td><td>${p.animal_origin}</td></tr>
+        <tr><td>Daily Throughput:</td><td>${p.daily_animals_handled} units/day</td></tr>
+        <tr><td>Drain Proximity:</td><td>${p.distance_to_drain_m} meters</td></tr>
+      </table>
 
-      <a class="nav-btn" style="display:inline-flex; justify-content:center; width:100%; padding:10px; font-size:0.9rem;" href="https://www.google.com/maps/search/?api=1&query=${lat},${lon}" target="_blank">
-        <i class="fa-brands fa-google"></i> Open Street View in Google Maps 3D
-      </a>
+      <div class="action-buttons-row">
+        <a class="btn-card-action btn-google-maps" href="https://www.google.com/maps/search/?api=1&query=${lat},${lon}" target="_blank">
+          <i class="fa-brands fa-google"></i> Google 3D
+        </a>
+      </div>
     </div>
   `;
-
-  modal.classList.remove("hidden");
+  map.setView([lat, lon], 16, { animate: true });
 };
 
-// ---------------- Drone Flyover Mode ---------------- //
+// ---------------- 3D Perspective & Flyover Modes ---------------- //
+
+function toggle3DTilt() {
+  const viewport = document.getElementById("map-viewport");
+  is3DTilt = !is3DTilt;
+  const btn = document.getElementById("btn-3d-tilt");
+
+  if (is3DTilt) {
+    viewport.classList.add("perspective-3d");
+    btn.classList.add("active");
+  } else {
+    viewport.classList.remove("perspective-3d");
+    btn.classList.remove("active");
+  }
+}
 
 function startDroneFlyover() {
   if (isDroneMode) return;
-  stopBikeCommute();
+  stopCommuteFlow();
 
   isDroneMode = true;
   droneStep = 0;
@@ -585,38 +611,33 @@ function startDroneFlyover() {
 
   const hud = document.getElementById("hud-panel");
   hud.classList.remove("hidden");
-  document.getElementById("hud-mode-title").innerHTML = '<i class="fa-solid fa-helicopter"></i> Drone Flyover Active';
+  document.getElementById("hud-mode-title").innerHTML = '<i class="fa-solid fa-helicopter"></i> Drone 3D Flyover Active';
 
-  // Add animated drone marker
   droneMarker = L.marker([DRONE_CHECKPOINTS[0].lat, DRONE_CHECKPOINTS[0].lon], {
     icon: L.divIcon({
-      html: '<div class="drone-camera-icon" style="width:28px; height:28px;"><i class="fa-solid fa-helicopter"></i></div>',
+      html: '<div class="source-marker-icon" style="background:#0ea5e9; width:28px; height:28px;"><i class="fa-solid fa-helicopter"></i></div>',
       className: "",
       iconSize: [28, 28],
       iconAnchor: [14, 14]
     })
   }).addTo(map);
 
-  flyToNextDroneCheckpoint();
+  flyToNextCheckpoint();
 }
 
-function flyToNextDroneCheckpoint() {
+function flyToNextCheckpoint() {
   if (!isDroneMode) return;
-
   const cp = DRONE_CHECKPOINTS[droneStep];
-  document.getElementById("hud-checkpoint-text").textContent = `Checkpoint ${droneStep + 1}/${DRONE_CHECKPOINTS.length}: ${cp.name}`;
-  document.getElementById("hud-alt-val").textContent = cp.alt;
-  document.getElementById("hud-speed-val").textContent = cp.speed;
 
-  const bioVal = document.getElementById("hud-bio-val");
-  bioVal.textContent = cp.hazard;
-  bioVal.className = `hud-val ${cp.hazard === "CRITICAL" ? "alert-red" : cp.hazard === "HIGH" ? "alert-red" : "alert-green"}`;
+  document.getElementById("hud-checkpoint-text").textContent = `${droneStep + 1}/${DRONE_CHECKPOINTS.length}: ${cp.name}`;
+  document.getElementById("hud-alt-val").textContent = cp.alt;
+  document.getElementById("hud-speed-val").textContent = cp.rate;
 
   droneMarker.setLatLng([cp.lat, cp.lon]);
   map.flyTo([cp.lat, cp.lon], cp.zoom, { duration: 3.5 });
 
   droneStep = (droneStep + 1) % DRONE_CHECKPOINTS.length;
-  droneTimer = setTimeout(flyToNextDroneCheckpoint, 5500);
+  droneTimer = setTimeout(flyToNextCheckpoint, 5500);
 }
 
 function stopDroneFlyover() {
@@ -630,142 +651,194 @@ function stopDroneFlyover() {
   }
 }
 
-// ---------------- Motorcycle / Bicycle Commute Mode ---------------- //
-
-function startBikeCommute() {
-  if (isBikeMode) return;
+function startCommuteFlow() {
+  if (isCommuteMode) return;
   stopDroneFlyover();
 
-  isBikeMode = true;
-  bikeProgress = 0;
+  isCommuteMode = true;
+  commuteStep = 0;
   document.getElementById("btn-commute-mode").classList.add("active");
 
   const hud = document.getElementById("hud-panel");
   hud.classList.remove("hidden");
-  document.getElementById("hud-mode-title").innerHTML = '<i class="fa-solid fa-motorcycle"></i> Livestock Commute Simulation';
-  document.getElementById("hud-checkpoint-text").textContent = 'Transporting Livestock: Kovur Rural Hatchery ➔ Stonehousepet Wholesale Market';
+  document.getElementById("hud-mode-title").innerHTML = '<i class="fa-solid fa-motorcycle"></i> Commute Flow Active';
+  document.getElementById("hud-checkpoint-text").textContent = 'Tracking Water Distribution Corridor across Pennar River...';
 
-  bikeMarker = L.marker(BIKE_ROUTE[0], {
+  commuteMarker = L.marker(COMMUTE_ROUTE[0], {
     icon: L.divIcon({
-      html: '<div class="moving-bike-icon" style="width:30px; height:30px;"><i class="fa-solid fa-motorcycle"></i></div>',
+      html: '<div class="tank-marker-icon" style="background:#f59e0b; width:28px; height:28px;"><i class="fa-solid fa-motorcycle"></i></div>',
       className: "",
-      iconSize: [30, 30],
-      iconAnchor: [15, 15]
+      iconSize: [28, 28],
+      iconAnchor: [14, 14]
     })
   }).addTo(map);
 
-  map.setView(BIKE_ROUTE[0], 15);
-  advanceBikeCommute();
+  advanceCommuteStep();
 }
 
-function advanceBikeCommute() {
-  if (!isBikeMode) return;
-
-  if (bikeProgress >= BIKE_ROUTE.length - 1) {
-    bikeProgress = 0; // Loop or finish
+function advanceCommuteStep() {
+  if (!isCommuteMode) return;
+  if (commuteStep >= COMMUTE_ROUTE.length - 1) {
+    commuteStep = 0;
   } else {
-    bikeProgress++;
+    commuteStep++;
   }
 
-  const currentCoord = BIKE_ROUTE[bikeProgress];
-  bikeMarker.setLatLng(currentCoord);
-  map.panTo(currentCoord, { animate: true, duration: 1.5 });
+  const coord = COMMUTE_ROUTE[commuteStep];
+  commuteMarker.setLatLng(coord);
+  map.panTo(coord, { animate: true, duration: 1.5 });
 
-  const distKm = ((bikeProgress / BIKE_ROUTE.length) * 6.5).toFixed(1);
-  document.getElementById("hud-alt-val").textContent = `Ground (${distKm} km)`;
+  document.getElementById("hud-alt-val").textContent = `Point ${commuteStep + 1}/${COMMUTE_ROUTE.length}`;
   document.getElementById("hud-speed-val").textContent = "32 km/h";
 
-  // Bio exposure triggers when crossing Pennar bridge & entering Stonehousepet
-  const bioVal = document.getElementById("hud-bio-val");
-  if (bikeProgress >= 7) {
-    bioVal.textContent = "CRITICAL (Near Open Sewer)";
-    bioVal.className = "hud-val alert-red";
-  } else if (bikeProgress >= 4) {
-    bioVal.textContent = "MODERATE (Crossing River)";
-    bioVal.className = "hud-val alert-green";
-  } else {
-    bioVal.textContent = "NORMAL";
-    bioVal.className = "hud-val alert-green";
-  }
-
-  bikeTimer = setTimeout(advanceBikeCommute, 2200);
+  commuteTimer = setTimeout(advanceCommuteStep, 2000);
 }
 
-function stopBikeCommute() {
-  isBikeMode = false;
-  clearTimeout(bikeTimer);
+function stopCommuteFlow() {
+  isCommuteMode = false;
+  clearTimeout(commuteTimer);
   document.getElementById("btn-commute-mode").classList.remove("active");
   document.getElementById("hud-panel").classList.add("hidden");
-  if (bikeMarker) {
-    map.removeLayer(bikeMarker);
-    bikeMarker = null;
+  if (commuteMarker) {
+    map.removeLayer(commuteMarker);
+    commuteMarker = null;
   }
 }
 
-// ---------------- Event Listeners & Filter Handlers ---------------- //
+// ---------------- API Keys Config ---------------- //
 
-function updateHeaderKPIs() {
-  const features = allData.markets.features;
-  const critical = features.filter(f => f.properties.risk_level === "Very High Risk" || f.properties.risk_level === "High Risk").length;
-  const veryHigh = features.filter(f => f.properties.risk_level === "Very High Risk").length;
+function loadSavedAPIKeys() {
+  const gKey = localStorage.getItem("nellore_google_key");
+  const sKey = localStorage.getItem("nellore_sentinel_key");
+  const mToken = localStorage.getItem("nellore_mapbox_token");
 
-  if (document.getElementById("kpi-total")) document.getElementById("kpi-total").textContent = features.length + allData.veg_markets.features.length;
-  if (document.getElementById("kpi-very-high")) document.getElementById("kpi-very-high").textContent = veryHigh;
-  if (document.getElementById("kpi-ai-acc") && allData.ai_metrics) {
-    document.getElementById("kpi-ai-acc").textContent = (allData.ai_metrics.test_accuracy * 100).toFixed(1) + "%";
-  }
+  if (gKey && document.getElementById("input-google-key")) document.getElementById("input-google-key").value = gKey;
+  if (sKey && document.getElementById("input-sentinel-key")) document.getElementById("input-sentinel-key").value = sKey;
+  if (mToken && document.getElementById("input-mapbox-token")) document.getElementById("input-mapbox-token").value = mToken;
 }
+
+function saveAPIKeys() {
+  const gKey = document.getElementById("input-google-key").value.trim();
+  const sKey = document.getElementById("input-sentinel-key").value.trim();
+  const mToken = document.getElementById("input-mapbox-token").value.trim();
+
+  if (gKey) localStorage.setItem("nellore_google_key", gKey);
+  if (sKey) localStorage.setItem("nellore_sentinel_key", sKey);
+  if (mToken) localStorage.setItem("nellore_mapbox_token", mToken);
+
+  alert("Credentials saved securely in your browser! Satellite and 3D services configured.");
+  document.getElementById("keys-modal").classList.add("hidden");
+}
+
+// ---------------- Event Listeners & Filters ---------------- //
 
 function setupEventListeners() {
-  // Layer Toggles
-  document.getElementById("layer-markets").addEventListener("change", (e) => toggleLayer(layerMarkets, e.target.checked));
-  document.getElementById("layer-veg-markets").addEventListener("change", (e) => toggleLayer(layerVegMarkets, e.target.checked));
-  document.getElementById("layer-pipelines").addEventListener("change", (e) => toggleLayer(layerPipelines, e.target.checked));
-  document.getElementById("layer-water-points").addEventListener("change", (e) => toggleLayer(layerWaterPoints, e.target.checked));
-  document.getElementById("layer-drainage").addEventListener("change", (e) => toggleLayer(layerDrainage, e.target.checked));
-  document.getElementById("layer-river").addEventListener("change", (e) => toggleLayer(layerRiver, e.target.checked));
-  document.getElementById("layer-hospitals").addEventListener("change", (e) => toggleLayer(layerHospitals, e.target.checked));
-  document.getElementById("layer-boundaries").addEventListener("change", (e) => toggleLayer(layerBoundaries, e.target.checked));
-  document.getElementById("layer-buffers-250").addEventListener("change", (e) => toggleLayer(layerBuffers250, e.target.checked));
+  // 3D Tilt
+  document.getElementById("btn-3d-tilt").addEventListener("click", toggle3DTilt);
 
-  // Drone & Bike Modes
+  // Drone & Commute
   document.getElementById("btn-drone-mode").addEventListener("click", () => {
     if (isDroneMode) stopDroneFlyover();
     else startDroneFlyover();
   });
 
   document.getElementById("btn-commute-mode").addEventListener("click", () => {
-    if (isBikeMode) stopBikeCommute();
-    else startBikeCommute();
+    if (isCommuteMode) stopCommuteFlow();
+    else startCommuteFlow();
   });
 
   document.getElementById("btn-hud-close").addEventListener("click", () => {
     stopDroneFlyover();
-    stopBikeCommute();
+    stopCommuteFlow();
   });
 
   document.getElementById("btn-hud-stop").addEventListener("click", () => {
     stopDroneFlyover();
-    stopBikeCommute();
+    stopCommuteFlow();
   });
 
   document.getElementById("btn-hud-next").addEventListener("click", () => {
-    if (isDroneMode) flyToNextDroneCheckpoint();
-    else if (isBikeMode) advanceBikeCommute();
+    if (isDroneMode) flyToNextCheckpoint();
+    else if (isCommuteMode) advanceCommuteStep();
   });
 
-  // Filters
-  document.getElementById("search-input").addEventListener("input", applyFilters);
-  document.getElementById("filter-risk").addEventListener("change", applyFilters);
-  document.getElementById("filter-zone").addEventListener("change", applyFilters);
-  document.getElementById("filter-category").addEventListener("change", applyFilters);
+  // Layer toggles
+  document.getElementById("layer-water-flow").addEventListener("change", (e) => toggleLayer(layerFlowNetwork, e.target.checked));
+  document.getElementById("layer-tanks").addEventListener("change", (e) => toggleLayer(layerTanks, e.target.checked));
+  document.getElementById("layer-sources").addEventListener("change", (e) => toggleLayer(layerSources, e.target.checked));
+  document.getElementById("layer-water-points").addEventListener("change", (e) => toggleLayer(layerWaterPoints, e.target.checked));
+  document.getElementById("layer-river").addEventListener("change", (e) => toggleLayer(layerRiver, e.target.checked));
+  document.getElementById("layer-drainage").addEventListener("change", (e) => toggleLayer(layerDrainage, e.target.checked));
+  document.getElementById("layer-veg-markets").addEventListener("change", (e) => toggleLayer(layerVegMarkets, e.target.checked));
+  document.getElementById("layer-markets").addEventListener("change", (e) => toggleLayer(layerMarkets, e.target.checked));
+  document.getElementById("layer-hospitals").addEventListener("change", (e) => toggleLayer(layerHospitals, e.target.checked));
+  document.getElementById("layer-boundaries").addEventListener("change", (e) => toggleLayer(layerBoundaries, e.target.checked));
 
-  const drainSlider = document.getElementById("filter-drain-dist");
-  drainSlider.addEventListener("input", (e) => {
-    const val = e.target.value;
-    document.getElementById("drain-dist-val").textContent = val >= 300 ? "All" : `≤ ${val}m`;
-    applyFilters();
+  // Mask toggle
+  document.getElementById("filter-mask").addEventListener("change", (e) => {
+    if (e.target.value === "DARK") {
+      layerMask.setStyle({ fillOpacity: 0.72 });
+    } else {
+      layerMask.setStyle({ fillOpacity: 0.15 });
+    }
   });
+
+  // Network Focus Filter
+  document.getElementById("filter-network-focus").addEventListener("change", (e) => {
+    const focus = e.target.value;
+    if (focus === "WATER_FLOW") {
+      map.addLayer(layerFlowNetwork);
+      map.addLayer(layerTanks);
+      map.addLayer(layerSources);
+      map.removeLayer(layerMarkets);
+      map.removeLayer(layerVegMarkets);
+      map.removeLayer(layerHospitals);
+    } else if (focus === "STORAGE_TANKS") {
+      map.addLayer(layerTanks);
+      map.removeLayer(layerMarkets);
+      map.removeLayer(layerFlowNetwork);
+    } else if (focus === "ALL") {
+      map.addLayer(layerFlowNetwork);
+      map.addLayer(layerTanks);
+      map.addLayer(layerSources);
+      map.addLayer(layerWaterPoints);
+      map.addLayer(layerMarkets);
+      map.addLayer(layerVegMarkets);
+      map.addLayer(layerHospitals);
+    }
+  });
+
+  // Search
+  document.getElementById("search-input").addEventListener("input", (e) => {
+    const query = e.target.value.toLowerCase().trim();
+    if (!query) return;
+
+    const tankMatch = allData.overhead_tanks.features.find(f => f.properties.name.toLowerCase().includes(query));
+    if (tankMatch) {
+      inspectTank(tankMatch.properties);
+      return;
+    }
+
+    const srcMatch = allData.underground_sources.features.find(f => f.properties.name.toLowerCase().includes(query));
+    if (srcMatch) {
+      inspectSource(srcMatch.properties);
+      return;
+    }
+
+    const pipeMatch = allData.flow_network.features.find(f => f.properties.name.toLowerCase().includes(query));
+    if (pipeMatch) {
+      inspectFlowPipe(pipeMatch.properties);
+    }
+  });
+
+  // API Keys Modal
+  document.getElementById("btn-api-keys").addEventListener("click", () => {
+    document.getElementById("keys-modal").classList.remove("hidden");
+  });
+  document.getElementById("btn-close-keys").addEventListener("click", () => {
+    document.getElementById("keys-modal").classList.add("hidden");
+  });
+  document.getElementById("btn-save-keys").addEventListener("click", saveAPIKeys);
 
   // Modals
   document.getElementById("btn-toggle-analytics").addEventListener("click", () => {
@@ -786,37 +859,18 @@ function setupEventListeners() {
     document.getElementById("street-modal").classList.add("hidden");
   });
 
-  // Simulation Tool
-  document.getElementById("btn-simulate-shop").addEventListener("click", () => {
-    isSimulationMode = true;
-    document.getElementById("simulation-banner").classList.remove("hidden");
-    map.getContainer().style.cursor = "crosshair";
+  // Shapefile & GeoJSON export buttons
+  document.getElementById("btn-dl-flow-network").addEventListener("click", () => {
+    downloadFile(JSON.stringify(allData.flow_network, null, 2), "water_distribution_flow_network.geojson", "application/json");
   });
 
-  document.getElementById("btn-cancel-sim").addEventListener("click", exitSimulationMode);
-  document.getElementById("btn-close-sim").addEventListener("click", () => {
-    document.getElementById("sim-result-modal").classList.add("hidden");
+  document.getElementById("btn-dl-tanks").addEventListener("click", () => {
+    downloadFile(JSON.stringify(allData.overhead_tanks, null, 2), "overhead_storage_reservoirs_elsr.geojson", "application/json");
   });
 
-  map.on("click", (e) => {
-    if (!isSimulationMode) return;
-    evaluateSimulatedLocation(e.latlng);
+  document.getElementById("btn-dl-boundaries").addEventListener("click", () => {
+    downloadFile(JSON.stringify(allData.aoi, null, 2), "nellore_kovur_exact_boundaries.geojson", "application/json");
   });
-
-  // Export handlers
-  document.getElementById("btn-dl-geojson").addEventListener("click", () => {
-    downloadFile(JSON.stringify(allData.markets, null, 2), "nellore_kovur_wet_markets.geojson", "application/json");
-  });
-
-  document.getElementById("btn-dl-pipelines").addEventListener("click", () => {
-    downloadFile(JSON.stringify(allData.pipelines, null, 2), "drinking_water_pipelines_nmc_kovur.geojson", "application/json");
-  });
-
-  document.getElementById("btn-dl-waterpoints").addEventListener("click", () => {
-    downloadFile(JSON.stringify(allData.water_points, null, 2), "water_points_ro_plants_handpumps.geojson", "application/json");
-  });
-
-  document.getElementById("btn-dl-csv").addEventListener("click", exportCSV);
 }
 
 function toggleLayer(layer, isChecked) {
@@ -824,112 +878,8 @@ function toggleLayer(layer, isChecked) {
   else map.removeLayer(layer);
 }
 
-function exitSimulationMode() {
-  isSimulationMode = false;
-  document.getElementById("simulation-banner").classList.add("hidden");
-  map.getContainer().style.cursor = "";
-  if (simMarker) {
-    map.removeLayer(simMarker);
-    simMarker = null;
-  }
-}
-
-function applyFilters() {
-  const search = document.getElementById("search-input").value.toLowerCase().trim();
-  const risk = document.getElementById("filter-risk").value;
-  const zone = document.getElementById("filter-zone").value;
-  const category = document.getElementById("filter-category").value;
-  const maxDrain = parseInt(document.getElementById("filter-drain-dist").value, 10);
-
-  const filtered = allData.markets.features.filter(f => {
-    const p = f.properties;
-    if (search && !p.shop_name.toLowerCase().includes(search) && !p.shop_id.toLowerCase().includes(search)) return false;
-    if (risk !== "ALL" && p.risk_level !== risk) return false;
-    if (zone !== "ALL" && p.mandal_zone !== zone) return false;
-    if (category !== "ALL" && p.category !== category) return false;
-    if (maxDrain < 300 && p.distance_to_drain_m > maxDrain) return false;
-    return true;
-  });
-
-  renderMarketMarkers(filtered);
-}
-
-function evaluateSimulatedLocation(latlng) {
-  const lat = latlng.lat;
-  const lon = latlng.lng;
-
-  const drainLines = allData.drainage.features.map(f => f.geometry.coordinates);
-  let minDrainDist = 9999;
-
-  drainLines.forEach(line => {
-    for (let i = 0; i < line.length - 1; i++) {
-      const [x1, y1] = line[i];
-      const [x2, y2] = line[i + 1];
-      const d = distPointToSegment(lon, lat, x1, y1, x2, y2);
-      if (d < minDrainDist) minDrainDist = d;
-    }
-  });
-  minDrainDist = Math.round(minDrainDist);
-  const riverDist = Math.round(Math.abs(lat - 14.463) * 110574);
-
-  const normDrain = Math.max(0, Math.min(1, (300 - minDrainDist) / 280));
-  const score = Math.round(((0.25 * normDrain) + (0.15 * 1.0) + (0.20 * (minDrainDist < 50 ? 1.0 : 0.4)) + 0.15 * 0.7 + 0.10 * 0.9 + 0.10 * 0.5 + 0.05 * Math.max(0, Math.min(1, (2500 - riverDist)/2300))) * 100);
-
-  let recommendation, permitDecision;
-  if (score >= 72 || minDrainDist < 30) {
-    permitDecision = "🚨 PERMIT REJECTED (High Zoonotic Risk)";
-    recommendation = `Location is only <strong>${minDrainDist}m</strong> from an open municipal sullage drain. Mandate 100m bio-setback distance or relocate to formal NMC abattoir zone.`;
-  } else if (score >= 56) {
-    permitDecision = "⚠️ CONDITIONAL PERMIT (Sanitary Covenants Required)";
-    recommendation = `Permit contingent on closed bio-waste traps, mandatory zero-discharge into nearby drainage (${minDrainDist}m), and verified cold storage refrigeration.`;
-  } else {
-    permitDecision = "✅ PERMIT APPROVED (Standard Food Safety Protocol)";
-    recommendation = `Adequate spatial separation from open drainage lines (${minDrainDist}m). Standard municipal sanitation inspection schedule applies.`;
-  }
-
-  if (simMarker) map.removeLayer(simMarker);
-  simMarker = L.circleMarker([lat, lon], {
-    radius: 10,
-    color: "#ffffff",
-    weight: 3,
-    fillColor: score >= 72 ? "#d90429" : score >= 56 ? "#f77f00" : "#06d6a0",
-    fillOpacity: 0.9
-  }).addTo(map);
-
-  const content = `
-    <div style="font-size:0.85rem; line-height:1.5;">
-      <div style="font-size:1rem; font-weight:700; margin-bottom:8px;">${permitDecision}</div>
-      <table class="detail-table">
-        <tr><td>Selected Coordinates:</td><td>${lat.toFixed(5)}°N, ${lon.toFixed(5)}°E</td></tr>
-        <tr><td>Distance to Open Drain:</td><td><strong>${minDrainDist} meters</strong></td></tr>
-        <tr><td>Distance to Pennar River:</td><td>${riverDist} meters</td></tr>
-        <tr><td>Estimated Geo-Risk Score:</td><td><strong>${score} / 100</strong></td></tr>
-      </table>
-      <div class="intervention-alert" style="margin-top:12px;">
-        ${recommendation}
-      </div>
-    </div>
-  `;
-
-  document.getElementById("sim-result-content").innerHTML = content;
-  document.getElementById("sim-result-modal").classList.remove("hidden");
-  exitSimulationMode();
-}
-
-function distPointToSegment(px, py, x1, y1, x2, y2) {
-  const cosLat = Math.cos(14.45 * Math.PI / 180);
-  const mx = (px - x1) * 111320 * cosLat;
-  const my = (py - y1) * 110574;
-  const sx = (x2 - x1) * 111320 * cosLat;
-  const sy = (y2 - y1) * 110574;
-
-  const segLenSq = sx * sx + sy * sy;
-  if (segLenSq === 0) return Math.sqrt(mx * mx + my * my);
-
-  const t = Math.max(0, Math.min(1, (mx * sx + my * sy) / segLenSq));
-  const dx = mx - t * sx;
-  const dy = my - t * sy;
-  return Math.sqrt(dx * dx + dy * dy);
+function updateStats() {
+  // Reserved for live telemetry
 }
 
 function downloadFile(content, fileName, contentType) {
@@ -939,13 +889,4 @@ function downloadFile(content, fileName, contentType) {
   a.download = fileName;
   a.click();
   URL.revokeObjectURL(a.href);
-}
-
-function exportCSV() {
-  const features = allData.markets.features;
-  if (!features.length) return;
-
-  const headers = Object.keys(features[0].properties);
-  const rows = features.map(f => headers.map(h => `"${String(f.properties[h] || '').replace(/"/g, '""')}"`).join(","));
-  downloadFile([headers.join(","), ...rows].join("\n"), "health_gis_nellore_kovur_attributes.csv", "text/csv;charset=utf-8;");
 }
