@@ -1566,6 +1566,135 @@ window.inspectMarket = function(shopId) {
   map.setView([lat, lon], 16, { animate: true });
 };
 
+// ---------------- 12b. MULTI-TEMPORAL CROP PHENOLOGY TRACKER ---------------- //
+
+const PHENOLOGY_STAGES = [
+  {
+    step: 1,
+    month: "July (నారుమడి & దమ్ము దశ)",
+    stageName: "Nursery & Mainfield Puddling",
+    teluguName: "నారుమడి దశ మరియు నాట్లు",
+    duration: "Days 1 - 25",
+    ndvi: "+0.18",
+    color: "#dfc27d",
+    waterReq: "2-3 cm shallow water layer in nursery; saturation during transplantation",
+    nitrogenStatus: "Basal application: 50 kg DAP + 15 kg MOP per acre before final puddling",
+    pestSurveillance: "Gall midge & nursery root weevil monitoring; seedling root dip in chlorpyriphos",
+    satelliteLook: "Visible wet soil & flooded paddy basins; low NIR scattering, moderate blue/green water reflectance"
+  },
+  {
+    step: 2,
+    month: "August (పిలకల దశ)",
+    stageName: "Active Tillering & Canopy Expansion",
+    teluguName: "తీవ్రమైన పిలకల దశ",
+    duration: "Days 26 - 55",
+    ndvi: "+0.48",
+    color: "#a6d96a",
+    waterReq: "Maintain 3-5 cm standing water layer; avoid deep submergence to encourage tiller buds",
+    nitrogenStatus: "1st top dressing: 25 kg Urea + 10 kg Zinc Sulphate (if zinc deficient) @ 30 DAT",
+    pestSurveillance: "Early stem borer (dead hearts) & leaf folder alert; pheromone traps recommended",
+    satelliteLook: "Rapid increase in green biomass; NIR Band 8 reflectance climbs from 12% to 32%"
+  },
+  {
+    step: 3,
+    month: "September (ఈనెలు తొడిగే దశ / అంకురం)",
+    stageName: "Active Panicle Initiation (PI)",
+    teluguName: "అంకురం ఏర్పడే దశ (ఈనెలు తొడగడం)",
+    duration: "Days 56 - 85",
+    ndvi: "+0.74 (Optimal Peak Vigor)",
+    color: "#1a9850",
+    waterReq: "Critical water stage: Maintain uninterrupted 5 cm water column; water stress causes sterile spikelets",
+    nitrogenStatus: "2nd top dressing: 25 kg Urea + 15 kg MOP (Potash) per acre for panicle elongation",
+    pestSurveillance: "HIGH ALERT: Rice Blast (leaf & nodal blast) due to 84% night humidity; spray Tricyclazole 75% WP @ 0.6g/L",
+    satelliteLook: "Peak Sentinel-2 chlorophyll absorption trough in Red B4 (0.04) and massive NIR B8 plateau (0.47)"
+  },
+  {
+    step: 4,
+    month: "October (పూత దశ)",
+    stageName: "Heading & 50% Flowering",
+    teluguName: "పూత దశ మరియు గింజ పాలుపోసుకునే సమయం",
+    duration: "Days 86 - 110",
+    ndvi: "+0.71",
+    color: "#66bd63",
+    waterReq: "Maintain 3 cm water layer; prevent drought stress during pollination and anthesis",
+    nitrogenStatus: "Zero urea application; foliar spray of 13-0-45 (Multi-K @ 10g/L) for bold grain formation",
+    pestSurveillance: "Neck blast & sheath rot monitoring; false smut prophylactic spray during boot leaf stage",
+    satelliteLook: "High canopy saturation; Red-Edge NDRE (+0.52) provides optimal nitrogen sensitivity"
+  },
+  {
+    step: 5,
+    month: "November (పాలుపోసుకునే దశ)",
+    stageName: "Milky to Hard Dough Grain Filling",
+    teluguName: "పాలుపోసుకునే మరియు గింజ గట్టిపడే దశ",
+    duration: "Days 111 - 135",
+    ndvi: "+0.55",
+    color: "#84cc16",
+    waterReq: "Alternate wetting and drying (AWD); drain water completely 10-12 days before anticipated harvest",
+    nitrogenStatus: "No chemical fertilization; allow translocated carbohydrates into panicles",
+    pestSurveillance: "Brown Plant Hopper (BPH) surveillance at base of hills; maintain alleyways in dense fields",
+    satelliteLook: "Canopy starts natural senescence; chlorophyll degrades, shifting CIR from magenta to amber tones"
+  },
+  {
+    step: 6,
+    month: "December (కోత దశ)",
+    stageName: "Physiological Maturity & Golden Harvest",
+    teluguName: "పంట కోత మరియు నూర్పిడి దశ",
+    duration: "Days 136 - 150",
+    ndvi: "+0.28",
+    color: "#eab308",
+    waterReq: "Completely dry field for combine harvester trafficability",
+    nitrogenStatus: "Harvest when 85% grains turn golden straw color; thresh and sun-dry to 17% moisture",
+    pestSurveillance: "Storage pest protection; clean threshing yard to prevent mold contamination",
+    satelliteLook: "Golden alluvium and straw reflectance; SWIR Band 11 indicates low moisture content ready for MSP sale"
+  }
+];
+
+function updatePhenologyStage(step) {
+  const stage = PHENOLOGY_STAGES.find(s => s.step === step) || PHENOLOGY_STAGES[2];
+  
+  const monthLbl = document.getElementById("phenology-month-label");
+  if (monthLbl) {
+    monthLbl.textContent = `${stage.month} • ${stage.stageName}`;
+  }
+
+  const detailsCard = document.getElementById("phenology-details-card");
+  if (detailsCard) {
+    detailsCard.style.borderLeftColor = stage.color;
+    detailsCard.innerHTML = `
+      <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:8px;">
+        <div>
+          <strong style="color:#f8fafc; font-size:0.95rem;">${stage.stageName}</strong>
+          <div style="font-size:0.75rem; color:#38bdf8; font-weight:600;">${stage.teluguName} • ${stage.duration}</div>
+        </div>
+        <span class="risk-badge" style="background:${stage.color}; color:#ffffff; font-family:'JetBrains Mono',monospace;">
+          ${stage.ndvi} NDVI
+        </span>
+      </div>
+      <table class="detail-table" style="margin-top:6px;">
+        <tr><td>Water Requirement:</td><td><strong>${stage.waterReq}</strong></td></tr>
+        <tr><td>Satellite Remote Sensing:</td><td>${stage.satelliteLook}</td></tr>
+      </table>
+    `;
+  }
+
+  const advCard = document.getElementById("phenology-advisory-card");
+  if (advCard) {
+    advCard.innerHTML = `
+      <div style="background:#090d16; border-left:3px solid #38bdf8; padding:10px 12px; border-radius:0 6px 6px 0;">
+        <strong style="color:#38bdf8;"><i class="fa-solid fa-flask"></i> Fertilizer & Nutrition Protocol:</strong>
+        <p style="margin:4px 0 0 0; color:#cbd5e1; font-size:0.78rem; line-height:1.4;">${stage.nitrogenStatus}</p>
+      </div>
+      <div style="background:#090d16; border-left:3px solid #f59e0b; padding:10px 12px; border-radius:0 6px 6px 0;">
+        <strong style="color:#f59e0b;"><i class="fa-solid fa-shield-virus"></i> Pest & Disease Early Warning:</strong>
+        <p style="margin:4px 0 0 0; color:#cbd5e1; font-size:0.78rem; line-height:1.4;">${stage.pestSurveillance}</p>
+      </div>
+      <button class="btn-card-action alert-green" onclick="focusOnCropZone('NDVI-KVR-01'); document.getElementById('farmer-modal').classList.add('hidden');" style="margin-top:4px;">
+        <i class="fa-solid fa-satellite"></i> Inspect Active Paddy on Map
+      </button>
+    `;
+  }
+}
+
 window.inspectNDVIZone = function(p) {
   const inspector = document.getElementById("inspector-content");
   inspector.innerHTML = `
@@ -2269,6 +2398,36 @@ function setupEventListeners() {
   document.getElementById("btn-dl-boundaries").addEventListener("click", () => {
     downloadFile(JSON.stringify(allData.aoi, null, 2), "nellore_kovur_exact_boundaries.geojson", "application/json");
   });
+
+  const btnDlNdvi = document.getElementById("btn-dl-ndvi");
+  if (btnDlNdvi) {
+    btnDlNdvi.addEventListener("click", () => {
+      downloadFile(JSON.stringify(allData.ndvi_zones, null, 2), "sentinel2_ndvi_multispectral_zones.geojson", "application/json");
+    });
+  }
+
+  const btnDlRbk = document.getElementById("btn-dl-rbk");
+  if (btnDlRbk) {
+    btnDlRbk.addEventListener("click", () => {
+      downloadFile(JSON.stringify(allData.rbk_centers, null, 2), "rythu_bharosa_kendrams_rbk.geojson", "application/json");
+    });
+  }
+
+  const btnDlStarred = document.getElementById("btn-dl-starred");
+  if (btnDlStarred) {
+    btnDlStarred.addEventListener("click", () => {
+      downloadFile(JSON.stringify(allData.starred_repos, null, 2), "virahitvin8_starred_repositories.json", "application/json");
+    });
+  }
+
+  // Seasonal Crop Phenology Slider
+  const phenoSlider = document.getElementById("phenology-slider");
+  if (phenoSlider) {
+    phenoSlider.addEventListener("input", (e) => {
+      updatePhenologyStage(parseInt(e.target.value, 10));
+    });
+    updatePhenologyStage(parseInt(phenoSlider.value, 10));
+  }
 }
 
 function toggleLayer(layer, isChecked) {

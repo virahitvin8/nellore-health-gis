@@ -833,6 +833,27 @@
               <span>Exact Area of Interest boundary polygons</span>
             </div>
           </button>
+          <button class="export-opt-btn" id="btn-dl-ndvi">
+            <i class="fa-solid fa-seedling" style="color:#10b981;"></i>
+            <div>
+              <strong>Sentinel-2 NDVI & Multi-Spectral Zones (GeoJSON)</strong>
+              <span>Paddy canopy vigor, NDRE, biomass & crop diagnostics</span>
+            </div>
+          </button>
+          <button class="export-opt-btn" id="btn-dl-rbk">
+            <i class="fa-solid fa-building-wheat" style="color:#38bdf8;"></i>
+            <div>
+              <strong>Rythu Bharosa Kendrams - RBK Directory (GeoJSON)</strong>
+              <span>Farmer assistance centers, contact numbers & officer in-charge</span>
+            </div>
+          </button>
+          <button class="export-opt-btn" id="btn-dl-starred">
+            <i class="fa-solid fa-star" style="color:#ffd700;"></i>
+            <div>
+              <strong>227 Starred Repositories & Startup Stack (JSON)</strong>
+              <span>Ranked open-source AI, GIS, and FinTech dataset</span>
+            </div>
+          </button>
         </div>
       </div>
     </div>
@@ -885,6 +906,7 @@
           <button class="farmer-tab-btn" data-tab="tab-pest-warning"><i class="fa-solid fa-bug"></i> Pest Risk & Advisories</button>
           <button class="farmer-tab-btn" data-tab="tab-rbk-centers"><i class="fa-solid fa-building-wheat"></i> Rythu Bharosa Kendrams</button>
           <button class="farmer-tab-btn" data-tab="tab-mandi-prices"><i class="fa-solid fa-scale-balanced"></i> Mandi & Rythu Bazaar Rates</button>
+          <button class="farmer-tab-btn" data-tab="tab-crop-phenology"><i class="fa-solid fa-timeline"></i> Seasonal Phenology (పంట పెరుగుదల దశలు)</button>
         </div>
 
         <!-- Tab 1: Crop Vigor & Zonation -->
@@ -1137,6 +1159,47 @@
               <span class="mandi-rate">₹45 <small>/ Kg</small></span>
               <span class="mandi-type">AC Subba Reddy Rythu Bazaar</span>
               <span class="mandi-procurement"><i class="fa-solid fa-store" style="color:#f59e0b;"></i> Daily Mandi Fixation</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 5: Seasonal Phenology & Multi-Temporal NDVI Time-Series Tracker -->
+        <div class="farmer-tab-pane" id="tab-crop-phenology" style="display:none;">
+          <div class="scada-grid" style="margin-bottom:16px;">
+            <div class="scada-panel">
+              <h4><i class="fa-solid fa-chart-area"></i> Nellore Masuri (BPT 5204) Satellite Phenological Trajectory</h4>
+              <p style="font-size:0.82rem; color:#94a3b8; line-height:1.45; margin-bottom:12px;">
+                Multi-temporal Copernicus Sentinel-2 MSI NDVI progression across the 150-day cropping cycle in Kovur Mandal. Drag the seasonal month slider below to simulate real-time canopy greenness evolution, water demand, and agronomic thresholds.
+              </p>
+              
+              <!-- Month Slider -->
+              <div style="background:#090d16; padding:14px; border-radius:8px; border:1px solid #1e293b; margin-bottom:14px;">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; flex-wrap:wrap; gap:6px;">
+                  <span style="font-size:0.8rem; font-weight:700; color:#38bdf8;"><i class="fa-solid fa-calendar-day"></i> Kharif / Rabi Crop Month:</span>
+                  <span id="phenology-month-label" style="font-size:0.85rem; font-weight:800; color:#10b981; font-family:'JetBrains Mono',monospace;">September (Active Panicle Initiation • ఈనెలు తొడిగే దశ)</span>
+                </div>
+                <input type="range" id="phenology-slider" min="1" max="6" value="3" step="1" style="width:100%; accent-color:#10b981; cursor:pointer;">
+                <div style="display:flex; justify-content:space-between; font-size:0.68rem; color:#64748b; font-family:'JetBrains Mono',monospace; margin-top:4px;">
+                  <span>Jul (Nursery)</span>
+                  <span>Aug (Tillering)</span>
+                  <span>Sep (Panicle)</span>
+                  <span>Oct (Heading)</span>
+                  <span>Nov (Grain Fill)</span>
+                  <span>Dec (Harvest)</span>
+                </div>
+              </div>
+
+              <!-- Phenology Dynamic Diagnostic Display -->
+              <div id="phenology-details-card" style="background:#090d16; border-left:4px solid #10b981; padding:14px; border-radius:0 8px 8px 0; font-size:0.8rem;">
+                <!-- Populated via JavaScript -->
+              </div>
+            </div>
+
+            <div class="scada-panel">
+              <h4><i class="fa-solid fa-leaf"></i> Agronomic Advisory & Fertilizer Schedule (ఎరువుల యాజమాన్యం)</h4>
+              <div id="phenology-advisory-card" style="display:flex; flex-direction:column; gap:10px; font-size:0.8rem;">
+                <!-- Populated via JavaScript -->
+              </div>
             </div>
           </div>
         </div>

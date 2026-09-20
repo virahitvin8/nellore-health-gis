@@ -183,21 +183,22 @@ Integrated directly into the WebGIS interface with a floating, ChatGPT-style gla
 
 - **Multi-Domain Intelligence**: Understands questions in plain English and Telugu transliteration regarding crop vigor, blast pest spray schedules, safe drinking water TDS, hospital beds, and market sanitation.
 - **Automated Spatial Actions**: The AI copilot does not just answer with text — it **actively drives the map**, auto-zooming to requested farms or tanks, toggling layers, highlighting high-risk drain buffers, and opening detail cards!
-- **Quick-Prompt Suggestion Pills**: 1-click prompts for *"Kovur Crop Vigor"*, *"Clean RO Water"*, *"Emergency 108"*, *"Market Drain Hazard"*, *"Rice Blast Advisory"*, and *"Mandi MSP Rates"*.
+- **Quick-Prompt Suggestion Pills**: 1-click prompts for *"Kovur Crop Vigor"*, *"Sentinel CIR False-Color"*, *"Clean RO Water"*, *"Emergency 108"*, *"Market Drain Hazard"*, *"Rice Blast Advisory"*, *"Mandi MSP Rates"*, and *"Starred Repos (227)"*.
+- **Multi-Temporal Crop Phenology Tracker**: 6-stage seasonal trajectory for Nellore Masuri paddy (July Nursery to December Harvest) with Telugu/English agronomic advisories, fertilizer split schedules, and pest vulnerabilities.
 
 ---
 
 ## 🏛️ Designed for Government of Andhra Pradesh & Govt of India Showcasing
 
 - **Nellore Municipal Corporation (NMC)**: Real-time municipal water grid telemetry, trunk line pressure balancing, and citizen grievance redressal.
-- **AP Department of Agriculture & Cooperation**: District-wide crop health monitoring, E-Crop verification, and RBK service delivery.
+- **AP Department of Agriculture & Cooperation**: District-wide crop health monitoring, multi-temporal phenology verification, and Rythu Bharosa Kendram (RBK) service delivery.
 - **AP Disaster Management Authority (APDMA)**: Hydraulic crisis simulations, open sullage sewage flood breach modeling, and emergency healthcare capacity tracking.
 
 ---
 
-## 📦 ESRI Shapefiles Package Included
+## 📦 ESRI Shapefiles & GIS Datasets Package Included
 
-Pre-packaged genuine ESRI Shapefiles (`.shp`, `.shx`, `.dbf`, `.prj` in WGS84 EPSG:4326):
+Pre-packaged genuine ESRI Shapefiles (`.shp`, `.shx`, `.dbf`, `.prj` in WGS84 EPSG:4326) and WebGIS GeoJSON layers:
 
 Download: **[nellore_kovur_gis_shapefiles.zip](https://virahitvin8.github.io/nellore-health-gis/data/shapefiles/nellore_kovur_gis_shapefiles.zip)**
 
@@ -207,6 +208,8 @@ Download: **[nellore_kovur_gis_shapefiles.zip](https://virahitvin8.github.io/nel
 4. `overhead_storage_tanks` — ELSR/OHT tanks with staging heights & capacity
 5. `underground_wells_sources` — Infiltration galleries & borewells with yields
 6. `rythu_bharosa_kendrams` — RBK agricultural service centers & farmer kiosks
+7. `sentinel2_ndvi_multispectral_zones` — Zonal polygons with NDVI, NDRE, and crop diagnostics (GeoJSON)
+8. `virahitvin8_starred_repositories` — 227 open-source developer & startup repositories (JSON)
 
 ---
 
