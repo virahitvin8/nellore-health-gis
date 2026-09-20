@@ -2437,3 +2437,136 @@ body {
   text-align: center;
   margin-top: 6px;
 }
+
+/* Starred Repositories & Startup Toolkit */
+.btn-starred {
+  background: rgba(245, 158, 11, 0.18) !important;
+  color: #fbbf24 !important;
+  border-color: rgba(245, 158, 11, 0.45) !important;
+}
+
+.btn-starred:hover {
+  background: rgba(245, 158, 11, 0.32) !important;
+  box-shadow: 0 0 12px rgba(245, 158, 11, 0.4);
+}
+
+.starred-cat-btn {
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: 1px solid #1e293b;
+  background: #0f172a;
+  color: #94a3b8;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.starred-cat-btn:hover {
+  border-color: #334155;
+  color: #f1f5f9;
+}
+
+.starred-cat-btn.active {
+  background: rgba(245, 158, 11, 0.15);
+  border-color: #f59e0b;
+  color: #fbbf24;
+}
+
+.starred-repo-card {
+  background: #090d16;
+  border: 1px solid #1e293b;
+  border-radius: 8px;
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 8px;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.starred-repo-card:hover {
+  border-color: rgba(245, 158, 11, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+}
+
+.src-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.src-title {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #f1f5f9;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  word-break: break-word;
+}
+
+.src-title:hover {
+  color: #38bdf8;
+}
+
+.src-stars {
+  background: rgba(245, 158, 11, 0.15);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  border-radius: 12px;
+  padding: 2px 8px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  font-family: 'JetBrains Mono', monospace;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.src-desc {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  line-height: 1.4;
+  margin: 0;
+  flex: 1;
+}
+
+.src-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.src-lang {
+  font-size: 0.68rem;
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.1);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.src-btn-link {
+  font-size: 0.72rem;
+  color: #e2e8f0;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: color 0.15s ease;
+}
+
+.src-btn-link:hover {
+  color: #fbbf24;
+}

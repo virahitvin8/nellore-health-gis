@@ -66,6 +66,12 @@ def build_embedded_bundle():
     with open(os.path.join(MODELS_DIR, "feature_importance.json")) as f:
         layers["feature_importance"] = json.load(f)
 
+    # 6. Starred Repositories Ecosystem
+    starred_path = os.path.join(DATA_DIR, "starred_ecosystem.json")
+    if os.path.exists(starred_path):
+        with open(starred_path) as f:
+            layers["starred_repos"] = json.load(f)
+
     output_path = os.path.join(DATA_DIR, "embedded_data.js")
     with open(output_path, "w") as f:
         f.write("// Auto-generated Comprehensive Health GIS Nellore & Kovur Spatial Data Bundle\n")

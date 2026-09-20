@@ -62,6 +62,10 @@ let orbitAnimationFrame = null;
 let spectralChart = null;
 let isContaminationActive = false;
 
+// Starred Repositories Ecosystem State
+let currentStarredCat = "ALL";
+let currentStarredSearch = "";
+
 // Strict Bounding Box for Nellore City & Kovur Mandal
 const STRICT_BOUNDS = L.latLngBounds(
   [14.3600, 79.9100], // Southwest
@@ -1760,6 +1764,37 @@ function setupEventListeners() {
     });
   });
 
+  // Starred Repositories Ecosystem Modal Wiring
+  const btnStarred = document.getElementById("btn-starred-ecosystem");
+  const modalStarred = document.getElementById("starred-modal");
+  const btnCloseStarred = document.getElementById("btn-close-starred");
+  const starredSearchInput = document.getElementById("starred-search-input");
+
+  if (btnStarred && modalStarred) {
+    btnStarred.addEventListener("click", () => {
+      modalStarred.classList.remove("hidden");
+      renderStarredRepos();
+      if (starredSearchInput) starredSearchInput.focus();
+    });
+  }
+  if (btnCloseStarred && modalStarred) {
+    btnCloseStarred.addEventListener("click", () => modalStarred.classList.add("hidden"));
+  }
+  if (starredSearchInput) {
+    starredSearchInput.addEventListener("input", (e) => {
+      currentStarredSearch = e.target.value;
+      renderStarredRepos();
+    });
+  }
+  document.querySelectorAll(".starred-cat-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      document.querySelectorAll(".starred-cat-btn").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      currentStarredCat = btn.dataset.cat || "ALL";
+      renderStarredRepos();
+    });
+  });
+
   // Andhra GIS Sahayak AI Copilot Wiring
   const btnOpenCopilot = document.getElementById("btn-open-copilot");
   const floatingCopilotBtn = document.getElementById("floating-copilot-btn");
@@ -2143,6 +2178,28 @@ function generateCopilotResponse(query) {
     };
   }
 
+  // 8. Starred Repositories / Developer Tools / Tech Stack
+  if (q.includes("star") || q.includes("repo") || q.includes("git") || q.includes("tool") || q.includes("stack") || q.includes("agent") || q.includes("vibe") || q.includes("code") || q.includes("tech")) {
+    return {
+      html: `
+        <p><strong>⭐ @virahitvin8 Curated 227 Starred Repositories & Startup Stack:</strong></p>
+        <p>This platform integrates Akshit's full GitHub starred ecosystem across 5 high-impact domains:</p>
+        <ul>
+          <li>🤖 <strong>AI Agents & Autonomous Swarms (84 Repos):</strong> <em>AutoGPT</em> (187k★), <em>superpowers</em> (289k★), <em>Claude skills</em>, <em>MCP servers</em>.</li>
+          <li>⚡ <strong>Vibe Coding & App Builders (47 Repos):</strong> <em>Bolt</em>, <em>Dokploy</em> (37k★), <em>Dyad</em> (21k★), rapid AI app scaffolding.</li>
+          <li>🛰️ <strong>GIS, Earth Observation & Remote Sensing (29 Repos):</strong> <em>RuView</em> (94k★), <em>WorldMonitor</em> (87k★), <em>Gods-Eye-View</em> (39k★), <em>khetmap</em>.</li>
+          <li>💰 <strong>FinTech & Startup Monetization (18 Repos):</strong> <em>MoneyPrinterTurbo</em> (124k★), <em>Vibe-Trading</em> (33k★), <em>FinceptTerminal</em>.</li>
+          <li>🔍 <strong>OSINT & Curated APIs (49 Repos):</strong> <em>public-apis</em> (481k★), <em>the-book-of-secret-knowledge</em> (244k★).</li>
+        </ul>
+      `,
+      actionsHtml: `
+        <button class="copilot-action-pill" onclick="document.getElementById('starred-modal').classList.remove('hidden'); renderStarredRepos();"><i class="fa-solid fa-star"></i> Open Starred Launcher (227)</button>
+        <button class="copilot-action-pill green" onclick="document.getElementById('starred-modal').classList.remove('hidden'); document.querySelector('[data-cat=GIS]').click();"><i class="fa-solid fa-satellite"></i> GIS & Agri Repos</button>
+        <button class="copilot-action-pill" onclick="document.getElementById('starred-modal').classList.remove('hidden'); document.querySelector('[data-cat=AGENTS]').click();"><i class="fa-solid fa-robot"></i> AI Agent Swarms</button>
+      `
+    };
+  }
+
   // Default Fallback
   return {
     html: `
@@ -2169,3 +2226,94 @@ function escapeHtml(text) {
   div.textContent = text;
   return div.innerHTML;
 }
+
+// ---------------- 13. STARRED REPOSITORIES & STARTUP ECOSYSTEM ---------------- //
+
+function getRepoCategory(r) {
+  const fn = (r.full_name || "").toLowerCase();
+  const text = ((r.name || "") + " " + (r.description || "") + " " + (r.topics ? r.topics.join(" ") : "")).toLowerCase();
+  if (["gis", "satellite", "earth", "remote sensing", "spatial", "dem", "geospatial", "agri", "crop", "farm", "plant", "geo", "khetmap", "gods-eye", "ruview", "worldmonitor", "world-intel"].some(k => text.includes(k)) || fn.includes("virahitvin8")) return "GIS";
+  if (["trading", "hedge", "finance", "stock", "money", "fintech", "wealth", "business", "docusign", "salesforce", "twenty", "affine", "supertokens", "show-me-the-money", "market", "adblock", "ads"].some(k => text.includes(k))) return "STARTUP";
+  if (["agent", "swarm", "skill", "mcp", "autonomous", "autogpt", "llm", "claude", "chatgpt", "superpowers", "ecc", "chatbox", "opencode", "odysseus", "distilly", "skales", "omnigent", "librechat", "prompts", "whisper", "handy"].some(k => text.includes(k))) return "AGENTS";
+  if (["vibe", "builder", "bolt", "v0", "lovable", "prototype", "replit", "code", "dev", "svelte", "flutter", "react", "dokploy", "dyad", "notebook", "frontend", "desktop", "android", "penpot"].some(k => text.includes(k))) return "VIBE";
+  return "OSINT";
+}
+
+function renderStarredRepos() {
+  const container = document.getElementById("starred-repos-grid");
+  const countLabel = document.getElementById("starred-count-label");
+  if (!container) return;
+
+  const repoList = (allData && allData.starred_repos) ? allData.starred_repos : (typeof HEALTH_GIS_DATA !== 'undefined' ? HEALTH_GIS_DATA.starred_repos : []);
+  if (!repoList || repoList.length === 0) {
+    container.innerHTML = `<div style="grid-column: 1/-1; padding: 30px; text-align: center; color: #94a3b8;">No repositories loaded.</div>`;
+    return;
+  }
+
+  const query = (currentStarredSearch || "").toLowerCase().trim();
+  const filtered = repoList.filter(r => {
+    if (currentStarredCat !== "ALL") {
+      const cat = getRepoCategory(r);
+      if (cat !== currentStarredCat) return false;
+    }
+    if (query) {
+      const hay = ((r.name || "") + " " + (r.full_name || "") + " " + (r.description || "") + " " + (r.language || "") + " " + (r.topics ? r.topics.join(" ") : "")).toLowerCase();
+      if (!hay.includes(query)) return false;
+    }
+    return true;
+  });
+
+  if (countLabel) {
+    countLabel.textContent = `Showing ${filtered.length} of ${repoList.length} repositories${currentStarredCat !== 'ALL' ? ' (' + currentStarredCat + ')' : ''}`;
+  }
+
+  if (filtered.length === 0) {
+    container.innerHTML = `
+      <div style="grid-column: 1/-1; padding: 40px; text-align: center; color: #94a3b8;">
+        <i class="fa-solid fa-magnifying-glass" style="font-size: 2rem; color: #475569; margin-bottom: 12px; display: block;"></i>
+        <p>No repositories match "<strong>${escapeHtml(currentStarredSearch)}</strong>" in this category.</p>
+        <button class="copilot-action-pill" style="margin-top: 10px;" onclick="document.getElementById('starred-search-input').value=''; currentStarredSearch=''; currentStarredCat='ALL'; document.querySelectorAll('.starred-cat-btn').forEach(b => b.classList.toggle('active', b.dataset.cat==='ALL')); renderStarredRepos();">
+          Reset Filter & Search
+        </button>
+      </div>
+    `;
+    return;
+  }
+
+  container.innerHTML = filtered.map((r, idx) => {
+    const starsFmt = r.stars >= 1000 ? (r.stars / 1000).toFixed(r.stars >= 10000 ? 0 : 1) + 'k' : r.stars;
+    const lang = r.language || 'Config/Docs';
+    const desc = r.description ? escapeHtml(r.description) : 'Curated open-source repository from @virahitvin8 starred collection.';
+    const topicsHtml = (r.topics && r.topics.length > 0)
+      ? r.topics.slice(0, 3).map(t => `<span style="font-size:0.65rem; background:rgba(255,255,255,0.06); color:#cbd5e1; padding:1px 6px; border-radius:4px;">#${escapeHtml(t)}</span>`).join(' ')
+      : '';
+
+    return `
+      <div class="starred-repo-card">
+        <div class="src-header">
+          <a class="src-title" href="${r.html_url}" target="_blank" rel="noopener noreferrer" title="View ${escapeHtml(r.full_name)} on GitHub">
+            <i class="fa-brands fa-github" style="color:#94a3b8;"></i>
+            <span>${escapeHtml(r.full_name)}</span>
+          </a>
+          <span class="src-stars" title="${r.stars.toLocaleString()} GitHub Stars">
+            <i class="fa-solid fa-star"></i> ${starsFmt}
+          </span>
+        </div>
+
+        <p class="src-desc">${desc}</p>
+
+        ${topicsHtml ? `<div style="display:flex; flex-wrap:wrap; gap:4px; margin-top:2px;">${topicsHtml}</div>` : ''}
+
+        <div class="src-meta">
+          <span class="src-lang">
+            <i class="fa-solid fa-code" style="font-size:0.6rem;"></i> ${escapeHtml(lang)}
+          </span>
+          <a class="src-btn-link" href="${r.html_url}" target="_blank" rel="noopener noreferrer">
+            <span>Explore</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+      </div>
+    `;
+  }).join("");
+}
+

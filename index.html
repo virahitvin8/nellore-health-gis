@@ -90,6 +90,9 @@
       <button class="nav-btn btn-export" id="btn-export-data">
         <i class="fa-solid fa-download"></i> Shapefiles
       </button>
+      <button class="nav-btn btn-starred" id="btn-starred-ecosystem" title="Browse 227 Starred Repositories & Startup Toolkit">
+        <i class="fa-solid fa-star" style="color:#ffd700;"></i> Starred (227)
+      </button>
     </div>
   </header>
 
@@ -1342,6 +1345,58 @@
               <!-- Injected via JavaScript upon submit -->
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Starred Repositories & Startup Launchpad Modal -->
+  <div id="starred-modal" class="modal-overlay hidden">
+    <div class="modal-window large-modal" style="width: 1000px; max-width: 96vw;">
+      <div class="modal-header">
+        <div style="display:flex; align-items:center; gap:10px;">
+          <div class="logo-badge" style="background:linear-gradient(135deg, #f59e0b, #d97706); width:36px; height:36px; font-size:16px;">
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <div>
+            <h2>Awesome Starred Repositories & Startup Launchpad</h2>
+            <p class="modal-subtitle">Curated from @virahitvin8 Stars • 227 Repositories across AI Agents, Vibe Coding, GIS, FinTech & APIs</p>
+          </div>
+        </div>
+        <button class="modal-close" id="btn-close-starred">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <!-- Search and Action Bar -->
+        <div class="starred-search-bar" style="display:flex; gap:10px; margin-bottom:12px;">
+          <div class="search-box" style="flex:1;">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="starred-search-input" placeholder="Search by name, description, topic or language (e.g. agent, mcp, gis, python)...">
+          </div>
+          <a class="btn-card-action" href="STARRED_REPOSITORIES.md" target="_blank" style="text-decoration:none; display:flex; align-items:center; gap:6px;">
+            <i class="fa-solid fa-book"></i> Full Markdown List
+          </a>
+        </div>
+
+        <!-- Category Filter Tabs -->
+        <div class="farmer-tabs-nav" style="margin-bottom:10px;">
+          <button class="starred-cat-btn active" data-cat="ALL"><i class="fa-solid fa-layer-group"></i> All (227)</button>
+          <button class="starred-cat-btn" data-cat="AGENTS"><i class="fa-solid fa-robot"></i> AI Agents (84)</button>
+          <button class="starred-cat-btn" data-cat="VIBE"><i class="fa-solid fa-bolt"></i> Vibe Coding (47)</button>
+          <button class="starred-cat-btn" data-cat="GIS"><i class="fa-solid fa-satellite"></i> GIS & Agri (29)</button>
+          <button class="starred-cat-btn" data-cat="STARTUP"><i class="fa-solid fa-coins"></i> Startup & FinTech (18)</button>
+          <button class="starred-cat-btn" data-cat="OSINT"><i class="fa-solid fa-shield-halved"></i> OSINT & APIs (49)</button>
+        </div>
+
+        <!-- Counter & Ranking Info -->
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+          <span id="starred-count-label" style="font-size:0.8rem; color:#94a3b8; font-weight:600;">Showing 227 repositories</span>
+          <span style="font-size:0.75rem; color:#64748b;">Ranked by GitHub Star Count • Live Data</span>
+        </div>
+
+        <!-- Repos Grid Container -->
+        <div class="starred-repos-grid" id="starred-repos-grid" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:12px; max-height:55vh; overflow-y:auto; padding-right:4px;">
+          <!-- Injected via JavaScript -->
         </div>
       </div>
     </div>
