@@ -21,50 +21,65 @@ def write_prj(filepath):
     with open(filepath, "w") as f:
         f.write(WGS84_PRJ)
 
+def extract_rings(geom):
+    if geom["type"] == "MultiPolygon":
+        rings = []
+        for poly in geom["coordinates"]:
+            for ring in poly:
+                rings.append(ring)
+        return rings
+    elif geom["type"] == "Polygon":
+        return geom["coordinates"]
+    return []
+
 def export_boundaries_shapefiles():
-    # 1. Nellore Municipal Corporation Boundary
+    # 1. Nellore Municipal Corporation Boundary (GADM 4.1)
     with open(os.path.join(DATA_DIR, "boundaries", "nellore_corporation_boundary.geojson")) as f:
         nellore_data = json.load(f)
     
     shp_path = os.path.join(SHP_DIR, "nellore_city_boundary")
     w = shapefile.Writer(shp_path, shapefile.POLYGON)
     w.field("NAME", "C", size=50)
+    w.field("GADM_GID", "C", size=20)
     w.field("TYPE", "C", size=30)
     w.field("DISTRICT", "C", size=30)
     w.field("STATE", "C", size=30)
+    w.field("SOURCE", "C", size=30)
     w.field("AREA_SQKM", "F", decimal=2)
     w.field("POP_EST", "N", size=10)
 
     for feat in nellore_data["features"]:
-        coords = feat["geometry"]["coordinates"]
+        rings = extract_rings(feat["geometry"])
         p = feat["properties"]
-        w.poly(coords)
-        w.record(p["name"], p["type"], p["district"], p["state"], p["area_sq_km"], p["population_est"])
+        w.poly(rings)
+        w.record(p["name"], p.get("gadm_gid", "IND.2.7.14_1"), p["type"], p["district"], p["state"], p.get("source", "GADM 4.1"), p["area_sq_km"], p["population_est"])
     w.close()
     write_prj(shp_path + ".prj")
 
-    # 2. Kovur Mandal Boundary
+    # 2. Kovur Mandal Boundary (GADM 4.1)
     with open(os.path.join(DATA_DIR, "boundaries", "kovur_mandal_boundary.geojson")) as f:
         kovur_data = json.load(f)
     
     shp_path = os.path.join(SHP_DIR, "kovur_mandal_boundary")
     w = shapefile.Writer(shp_path, shapefile.POLYGON)
     w.field("NAME", "C", size=50)
+    w.field("GADM_GID", "C", size=20)
     w.field("TYPE", "C", size=30)
     w.field("DISTRICT", "C", size=30)
     w.field("STATE", "C", size=30)
+    w.field("SOURCE", "C", size=30)
     w.field("AREA_SQKM", "F", decimal=2)
     w.field("POP_EST", "N", size=10)
 
     for feat in kovur_data["features"]:
-        coords = feat["geometry"]["coordinates"]
+        rings = extract_rings(feat["geometry"])
         p = feat["properties"]
-        w.poly(coords)
-        w.record(p["name"], p["type"], p["district"], p["state"], p["area_sq_km"], p["population_est"])
+        w.poly(rings)
+        w.record(p["name"], p.get("gadm_gid", "IND.2.7.4_1"), p["type"], p["district"], p["state"], p.get("source", "GADM 4.1"), p["area_sq_km"], p["population_est"])
     w.close()
     write_prj(shp_path + ".prj")
 
-    print("✓ Exported Boundaries Shapefiles")
+    print("✓ Exported GADM 4.1 Boundaries Shapefiles")
 
 def export_water_network_shapefile(water_network):
     # Pipelines

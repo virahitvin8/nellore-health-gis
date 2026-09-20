@@ -219,7 +219,11 @@ function initVectorLayers() {
     },
     onEachFeature: (feature, layer) => {
       const p = feature.properties;
-      layer.bindTooltip(`<strong>${p.name}</strong><br>${p.type} • Pop: ${p.population_est.toLocaleString()}`, { sticky: true });
+      layer.bindTooltip(`
+        <strong>${p.name}</strong><br>
+        Source: ${p.source || 'GADM 4.1'} • GID: ${p.gadm_gid || 'IND.2.7'}<br>
+        ${p.type} • Pop: ${p.population_est.toLocaleString()}
+      `, { sticky: true });
     }
   }).addTo(map);
 
@@ -465,7 +469,7 @@ function initMapbox3D() {
       }
     });
 
-    // 4. Inverted Exclusion Mask in Mapbox 3D
+    // 4. Inverted Exclusion Mask in Mapbox 3D (Clips everything outside Nellore & Kovur)
     if (allData && allData.inverted_mask) {
       mapbox3d.addSource('mask-source', {
         type: 'geojson',
@@ -476,8 +480,37 @@ function initMapbox3D() {
         type: 'fill',
         source: 'mask-source',
         paint: {
-          'fill-color': '#090d16',
-          'fill-opacity': 0.72
+          'fill-color': '#050811',
+          'fill-opacity': 0.88
+        }
+      });
+    }
+
+    // 4b. GADM 3D Boundary Extrusion Curtain (Clipped 3D Holographic Perimeter)
+    if (allData && allData.gadm_curtain_3d) {
+      mapbox3d.addSource('gadm-curtain-source', {
+        type: 'geojson',
+        data: allData.gadm_curtain_3d
+      });
+      mapbox3d.addLayer({
+        id: 'gadm-3d-curtain',
+        type: 'fill-extrusion',
+        source: 'gadm-curtain-source',
+        paint: {
+          'fill-extrusion-color': ['get', 'color'],
+          'fill-extrusion-height': ['get', 'height'],
+          'fill-extrusion-base': ['get', 'base_height'],
+          'fill-extrusion-opacity': 0.28
+        }
+      });
+      mapbox3d.addLayer({
+        id: 'gadm-curtain-rim',
+        type: 'line',
+        source: 'gadm-curtain-source',
+        paint: {
+          'line-color': '#38bdf8',
+          'line-width': 3,
+          'line-blur': 1.2
         }
       });
     }

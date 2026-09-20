@@ -51,6 +51,7 @@
 5. **SCADA Hydraulic Flow Sandbox**: Simulate Peak Morning Demand (72.0 MLD) vs Night Refill (35.0 MLD) with Hazen-Williams head loss and live line pressures.
 6. **Contamination Crisis Simulator (What-If Analysis)**: Trigger a simulated sullage sewer infiltration plume, watch downstream uPVC pipes flash into emergency lockdown, and generate automated boil-water advisories with alternative safe RO water plants.
 7. **Live Municipal IoT Telemetry Stream**: Glassmorphism live ticker streaming turbidity, residual chlorine, trunk pipeline pressure, and drainage outfall depths.
+8. **Official GADM 4.1 Administrative Boundary Extraction & 3D Clip Curtain**: Picked and clipped exact official GADM Level 3 boundaries for Nellore (`IND.2.7.14_1`) and Kovur (`IND.2.7.4_1`), extruded as a 75-meter 3D holographic boundary curtain enclosing the 3D terrain!
 
 ---
 

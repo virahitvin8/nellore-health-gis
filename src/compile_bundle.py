@@ -23,6 +23,8 @@ def build_embedded_bundle():
         layers["kovur_boundary"] = json.load(f)
     with open(os.path.join(DATA_DIR, "boundaries", "aoi_inverted_mask.geojson")) as f:
         layers["inverted_mask"] = json.load(f)
+    with open(os.path.join(DATA_DIR, "boundaries", "aoi_3d_clip_curtain.geojson")) as f:
+        layers["gadm_curtain_3d"] = json.load(f)
 
     # 2. Environmental & Water Flow Infrastructure
     with open(os.path.join(DATA_DIR, "infrastructure", "pennar_river_waterbodies.geojson")) as f:
