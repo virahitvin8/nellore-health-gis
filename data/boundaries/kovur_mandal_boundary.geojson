@@ -1,0 +1,59 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kovur Mandal",
+        "type": "Rural/Peri-Urban Mandal",
+        "district": "SPSR Nellore",
+        "state": "Andhra Pradesh",
+        "area_sq_km": 112.8,
+        "population_est": 125000
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              79.94,
+              14.468
+            ],
+            [
+              79.97,
+              14.471
+            ],
+            [
+              80.005,
+              14.469
+            ],
+            [
+              80.03,
+              14.485
+            ],
+            [
+              80.02,
+              14.525
+            ],
+            [
+              79.98,
+              14.54
+            ],
+            [
+              79.945,
+              14.52
+            ],
+            [
+              79.935,
+              14.485
+            ],
+            [
+              79.94,
+              14.468
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

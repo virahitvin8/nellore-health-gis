@@ -1,0 +1,149 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Government General Hospital (GGH / DSR Hospital)",
+        "facility_type": "Tertiary Referral Hospital",
+        "bed_capacity": 750,
+        "emergency_service": "Available"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.986,
+          14.4445
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "ACSR Government Medical College & Hospital",
+        "facility_type": "Medical College Hospital",
+        "bed_capacity": 500,
+        "emergency_service": "Available"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.972,
+          14.438
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kovur Community Health Centre (CHC)",
+        "facility_type": "Community Health Centre",
+        "bed_capacity": 50,
+        "emergency_service": "Available"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.979,
+          14.493
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Stonehousepet Urban Primary Health Centre (UPHC)",
+        "facility_type": "Urban Primary Health Centre",
+        "bed_capacity": 10,
+        "emergency_service": "Day OPD Only"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.9915,
+          14.4505
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Santhapet Municipal Dispensary / UPHC",
+        "facility_type": "Urban Dispensary",
+        "bed_capacity": 6,
+        "emergency_service": "Day OPD Only"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.981,
+          14.439
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ranganayakulapet Ward Health Post",
+        "facility_type": "Health Wellness Centre",
+        "bed_capacity": 4,
+        "emergency_service": "Day OPD Only"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.987,
+          14.454
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Vedayapalem Area Hospital / UPHC",
+        "facility_type": "Urban Primary Health Centre",
+        "bed_capacity": 15,
+        "emergency_service": "Day OPD Only"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.967,
+          14.417
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Padugupadu Primary Health Sub-Centre",
+        "facility_type": "Primary Health Sub-Centre",
+        "bed_capacity": 4,
+        "emergency_service": "Day OPD Only"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.983,
+          14.476
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Inamadugu Rural Health Clinic",
+        "facility_type": "Rural Clinic",
+        "bed_capacity": 2,
+        "emergency_service": "Day OPD Only"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.004,
+          14.491
+        ]
+      }
+    }
+  ]
+}

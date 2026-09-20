@@ -1,0 +1,3245 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-001",
+        "shop_name": "Kovur Royal Poultry Stall (Stonehousepet)",
+        "cluster_hub": "Stonehousepet Fish & Mutton Hub",
+        "mandal_zone": "Nellore Urban (NMC)",
+        "latitude": 14.449241,
+        "longitude": 79.99062,
+        "category": "Poultry (Broiler/Country Chicken)",
+        "animal_origin": "Local Nellore Poultry Farms (Podalakur Road)",
+        "animal_destination": "Trunk Road & Gandhi Nagar Restaurants",
+        "daily_animals_handled": 96,
+        "slaughter_on_site": "No",
+        "refrigeration_available": "No",
+        "waste_disposal_method": "Closed Bin Collection",
+        "water_source": "Borewell / Groundwater",
+        "drainage_condition": "Underground Closed Drain",
+        "distance_to_drain_m": 342.9,
+        "distance_to_waterbody_m": 1521.4,
+        "distance_to_hospital_m": 169.1,
+        "market_crowd_index": 8.2,
+        "norm_drain_risk": 0.0,
+        "norm_waste_risk": 0.1,
+        "composite_geo_risk_score": 30.81,
+        "risk_level": "Low Risk",
+        "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
+        "marker_color": "#06d6a0",
+        "ai_predicted_risk": "Low Risk",
+        "ai_prediction_confidence": 82.1,
+        "ai_concurrence": "True"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.99062,
+          14.449241
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-002",
+        "shop_name": "Star Mutton Stall (Stonehousepet)",
+        "cluster_hub": "Stonehousepet Fish & Mutton Hub",
+        "mandal_zone": "Nellore Urban (NMC)",
+        "latitude": 14.449709,
+        "longitude": 79.991325,
+        "category": "Mutton / Sheep / Goat",
+        "animal_origin": "Nellore Local Herders (Pennar Basin)",
+        "animal_destination": "Inter-Mandal Retail Stalls",
+        "daily_animals_handled": 239,
+        "slaughter_on_site": "Yes",
+        "refrigeration_available": "No",
+        "waste_disposal_method": "Closed Bin Collection",
+        "water_source": "Borewell / Groundwater",
+        "drainage_condition": "Underground Closed Drain",
+        "distance_to_drain_m": 385.8,
+        "distance_to_waterbody_m": 1469.7,
+        "distance_to_hospital_m": 90.0,
+        "market_crowd_index": 10.0,
+        "norm_drain_risk": 0.0,
+        "norm_waste_risk": 0.1,
+        "composite_geo_risk_score": 49.55,
+        "risk_level": "Moderate Risk",
+        "recommended_intervention": "Monthly routine surveillance; water potability testing; solid waste collection compliance.",
+        "marker_color": "#ffd166",
+        "ai_predicted_risk": "Moderate Risk",
+        "ai_prediction_confidence": 84.3,
+        "ai_concurrence": "True"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.991325,
+          14.449709
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-003",
+        "shop_name": "National Poultry Stall (Stonehousepet)",
+        "cluster_hub": "Stonehousepet Fish & Mutton Hub",
+        "mandal_zone": "Nellore Urban (NMC)",
+        "latitude": 14.450514,
+        "longitude": 79.992944,
+        "category": "Poultry (Broiler/Country Chicken)",
+        "animal_origin": "Local Nellore Poultry Farms (Podalakur Road)",
+        "animal_destination": "Trunk Road & Gandhi Nagar Restaurants",
+        "daily_animals_handled": 415,
+        "slaughter_on_site": "Yes",
+        "refrigeration_available": "Yes",
+        "waste_disposal_method": "Municipal Waste Bin",
+        "water_source": "Piped Municipal Supply",
+        "drainage_condition": "Underground Closed Drain",
+        "distance_to_drain_m": 526.6,
+        "distance_to_waterbody_m": 1380.6,
+        "distance_to_hospital_m": 155.5,
+        "market_crowd_index": 6.8,
+        "norm_drain_risk": 0.0,
+        "norm_waste_risk": 0.35,
+        "composite_geo_risk_score": 45.36,
+        "risk_level": "Moderate Risk",
+        "recommended_intervention": "Monthly routine surveillance; water potability testing; solid waste collection compliance.",
+        "marker_color": "#ffd166",
+        "ai_predicted_risk": "Moderate Risk",
+        "ai_prediction_confidence": 50.8,
+        "ai_concurrence": "True"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.992944,
+          14.450514
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-004",
+        "shop_name": "National Mixed Stall (Stonehousepet)",
+        "cluster_hub": "Stonehousepet Fish & Mutton Hub",
+        "mandal_zone": "Nellore Urban (NMC)",
+        "latitude": 14.447519,
+        "longitude": 79.989901,
+        "category": "Mixed Live Meat & Fish",
+        "animal_origin": "Combined Regional Traders & Local Shandy",
+        "animal_destination": "Inter-Mandal Retail Stalls",
+        "daily_animals_handled": 175,
+        "slaughter_on_site": "No",
+        "refrigeration_available": "No",
+        "waste_disposal_method": "Closed Bin Collection",
+        "water_source": "Piped Municipal Supply",
+        "drainage_condition": "Underground Closed Drain",
+        "distance_to_drain_m": 436.0,
+        "distance_to_waterbody_m": 1711.8,
+        "distance_to_hospital_m": 373.5,
+        "market_crowd_index": 8.7,
+        "norm_drain_risk": 0.0,
+        "norm_waste_risk": 0.1,
+        "composite_geo_risk_score": 32.9,
+        "risk_level": "Low Risk",
+        "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
+        "marker_color": "#06d6a0",
+        "ai_predicted_risk": "Low Risk",
+        "ai_prediction_confidence": 84.4,
+        "ai_concurrence": "True"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.989901,
+          14.447519
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-005",
+        "shop_name": "National Poultry Stall (Stonehousepet)",
+        "cluster_hub": "Stonehousepet Fish & Mutton Hub",
+        "mandal_zone": "Nellore Urban (NMC)",
+        "latitude": 14.4519,
+        "longitude": 79.99237,
+        "category": "Poultry (Broiler/Country Chicken)",
+        "animal_origin": "Local Nellore Poultry Farms (Podalakur Road)",
+        "animal_destination": "Trunk Road & Gandhi Nagar Restaurants",
+        "daily_animals_handled": 76,
+        "slaughter_on_site": "Yes",
+        "refrigeration_available": "No",
+        "waste_disposal_method": "Closed Bin Collection",
+        "water_source": "Borewell / Groundwater",
+        "drainage_condition": "Underground Closed Drain",
+        "distance_to_drain_m": 424.2,
+        "distance_to_waterbody_m": 1227.4,
+        "distance_to_hospital_m": 181.7,
+        "market_crowd_index": 7.4,
+        "norm_drain_risk": 0.0,
+        "norm_waste_risk": 0.1,
+        "composite_geo_risk_score": 42.56,
+        "risk_level": "Moderate Risk",
+        "recommended_intervention": "Monthly routine surveillance; water potability testing; solid waste collection compliance.",
+        "marker_color": "#ffd166",
+        "ai_predicted_risk": "Moderate Risk",
+        "ai_prediction_confidence": 80.5,
+        "ai_concurrence": "True"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.99237,
+          14.4519
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-006",
+        "shop_name": "Kovur Royal Mutton Stall (Stonehousepet)",
+        "cluster_hub": "Stonehousepet Fish & Mutton Hub",
+        "mandal_zone": "Nellore Urban (NMC)",
+        "latitude": 14.451616,
+        "longitude": 79.993931,
+        "category": "Mutton / Sheep / Goat",
+        "animal_origin": "Nellore Local Herders (Pennar Basin)",
+        "animal_destination": "Trunk Road & Gandhi Nagar Restaurants",
+        "daily_animals_handled": 108,
+        "slaughter_on_site": "Yes",
+        "refrigeration_available": "Yes",
+        "waste_disposal_method": "Open Dumping on Ground",
+        "water_source": "Piped Municipal Supply",
+        "drainage_condition": "Underground Closed Drain",
+        "distance_to_drain_m": 594.5,
+        "distance_to_waterbody_m": 1258.8,
+        "distance_to_hospital_m": 289.6,
+        "market_crowd_index": 7.8,
+        "norm_drain_risk": 0.0,
+        "norm_waste_risk": 0.85,
+        "composite_geo_risk_score": 50.3,
+        "risk_level": "Moderate Risk",
+        "recommended_intervention": "Monthly routine surveillance; water potability testing; solid waste collection compliance.",
+        "marker_color": "#ffd166",
+        "ai_predicted_risk": "Moderate Risk",
+        "ai_prediction_confidence": 69.9,
+        "ai_concurrence": "True"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.993931,
+          14.451616
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-007",
+        "shop_name": "Coastal Choice Fish Stall (Stonehousepet)",
+        "cluster_hub": "Stonehousepet Fish & Mutton Hub",
+        "mandal_zone": "Nellore Urban (NMC)",
+        "latitude": 14.448117,
+        "longitude": 79.98712,
+        "category": "Fish & Seafood",
+        "animal_origin": "Krishnapatnam Deep Sea Port Landing",
+        "animal_destination": "Local Ward Neighborhood Households",
+        "daily_animals_handled": 186,
+        "slaughter_on_site": "Yes",
+        "refrigeration_available": "Yes",
+        "waste_disposal_method": "Open Dumping on Ground",
+        "water_source": "Piped Municipal Supply",
+        "drainage_condition": "Underground Closed Drain",
+        "distance_to_drain_m": 248.5,
+        "distance_to_waterbody_m": 1645.7,
+        "distance_to_hospital_m": 419.9,
+        "market_crowd_index": 8.3,
+        "norm_drain_risk": 0.184,
+        "norm_waste_risk": 0.85,
+        "composite_geo_risk_score": 56.54,
+        "risk_level": "High Risk",
+        "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
+        "marker_color": "#f77f00",
+        "ai_predicted_risk": "High Risk",
+        "ai_prediction_confidence": 68.0,
+        "ai_concurrence": "True"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.98712,
+          14.448117
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-008",
+        "shop_name": "Gouthami Mixed Stall (Stonehousepet)",
+        "cluster_hub": "Stonehousepet Fish & Mutton Hub",
+        "mandal_zone": "Nellore Urban (NMC)",
+        "latitude": 14.448281,
+        "longitude": 79.987132,
+        "category": "Mixed Live Meat & Fish",
+        "animal_origin": "Combined Regional Traders & Local Shandy",
+        "animal_destination": "Hotel & Catering Aggregators",
+        "daily_animals_handled": 96,
+        "slaughter_on_site": "Yes",
+        "refrigeration_available": "No",
+        "waste_disposal_method": "Municipal Waste Bin",
+        "water_source": "Piped Municipal Supply",
+        "drainage_condition": "Underground Closed Drain",
+        "distance_to_drain_m": 243.3,
+        "distance_to_waterbody_m": 1627.6,
+        "distance_to_hospital_m": 437.7,
+        "market_crowd_index": 10.0,
+        "norm_drain_risk": 0.202,
+        "norm_waste_risk": 0.35,
+        "composite_geo_risk_score": 56.09,
+        "risk_level": "High Risk",
+        "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
+        "marker_color": "#f77f00",
+        "ai_predicted_risk": "High Risk",
+        "ai_prediction_confidence": 62.9,
+        "ai_concurrence": "True"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.987132,
+          14.448281
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-009",
+        "shop_name": "Al-Madina Mutton Stall (Stonehousepet)",
+        "cluster_hub": "Stonehousepet Fish & Mutton Hub",
+        "mandal_zone": "Nellore Urban (NMC)",
+        "latitude": 14.448478,
+        "longitude": 79.991915,
+        "category": "Mutton / Sheep / Goat",
+        "animal_origin": "Nellore Local Herders (Pennar Basin)",
+        "animal_destination": "Local Street Food Vendors",
+        "daily_animals_handled": 71,
+        "slaughter_on_site": "No",
+        "refrigeration_available": "No",
+        "waste_disposal_method": "Municipal Waste Bin",
+        "water_source": "Borewell / Groundwater",
+        "drainage_condition": "Underground Closed Drain",
+        "distance_to_drain_m": 505.8,
+        "distance_to_waterbody_m": 1605.7,
+        "distance_to_hospital_m": 229.2,
+        "market_crowd_index": 7.8,
+        "norm_drain_risk": 0.0,
+        "norm_waste_risk": 0.35,
+        "composite_geo_risk_score": 34.47,
+        "risk_level": "Low Risk",
+        "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
+        "marker_color": "#06d6a0",
+        "ai_predicted_risk": "Low Risk",
+        "ai_prediction_confidence": 86.4,
+        "ai_concurrence": "True"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.991915,
+          14.448478
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-010",
+        "shop_name": "Sai Krupa Poultry Stall (Stonehousepet)",
+        "cluster_hub": "Stonehousepet Fish & Mutton Hub",
+        "mandal_zone": "Nellore Urban (NMC)",
+        "latitude": 14.447303,
+        "longitude": 79.985605,
+        "category": "Poultry (Broiler/Country Chicken)",
+        "animal_origin": "Chittoor Hatcheries Supply",
+        "animal_destination": "Local Ward Neighborhood Households",
+        "daily_animals_handled": 373,
+        "slaughter_on_site": "No",
+        "refrigeration_available": "No",
+        "waste_disposal_method": "Municipal Waste Bin",
+        "water_source": "Borewell / Groundwater",
+        "drainage_condition": "Underground Closed Drain",
+        "distance_to_drain_m": 132.5,
+        "distance_to_waterbody_m": 1735.7,
+        "distance_to_hospital_m": 314.6,
+        "market_crowd_index": 10.0,
+        "norm_drain_risk": 0.598,
+        "norm_waste_risk": 0.35,
+        "composite_geo_risk_score": 59.16,
+        "risk_level": "High Risk",
+        "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
+        "marker_color": "#f77f00",
+        "ai_predicted_risk": "High Risk",
+        "ai_prediction_confidence": 81.2,
+        "ai_concurrence": "True"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.985605,
+          14.447303
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-011",
+        "shop_name": "Annapurna Mutton Stall (Stonehousepet)",
+        "cluster_hub": "Stonehousepet Fish & Mutton Hub",
+        "mandal_zone": "Nellore Urban (NMC)",
+        "latitude": 14.448695,
+        "longitude": 79.992547,
+        "category": "Mutton / Sheep / Goat",
+        "animal_origin": "Atmakur Cattle & Sheep Market",
+        "animal_destination": "Local Ward Neighborhood Households",
+        "daily_animals_handled": 394,
+        "slaughter_on_site": "No",
+        "refrigeration_available": "Yes",
+        "waste_disposal_method": "Municipal Waste Bin",
+        "water_source": "Borewell / Groundwater",
+        "drainage_condition": "Underground Closed Drain",
+        "distance_to_drain_m": 552.5,
+        "distance_to_waterbody_m": 1581.8,
+        "distance_to_hospital_m": 230.3,
+        "market_crowd_index": 10.0,
+        "norm_drain_risk": 0.0,
+        "norm_waste_risk": 0.35,
+        "composite_geo_risk_score": 36.5,
+        "risk_level": "Low Risk",
+        "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
+        "marker_color": "#06d6a0",
+        "ai_predicted_risk": "Low Risk",
+        "ai_prediction_confidence": 83.6,
+        "ai_concurrence": "True"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.992547,
+          14.448695
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-012",
+        "shop_name": "Gouthami Mutton Stall (Stonehousepet)",
+        "cluster_hub": "Stonehousepet Fish & Mutton Hub",
+        "mandal_zone": "Nellore Urban (NMC)",
+        "latitude": 14.447601,
+        "longitude": 79.992426,
+        "category": "Mutton / Sheep / Goat",
+        "animal_origin": "Kadapa / Badvel Livestock Shandy",
+        "animal_destination": "Hotel & Catering Aggregators",
+        "daily_animals_handled": 415,
+        "slaughter_on_site": "Yes",
+        "refrigeration_available": "No",
+        "waste_disposal_method": "Open Dumping on Ground",
+        "water_source": "Stored Tank Water (Untreated)",
+        "drainage_condition": "Underground Closed Drain",
+        "distance_to_drain_m": 607.4,
+        "distance_to_waterbody_m": 1702.7,
+        "distance_to_hospital_m": 337.5,
+        "market_crowd_index": 7.3,
+        "norm_drain_risk": 0.0,
+        "norm_waste_risk": 0.85,
+        "composite_geo_risk_score": 63.91,
+        "risk_level": "High Risk",
+        "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
+        "marker_color": "#f77f00",
+        "ai_predicted_risk": "High Risk",
+        "ai_prediction_confidence": 58.9,
+        "ai_concurrence": "True"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.992426,
+          14.447601
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-013",
+        "shop_name": "Balaji Poultry Stall (Stonehousepet)",
+        "cluster_hub": "Stonehousepet Fish & Mutton Hub",
+        "mandal_zone": "Nellore Urban (NMC)",
+        "latitude": 14.44934,
+        "longitude": 79.99139,
+        "category": "Poultry (Broiler/Country Chicken)",
+        "animal_origin": "Allur Broiler Breeding Units",
+        "animal_destination": "Trunk Road & Gandhi Nagar Restaurants",
+        "daily_animals_handled": 54,
+        "slaughter_on_site": "Yes",
+        "refrigeration_available": "No",
+        "waste_disposal_method": "Municipal Waste Bin",
+        "water_source": "Piped Municipal Supply",
+        "drainage_condition": "Underground Closed Drain",
+        "distance_to_drain_m": 408.9,
+        "distance_to_waterbody_m": 1510.5,
+        "distance_to_hospital_m": 129.6,
+        "market_crowd_index": 9.8,
+        "norm_drain_risk": 0.0,
+        "norm_waste_risk": 0.35,
+        "composite_geo_risk_score": 50.05,
+        "risk_level": "Moderate Risk",
+        "recommended_intervention": "Monthly routine surveillance; water potability testing; solid waste collection compliance.",
+        "marker_color": "#ffd166",
+        "ai_predicted_risk": "Moderate Risk",
+        "ai_prediction_confidence": 82.4,
+        "ai_concurrence": "True"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.99139,
+          14.44934
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-014",
+        "shop_name": "National Mixed Stall (Stonehousepet)",
+        "cluster_hub": "Stonehousepet Fish & Mutton Hub",
+        "mandal_zone": "Nellore Urban (NMC)",
+        "latitude": 14.444949,
+        "longitude": 79.991115,
+        "category": "Mixed Live Meat & Fish",
+        "animal_origin": "Combined Regional Traders & Local Shandy",
+        "animal_destination": "Hotel & Catering Aggregators",
+        "daily_animals_handled": 295,
+        "slaughter_on_site": "No",
+        "refrigeration_available": "No",
+        "waste_disposal_method": "Municipal Waste Bin",
+        "water_source": "Piped Municipal Supply",
+        "drainage_condition": "Underground Closed Drain",
+        "distance_to_drain_m": 748.6,
+        "distance_to_waterbody_m": 1996.0,
+        "distance_to_hospital_m": 553.0,
+        "market_crowd_index": 7.9,
+        "norm_drain_risk": 0.0,
+        "norm_waste_risk": 0.35,
+        "composite_geo_risk_score": 38.75,
+        "risk_level": "Low Risk",
+        "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
+        "marker_color": "#06d6a0",
+        "ai_predicted_risk": "Low Risk",
+        "ai_prediction_confidence": 80.7,
+        "ai_concurrence": "True"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.991115,
+          14.444949
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-015",
+        "shop_name": "Sri Venkateswara Mixed Stall (Stonehousepet)",
+        "cluster_hub": "Stonehousepet Fish & Mutton Hub",
+        "mandal_zone": "Nellore Urban (NMC)",
+        "latitude": 14.448451,
+        "longitude": 79.987769,
+        "category": "Mixed Live Meat & Fish",
+        "animal_origin": "Multi-Source Livestock Distributors",
+        "animal_destination": "Local Street Food Vendors",
+        "daily_animals_handled": 289,
+        "slaughter_on_site": "Yes",
+        "refrigeration_available": "Yes",
+        "waste_disposal_method": "Municipal Waste Bin",
+        "water_source": "Borewell / Groundwater",
+        "drainage_condition": "Underground Closed Drain",
+        "distance_to_drain_m": 283.0,
+        "distance_to_waterbody_m": 1608.8,
+        "distance_to_hospital_m": 461.8,
+        "market_crowd_index": 7.0,
+        "norm_drain_risk": 0.061,
+        "norm_waste_risk": 0.35,
+        "composite_geo_risk_score": 43.88,
+        "risk_level": "Moderate Risk",
+        "recommended_intervention": "Monthly routine surveillance; water potability testing; solid waste collection compliance.",
+        "marker_color": "#ffd166",
+        "ai_predicted_risk": "Moderate Risk",
+        "ai_prediction_confidence": 67.1,
+        "ai_concurrence": "True"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.987769,
+          14.448451
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-016",
+        "shop_name": "Pennar Quality Mutton Stall (Stonehousepet)",
+        "cluster_hub": "Stonehousepet Fish & Mutton Hub",
+        "mandal_zone": "Nellore Urban (NMC)",
+        "latitude": 14.448703,
+        "longitude": 79.993803,
+        "category": "Mutton / Sheep / Goat",
+        "animal_origin": "Kadapa / Badvel Livestock Shandy",
+        "animal_destination": "Local Ward Neighborhood Households",
+        "daily_animals_handled": 194,
+        "slaughter_on_site": "Yes",
+        "refrigeration_available": "Yes",
+        "waste_disposal_method": "Closed Bin Collection",
+        "water_source": "Borewell / Groundwater",
+        "drainage_condition": "Underground Closed Drain",
+        "distance_to_drain_m": 675.2,
+        "distance_to_waterbody_m": 1580.9,
+        "distance_to_hospital_m": 318.5,
+        "market_crowd_index": 9.2,
+        "norm_drain_risk": 0.0,
+        "norm_waste_risk": 0.1,
+        "composite_geo_risk_score": 38.61,
+        "risk_level": "Low Risk",
+        "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
+        "marker_color": "#06d6a0",
+        "ai_predicted_risk": "Low Risk",
+        "ai_prediction_confidence": 78.3,
+        "ai_concurrence": "True"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.993803,
+          14.448703
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-017",
+        "shop_name": "Sai Krupa Poultry Stall (Santhapet)",
+        "cluster_hub": "Santhapet Central Meat Market",
+        "mandal_zone": "Nellore Urban (NMC)",
+        "latitude": 14.438879,
+        "longitude": 79.976012,
+        "category": "Poultry (Broiler/Country Chicken)",
+        "animal_origin": "Local Nellore Poultry Farms (Podalakur Road)",
+        "animal_destination": "Local Street Food Vendors",
+        "daily_animals_handled": 233,
+        "slaughter_on_site": "Yes",
+        "refrigeration_available": "Yes",
+        "waste_disposal_method": "Municipal Waste Bin",
+        "water_source": "Borewell / Groundwater",
+        "drainage_condition": "Underground Closed Drain",
+        "distance_to_drain_m": 296.8,
+        "distance_to_waterbody_m": 2667.1,
+        "distance_to_hospital_m": 442.9,
+        "market_crowd_index": 5.6,
+        "norm_drain_risk": 0.011,
+        "norm_waste_risk": 0.35,
+        "composite_geo_risk_score": 37.36,
+        "risk_level": "Low Risk",
+        "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
+        "marker_color": "#06d6a0",
+        "ai_predicted_risk": "Low Risk",
+        "ai_prediction_confidence": 71.8,
+        "ai_concurrence": "True"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.976012,
+          14.438879
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-018",
+        "shop_name": "Annapurna Mutton Stall (Santhapet)",
+        "cluster_hub": "Santhapet Central Meat Market",
+        "mandal_zone": "Nellore Urban (NMC)",
+        "latitude": 14.440098,
+        "longitude": 79.978692,
+        "category": "Mutton / Sheep / Goat",
+        "animal_origin": "Atmakur Cattle & Sheep Market",
+        "animal_destination": "Hotel & Catering Aggregators",
+        "daily_animals_handled": 80,
+        "slaughter_on_site": "Yes",
+        "refrigeration_available": "Yes",
+        "waste_disposal_method": "Municipal Waste Bin",
+        "water_source": "Borewell / Groundwater",
+        "drainage_condition": "Underground Closed Drain",
+        "distance_to_drain_m": 151.9,
+        "distance_to_waterbody_m": 2532.3,
+        "distance_to_hospital_m": 276.9,
+        "market_crowd_index": 6.1,
+        "norm_drain_risk": 0.529,
+        "norm_waste_risk": 0.35,
+        "composite_geo_risk_score": 47.65,
+        "risk_level": "Moderate Risk",
+        "recommended_intervention": "Monthly routine surveillance; water potability testing; solid waste collection compliance.",
+        "marker_color": "#ffd166",
+        "ai_predicted_risk": "High Risk",
+        "ai_prediction_confidence": 57.9,
+        "ai_concurrence": "False"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.978692,
+          14.440098
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-019",
+        "shop_name": "Pennar Quality Mutton Stall (Santhapet)",
+        "cluster_hub": "Santhapet Central Meat Market",
+        "mandal_zone": "Nellore Urban (NMC)",
+        "latitude": 14.435933,
+        "longitude": 79.981543,
+        "category": "Mutton / Sheep / Goat",
+        "animal_origin": "Atmakur Cattle & Sheep Market",
+        "animal_destination": "Inter-Mandal Retail Stalls",
+        "daily_animals_handled": 75,
+        "slaughter_on_site": "Yes",
+        "refrigeration_available": "No",
+        "waste_disposal_method": "Closed Bin Collection",
+        "water_source": "Stored Tank Water (Untreated)",
+        "drainage_condition": "Underground Closed Drain",
+        "distance_to_drain_m": 373.7,
+        "distance_to_waterbody_m": 2992.9,
+        "distance_to_hospital_m": 346.0,
+        "market_crowd_index": 9.6,
+        "norm_drain_risk": 0.0,
+        "norm_waste_risk": 0.1,
+        "composite_geo_risk_score": 43.07,
+        "risk_level": "Moderate Risk",
+        "recommended_intervention": "Monthly routine surveillance; water potability testing; solid waste collection compliance.",
+        "marker_color": "#ffd166",
+        "ai_predicted_risk": "Moderate Risk",
+        "ai_prediction_confidence": 73.2,
+        "ai_concurrence": "True"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.981543,
+          14.435933
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-020",
+        "shop_name": "Annapurna Poultry Stall (Santhapet)",
+        "cluster_hub": "Santhapet Central Meat Market",
+        "mandal_zone": "Nellore Urban (NMC)",
+        "latitude": 14.437939,
+        "longitude": 79.978402,
+        "category": "Poultry (Broiler/Country Chicken)",
+        "animal_origin": "Local Nellore Poultry Farms (Podalakur Road)",
+        "animal_destination": "Trunk Road & Gandhi Nagar Restaurants",
+        "daily_animals_handled": 219,
+        "slaughter_on_site": "Yes",
+        "refrigeration_available": "No",
+        "waste_disposal_method": "Municipal Waste Bin",
+        "water_source": "Piped Municipal Supply",
+        "drainage_condition": "Open Stagnant Drain",
+        "distance_to_drain_m": 29.6,
+        "distance_to_waterbody_m": 2771.1,
+        "distance_to_hospital_m": 303.6,
+        "market_crowd_index": 8.3,
+        "norm_drain_risk": 0.966,
+        "norm_waste_risk": 0.35,
+        "composite_geo_risk_score": 73.46,
+        "risk_level": "Very High Risk",
+        "recommended_intervention": "Immediate bio-sanitation audit; mandatory effluent interceptor; drain covering within 50m; live slaughter inspection.",
+        "marker_color": "#d90429",
+        "ai_predicted_risk": "Very High Risk",
+        "ai_prediction_confidence": 56.5,
+        "ai_concurrence": "True"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.978402,
+          14.437939
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-021",
+        "shop_name": "Coastal Choice Poultry Stall (Santhapet)",
+        "cluster_hub": "Santhapet Central Meat Market",
+        "mandal_zone": "Nellore Urban (NMC)",
+        "latitude": 14.435498,
+        "longitude": 79.98307,
+        "category": "Poultry (Broiler/Country Chicken)",
+        "animal_origin": "Local Nellore Poultry Farms (Podalakur Road)",
+        "animal_destination": "Trunk Road & Gandhi Nagar Restaurants",
+        "daily_animals_handled": 176,
+        "slaughter_on_site": "Yes",
+        "refrigeration_available": "Yes",
+        "waste_disposal_method": "Closed Bin Collection",
+        "water_source": "Borewell / Groundwater",
+        "drainage_condition": "Underground Closed Drain",
+        "distance_to_drain_m": 533.1,
+        "distance_to_waterbody_m": 3041.0,
+        "distance_to_hospital_m": 448.7,
+        "market_crowd_index": 7.4,
+        "norm_drain_risk": 0.0,
+        "norm_waste_risk": 0.1,
+        "composite_geo_risk_score": 33.51,
+        "risk_level": "Low Risk",
+        "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
+        "marker_color": "#06d6a0",
+        "ai_predicted_risk": "Low Risk",
+        "ai_prediction_confidence": 81.3,
+        "ai_concurrence": "True"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.98307,
+          14.435498
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-022",
+        "shop_name": "Al-Madina Mutton Stall (Santhapet)",
+        "cluster_hub": "Santhapet Central Meat Market",
+        "mandal_zone": "Nellore Urban (NMC)",
+        "latitude": 14.440032,
+        "longitude": 79.976195,
+        "category": "Mutton / Sheep / Goat",
+        "animal_origin": "Kadapa / Badvel Livestock Shandy",
+        "animal_destination": "Inter-Mandal Retail Stalls",
+        "daily_animals_handled": 66,
+        "slaughter_on_site": "No",
+        "refrigeration_available": "Yes",
+        "waste_disposal_method": "Municipal Waste Bin",
+        "water_source": "Stored Tank Water (Untreated)",
+        "drainage_condition": "Underground Closed Drain",
+        "distance_to_drain_m": 359.6,
+        "distance_to_waterbody_m": 2539.7,
+        "distance_to_hospital_m": 505.1,
+        "market_crowd_index": 7.5,
+        "norm_drain_risk": 0.0,
+        "norm_waste_risk": 0.35,
+        "composite_geo_risk_score": 23.47,
+        "risk_level": "Low Risk",
+        "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
+        "marker_color": "#06d6a0",
+        "ai_predicted_risk": "Low Risk",
+        "ai_prediction_confidence": 91.5,
+        "ai_concurrence": "True"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.976195,
+          14.440032
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-023",
+        "shop_name": "National Mutton Stall (Santhapet)",
+        "cluster_hub": "Santhapet Central Meat Market",
+        "mandal_zone": "Nellore Urban (NMC)",
+        "latitude": 14.44226,
+        "longitude": 79.983664,
+        "category": "Mutton / Sheep / Goat",
+        "animal_origin": "Nellore Local Herders (Pennar Basin)",
+        "animal_destination": "Inter-Mandal Retail Stalls",
+        "daily_animals_handled": 45,
+        "slaughter_on_site": "Yes",
+        "refrigeration_available": "No",
+        "waste_disposal_method": "Municipal Waste Bin",
+        "water_source": "Piped Municipal Supply",
+        "drainage_condition": "Underground Closed Drain",
+        "distance_to_drain_m": 154.4,
+        "distance_to_waterbody_m": 2293.3,
+        "distance_to_hospital_m": 354.0,
+        "market_crowd_index": 8.2,
+        "norm_drain_risk": 0.52,
+        "norm_waste_risk": 0.35,
+        "composite_geo_risk_score": 58.75,
+        "risk_level": "High Risk",
+        "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
+        "marker_color": "#f77f00",
+        "ai_predicted_risk": "High Risk",
+        "ai_prediction_confidence": 80.6,
+        "ai_concurrence": "True"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.983664,
+          14.44226
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-024",
+        "shop_name": "Gouthami Mutton Stall (Santhapet)",
+        "cluster_hub": "Santhapet Central Meat Market",
+        "mandal_zone": "Nellore Urban (NMC)",
+        "latitude": 14.439015,
+        "longitude": 79.979822,
+        "category": "Mutton / Sheep / Goat",
+        "animal_origin": "Nellore Local Herders (Pennar Basin)",
+        "animal_destination": "Hotel & Catering Aggregators",
+        "daily_animals_handled": 259,
+        "slaughter_on_site": "Yes",
+        "refrigeration_available": "No",
+        "waste_disposal_method": "Direct Open Drain Discharge",
+        "water_source": "Piped Municipal Supply",
+        "drainage_condition": "Open Stagnant Drain",
+        "distance_to_drain_m": 17.8,
+        "distance_to_waterbody_m": 2652.2,
+        "distance_to_hospital_m": 126.9,
+        "market_crowd_index": 8.4,
+        "norm_drain_risk": 1.0,
+        "norm_waste_risk": 1.0,
+        "composite_geo_risk_score": 88.36,
+        "risk_level": "Very High Risk",
+        "recommended_intervention": "Immediate bio-sanitation audit; mandatory effluent interceptor; drain covering within 50m; live slaughter inspection.",
+        "marker_color": "#d90429",
+        "ai_predicted_risk": "Very High Risk",
+        "ai_prediction_confidence": 59.3,
+        "ai_concurrence": "True"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.979822,
+          14.439015
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-025",
+        "shop_name": "National Mutton Stall (Santhapet)",
+        "cluster_hub": "Santhapet Central Meat Market",
+        "mandal_zone": "Nellore Urban (NMC)",
+        "latitude": 14.440202,
+        "longitude": 79.980479,
+        "category": "Mutton / Sheep / Goat",
+        "animal_origin": "Nellore Local Herders (Pennar Basin)",
+        "animal_destination": "Hotel & Catering Aggregators",
+        "daily_animals_handled": 92,
+        "slaughter_on_site": "No",
+        "refrigeration_available": "No",
+        "waste_disposal_method": "Open Dumping on Ground",
+        "water_source": "Borewell / Groundwater",
+        "drainage_condition": "Open Stagnant Drain",
+        "distance_to_drain_m": 7.0,
+        "distance_to_waterbody_m": 2520.9,
+        "distance_to_hospital_m": 144.9,
+        "market_crowd_index": 8.7,
+        "norm_drain_risk": 1.0,
+        "norm_waste_risk": 0.85,
+        "composite_geo_risk_score": 69.34,
+        "risk_level": "High Risk",
+        "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
+        "marker_color": "#f77f00",
+        "ai_predicted_risk": "High Risk",
+        "ai_prediction_confidence": 81.7,
+        "ai_concurrence": "True"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.980479,
+          14.440202
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-026",
+        "shop_name": "Nellore Fresh Mutton Stall (Santhapet)",
+        "cluster_hub": "Santhapet Central Meat Market",
+        "mandal_zone": "Nellore Urban (NMC)",
+        "latitude": 14.442353,
+        "longitude": 79.978452,
+        "category": "Mutton / Sheep / Goat",
+        "animal_origin": "Nellore Local Herders (Pennar Basin)",
+        "animal_destination": "Inter-Mandal Retail Stalls",
+        "daily_animals_handled": 178,
+        "slaughter_on_site": "No",
+        "refrigeration_available": "Yes",
+        "waste_disposal_method": "Closed Bin Collection",
+        "water_source": "Borewell / Groundwater",
+        "drainage_condition": "Underground Closed Drain",
+        "distance_to_drain_m": 325.6,
+        "distance_to_waterbody_m": 2283.0,
+        "distance_to_hospital_m": 462.9,
+        "market_crowd_index": 10.0,
+        "norm_drain_risk": 0.0,
+        "norm_waste_risk": 0.1,
+        "composite_geo_risk_score": 25.18,
+        "risk_level": "Low Risk",
+        "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
+        "marker_color": "#06d6a0",
+        "ai_predicted_risk": "Low Risk",
+        "ai_prediction_confidence": 79.0,
+        "ai_concurrence": "True"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.978452,
+          14.442353
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-027",
+        "shop_name": "Sri Venkateswara Poultry Stall (Santhapet)",
+        "cluster_hub": "Santhapet Central Meat Market",
+        "mandal_zone": "Nellore Urban (NMC)",
+        "latitude": 14.43945,
+        "longitude": 79.979223,
+        "category": "Poultry (Broiler/Country Chicken)",
+        "animal_origin": "Chittoor Hatcheries Supply",
+        "animal_destination": "Trunk Road & Gandhi Nagar Restaurants",
+        "daily_animals_handled": 392,
+        "slaughter_on_site": "Yes",
+        "refrigeration_available": "No",
+        "waste_disposal_method": "Open Dumping on Ground",
+        "water_source": "Piped Municipal Supply",
+        "drainage_condition": "Semi-Covered Municipal Drain",
+        "distance_to_drain_m": 62.7,
+        "distance_to_waterbody_m": 2604.0,
+        "distance_to_hospital_m": 197.8,
+        "market_crowd_index": 7.5,
+        "norm_drain_risk": 0.848,
+        "norm_waste_risk": 0.85,
+        "composite_geo_risk_score": 83.15,
+        "risk_level": "Very High Risk",
+        "recommended_intervention": "Immediate bio-sanitation audit; mandatory effluent interceptor; drain covering within 50m; live slaughter inspection.",
+        "marker_color": "#d90429",
+        "ai_predicted_risk": "Very High Risk",
+        "ai_prediction_confidence": 88.4,
+        "ai_concurrence": "True"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.979223,
+          14.43945
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-028",
+        "shop_name": "Balaji Poultry Stall (Santhapet)",
+        "cluster_hub": "Santhapet Central Meat Market",
+        "mandal_zone": "Nellore Urban (NMC)",
+        "latitude": 14.443433,
+        "longitude": 79.982432,
+        "category": "Poultry (Broiler/Country Chicken)",
+        "animal_origin": "Local Nellore Poultry Farms (Podalakur Road)",
+        "animal_destination": "Local Ward Neighborhood Households",
+        "daily_animals_handled": 195,
+        "slaughter_on_site": "No",
+        "refrigeration_available": "No",
+        "waste_disposal_method": "Direct Open Drain Discharge",
+        "water_source": "Piped Municipal Supply",
+        "drainage_condition": "Open Stagnant Drain",
+        "distance_to_drain_m": 18.2,
+        "distance_to_waterbody_m": 2163.6,
+        "distance_to_hospital_m": 402.1,
+        "market_crowd_index": 8.2,
+        "norm_drain_risk": 1.0,
+        "norm_waste_risk": 1.0,
+        "composite_geo_risk_score": 74.61,
+        "risk_level": "Very High Risk",
+        "recommended_intervention": "Immediate bio-sanitation audit; mandatory effluent interceptor; drain covering within 50m; live slaughter inspection.",
+        "marker_color": "#d90429",
+        "ai_predicted_risk": "Very High Risk",
+        "ai_prediction_confidence": 65.8,
+        "ai_concurrence": "True"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.982432,
+          14.443433
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-029",
+        "shop_name": "Star Mutton Stall (Santhapet)",
+        "cluster_hub": "Santhapet Central Meat Market",
+        "mandal_zone": "Nellore Urban (NMC)",
+        "latitude": 14.438865,
+        "longitude": 79.977786,
+        "category": "Mutton / Sheep / Goat",
+        "animal_origin": "Kadapa / Badvel Livestock Shandy",
+        "animal_destination": "Trunk Road & Gandhi Nagar Restaurants",
+        "daily_animals_handled": 304,
+        "slaughter_on_site": "Yes",
+        "refrigeration_available": "No",
+        "waste_disposal_method": "Municipal Waste Bin",
+        "water_source": "Borewell / Groundwater",
+        "drainage_condition": "Underground Closed Drain",
+        "distance_to_drain_m": 145.0,
+        "distance_to_waterbody_m": 2668.7,
+        "distance_to_hospital_m": 346.4,
+        "market_crowd_index": 8.6,
+        "norm_drain_risk": 0.554,
+        "norm_waste_risk": 0.35,
+        "composite_geo_risk_score": 65.49,
+        "risk_level": "High Risk",
+        "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
+        "marker_color": "#f77f00",
+        "ai_predicted_risk": "High Risk",
+        "ai_prediction_confidence": 70.1,
+        "ai_concurrence": "True"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.977786,
+          14.438865
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-030",
+        "shop_name": "Gouthami Poultry Stall (Santhapet)",
+        "cluster_hub": "Santhapet Central Meat Market",
+        "mandal_zone": "Nellore Urban (NMC)",
+        "latitude": 14.439945,
+        "longitude": 79.981118,
+        "category": "Poultry (Broiler/Country Chicken)",
+        "animal_origin": "Local Nellore Poultry Farms (Podalakur Road)",
+        "animal_destination": "Trunk Road & Gandhi Nagar Restaurants",
+        "daily_animals_handled": 366,
+        "slaughter_on_site": "Yes",
+        "refrigeration_available": "No",
+        "waste_disposal_method": "Open Dumping on Ground",
+        "water_source": "Borewell / Groundwater",
+        "drainage_condition": "Semi-Covered Municipal Drain",
+        "distance_to_drain_m": 64.8,
+        "distance_to_waterbody_m": 2549.2,
+        "distance_to_hospital_m": 105.9,
+        "market_crowd_index": 7.4,
+        "norm_drain_risk": 0.84,
+        "norm_waste_risk": 0.85,
+        "composite_geo_risk_score": 82.23,
+        "risk_level": "Very High Risk",
+        "recommended_intervention": "Immediate bio-sanitation audit; mandatory effluent interceptor; drain covering within 50m; live slaughter inspection.",
+        "marker_color": "#d90429",
+        "ai_predicted_risk": "Very High Risk",
+        "ai_prediction_confidence": 85.9,
+        "ai_concurrence": "True"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.981118,
+          14.439945
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-031",
+        "shop_name": "Star Poultry Stall (Ranganayakulapet)",
+        "cluster_hub": "Ranganayakulapet Riverside Stalls",
+        "mandal_zone": "Nellore Urban (NMC)",
+        "latitude": 14.453487,
+        "longitude": 79.982483,
+        "category": "Poultry (Broiler/Country Chicken)",
+        "animal_origin": "Local Nellore Poultry Farms (Podalakur Road)",
+        "animal_destination": "Trunk Road & Gandhi Nagar Restaurants",
+        "daily_animals_handled": 236,
+        "slaughter_on_site": "Yes",
+        "refrigeration_available": "No",
+        "waste_disposal_method": "Municipal Waste Bin",
+        "water_source": "Stored Tank Water (Untreated)",
+        "drainage_condition": "Underground Closed Drain",
+        "distance_to_drain_m": 154.1,
+        "distance_to_waterbody_m": 1051.9,
+        "distance_to_hospital_m": 489.7,
+        "market_crowd_index": 7.8,
+        "norm_drain_risk": 0.521,
+        "norm_waste_risk": 0.35,
+        "composite_geo_risk_score": 65.12,
+        "risk_level": "High Risk",
+        "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
+        "marker_color": "#f77f00",
+        "ai_predicted_risk": "High Risk",
+        "ai_prediction_confidence": 75.4,
+        "ai_concurrence": "True"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.982483,
+          14.453487
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-032",
+        "shop_name": "Star Poultry Stall (Ranganayakulapet)",
+        "cluster_hub": "Ranganayakulapet Riverside Stalls",
+        "mandal_zone": "Nellore Urban (NMC)",
+        "latitude": 14.450096,
+        "longitude": 79.987515,
+        "category": "Poultry (Broiler/Country Chicken)",
+        "animal_origin": "Allur Broiler Breeding Units",
+        "animal_destination": "Local Ward Neighborhood Households",
+        "daily_animals_handled": 265,
+        "slaughter_on_site": "Yes",
+        "refrigeration_available": "No",
+        "waste_disposal_method": "Municipal Waste Bin",
+        "water_source": "Borewell / Groundwater",
+        "drainage_condition": "Semi-Covered Municipal Drain",
+        "distance_to_drain_m": 112.8,
+        "distance_to_waterbody_m": 1426.9,
+        "distance_to_hospital_m": 431.4,
+        "market_crowd_index": 7.7,
+        "norm_drain_risk": 0.669,
+        "norm_waste_risk": 0.35,
+        "composite_geo_risk_score": 68.49,
+        "risk_level": "High Risk",
+        "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
+        "marker_color": "#f77f00",
+        "ai_predicted_risk": "High Risk",
+        "ai_prediction_confidence": 88.0,
+        "ai_concurrence": "True"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.987515,
+          14.450096
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-033",
+        "shop_name": "Balaji Poultry Stall (Ranganayakulapet)",
+        "cluster_hub": "Ranganayakulapet Riverside Stalls",
+        "mandal_zone": "Nellore Urban (NMC)",
+        "latitude": 14.454383,
+        "longitude": 79.98637,
+        "category": "Poultry (Broiler/Country Chicken)",
+        "animal_origin": "Allur Broiler Breeding Units",
+        "animal_destination": "Hotel & Catering Aggregators",
+        "daily_animals_handled": 167,
+        "slaughter_on_site": "No",
+        "refrigeration_available": "No",
+        "waste_disposal_method": "Direct Open Drain Discharge",
+        "water_source": "Piped Municipal Supply",
+        "drainage_condition": "Open Stagnant Drain",
+        "distance_to_drain_m": 18.3,
+        "distance_to_waterbody_m": 952.8,
+        "distance_to_hospital_m": 80.1,
+        "market_crowd_index": 4.3,
+        "norm_drain_risk": 1.0,
+        "norm_waste_risk": 1.0,
+        "composite_geo_risk_score": 70.77,
+        "risk_level": "High Risk",
+        "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
+        "marker_color": "#f77f00",
+        "ai_predicted_risk": "High Risk",
+        "ai_prediction_confidence": 77.3,
+        "ai_concurrence": "True"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.98637,
+          14.454383
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-034",
+        "shop_name": "Al-Madina Fish Stall (Ranganayakulapet)",
+        "cluster_hub": "Ranganayakulapet Riverside Stalls",
+        "mandal_zone": "Nellore Urban (NMC)",
+        "latitude": 14.45649,
+        "longitude": 79.987246,
+        "category": "Fish & Seafood",
+        "animal_origin": "Krishnapatnam Deep Sea Port Landing",
+        "animal_destination": "Inter-Mandal Retail Stalls",
+        "daily_animals_handled": 160,
+        "slaughter_on_site": "Yes",
+        "refrigeration_available": "No",
+        "waste_disposal_method": "Direct Open Drain Discharge",
+        "water_source": "Piped Municipal Supply",
+        "drainage_condition": "Semi-Covered Municipal Drain",
+        "distance_to_drain_m": 61.3,
+        "distance_to_waterbody_m": 719.8,
+        "distance_to_hospital_m": 278.1,
+        "market_crowd_index": 7.2,
+        "norm_drain_risk": 0.852,
+        "norm_waste_risk": 1.0,
+        "composite_geo_risk_score": 84.54,
+        "risk_level": "Very High Risk",
+        "recommended_intervention": "Immediate bio-sanitation audit; mandatory effluent interceptor; drain covering within 50m; live slaughter inspection.",
+        "marker_color": "#d90429",
+        "ai_predicted_risk": "Very High Risk",
+        "ai_prediction_confidence": 65.5,
+        "ai_concurrence": "True"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.987246,
+          14.45649
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-035",
+        "shop_name": "Sai Krupa Fish Stall (Ranganayakulapet)",
+        "cluster_hub": "Ranganayakulapet Riverside Stalls",
+        "mandal_zone": "Nellore Urban (NMC)",
+        "latitude": 14.451808,
+        "longitude": 79.98587,
+        "category": "Fish & Seafood",
+        "animal_origin": "Krishnapatnam Deep Sea Port Landing",
+        "animal_destination": "Hotel & Catering Aggregators",
+        "daily_animals_handled": 47,
+        "slaughter_on_site": "Yes",
+        "refrigeration_available": "Yes",
+        "waste_disposal_method": "Municipal Waste Bin",
+        "water_source": "Piped Municipal Supply",
+        "drainage_condition": "Open Stagnant Drain",
+        "distance_to_drain_m": 26.0,
+        "distance_to_waterbody_m": 1237.6,
+        "distance_to_hospital_m": 272.4,
+        "market_crowd_index": 6.6,
+        "norm_drain_risk": 0.979,
+        "norm_waste_risk": 0.35,
+        "composite_geo_risk_score": 61.65,
+        "risk_level": "High Risk",
+        "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
+        "marker_color": "#f77f00",
+        "ai_predicted_risk": "High Risk",
+        "ai_prediction_confidence": 60.3,
+        "ai_concurrence": "True"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.98587,
+          14.451808
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-036",
+        "shop_name": "National Fish Stall (Ranganayakulapet)",
+        "cluster_hub": "Ranganayakulapet Riverside Stalls",
+        "mandal_zone": "Nellore Urban (NMC)",
+        "latitude": 14.450592,
+        "longitude": 79.988264,
+        "category": "Fish & Seafood",
+        "animal_origin": "Mypadu Coastal Aquaculture Farms",
+        "animal_destination": "Local Ward Neighborhood Households",
+        "daily_animals_handled": 393,
+        "slaughter_on_site": "No",
+        "refrigeration_available": "No",
+        "waste_disposal_method": "Municipal Waste Bin",
+        "water_source": "Borewell / Groundwater",
+        "drainage_condition": "Semi-Covered Municipal Drain",
+        "distance_to_drain_m": 53.3,
+        "distance_to_waterbody_m": 1372.0,
+        "distance_to_hospital_m": 348.6,
+        "market_crowd_index": 8.2,
+        "norm_drain_risk": 0.881,
+        "norm_waste_risk": 0.35,
+        "composite_geo_risk_score": 64.76,
+        "risk_level": "High Risk",
+        "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
+        "marker_color": "#f77f00",
+        "ai_predicted_risk": "High Risk",
+        "ai_prediction_confidence": 88.9,
+        "ai_concurrence": "True"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.988264,
+          14.450592
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-037",
+        "shop_name": "Gouthami Fish Stall (Ranganayakulapet)",
+        "cluster_hub": "Ranganayakulapet Riverside Stalls",
+        "mandal_zone": "Nellore Urban (NMC)",
+        "latitude": 14.453234,
+        "longitude": 79.988601,
+        "category": "Fish & Seafood",
+        "animal_origin": "Pulicat Lake Brackish Water Source",
+        "animal_destination": "Trunk Road & Gandhi Nagar Restaurants",
+        "daily_animals_handled": 340,
+        "slaughter_on_site": "Yes",
+        "refrigeration_available": "No",
+        "waste_disposal_method": "Open Dumping on Ground",
+        "water_source": "Borewell / Groundwater",
+        "drainage_condition": "Open Stagnant Drain",
+        "distance_to_drain_m": 7.2,
+        "distance_to_waterbody_m": 1079.8,
+        "distance_to_hospital_m": 192.3,
+        "market_crowd_index": 7.5,
+        "norm_drain_risk": 1.0,
+        "norm_waste_risk": 0.85,
+        "composite_geo_risk_score": 88.89,
+        "risk_level": "Very High Risk",
+        "recommended_intervention": "Immediate bio-sanitation audit; mandatory effluent interceptor; drain covering within 50m; live slaughter inspection.",
+        "marker_color": "#d90429",
+        "ai_predicted_risk": "Very High Risk",
+        "ai_prediction_confidence": 76.5,
+        "ai_concurrence": "True"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.988601,
+          14.453234
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-038",
+        "shop_name": "Annapurna Fish Stall (Ranganayakulapet)",
+        "cluster_hub": "Ranganayakulapet Riverside Stalls",
+        "mandal_zone": "Nellore Urban (NMC)",
+        "latitude": 14.456561,
+        "longitude": 79.986113,
+        "category": "Fish & Seafood",
+        "animal_origin": "Krishnapatnam Deep Sea Port Landing",
+        "animal_destination": "Inter-Mandal Retail Stalls",
+        "daily_animals_handled": 267,
+        "slaughter_on_site": "No",
+        "refrigeration_available": "No",
+        "waste_disposal_method": "Municipal Waste Bin",
+        "water_source": "Piped Municipal Supply",
+        "drainage_condition": "Semi-Covered Municipal Drain",
+        "distance_to_drain_m": 59.7,
+        "distance_to_waterbody_m": 712.0,
+        "distance_to_hospital_m": 300.4,
+        "market_crowd_index": 5.9,
+        "norm_drain_risk": 0.858,
+        "norm_waste_risk": 0.35,
+        "composite_geo_risk_score": 59.38,
+        "risk_level": "High Risk",
+        "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
+        "marker_color": "#f77f00",
+        "ai_predicted_risk": "High Risk",
+        "ai_prediction_confidence": 86.2,
+        "ai_concurrence": "True"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.986113,
+          14.456561
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-039",
+        "shop_name": "Star Fish Stall (Ranganayakulapet)",
+        "cluster_hub": "Ranganayakulapet Riverside Stalls",
+        "mandal_zone": "Nellore Urban (NMC)",
+        "latitude": 14.450964,
+        "longitude": 79.987198,
+        "category": "Fish & Seafood",
+        "animal_origin": "Pennar River Catchment",
+        "animal_destination": "Trunk Road & Gandhi Nagar Restaurants",
+        "daily_animals_handled": 369,
+        "slaughter_on_site": "Yes",
+        "refrigeration_available": "No",
+        "waste_disposal_method": "Direct Open Drain Discharge",
+        "water_source": "Borewell / Groundwater",
+        "drainage_condition": "Semi-Covered Municipal Drain",
+        "distance_to_drain_m": 86.5,
+        "distance_to_waterbody_m": 1330.9,
+        "distance_to_hospital_m": 338.3,
+        "market_crowd_index": 8.6,
+        "norm_drain_risk": 0.762,
+        "norm_waste_risk": 1.0,
+        "composite_geo_risk_score": 87.7,
+        "risk_level": "Very High Risk",
+        "recommended_intervention": "Immediate bio-sanitation audit; mandatory effluent interceptor; drain covering within 50m; live slaughter inspection.",
+        "marker_color": "#d90429",
+        "ai_predicted_risk": "Very High Risk",
+        "ai_prediction_confidence": 75.4,
+        "ai_concurrence": "True"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.987198,
+          14.450964
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-040",
+        "shop_name": "Star Poultry Stall (Ranganayakulapet)",
+        "cluster_hub": "Ranganayakulapet Riverside Stalls",
+        "mandal_zone": "Nellore Urban (NMC)",
+        "latitude": 14.453251,
+        "longitude": 79.989542,
+        "category": "Poultry (Broiler/Country Chicken)",
+        "animal_origin": "Chittoor Hatcheries Supply",
+        "animal_destination": "Local Street Food Vendors",
+        "daily_animals_handled": 278,
+        "slaughter_on_site": "Yes",
+        "refrigeration_available": "Yes",
+        "waste_disposal_method": "Municipal Waste Bin",
+        "water_source": "Stored Tank Water (Untreated)",
+        "drainage_condition": "Semi-Covered Municipal Drain",
+        "distance_to_drain_m": 89.7,
+        "distance_to_waterbody_m": 1078.0,
+        "distance_to_hospital_m": 286.1,
+        "market_crowd_index": 7.5,
+        "norm_drain_risk": 0.751,
+        "norm_waste_risk": 0.35,
+        "composite_geo_risk_score": 62.8,
+        "risk_level": "High Risk",
+        "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
+        "marker_color": "#f77f00",
+        "ai_predicted_risk": "High Risk",
+        "ai_prediction_confidence": 81.3,
+        "ai_concurrence": "True"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.989542,
+          14.453251
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-041",
+        "shop_name": "Balaji Poultry Stall (Vedayapalem)",
+        "cluster_hub": "Vedayapalem - Ramalingapuram Meat Cluster",
+        "mandal_zone": "Nellore Urban (NMC)",
+        "latitude": 14.41985,
+        "longitude": 79.964983,
+        "category": "Poultry (Broiler/Country Chicken)",
+        "animal_origin": "Local Nellore Poultry Farms (Podalakur Road)",
+        "animal_destination": "Inter-Mandal Retail Stalls",
+        "daily_animals_handled": 262,
+        "slaughter_on_site": "Yes",
+        "refrigeration_available": "Yes",
+        "waste_disposal_method": "Municipal Waste Bin",
+        "water_source": "Piped Municipal Supply",
+        "drainage_condition": "Semi-Covered Municipal Drain",
+        "distance_to_drain_m": 45.6,
+        "distance_to_waterbody_m": 4771.3,
+        "distance_to_hospital_m": 384.2,
+        "market_crowd_index": 6.6,
+        "norm_drain_risk": 0.909,
+        "norm_waste_risk": 0.35,
+        "composite_geo_risk_score": 61.94,
+        "risk_level": "High Risk",
+        "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
+        "marker_color": "#f77f00",
+        "ai_predicted_risk": "High Risk",
+        "ai_prediction_confidence": 53.0,
+        "ai_concurrence": "True"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.964983,
+          14.41985
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-042",
+        "shop_name": "Coastal Choice Mutton Stall (Vedayapalem)",
+        "cluster_hub": "Vedayapalem - Ramalingapuram Meat Cluster",
+        "mandal_zone": "Nellore Urban (NMC)",
+        "latitude": 14.414967,
+        "longitude": 79.963054,
+        "category": "Mutton / Sheep / Goat",
+        "animal_origin": "Nellore Local Herders (Pennar Basin)",
+        "animal_destination": "Inter-Mandal Retail Stalls",
+        "daily_animals_handled": 243,
+        "slaughter_on_site": "No",
+        "refrigeration_available": "No",
+        "waste_disposal_method": "Open Dumping on Ground",
+        "water_source": "Piped Municipal Supply",
+        "drainage_condition": "Semi-Covered Municipal Drain",
+        "distance_to_drain_m": 87.0,
+        "distance_to_waterbody_m": 5311.2,
+        "distance_to_hospital_m": 481.3,
+        "market_crowd_index": 4.3,
+        "norm_drain_risk": 0.761,
+        "norm_waste_risk": 0.85,
+        "composite_geo_risk_score": 60.12,
+        "risk_level": "High Risk",
+        "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
+        "marker_color": "#f77f00",
+        "ai_predicted_risk": "High Risk",
+        "ai_prediction_confidence": 84.1,
+        "ai_concurrence": "True"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.963054,
+          14.414967
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-043",
+        "shop_name": "Nellore Fresh Mutton Stall (Vedayapalem)",
+        "cluster_hub": "Vedayapalem - Ramalingapuram Meat Cluster",
+        "mandal_zone": "Nellore Urban (NMC)",
+        "latitude": 14.414642,
+        "longitude": 79.968633,
+        "category": "Mutton / Sheep / Goat",
+        "animal_origin": "Nellore Local Herders (Pennar Basin)",
+        "animal_destination": "Local Street Food Vendors",
+        "daily_animals_handled": 345,
+        "slaughter_on_site": "Yes",
+        "refrigeration_available": "No",
+        "waste_disposal_method": "Closed Bin Collection",
+        "water_source": "Borewell / Groundwater",
+        "drainage_condition": "Underground Closed Drain",
+        "distance_to_drain_m": 604.1,
+        "distance_to_waterbody_m": 5347.2,
+        "distance_to_hospital_m": 315.8,
+        "market_crowd_index": 4.7,
+        "norm_drain_risk": 0.0,
+        "norm_waste_risk": 0.1,
+        "composite_geo_risk_score": 41.72,
+        "risk_level": "Moderate Risk",
+        "recommended_intervention": "Monthly routine surveillance; water potability testing; solid waste collection compliance.",
+        "marker_color": "#ffd166",
+        "ai_predicted_risk": "Moderate Risk",
+        "ai_prediction_confidence": 45.4,
+        "ai_concurrence": "True"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.968633,
+          14.414642
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-044",
+        "shop_name": "Al-Madina Poultry Stall (Vedayapalem)",
+        "cluster_hub": "Vedayapalem - Ramalingapuram Meat Cluster",
+        "mandal_zone": "Nellore Urban (NMC)",
+        "latitude": 14.420765,
+        "longitude": 79.96853,
+        "category": "Poultry (Broiler/Country Chicken)",
+        "animal_origin": "Chittoor Hatcheries Supply",
+        "animal_destination": "Trunk Road & Gandhi Nagar Restaurants",
+        "daily_animals_handled": 57,
+        "slaughter_on_site": "Yes",
+        "refrigeration_available": "Yes",
+        "waste_disposal_method": "Municipal Waste Bin",
+        "water_source": "Borewell / Groundwater",
+        "drainage_condition": "Underground Closed Drain",
+        "distance_to_drain_m": 213.1,
+        "distance_to_waterbody_m": 4670.0,
+        "distance_to_hospital_m": 449.9,
+        "market_crowd_index": 6.7,
+        "norm_drain_risk": 0.31,
+        "norm_waste_risk": 0.35,
+        "composite_geo_risk_score": 42.58,
+        "risk_level": "Moderate Risk",
+        "recommended_intervention": "Monthly routine surveillance; water potability testing; solid waste collection compliance.",
+        "marker_color": "#ffd166",
+        "ai_predicted_risk": "Moderate Risk",
+        "ai_prediction_confidence": 61.7,
+        "ai_concurrence": "True"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.96853,
+          14.420765
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-045",
+        "shop_name": "National Poultry Stall (Vedayapalem)",
+        "cluster_hub": "Vedayapalem - Ramalingapuram Meat Cluster",
+        "mandal_zone": "Nellore Urban (NMC)",
+        "latitude": 14.415129,
+        "longitude": 79.969913,
+        "category": "Poultry (Broiler/Country Chicken)",
+        "animal_origin": "Chittoor Hatcheries Supply",
+        "animal_destination": "Local Street Food Vendors",
+        "daily_animals_handled": 269,
+        "slaughter_on_site": "Yes",
+        "refrigeration_available": "No",
+        "waste_disposal_method": "Closed Bin Collection",
+        "water_source": "Stored Tank Water (Untreated)",
+        "drainage_condition": "Underground Closed Drain",
+        "distance_to_drain_m": 687.6,
+        "distance_to_waterbody_m": 5293.2,
+        "distance_to_hospital_m": 376.4,
+        "market_crowd_index": 7.2,
+        "norm_drain_risk": 0.0,
+        "norm_waste_risk": 0.1,
+        "composite_geo_risk_score": 43.78,
+        "risk_level": "Moderate Risk",
+        "recommended_intervention": "Monthly routine surveillance; water potability testing; solid waste collection compliance.",
+        "marker_color": "#ffd166",
+        "ai_predicted_risk": "Moderate Risk",
+        "ai_prediction_confidence": 64.1,
+        "ai_concurrence": "True"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.969913,
+          14.415129
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-046",
+        "shop_name": "Al-Madina Poultry Stall (Vedayapalem)",
+        "cluster_hub": "Vedayapalem - Ramalingapuram Meat Cluster",
+        "mandal_zone": "Nellore Urban (NMC)",
+        "latitude": 14.416959,
+        "longitude": 79.96712,
+        "category": "Poultry (Broiler/Country Chicken)",
+        "animal_origin": "Allur Broiler Breeding Units",
+        "animal_destination": "Trunk Road & Gandhi Nagar Restaurants",
+        "daily_animals_handled": 164,
+        "slaughter_on_site": "Yes",
+        "refrigeration_available": "Yes",
+        "waste_disposal_method": "Municipal Waste Bin",
+        "water_source": "Piped Municipal Supply",
+        "drainage_condition": "Underground Closed Drain",
+        "distance_to_drain_m": 324.9,
+        "distance_to_waterbody_m": 5090.9,
+        "distance_to_hospital_m": 13.7,
+        "market_crowd_index": 3.9,
+        "norm_drain_risk": 0.0,
+        "norm_waste_risk": 0.35,
+        "composite_geo_risk_score": 32.99,
+        "risk_level": "Low Risk",
+        "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
+        "marker_color": "#06d6a0",
+        "ai_predicted_risk": "Low Risk",
+        "ai_prediction_confidence": 74.3,
+        "ai_concurrence": "True"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.96712,
+          14.416959
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-047",
+        "shop_name": "Pennar Quality Poultry Stall (Vedayapalem)",
+        "cluster_hub": "Vedayapalem - Ramalingapuram Meat Cluster",
+        "mandal_zone": "Nellore Urban (NMC)",
+        "latitude": 14.416943,
+        "longitude": 79.96334,
+        "category": "Poultry (Broiler/Country Chicken)",
+        "animal_origin": "Chittoor Hatcheries Supply",
+        "animal_destination": "Inter-Mandal Retail Stalls",
+        "daily_animals_handled": 38,
+        "slaughter_on_site": "No",
+        "refrigeration_available": "No",
+        "waste_disposal_method": "Open Dumping on Ground",
+        "water_source": "Borewell / Groundwater",
+        "drainage_condition": "Open Stagnant Drain",
+        "distance_to_drain_m": 10.7,
+        "distance_to_waterbody_m": 5092.7,
+        "distance_to_hospital_m": 394.2,
+        "market_crowd_index": 3.8,
+        "norm_drain_risk": 1.0,
+        "norm_waste_risk": 0.85,
+        "composite_geo_risk_score": 60.79,
+        "risk_level": "High Risk",
+        "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
+        "marker_color": "#f77f00",
+        "ai_predicted_risk": "High Risk",
+        "ai_prediction_confidence": 85.4,
+        "ai_concurrence": "True"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.96334,
+          14.416943
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-048",
+        "shop_name": "Annapurna Poultry Stall (Vedayapalem)",
+        "cluster_hub": "Vedayapalem - Ramalingapuram Meat Cluster",
+        "mandal_zone": "Nellore Urban (NMC)",
+        "latitude": 14.419067,
+        "longitude": 79.969542,
+        "category": "Poultry (Broiler/Country Chicken)",
+        "animal_origin": "Allur Broiler Breeding Units",
+        "animal_destination": "Hotel & Catering Aggregators",
+        "daily_animals_handled": 197,
+        "slaughter_on_site": "No",
+        "refrigeration_available": "No",
+        "waste_disposal_method": "Closed Bin Collection",
+        "water_source": "Piped Municipal Supply",
+        "drainage_condition": "Underground Closed Drain",
+        "distance_to_drain_m": 409.1,
+        "distance_to_waterbody_m": 4857.8,
+        "distance_to_hospital_m": 357.4,
+        "market_crowd_index": 6.4,
+        "norm_drain_risk": 0.0,
+        "norm_waste_risk": 0.1,
+        "composite_geo_risk_score": 28.23,
+        "risk_level": "Low Risk",
+        "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
+        "marker_color": "#06d6a0",
+        "ai_predicted_risk": "Low Risk",
+        "ai_prediction_confidence": 69.1,
+        "ai_concurrence": "True"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.969542,
+          14.419067
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-049",
+        "shop_name": "Gouthami Poultry Stall (Vedayapalem)",
+        "cluster_hub": "Vedayapalem - Ramalingapuram Meat Cluster",
+        "mandal_zone": "Nellore Urban (NMC)",
+        "latitude": 14.418532,
+        "longitude": 79.965365,
+        "category": "Poultry (Broiler/Country Chicken)",
+        "animal_origin": "Allur Broiler Breeding Units",
+        "animal_destination": "Trunk Road & Gandhi Nagar Restaurants",
+        "daily_animals_handled": 357,
+        "slaughter_on_site": "Yes",
+        "refrigeration_available": "No",
+        "waste_disposal_method": "Direct Open Drain Discharge",
+        "water_source": "Borewell / Groundwater",
+        "drainage_condition": "Semi-Covered Municipal Drain",
+        "distance_to_drain_m": 70.5,
+        "distance_to_waterbody_m": 4917.0,
+        "distance_to_hospital_m": 245.0,
+        "market_crowd_index": 6.0,
+        "norm_drain_risk": 0.82,
+        "norm_waste_risk": 1.0,
+        "composite_geo_risk_score": 82.42,
+        "risk_level": "Very High Risk",
+        "recommended_intervention": "Immediate bio-sanitation audit; mandatory effluent interceptor; drain covering within 50m; live slaughter inspection.",
+        "marker_color": "#d90429",
+        "ai_predicted_risk": "Very High Risk",
+        "ai_prediction_confidence": 78.2,
+        "ai_concurrence": "True"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.965365,
+          14.418532
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-050",
+        "shop_name": "National Poultry Stall (Vedayapalem)",
+        "cluster_hub": "Vedayapalem - Ramalingapuram Meat Cluster",
+        "mandal_zone": "Nellore Urban (NMC)",
+        "latitude": 14.420941,
+        "longitude": 79.968158,
+        "category": "Poultry (Broiler/Country Chicken)",
+        "animal_origin": "Chittoor Hatcheries Supply",
+        "animal_destination": "Trunk Road & Gandhi Nagar Restaurants",
+        "daily_animals_handled": 263,
+        "slaughter_on_site": "Yes",
+        "refrigeration_available": "No",
+        "waste_disposal_method": "Municipal Waste Bin",
+        "water_source": "Piped Municipal Supply",
+        "drainage_condition": "Underground Closed Drain",
+        "distance_to_drain_m": 169.1,
+        "distance_to_waterbody_m": 4650.6,
+        "distance_to_hospital_m": 455.6,
+        "market_crowd_index": 6.5,
+        "norm_drain_risk": 0.468,
+        "norm_waste_risk": 0.35,
+        "composite_geo_risk_score": 59.28,
+        "risk_level": "High Risk",
+        "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
+        "marker_color": "#f77f00",
+        "ai_predicted_risk": "High Risk",
+        "ai_prediction_confidence": 67.3,
+        "ai_concurrence": "True"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.968158,
+          14.420941
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-051",
+        "shop_name": "Nellore Fresh Mutton Stall (Kovur)",
+        "cluster_hub": "Kovur Main Bazaar & Daily Market",
+        "mandal_zone": "Kovur Mandal",
+        "latitude": 14.493883,
+        "longitude": 79.974759,
+        "category": "Mutton / Sheep / Goat",
+        "animal_origin": "Atmakur Cattle & Sheep Market",
+        "animal_destination": "Local Ward Neighborhood Households",
+        "daily_animals_handled": 321,
+        "slaughter_on_site": "Yes",
+        "refrigeration_available": "Yes",
+        "waste_disposal_method": "Municipal Waste Bin",
+        "water_source": "Stored Tank Water (Untreated)",
+        "drainage_condition": "Semi-Covered Municipal Drain",
+        "distance_to_drain_m": 115.1,
+        "distance_to_waterbody_m": 3414.9,
+        "distance_to_hospital_m": 467.0,
+        "market_crowd_index": 6.5,
+        "norm_drain_risk": 0.66,
+        "norm_waste_risk": 0.35,
+        "composite_geo_risk_score": 56.89,
+        "risk_level": "High Risk",
+        "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
+        "marker_color": "#f77f00",
+        "ai_predicted_risk": "High Risk",
+        "ai_prediction_confidence": 51.2,
+        "ai_concurrence": "True"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.974759,
+          14.493883
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-052",
+        "shop_name": "Amma Mutton Stall (Kovur)",
+        "cluster_hub": "Kovur Main Bazaar & Daily Market",
+        "mandal_zone": "Kovur Mandal",
+        "latitude": 14.496225,
+        "longitude": 79.975029,
+        "category": "Mutton / Sheep / Goat",
+        "animal_origin": "Kadapa / Badvel Livestock Shandy",
+        "animal_destination": "Hotel & Catering Aggregators",
+        "daily_animals_handled": 375,
+        "slaughter_on_site": "Yes",
+        "refrigeration_available": "Yes",
+        "waste_disposal_method": "Open Dumping on Ground",
+        "water_source": "Piped Municipal Supply",
+        "drainage_condition": "Underground Closed Drain",
+        "distance_to_drain_m": 302.6,
+        "distance_to_waterbody_m": 3673.8,
+        "distance_to_hospital_m": 557.9,
+        "market_crowd_index": 6.8,
+        "norm_drain_risk": 0.0,
+        "norm_waste_risk": 0.85,
+        "composite_geo_risk_score": 52.03,
+        "risk_level": "Moderate Risk",
+        "recommended_intervention": "Monthly routine surveillance; water potability testing; solid waste collection compliance.",
+        "marker_color": "#ffd166",
+        "ai_predicted_risk": "Low Risk",
+        "ai_prediction_confidence": 51.4,
+        "ai_concurrence": "False"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.975029,
+          14.496225
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-053",
+        "shop_name": "National Poultry Stall (Kovur)",
+        "cluster_hub": "Kovur Main Bazaar & Daily Market",
+        "mandal_zone": "Kovur Mandal",
+        "latitude": 14.491906,
+        "longitude": 79.977838,
+        "category": "Poultry (Broiler/Country Chicken)",
+        "animal_origin": "Chittoor Hatcheries Supply",
+        "animal_destination": "Hotel & Catering Aggregators",
+        "daily_animals_handled": 31,
+        "slaughter_on_site": "No",
+        "refrigeration_available": "No",
+        "waste_disposal_method": "Municipal Waste Bin",
+        "water_source": "Stored Tank Water (Untreated)",
+        "drainage_condition": "Underground Closed Drain",
+        "distance_to_drain_m": 260.5,
+        "distance_to_waterbody_m": 3196.3,
+        "distance_to_hospital_m": 174.4,
+        "market_crowd_index": 6.5,
+        "norm_drain_risk": 0.141,
+        "norm_waste_risk": 0.35,
+        "composite_geo_risk_score": 33.22,
+        "risk_level": "Low Risk",
+        "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
+        "marker_color": "#06d6a0",
+        "ai_predicted_risk": "Low Risk",
+        "ai_prediction_confidence": 75.9,
+        "ai_concurrence": "True"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.977838,
+          14.491906
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-054",
+        "shop_name": "Nellore Fresh Fish Stall (Kovur)",
+        "cluster_hub": "Kovur Main Bazaar & Daily Market",
+        "mandal_zone": "Kovur Mandal",
+        "latitude": 14.491955,
+        "longitude": 79.979284,
+        "category": "Fish & Seafood",
+        "animal_origin": "Pulicat Lake Brackish Water Source",
+        "animal_destination": "Local Street Food Vendors",
+        "daily_animals_handled": 248,
+        "slaughter_on_site": "No",
+        "refrigeration_available": "No",
+        "waste_disposal_method": "Municipal Waste Bin",
+        "water_source": "Borewell / Groundwater",
+        "drainage_condition": "Underground Closed Drain",
+        "distance_to_drain_m": 351.2,
+        "distance_to_waterbody_m": 3201.7,
+        "distance_to_hospital_m": 120.1,
+        "market_crowd_index": 8.6,
+        "norm_drain_risk": 0.0,
+        "norm_waste_risk": 0.35,
+        "composite_geo_risk_score": 37.66,
+        "risk_level": "Low Risk",
+        "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
+        "marker_color": "#06d6a0",
+        "ai_predicted_risk": "Low Risk",
+        "ai_prediction_confidence": 83.8,
+        "ai_concurrence": "True"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.979284,
+          14.491955
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-055",
+        "shop_name": "Gouthami Mixed Stall (Kovur)",
+        "cluster_hub": "Kovur Main Bazaar & Daily Market",
+        "mandal_zone": "Kovur Mandal",
+        "latitude": 14.494144,
+        "longitude": 79.980869,
+        "category": "Mixed Live Meat & Fish",
+        "animal_origin": "Multi-Source Livestock Distributors",
+        "animal_destination": "Hotel & Catering Aggregators",
+        "daily_animals_handled": 39,
+        "slaughter_on_site": "Yes",
+        "refrigeration_available": "Yes",
+        "waste_disposal_method": "Municipal Waste Bin",
+        "water_source": "Borewell / Groundwater",
+        "drainage_condition": "Underground Closed Drain",
+        "distance_to_drain_m": 263.6,
+        "distance_to_waterbody_m": 3443.7,
+        "distance_to_hospital_m": 238.0,
+        "market_crowd_index": 7.9,
+        "norm_drain_risk": 0.13,
+        "norm_waste_risk": 0.35,
+        "composite_geo_risk_score": 39.47,
+        "risk_level": "Low Risk",
+        "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
+        "marker_color": "#06d6a0",
+        "ai_predicted_risk": "Moderate Risk",
+        "ai_prediction_confidence": 49.5,
+        "ai_concurrence": "False"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.980869,
+          14.494144
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-056",
+        "shop_name": "Coastal Choice Poultry Stall (Kovur)",
+        "cluster_hub": "Kovur Main Bazaar & Daily Market",
+        "mandal_zone": "Kovur Mandal",
+        "latitude": 14.495956,
+        "longitude": 79.977966,
+        "category": "Poultry (Broiler/Country Chicken)",
+        "animal_origin": "Chittoor Hatcheries Supply",
+        "animal_destination": "Trunk Road & Gandhi Nagar Restaurants",
+        "daily_animals_handled": 68,
+        "slaughter_on_site": "Yes",
+        "refrigeration_available": "No",
+        "waste_disposal_method": "Municipal Waste Bin",
+        "water_source": "Borewell / Groundwater",
+        "drainage_condition": "Semi-Covered Municipal Drain",
+        "distance_to_drain_m": 86.0,
+        "distance_to_waterbody_m": 3644.1,
+        "distance_to_hospital_m": 347.0,
+        "market_crowd_index": 7.1,
+        "norm_drain_risk": 0.764,
+        "norm_waste_risk": 0.35,
+        "composite_geo_risk_score": 63.27,
+        "risk_level": "High Risk",
+        "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
+        "marker_color": "#f77f00",
+        "ai_predicted_risk": "High Risk",
+        "ai_prediction_confidence": 71.6,
+        "ai_concurrence": "True"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.977966,
+          14.495956
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-057",
+        "shop_name": "National Poultry Stall (Kovur)",
+        "cluster_hub": "Kovur Main Bazaar & Daily Market",
+        "mandal_zone": "Kovur Mandal",
+        "latitude": 14.493228,
+        "longitude": 79.976471,
+        "category": "Poultry (Broiler/Country Chicken)",
+        "animal_origin": "Local Nellore Poultry Farms (Podalakur Road)",
+        "animal_destination": "Hotel & Catering Aggregators",
+        "daily_animals_handled": 138,
+        "slaughter_on_site": "Yes",
+        "refrigeration_available": "Yes",
+        "waste_disposal_method": "Municipal Waste Bin",
+        "water_source": "Borewell / Groundwater",
+        "drainage_condition": "Semi-Covered Municipal Drain",
+        "distance_to_drain_m": 54.9,
+        "distance_to_waterbody_m": 3342.4,
+        "distance_to_hospital_m": 273.4,
+        "market_crowd_index": 7.0,
+        "norm_drain_risk": 0.875,
+        "norm_waste_risk": 0.35,
+        "composite_geo_risk_score": 58.95,
+        "risk_level": "High Risk",
+        "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
+        "marker_color": "#f77f00",
+        "ai_predicted_risk": "High Risk",
+        "ai_prediction_confidence": 57.0,
+        "ai_concurrence": "True"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.976471,
+          14.493228
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-058",
+        "shop_name": "Star Mixed Stall (Kovur)",
+        "cluster_hub": "Kovur Main Bazaar & Daily Market",
+        "mandal_zone": "Kovur Mandal",
+        "latitude": 14.493955,
+        "longitude": 79.976553,
+        "category": "Mixed Live Meat & Fish",
+        "animal_origin": "Multi-Source Livestock Distributors",
+        "animal_destination": "Hotel & Catering Aggregators",
+        "daily_animals_handled": 153,
+        "slaughter_on_site": "Yes",
+        "refrigeration_available": "No",
+        "waste_disposal_method": "Direct Open Drain Discharge",
+        "water_source": "Piped Municipal Supply",
+        "drainage_condition": "Open Stagnant Drain",
+        "distance_to_drain_m": 5.0,
+        "distance_to_waterbody_m": 3422.9,
+        "distance_to_hospital_m": 284.0,
+        "market_crowd_index": 7.7,
+        "norm_drain_risk": 1.0,
+        "norm_waste_risk": 1.0,
+        "composite_geo_risk_score": 84.95,
+        "risk_level": "Very High Risk",
+        "recommended_intervention": "Immediate bio-sanitation audit; mandatory effluent interceptor; drain covering within 50m; live slaughter inspection.",
+        "marker_color": "#d90429",
+        "ai_predicted_risk": "Very High Risk",
+        "ai_prediction_confidence": 51.8,
+        "ai_concurrence": "True"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.976553,
+          14.493955
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-059",
+        "shop_name": "Sri Venkateswara Mixed Stall (Kovur)",
+        "cluster_hub": "Kovur Main Bazaar & Daily Market",
+        "mandal_zone": "Kovur Mandal",
+        "latitude": 14.494069,
+        "longitude": 79.977166,
+        "category": "Mixed Live Meat & Fish",
+        "animal_origin": "Multi-Source Livestock Distributors",
+        "animal_destination": "Inter-Mandal Retail Stalls",
+        "daily_animals_handled": 414,
+        "slaughter_on_site": "Yes",
+        "refrigeration_available": "Yes",
+        "waste_disposal_method": "Direct Open Drain Discharge",
+        "water_source": "Borewell / Groundwater",
+        "drainage_condition": "Open Stagnant Drain",
+        "distance_to_drain_m": 26.7,
+        "distance_to_waterbody_m": 3435.4,
+        "distance_to_hospital_m": 230.5,
+        "market_crowd_index": 8.1,
+        "norm_drain_risk": 0.976,
+        "norm_waste_risk": 1.0,
+        "composite_geo_risk_score": 82.25,
+        "risk_level": "Very High Risk",
+        "recommended_intervention": "Immediate bio-sanitation audit; mandatory effluent interceptor; drain covering within 50m; live slaughter inspection.",
+        "marker_color": "#d90429",
+        "ai_predicted_risk": "Very High Risk",
+        "ai_prediction_confidence": 54.8,
+        "ai_concurrence": "True"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.977166,
+          14.494069
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-060",
+        "shop_name": "Sri Venkateswara Poultry Stall (Kovur)",
+        "cluster_hub": "Kovur Main Bazaar & Daily Market",
+        "mandal_zone": "Kovur Mandal",
+        "latitude": 14.495621,
+        "longitude": 79.978202,
+        "category": "Poultry (Broiler/Country Chicken)",
+        "animal_origin": "Local Nellore Poultry Farms (Podalakur Road)",
+        "animal_destination": "Inter-Mandal Retail Stalls",
+        "daily_animals_handled": 174,
+        "slaughter_on_site": "Yes",
+        "refrigeration_available": "Yes",
+        "waste_disposal_method": "Open Dumping on Ground",
+        "water_source": "Piped Municipal Supply",
+        "drainage_condition": "Semi-Covered Municipal Drain",
+        "distance_to_drain_m": 41.2,
+        "distance_to_waterbody_m": 3607.0,
+        "distance_to_hospital_m": 303.8,
+        "market_crowd_index": 7.4,
+        "norm_drain_risk": 0.924,
+        "norm_waste_risk": 0.85,
+        "composite_geo_risk_score": 71.57,
+        "risk_level": "High Risk",
+        "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
+        "marker_color": "#f77f00",
+        "ai_predicted_risk": "High Risk",
+        "ai_prediction_confidence": 69.0,
+        "ai_concurrence": "True"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.978202,
+          14.495621
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-061",
+        "shop_name": "Sai Krupa Mixed Stall (Kovur)",
+        "cluster_hub": "Kovur Main Bazaar & Daily Market",
+        "mandal_zone": "Kovur Mandal",
+        "latitude": 14.492689,
+        "longitude": 79.977389,
+        "category": "Mixed Live Meat & Fish",
+        "animal_origin": "Multi-Source Livestock Distributors",
+        "animal_destination": "Trunk Road & Gandhi Nagar Restaurants",
+        "daily_animals_handled": 51,
+        "slaughter_on_site": "Yes",
+        "refrigeration_available": "No",
+        "waste_disposal_method": "Municipal Waste Bin",
+        "water_source": "Borewell / Groundwater",
+        "drainage_condition": "Underground Closed Drain",
+        "distance_to_drain_m": 162.3,
+        "distance_to_waterbody_m": 3282.8,
+        "distance_to_hospital_m": 176.9,
+        "market_crowd_index": 6.4,
+        "norm_drain_risk": 0.492,
+        "norm_waste_risk": 0.35,
+        "composite_geo_risk_score": 55.03,
+        "risk_level": "Moderate Risk",
+        "recommended_intervention": "Monthly routine surveillance; water potability testing; solid waste collection compliance.",
+        "marker_color": "#ffd166",
+        "ai_predicted_risk": "Moderate Risk",
+        "ai_prediction_confidence": 60.7,
+        "ai_concurrence": "True"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.977389,
+          14.492689
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-062",
+        "shop_name": "Star Fish Stall (Kovur)",
+        "cluster_hub": "Kovur Main Bazaar & Daily Market",
+        "mandal_zone": "Kovur Mandal",
+        "latitude": 14.494622,
+        "longitude": 79.97968,
+        "category": "Fish & Seafood",
+        "animal_origin": "Pennar River Catchment",
+        "animal_destination": "Trunk Road & Gandhi Nagar Restaurants",
+        "daily_animals_handled": 85,
+        "slaughter_on_site": "Yes",
+        "refrigeration_available": "No",
+        "waste_disposal_method": "Municipal Waste Bin",
+        "water_source": "Piped Municipal Supply",
+        "drainage_condition": "Underground Closed Drain",
+        "distance_to_drain_m": 143.5,
+        "distance_to_waterbody_m": 3496.6,
+        "distance_to_hospital_m": 194.7,
+        "market_crowd_index": 8.2,
+        "norm_drain_risk": 0.559,
+        "norm_waste_risk": 0.35,
+        "composite_geo_risk_score": 60.16,
+        "risk_level": "High Risk",
+        "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
+        "marker_color": "#f77f00",
+        "ai_predicted_risk": "High Risk",
+        "ai_prediction_confidence": 87.4,
+        "ai_concurrence": "True"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.97968,
+          14.494622
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-063",
+        "shop_name": "Kovur Royal Mixed Stall (Kovur)",
+        "cluster_hub": "Kovur Main Bazaar & Daily Market",
+        "mandal_zone": "Kovur Mandal",
+        "latitude": 14.49255,
+        "longitude": 79.97816,
+        "category": "Mixed Live Meat & Fish",
+        "animal_origin": "Multi-Source Livestock Distributors",
+        "animal_destination": "Inter-Mandal Retail Stalls",
+        "daily_animals_handled": 244,
+        "slaughter_on_site": "Yes",
+        "refrigeration_available": "No",
+        "waste_disposal_method": "Closed Bin Collection",
+        "water_source": "Piped Municipal Supply",
+        "drainage_condition": "Underground Closed Drain",
+        "distance_to_drain_m": 225.2,
+        "distance_to_waterbody_m": 3267.5,
+        "distance_to_hospital_m": 103.4,
+        "market_crowd_index": 8.8,
+        "norm_drain_risk": 0.267,
+        "norm_waste_risk": 0.1,
+        "composite_geo_risk_score": 52.3,
+        "risk_level": "Moderate Risk",
+        "recommended_intervention": "Monthly routine surveillance; water potability testing; solid waste collection compliance.",
+        "marker_color": "#ffd166",
+        "ai_predicted_risk": "Moderate Risk",
+        "ai_prediction_confidence": 83.3,
+        "ai_concurrence": "True"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.97816,
+          14.49255
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-064",
+        "shop_name": "Sri Venkateswara Mutton Stall (Kovur)",
+        "cluster_hub": "Kovur Main Bazaar & Daily Market",
+        "mandal_zone": "Kovur Mandal",
+        "latitude": 14.494103,
+        "longitude": 79.978417,
+        "category": "Mutton / Sheep / Goat",
+        "animal_origin": "Kadapa / Badvel Livestock Shandy",
+        "animal_destination": "Inter-Mandal Retail Stalls",
+        "daily_animals_handled": 63,
+        "slaughter_on_site": "Yes",
+        "refrigeration_available": "No",
+        "waste_disposal_method": "Municipal Waste Bin",
+        "water_source": "Piped Municipal Supply",
+        "drainage_condition": "Semi-Covered Municipal Drain",
+        "distance_to_drain_m": 106.0,
+        "distance_to_waterbody_m": 3439.2,
+        "distance_to_hospital_m": 137.8,
+        "market_crowd_index": 8.5,
+        "norm_drain_risk": 0.693,
+        "norm_waste_risk": 0.35,
+        "composite_geo_risk_score": 63.47,
+        "risk_level": "High Risk",
+        "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
+        "marker_color": "#f77f00",
+        "ai_predicted_risk": "High Risk",
+        "ai_prediction_confidence": 84.2,
+        "ai_concurrence": "True"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.978417,
+          14.494103
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-065",
+        "shop_name": "Sai Krupa Poultry Stall (Padugupadu)",
+        "cluster_hub": "Padugupadu Railway & Bridge Junction Stalls",
+        "mandal_zone": "Kovur Mandal",
+        "latitude": 14.475828,
+        "longitude": 79.987424,
+        "category": "Poultry (Broiler/Country Chicken)",
+        "animal_origin": "Local Nellore Poultry Farms (Podalakur Road)",
+        "animal_destination": "Trunk Road & Gandhi Nagar Restaurants",
+        "daily_animals_handled": 160,
+        "slaughter_on_site": "No",
+        "refrigeration_available": "No",
+        "waste_disposal_method": "Closed Bin Collection",
+        "water_source": "Stored Tank Water (Untreated)",
+        "drainage_condition": "Underground Closed Drain",
+        "distance_to_drain_m": 365.9,
+        "distance_to_waterbody_m": 1418.4,
+        "distance_to_hospital_m": 476.7,
+        "market_crowd_index": 5.2,
+        "norm_drain_risk": 0.0,
+        "norm_waste_risk": 0.1,
+        "composite_geo_risk_score": 27.96,
+        "risk_level": "Low Risk",
+        "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
+        "marker_color": "#06d6a0",
+        "ai_predicted_risk": "Low Risk",
+        "ai_prediction_confidence": 57.2,
+        "ai_concurrence": "True"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.987424,
+          14.475828
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-066",
+        "shop_name": "Coastal Choice Fish Stall (Padugupadu)",
+        "cluster_hub": "Padugupadu Railway & Bridge Junction Stalls",
+        "mandal_zone": "Kovur Mandal",
+        "latitude": 14.476523,
+        "longitude": 79.985025,
+        "category": "Fish & Seafood",
+        "animal_origin": "Pennar River Catchment",
+        "animal_destination": "Local Ward Neighborhood Households",
+        "daily_animals_handled": 109,
+        "slaughter_on_site": "No",
+        "refrigeration_available": "No",
+        "waste_disposal_method": "Municipal Waste Bin",
+        "water_source": "Stored Tank Water (Untreated)",
+        "drainage_condition": "Semi-Covered Municipal Drain",
+        "distance_to_drain_m": 97.4,
+        "distance_to_waterbody_m": 1495.3,
+        "distance_to_hospital_m": 225.6,
+        "market_crowd_index": 7.3,
+        "norm_drain_risk": 0.724,
+        "norm_waste_risk": 0.35,
+        "composite_geo_risk_score": 52.9,
+        "risk_level": "Moderate Risk",
+        "recommended_intervention": "Monthly routine surveillance; water potability testing; solid waste collection compliance.",
+        "marker_color": "#ffd166",
+        "ai_predicted_risk": "High Risk",
+        "ai_prediction_confidence": 77.3,
+        "ai_concurrence": "False"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.985025,
+          14.476523
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-067",
+        "shop_name": "Nellore Fresh Poultry Stall (Padugupadu)",
+        "cluster_hub": "Padugupadu Railway & Bridge Junction Stalls",
+        "mandal_zone": "Kovur Mandal",
+        "latitude": 14.477452,
+        "longitude": 79.986367,
+        "category": "Poultry (Broiler/Country Chicken)",
+        "animal_origin": "Allur Broiler Breeding Units",
+        "animal_destination": "Inter-Mandal Retail Stalls",
+        "daily_animals_handled": 301,
+        "slaughter_on_site": "Yes",
+        "refrigeration_available": "Yes",
+        "waste_disposal_method": "Municipal Waste Bin",
+        "water_source": "Borewell / Groundwater",
+        "drainage_condition": "Underground Closed Drain",
+        "distance_to_drain_m": 219.7,
+        "distance_to_waterbody_m": 1598.1,
+        "distance_to_hospital_m": 396.8,
+        "market_crowd_index": 6.1,
+        "norm_drain_risk": 0.287,
+        "norm_waste_risk": 0.35,
+        "composite_geo_risk_score": 48.47,
+        "risk_level": "Moderate Risk",
+        "recommended_intervention": "Monthly routine surveillance; water potability testing; solid waste collection compliance.",
+        "marker_color": "#ffd166",
+        "ai_predicted_risk": "Moderate Risk",
+        "ai_prediction_confidence": 76.1,
+        "ai_concurrence": "True"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.986367,
+          14.477452
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-068",
+        "shop_name": "Annapurna Fish Stall (Padugupadu)",
+        "cluster_hub": "Padugupadu Railway & Bridge Junction Stalls",
+        "mandal_zone": "Kovur Mandal",
+        "latitude": 14.476728,
+        "longitude": 79.984435,
+        "category": "Fish & Seafood",
+        "animal_origin": "Mypadu Coastal Aquaculture Farms",
+        "animal_destination": "Inter-Mandal Retail Stalls",
+        "daily_animals_handled": 45,
+        "slaughter_on_site": "No",
+        "refrigeration_available": "Yes",
+        "waste_disposal_method": "Direct Open Drain Discharge",
+        "water_source": "Borewell / Groundwater",
+        "drainage_condition": "Open Stagnant Drain",
+        "distance_to_drain_m": 30.6,
+        "distance_to_waterbody_m": 1517.9,
+        "distance_to_hospital_m": 174.4,
+        "market_crowd_index": 8.3,
+        "norm_drain_risk": 0.962,
+        "norm_waste_risk": 1.0,
+        "composite_geo_risk_score": 63.39,
+        "risk_level": "High Risk",
+        "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
+        "marker_color": "#f77f00",
+        "ai_predicted_risk": "High Risk",
+        "ai_prediction_confidence": 82.1,
+        "ai_concurrence": "True"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.984435,
+          14.476728
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-069",
+        "shop_name": "Sai Krupa Poultry Stall (Padugupadu)",
+        "cluster_hub": "Padugupadu Railway & Bridge Junction Stalls",
+        "mandal_zone": "Kovur Mandal",
+        "latitude": 14.476497,
+        "longitude": 79.986653,
+        "category": "Poultry (Broiler/Country Chicken)",
+        "animal_origin": "Local Nellore Poultry Farms (Podalakur Road)",
+        "animal_destination": "Local Street Food Vendors",
+        "daily_animals_handled": 203,
+        "slaughter_on_site": "Yes",
+        "refrigeration_available": "Yes",
+        "waste_disposal_method": "Municipal Waste Bin",
+        "water_source": "Borewell / Groundwater",
+        "drainage_condition": "Underground Closed Drain",
+        "distance_to_drain_m": 270.2,
+        "distance_to_waterbody_m": 1492.4,
+        "distance_to_hospital_m": 397.1,
+        "market_crowd_index": 5.3,
+        "norm_drain_risk": 0.106,
+        "norm_waste_risk": 0.35,
+        "composite_geo_risk_score": 40.81,
+        "risk_level": "Moderate Risk",
+        "recommended_intervention": "Monthly routine surveillance; water potability testing; solid waste collection compliance.",
+        "marker_color": "#ffd166",
+        "ai_predicted_risk": "Moderate Risk",
+        "ai_prediction_confidence": 79.6,
+        "ai_concurrence": "True"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.986653,
+          14.476497
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-070",
+        "shop_name": "Sri Venkateswara Fish Stall (Padugupadu)",
+        "cluster_hub": "Padugupadu Railway & Bridge Junction Stalls",
+        "mandal_zone": "Kovur Mandal",
+        "latitude": 14.47661,
+        "longitude": 79.987796,
+        "category": "Fish & Seafood",
+        "animal_origin": "Pulicat Lake Brackish Water Source",
+        "animal_destination": "Local Ward Neighborhood Households",
+        "daily_animals_handled": 186,
+        "slaughter_on_site": "Yes",
+        "refrigeration_available": "Yes",
+        "waste_disposal_method": "Closed Bin Collection",
+        "water_source": "Stored Tank Water (Untreated)",
+        "drainage_condition": "Underground Closed Drain",
+        "distance_to_drain_m": 388.7,
+        "distance_to_waterbody_m": 1504.9,
+        "distance_to_hospital_m": 520.7,
+        "market_crowd_index": 5.8,
+        "norm_drain_risk": 0.0,
+        "norm_waste_risk": 0.1,
+        "composite_geo_risk_score": 33.5,
+        "risk_level": "Low Risk",
+        "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
+        "marker_color": "#06d6a0",
+        "ai_predicted_risk": "Low Risk",
+        "ai_prediction_confidence": 77.7,
+        "ai_concurrence": "True"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.987796,
+          14.47661
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-071",
+        "shop_name": "Annapurna Poultry Stall (Padugupadu)",
+        "cluster_hub": "Padugupadu Railway & Bridge Junction Stalls",
+        "mandal_zone": "Kovur Mandal",
+        "latitude": 14.474266,
+        "longitude": 79.981699,
+        "category": "Poultry (Broiler/Country Chicken)",
+        "animal_origin": "Local Nellore Poultry Farms (Podalakur Road)",
+        "animal_destination": "Trunk Road & Gandhi Nagar Restaurants",
+        "daily_animals_handled": 290,
+        "slaughter_on_site": "Yes",
+        "refrigeration_available": "No",
+        "waste_disposal_method": "Closed Bin Collection",
+        "water_source": "Piped Municipal Supply",
+        "drainage_condition": "Underground Closed Drain",
+        "distance_to_drain_m": 139.0,
+        "distance_to_waterbody_m": 1245.7,
+        "distance_to_hospital_m": 238.4,
+        "market_crowd_index": 6.9,
+        "norm_drain_risk": 0.575,
+        "norm_waste_risk": 0.1,
+        "composite_geo_risk_score": 60.9,
+        "risk_level": "High Risk",
+        "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
+        "marker_color": "#f77f00",
+        "ai_predicted_risk": "High Risk",
+        "ai_prediction_confidence": 79.9,
+        "ai_concurrence": "True"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.981699,
+          14.474266
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-072",
+        "shop_name": "Kovur Royal Fish Stall (Padugupadu)",
+        "cluster_hub": "Padugupadu Railway & Bridge Junction Stalls",
+        "mandal_zone": "Kovur Mandal",
+        "latitude": 14.477676,
+        "longitude": 79.980849,
+        "category": "Fish & Seafood",
+        "animal_origin": "Pennar River Catchment",
+        "animal_destination": "Inter-Mandal Retail Stalls",
+        "daily_animals_handled": 147,
+        "slaughter_on_site": "Yes",
+        "refrigeration_available": "Yes",
+        "waste_disposal_method": "Municipal Waste Bin",
+        "water_source": "Borewell / Groundwater",
+        "drainage_condition": "Underground Closed Drain",
+        "distance_to_drain_m": 368.9,
+        "distance_to_waterbody_m": 1622.8,
+        "distance_to_hospital_m": 297.3,
+        "market_crowd_index": 7.2,
+        "norm_drain_risk": 0.0,
+        "norm_waste_risk": 0.35,
+        "composite_geo_risk_score": 39.47,
+        "risk_level": "Low Risk",
+        "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
+        "marker_color": "#06d6a0",
+        "ai_predicted_risk": "Low Risk",
+        "ai_prediction_confidence": 82.9,
+        "ai_concurrence": "True"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.980849,
+          14.477676
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-073",
+        "shop_name": "Coastal Choice Poultry Stall (Padugupadu)",
+        "cluster_hub": "Padugupadu Railway & Bridge Junction Stalls",
+        "mandal_zone": "Kovur Mandal",
+        "latitude": 14.479472,
+        "longitude": 79.983764,
+        "category": "Poultry (Broiler/Country Chicken)",
+        "animal_origin": "Local Nellore Poultry Farms (Podalakur Road)",
+        "animal_destination": "Trunk Road & Gandhi Nagar Restaurants",
+        "daily_animals_handled": 280,
+        "slaughter_on_site": "No",
+        "refrigeration_available": "Yes",
+        "waste_disposal_method": "Municipal Waste Bin",
+        "water_source": "Borewell / Groundwater",
+        "drainage_condition": "Semi-Covered Municipal Drain",
+        "distance_to_drain_m": 98.5,
+        "distance_to_waterbody_m": 1821.4,
+        "distance_to_hospital_m": 394.8,
+        "market_crowd_index": 5.2,
+        "norm_drain_risk": 0.72,
+        "norm_waste_risk": 0.35,
+        "composite_geo_risk_score": 44.24,
+        "risk_level": "Moderate Risk",
+        "recommended_intervention": "Monthly routine surveillance; water potability testing; solid waste collection compliance.",
+        "marker_color": "#ffd166",
+        "ai_predicted_risk": "Moderate Risk",
+        "ai_prediction_confidence": 56.4,
+        "ai_concurrence": "True"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.983764,
+          14.479472
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-074",
+        "shop_name": "Sri Venkateswara Mutton Stall (Inamadugu)",
+        "cluster_hub": "Inamadugu Rural Livestock & Poultry Market",
+        "mandal_zone": "Kovur Mandal",
+        "latitude": 14.491223,
+        "longitude": 80.001447,
+        "category": "Mutton / Sheep / Goat",
+        "animal_origin": "Kadapa / Badvel Livestock Shandy",
+        "animal_destination": "Hotel & Catering Aggregators",
+        "daily_animals_handled": 420,
+        "slaughter_on_site": "No",
+        "refrigeration_available": "No",
+        "waste_disposal_method": "Municipal Waste Bin",
+        "water_source": "Piped Municipal Supply",
+        "drainage_condition": "Open Stagnant Drain",
+        "distance_to_drain_m": 39.8,
+        "distance_to_waterbody_m": 3120.8,
+        "distance_to_hospital_m": 276.0,
+        "market_crowd_index": 5.1,
+        "norm_drain_risk": 0.929,
+        "norm_waste_risk": 0.35,
+        "composite_geo_risk_score": 59.47,
+        "risk_level": "High Risk",
+        "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
+        "marker_color": "#f77f00",
+        "ai_predicted_risk": "High Risk",
+        "ai_prediction_confidence": 85.5,
+        "ai_concurrence": "True"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.001447,
+          14.491223
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-075",
+        "shop_name": "National Poultry Stall (Inamadugu)",
+        "cluster_hub": "Inamadugu Rural Livestock & Poultry Market",
+        "mandal_zone": "Kovur Mandal",
+        "latitude": 14.490689,
+        "longitude": 80.005313,
+        "category": "Poultry (Broiler/Country Chicken)",
+        "animal_origin": "Local Nellore Poultry Farms (Podalakur Road)",
+        "animal_destination": "Local Street Food Vendors",
+        "daily_animals_handled": 300,
+        "slaughter_on_site": "Yes",
+        "refrigeration_available": "Yes",
+        "waste_disposal_method": "Closed Bin Collection",
+        "water_source": "Borewell / Groundwater",
+        "drainage_condition": "Underground Closed Drain",
+        "distance_to_drain_m": 272.2,
+        "distance_to_waterbody_m": 3061.7,
+        "distance_to_hospital_m": 145.6,
+        "market_crowd_index": 7.7,
+        "norm_drain_risk": 0.099,
+        "norm_waste_risk": 0.1,
+        "composite_geo_risk_score": 39.2,
+        "risk_level": "Low Risk",
+        "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
+        "marker_color": "#06d6a0",
+        "ai_predicted_risk": "Moderate Risk",
+        "ai_prediction_confidence": 46.7,
+        "ai_concurrence": "False"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.005313,
+          14.490689
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-076",
+        "shop_name": "Star Poultry Stall (Inamadugu)",
+        "cluster_hub": "Inamadugu Rural Livestock & Poultry Market",
+        "mandal_zone": "Kovur Mandal",
+        "latitude": 14.489512,
+        "longitude": 80.003652,
+        "category": "Poultry (Broiler/Country Chicken)",
+        "animal_origin": "Local Nellore Poultry Farms (Podalakur Road)",
+        "animal_destination": "Hotel & Catering Aggregators",
+        "daily_animals_handled": 406,
+        "slaughter_on_site": "Yes",
+        "refrigeration_available": "No",
+        "waste_disposal_method": "Municipal Waste Bin",
+        "water_source": "Stored Tank Water (Untreated)",
+        "drainage_condition": "Underground Closed Drain",
+        "distance_to_drain_m": 257.2,
+        "distance_to_waterbody_m": 2931.6,
+        "distance_to_hospital_m": 169.6,
+        "market_crowd_index": 6.7,
+        "norm_drain_risk": 0.153,
+        "norm_waste_risk": 0.35,
+        "composite_geo_risk_score": 54.89,
+        "risk_level": "Moderate Risk",
+        "recommended_intervention": "Monthly routine surveillance; water potability testing; solid waste collection compliance.",
+        "marker_color": "#ffd166",
+        "ai_predicted_risk": "Moderate Risk",
+        "ai_prediction_confidence": 66.5,
+        "ai_concurrence": "True"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.003652,
+          14.489512
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-077",
+        "shop_name": "Sri Venkateswara Poultry Stall (Inamadugu)",
+        "cluster_hub": "Inamadugu Rural Livestock & Poultry Market",
+        "mandal_zone": "Kovur Mandal",
+        "latitude": 14.493177,
+        "longitude": 79.997915,
+        "category": "Poultry (Broiler/Country Chicken)",
+        "animal_origin": "Local Nellore Poultry Farms (Podalakur Road)",
+        "animal_destination": "Trunk Road & Gandhi Nagar Restaurants",
+        "daily_animals_handled": 282,
+        "slaughter_on_site": "No",
+        "refrigeration_available": "Yes",
+        "waste_disposal_method": "Municipal Waste Bin",
+        "water_source": "Piped Municipal Supply",
+        "drainage_condition": "Underground Closed Drain",
+        "distance_to_drain_m": 448.3,
+        "distance_to_waterbody_m": 3336.8,
+        "distance_to_hospital_m": 698.4,
+        "market_crowd_index": 7.6,
+        "norm_drain_risk": 0.0,
+        "norm_waste_risk": 0.35,
+        "composite_geo_risk_score": 28.42,
+        "risk_level": "Low Risk",
+        "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
+        "marker_color": "#06d6a0",
+        "ai_predicted_risk": "Low Risk",
+        "ai_prediction_confidence": 92.8,
+        "ai_concurrence": "True"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.997915,
+          14.493177
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-078",
+        "shop_name": "Sai Krupa Mutton Stall (Inamadugu)",
+        "cluster_hub": "Inamadugu Rural Livestock & Poultry Market",
+        "mandal_zone": "Kovur Mandal",
+        "latitude": 14.493318,
+        "longitude": 80.003111,
+        "category": "Mutton / Sheep / Goat",
+        "animal_origin": "Kadapa / Badvel Livestock Shandy",
+        "animal_destination": "Local Street Food Vendors",
+        "daily_animals_handled": 160,
+        "slaughter_on_site": "Yes",
+        "refrigeration_available": "No",
+        "waste_disposal_method": "Municipal Waste Bin",
+        "water_source": "Stored Tank Water (Untreated)",
+        "drainage_condition": "Semi-Covered Municipal Drain",
+        "distance_to_drain_m": 103.1,
+        "distance_to_waterbody_m": 3352.4,
+        "distance_to_hospital_m": 275.0,
+        "market_crowd_index": 4.3,
+        "norm_drain_risk": 0.703,
+        "norm_waste_risk": 0.35,
+        "composite_geo_risk_score": 59.59,
+        "risk_level": "High Risk",
+        "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
+        "marker_color": "#f77f00",
+        "ai_predicted_risk": "High Risk",
+        "ai_prediction_confidence": 88.9,
+        "ai_concurrence": "True"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.003111,
+          14.493318
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-079",
+        "shop_name": "Al-Madina Poultry Stall (Inamadugu)",
+        "cluster_hub": "Inamadugu Rural Livestock & Poultry Market",
+        "mandal_zone": "Kovur Mandal",
+        "latitude": 14.492116,
+        "longitude": 80.001837,
+        "category": "Poultry (Broiler/Country Chicken)",
+        "animal_origin": "Chittoor Hatcheries Supply",
+        "animal_destination": "Local Street Food Vendors",
+        "daily_animals_handled": 302,
+        "slaughter_on_site": "Yes",
+        "refrigeration_available": "Yes",
+        "waste_disposal_method": "Municipal Waste Bin",
+        "water_source": "Stored Tank Water (Untreated)",
+        "drainage_condition": "Semi-Covered Municipal Drain",
+        "distance_to_drain_m": 89.5,
+        "distance_to_waterbody_m": 3219.5,
+        "distance_to_hospital_m": 263.9,
+        "market_crowd_index": 7.5,
+        "norm_drain_risk": 0.752,
+        "norm_waste_risk": 0.35,
+        "composite_geo_risk_score": 60.26,
+        "risk_level": "High Risk",
+        "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
+        "marker_color": "#f77f00",
+        "ai_predicted_risk": "High Risk",
+        "ai_prediction_confidence": 60.2,
+        "ai_concurrence": "True"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.001837,
+          14.492116
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-080",
+        "shop_name": "Amma Mutton Stall (Inamadugu)",
+        "cluster_hub": "Inamadugu Rural Livestock & Poultry Market",
+        "mandal_zone": "Kovur Mandal",
+        "latitude": 14.490952,
+        "longitude": 80.007184,
+        "category": "Mutton / Sheep / Goat",
+        "animal_origin": "Atmakur Cattle & Sheep Market",
+        "animal_destination": "Trunk Road & Gandhi Nagar Restaurants",
+        "daily_animals_handled": 380,
+        "slaughter_on_site": "Yes",
+        "refrigeration_available": "Yes",
+        "waste_disposal_method": "Municipal Waste Bin",
+        "water_source": "Borewell / Groundwater",
+        "drainage_condition": "Underground Closed Drain",
+        "distance_to_drain_m": 381.2,
+        "distance_to_waterbody_m": 3090.7,
+        "distance_to_hospital_m": 342.9,
+        "market_crowd_index": 5.2,
+        "norm_drain_risk": 0.0,
+        "norm_waste_risk": 0.35,
+        "composite_geo_risk_score": 39.74,
+        "risk_level": "Low Risk",
+        "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
+        "marker_color": "#06d6a0",
+        "ai_predicted_risk": "Low Risk",
+        "ai_prediction_confidence": 84.1,
+        "ai_concurrence": "True"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.007184,
+          14.490952
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "shop_id": "NLR-HLTH-081",
+        "shop_name": "Kovur Royal Poultry Stall (Inamadugu)",
+        "cluster_hub": "Inamadugu Rural Livestock & Poultry Market",
+        "mandal_zone": "Kovur Mandal",
+        "latitude": 14.490287,
+        "longitude": 80.004373,
+        "category": "Poultry (Broiler/Country Chicken)",
+        "animal_origin": "Chittoor Hatcheries Supply",
+        "animal_destination": "Trunk Road & Gandhi Nagar Restaurants",
+        "daily_animals_handled": 112,
+        "slaughter_on_site": "Yes",
+        "refrigeration_available": "No",
+        "waste_disposal_method": "Municipal Waste Bin",
+        "water_source": "Piped Municipal Supply",
+        "drainage_condition": "Underground Closed Drain",
+        "distance_to_drain_m": 240.4,
+        "distance_to_waterbody_m": 3017.2,
+        "distance_to_hospital_m": 88.9,
+        "market_crowd_index": 3.9,
+        "norm_drain_risk": 0.213,
+        "norm_waste_risk": 0.35,
+        "composite_geo_risk_score": 45.66,
+        "risk_level": "Moderate Risk",
+        "recommended_intervention": "Monthly routine surveillance; water potability testing; solid waste collection compliance.",
+        "marker_color": "#ffd166",
+        "ai_predicted_risk": "Moderate Risk",
+        "ai_prediction_confidence": 79.2,
+        "ai_concurrence": "True"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.004373,
+          14.490287
+        ]
+      }
+    }
+  ]
+}

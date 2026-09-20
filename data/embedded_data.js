@@ -1,0 +1,13482 @@
+// Auto-generated Health GIS Nellore & Kovur Spatial Data Bundle
+const HEALTH_GIS_DATA = {
+  "aoi": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Nellore Municipal Corporation",
+          "type": "Urban Local Body (NMC)",
+          "district": "SPSR Nellore",
+          "state": "Andhra Pradesh",
+          "area_sq_km": 150.4,
+          "population_est": 600000
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.945,
+                14.46
+              ],
+              [
+                79.965,
+                14.462
+              ],
+              [
+                79.99,
+                14.458
+              ],
+              [
+                80.015,
+                14.452
+              ],
+              [
+                80.025,
+                14.43
+              ],
+              [
+                80.015,
+                14.405
+              ],
+              [
+                79.98,
+                14.395
+              ],
+              [
+                79.95,
+                14.408
+              ],
+              [
+                79.935,
+                14.43
+              ],
+              [
+                79.945,
+                14.46
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Kovur Mandal",
+          "type": "Rural/Peri-Urban Mandal",
+          "district": "SPSR Nellore",
+          "state": "Andhra Pradesh",
+          "area_sq_km": 112.8,
+          "population_est": 125000
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.94,
+                14.468
+              ],
+              [
+                79.97,
+                14.471
+              ],
+              [
+                80.005,
+                14.469
+              ],
+              [
+                80.03,
+                14.485
+              ],
+              [
+                80.02,
+                14.525
+              ],
+              [
+                79.98,
+                14.54
+              ],
+              [
+                79.945,
+                14.52
+              ],
+              [
+                79.935,
+                14.485
+              ],
+              [
+                79.94,
+                14.468
+              ]
+            ]
+          ]
+        }
+      }
+    ]
+  },
+  "nellore_boundary": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Nellore Municipal Corporation",
+          "type": "Urban Local Body (NMC)",
+          "district": "SPSR Nellore",
+          "state": "Andhra Pradesh",
+          "area_sq_km": 150.4,
+          "population_est": 600000
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.945,
+                14.46
+              ],
+              [
+                79.965,
+                14.462
+              ],
+              [
+                79.99,
+                14.458
+              ],
+              [
+                80.015,
+                14.452
+              ],
+              [
+                80.025,
+                14.43
+              ],
+              [
+                80.015,
+                14.405
+              ],
+              [
+                79.98,
+                14.395
+              ],
+              [
+                79.95,
+                14.408
+              ],
+              [
+                79.935,
+                14.43
+              ],
+              [
+                79.945,
+                14.46
+              ]
+            ]
+          ]
+        }
+      }
+    ]
+  },
+  "kovur_boundary": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Kovur Mandal",
+          "type": "Rural/Peri-Urban Mandal",
+          "district": "SPSR Nellore",
+          "state": "Andhra Pradesh",
+          "area_sq_km": 112.8,
+          "population_est": 125000
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.94,
+                14.468
+              ],
+              [
+                79.97,
+                14.471
+              ],
+              [
+                80.005,
+                14.469
+              ],
+              [
+                80.03,
+                14.485
+              ],
+              [
+                80.02,
+                14.525
+              ],
+              [
+                79.98,
+                14.54
+              ],
+              [
+                79.945,
+                14.52
+              ],
+              [
+                79.935,
+                14.485
+              ],
+              [
+                79.94,
+                14.468
+              ]
+            ]
+          ]
+        }
+      }
+    ]
+  },
+  "waterbodies": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Pennar River Basin (Penna)",
+          "category": "Major River",
+          "status": "Seasonal Flow / Sandbed / Urban Discharge Sink"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.92,
+                14.46
+              ],
+              [
+                79.94,
+                14.4615
+              ],
+              [
+                79.965,
+                14.463
+              ],
+              [
+                79.985,
+                14.462
+              ],
+              [
+                80.005,
+                14.459
+              ],
+              [
+                80.035,
+                14.456
+              ],
+              [
+                80.055,
+                14.453
+              ],
+              [
+                80.055,
+                14.46
+              ],
+              [
+                80.035,
+                14.463
+              ],
+              [
+                80.005,
+                14.466
+              ],
+              [
+                79.985,
+                14.469
+              ],
+              [
+                79.965,
+                14.47
+              ],
+              [
+                79.94,
+                14.4685
+              ],
+              [
+                79.92,
+                14.467
+              ],
+              [
+                79.92,
+                14.46
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Sarvepalli Irrigation Canal",
+          "category": "Primary Canal",
+          "status": "Active Agricultural / Runoff Carrier"
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              79.955,
+              14.455
+            ],
+            [
+              79.96,
+              14.435
+            ],
+            [
+              79.965,
+              14.415
+            ],
+            [
+              79.97,
+              14.395
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Buckingham Canal Feeder Channel",
+          "category": "Coastal Drainage & Canal",
+          "status": "High Silt & Urban Waste Effluent"
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              80.01,
+              14.47
+            ],
+            [
+              80.012,
+              14.445
+            ],
+            [
+              80.014,
+              14.42
+            ],
+            [
+              80.016,
+              14.4
+            ]
+          ]
+        }
+      }
+    ]
+  },
+  "drainage": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "drain_name": "Stonehousepet - Pennar Main Open Outfall Drain",
+          "drain_type": "Open Masonry Drain (High Sullage)",
+          "bio_hazard_rating": "High (Stagnant Organic Waste)"
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              79.988,
+              14.451
+            ],
+            [
+              79.9895,
+              14.456
+            ],
+            [
+              79.991,
+              14.4625
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "drain_name": "Santhapet - Trunk Road Central Municipal Drain",
+          "drain_type": "Semi-Covered Heavy Effluent Drain",
+          "bio_hazard_rating": "High (Stagnant Organic Waste)"
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              79.978,
+              14.437
+            ],
+            [
+              79.982,
+              14.442
+            ],
+            [
+              79.985,
+              14.449
+            ],
+            [
+              79.987,
+              14.458
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "drain_name": "Ranganayakulapet Riverbank Open Sewer Line",
+          "drain_type": "Unlined Open Ditch",
+          "bio_hazard_rating": "High (Stagnant Organic Waste)"
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              79.98,
+              14.453
+            ],
+            [
+              79.984,
+              14.457
+            ],
+            [
+              79.987,
+              14.462
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "drain_name": "Vedayapalem - Ramalingapuram Stormwater & Wastewater Channel",
+          "drain_type": "Open Storm Drain with Sludge",
+          "bio_hazard_rating": "High (Stagnant Organic Waste)"
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              79.96,
+              14.412
+            ],
+            [
+              79.967,
+              14.422
+            ],
+            [
+              79.972,
+              14.431
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "drain_name": "Kovur Padugupadu Rail-Line Open Sullage Drain",
+          "drain_type": "Open Earthen Sullage Channel",
+          "bio_hazard_rating": "High (Stagnant Organic Waste)"
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              79.982,
+              14.472
+            ],
+            [
+              79.984,
+              14.476
+            ],
+            [
+              79.985,
+              14.481
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "drain_name": "Kovur Main Bazaar Central Open Gutter",
+          "drain_type": "Open Roadside Sludge Drain",
+          "bio_hazard_rating": "High (Stagnant Organic Waste)"
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              79.974,
+              14.492
+            ],
+            [
+              79.978,
+              14.495
+            ],
+            [
+              79.982,
+              14.498
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "drain_name": "Inamadugu Village Bypass Open Drain",
+          "drain_type": "Rural Runoff and Animal Waste Channel",
+          "bio_hazard_rating": "High (Stagnant Organic Waste)"
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              79.998,
+              14.488
+            ],
+            [
+              80.003,
+              14.492
+            ],
+            [
+              80.009,
+              14.497
+            ]
+          ]
+        }
+      }
+    ]
+  },
+  "hospitals": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Government General Hospital (GGH / DSR Hospital)",
+          "facility_type": "Tertiary Referral Hospital",
+          "bed_capacity": 750,
+          "emergency_service": "Available"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.986,
+            14.4445
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "ACSR Government Medical College & Hospital",
+          "facility_type": "Medical College Hospital",
+          "bed_capacity": 500,
+          "emergency_service": "Available"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.972,
+            14.438
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Kovur Community Health Centre (CHC)",
+          "facility_type": "Community Health Centre",
+          "bed_capacity": 50,
+          "emergency_service": "Available"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.979,
+            14.493
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Stonehousepet Urban Primary Health Centre (UPHC)",
+          "facility_type": "Urban Primary Health Centre",
+          "bed_capacity": 10,
+          "emergency_service": "Day OPD Only"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.9915,
+            14.4505
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Santhapet Municipal Dispensary / UPHC",
+          "facility_type": "Urban Dispensary",
+          "bed_capacity": 6,
+          "emergency_service": "Day OPD Only"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.981,
+            14.439
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Ranganayakulapet Ward Health Post",
+          "facility_type": "Health Wellness Centre",
+          "bed_capacity": 4,
+          "emergency_service": "Day OPD Only"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.987,
+            14.454
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Vedayapalem Area Hospital / UPHC",
+          "facility_type": "Urban Primary Health Centre",
+          "bed_capacity": 15,
+          "emergency_service": "Day OPD Only"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.967,
+            14.417
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Padugupadu Primary Health Sub-Centre",
+          "facility_type": "Primary Health Sub-Centre",
+          "bed_capacity": 4,
+          "emergency_service": "Day OPD Only"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.983,
+            14.476
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Inamadugu Rural Health Clinic",
+          "facility_type": "Rural Clinic",
+          "bed_capacity": 2,
+          "emergency_service": "Day OPD Only"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            80.004,
+            14.491
+          ]
+        }
+      }
+    ]
+  },
+  "markets": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-001",
+          "shop_name": "Kovur Royal Poultry Stall (Stonehousepet)",
+          "cluster_hub": "Stonehousepet Fish & Mutton Hub",
+          "mandal_zone": "Nellore Urban (NMC)",
+          "latitude": 14.449241,
+          "longitude": 79.99062,
+          "category": "Poultry (Broiler/Country Chicken)",
+          "animal_origin": "Local Nellore Poultry Farms (Podalakur Road)",
+          "animal_destination": "Trunk Road & Gandhi Nagar Restaurants",
+          "daily_animals_handled": 96,
+          "slaughter_on_site": "No",
+          "refrigeration_available": "No",
+          "waste_disposal_method": "Closed Bin Collection",
+          "water_source": "Borewell / Groundwater",
+          "drainage_condition": "Underground Closed Drain",
+          "distance_to_drain_m": 342.9,
+          "distance_to_waterbody_m": 1521.4,
+          "distance_to_hospital_m": 169.1,
+          "market_crowd_index": 8.2,
+          "norm_drain_risk": 0.0,
+          "norm_waste_risk": 0.1,
+          "composite_geo_risk_score": 30.81,
+          "risk_level": "Low Risk",
+          "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
+          "marker_color": "#06d6a0",
+          "ai_predicted_risk": "Low Risk",
+          "ai_prediction_confidence": 82.1,
+          "ai_concurrence": "True"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.99062,
+            14.449241
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-002",
+          "shop_name": "Star Mutton Stall (Stonehousepet)",
+          "cluster_hub": "Stonehousepet Fish & Mutton Hub",
+          "mandal_zone": "Nellore Urban (NMC)",
+          "latitude": 14.449709,
+          "longitude": 79.991325,
+          "category": "Mutton / Sheep / Goat",
+          "animal_origin": "Nellore Local Herders (Pennar Basin)",
+          "animal_destination": "Inter-Mandal Retail Stalls",
+          "daily_animals_handled": 239,
+          "slaughter_on_site": "Yes",
+          "refrigeration_available": "No",
+          "waste_disposal_method": "Closed Bin Collection",
+          "water_source": "Borewell / Groundwater",
+          "drainage_condition": "Underground Closed Drain",
+          "distance_to_drain_m": 385.8,
+          "distance_to_waterbody_m": 1469.7,
+          "distance_to_hospital_m": 90.0,
+          "market_crowd_index": 10.0,
+          "norm_drain_risk": 0.0,
+          "norm_waste_risk": 0.1,
+          "composite_geo_risk_score": 49.55,
+          "risk_level": "Moderate Risk",
+          "recommended_intervention": "Monthly routine surveillance; water potability testing; solid waste collection compliance.",
+          "marker_color": "#ffd166",
+          "ai_predicted_risk": "Moderate Risk",
+          "ai_prediction_confidence": 84.3,
+          "ai_concurrence": "True"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.991325,
+            14.449709
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-003",
+          "shop_name": "National Poultry Stall (Stonehousepet)",
+          "cluster_hub": "Stonehousepet Fish & Mutton Hub",
+          "mandal_zone": "Nellore Urban (NMC)",
+          "latitude": 14.450514,
+          "longitude": 79.992944,
+          "category": "Poultry (Broiler/Country Chicken)",
+          "animal_origin": "Local Nellore Poultry Farms (Podalakur Road)",
+          "animal_destination": "Trunk Road & Gandhi Nagar Restaurants",
+          "daily_animals_handled": 415,
+          "slaughter_on_site": "Yes",
+          "refrigeration_available": "Yes",
+          "waste_disposal_method": "Municipal Waste Bin",
+          "water_source": "Piped Municipal Supply",
+          "drainage_condition": "Underground Closed Drain",
+          "distance_to_drain_m": 526.6,
+          "distance_to_waterbody_m": 1380.6,
+          "distance_to_hospital_m": 155.5,
+          "market_crowd_index": 6.8,
+          "norm_drain_risk": 0.0,
+          "norm_waste_risk": 0.35,
+          "composite_geo_risk_score": 45.36,
+          "risk_level": "Moderate Risk",
+          "recommended_intervention": "Monthly routine surveillance; water potability testing; solid waste collection compliance.",
+          "marker_color": "#ffd166",
+          "ai_predicted_risk": "Moderate Risk",
+          "ai_prediction_confidence": 50.8,
+          "ai_concurrence": "True"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.992944,
+            14.450514
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-004",
+          "shop_name": "National Mixed Stall (Stonehousepet)",
+          "cluster_hub": "Stonehousepet Fish & Mutton Hub",
+          "mandal_zone": "Nellore Urban (NMC)",
+          "latitude": 14.447519,
+          "longitude": 79.989901,
+          "category": "Mixed Live Meat & Fish",
+          "animal_origin": "Combined Regional Traders & Local Shandy",
+          "animal_destination": "Inter-Mandal Retail Stalls",
+          "daily_animals_handled": 175,
+          "slaughter_on_site": "No",
+          "refrigeration_available": "No",
+          "waste_disposal_method": "Closed Bin Collection",
+          "water_source": "Piped Municipal Supply",
+          "drainage_condition": "Underground Closed Drain",
+          "distance_to_drain_m": 436.0,
+          "distance_to_waterbody_m": 1711.8,
+          "distance_to_hospital_m": 373.5,
+          "market_crowd_index": 8.7,
+          "norm_drain_risk": 0.0,
+          "norm_waste_risk": 0.1,
+          "composite_geo_risk_score": 32.9,
+          "risk_level": "Low Risk",
+          "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
+          "marker_color": "#06d6a0",
+          "ai_predicted_risk": "Low Risk",
+          "ai_prediction_confidence": 84.4,
+          "ai_concurrence": "True"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.989901,
+            14.447519
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-005",
+          "shop_name": "National Poultry Stall (Stonehousepet)",
+          "cluster_hub": "Stonehousepet Fish & Mutton Hub",
+          "mandal_zone": "Nellore Urban (NMC)",
+          "latitude": 14.4519,
+          "longitude": 79.99237,
+          "category": "Poultry (Broiler/Country Chicken)",
+          "animal_origin": "Local Nellore Poultry Farms (Podalakur Road)",
+          "animal_destination": "Trunk Road & Gandhi Nagar Restaurants",
+          "daily_animals_handled": 76,
+          "slaughter_on_site": "Yes",
+          "refrigeration_available": "No",
+          "waste_disposal_method": "Closed Bin Collection",
+          "water_source": "Borewell / Groundwater",
+          "drainage_condition": "Underground Closed Drain",
+          "distance_to_drain_m": 424.2,
+          "distance_to_waterbody_m": 1227.4,
+          "distance_to_hospital_m": 181.7,
+          "market_crowd_index": 7.4,
+          "norm_drain_risk": 0.0,
+          "norm_waste_risk": 0.1,
+          "composite_geo_risk_score": 42.56,
+          "risk_level": "Moderate Risk",
+          "recommended_intervention": "Monthly routine surveillance; water potability testing; solid waste collection compliance.",
+          "marker_color": "#ffd166",
+          "ai_predicted_risk": "Moderate Risk",
+          "ai_prediction_confidence": 80.5,
+          "ai_concurrence": "True"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.99237,
+            14.4519
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-006",
+          "shop_name": "Kovur Royal Mutton Stall (Stonehousepet)",
+          "cluster_hub": "Stonehousepet Fish & Mutton Hub",
+          "mandal_zone": "Nellore Urban (NMC)",
+          "latitude": 14.451616,
+          "longitude": 79.993931,
+          "category": "Mutton / Sheep / Goat",
+          "animal_origin": "Nellore Local Herders (Pennar Basin)",
+          "animal_destination": "Trunk Road & Gandhi Nagar Restaurants",
+          "daily_animals_handled": 108,
+          "slaughter_on_site": "Yes",
+          "refrigeration_available": "Yes",
+          "waste_disposal_method": "Open Dumping on Ground",
+          "water_source": "Piped Municipal Supply",
+          "drainage_condition": "Underground Closed Drain",
+          "distance_to_drain_m": 594.5,
+          "distance_to_waterbody_m": 1258.8,
+          "distance_to_hospital_m": 289.6,
+          "market_crowd_index": 7.8,
+          "norm_drain_risk": 0.0,
+          "norm_waste_risk": 0.85,
+          "composite_geo_risk_score": 50.3,
+          "risk_level": "Moderate Risk",
+          "recommended_intervention": "Monthly routine surveillance; water potability testing; solid waste collection compliance.",
+          "marker_color": "#ffd166",
+          "ai_predicted_risk": "Moderate Risk",
+          "ai_prediction_confidence": 69.9,
+          "ai_concurrence": "True"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.993931,
+            14.451616
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-007",
+          "shop_name": "Coastal Choice Fish Stall (Stonehousepet)",
+          "cluster_hub": "Stonehousepet Fish & Mutton Hub",
+          "mandal_zone": "Nellore Urban (NMC)",
+          "latitude": 14.448117,
+          "longitude": 79.98712,
+          "category": "Fish & Seafood",
+          "animal_origin": "Krishnapatnam Deep Sea Port Landing",
+          "animal_destination": "Local Ward Neighborhood Households",
+          "daily_animals_handled": 186,
+          "slaughter_on_site": "Yes",
+          "refrigeration_available": "Yes",
+          "waste_disposal_method": "Open Dumping on Ground",
+          "water_source": "Piped Municipal Supply",
+          "drainage_condition": "Underground Closed Drain",
+          "distance_to_drain_m": 248.5,
+          "distance_to_waterbody_m": 1645.7,
+          "distance_to_hospital_m": 419.9,
+          "market_crowd_index": 8.3,
+          "norm_drain_risk": 0.184,
+          "norm_waste_risk": 0.85,
+          "composite_geo_risk_score": 56.54,
+          "risk_level": "High Risk",
+          "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
+          "marker_color": "#f77f00",
+          "ai_predicted_risk": "High Risk",
+          "ai_prediction_confidence": 68.0,
+          "ai_concurrence": "True"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.98712,
+            14.448117
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-008",
+          "shop_name": "Gouthami Mixed Stall (Stonehousepet)",
+          "cluster_hub": "Stonehousepet Fish & Mutton Hub",
+          "mandal_zone": "Nellore Urban (NMC)",
+          "latitude": 14.448281,
+          "longitude": 79.987132,
+          "category": "Mixed Live Meat & Fish",
+          "animal_origin": "Combined Regional Traders & Local Shandy",
+          "animal_destination": "Hotel & Catering Aggregators",
+          "daily_animals_handled": 96,
+          "slaughter_on_site": "Yes",
+          "refrigeration_available": "No",
+          "waste_disposal_method": "Municipal Waste Bin",
+          "water_source": "Piped Municipal Supply",
+          "drainage_condition": "Underground Closed Drain",
+          "distance_to_drain_m": 243.3,
+          "distance_to_waterbody_m": 1627.6,
+          "distance_to_hospital_m": 437.7,
+          "market_crowd_index": 10.0,
+          "norm_drain_risk": 0.202,
+          "norm_waste_risk": 0.35,
+          "composite_geo_risk_score": 56.09,
+          "risk_level": "High Risk",
+          "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
+          "marker_color": "#f77f00",
+          "ai_predicted_risk": "High Risk",
+          "ai_prediction_confidence": 62.9,
+          "ai_concurrence": "True"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.987132,
+            14.448281
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-009",
+          "shop_name": "Al-Madina Mutton Stall (Stonehousepet)",
+          "cluster_hub": "Stonehousepet Fish & Mutton Hub",
+          "mandal_zone": "Nellore Urban (NMC)",
+          "latitude": 14.448478,
+          "longitude": 79.991915,
+          "category": "Mutton / Sheep / Goat",
+          "animal_origin": "Nellore Local Herders (Pennar Basin)",
+          "animal_destination": "Local Street Food Vendors",
+          "daily_animals_handled": 71,
+          "slaughter_on_site": "No",
+          "refrigeration_available": "No",
+          "waste_disposal_method": "Municipal Waste Bin",
+          "water_source": "Borewell / Groundwater",
+          "drainage_condition": "Underground Closed Drain",
+          "distance_to_drain_m": 505.8,
+          "distance_to_waterbody_m": 1605.7,
+          "distance_to_hospital_m": 229.2,
+          "market_crowd_index": 7.8,
+          "norm_drain_risk": 0.0,
+          "norm_waste_risk": 0.35,
+          "composite_geo_risk_score": 34.47,
+          "risk_level": "Low Risk",
+          "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
+          "marker_color": "#06d6a0",
+          "ai_predicted_risk": "Low Risk",
+          "ai_prediction_confidence": 86.4,
+          "ai_concurrence": "True"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.991915,
+            14.448478
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-010",
+          "shop_name": "Sai Krupa Poultry Stall (Stonehousepet)",
+          "cluster_hub": "Stonehousepet Fish & Mutton Hub",
+          "mandal_zone": "Nellore Urban (NMC)",
+          "latitude": 14.447303,
+          "longitude": 79.985605,
+          "category": "Poultry (Broiler/Country Chicken)",
+          "animal_origin": "Chittoor Hatcheries Supply",
+          "animal_destination": "Local Ward Neighborhood Households",
+          "daily_animals_handled": 373,
+          "slaughter_on_site": "No",
+          "refrigeration_available": "No",
+          "waste_disposal_method": "Municipal Waste Bin",
+          "water_source": "Borewell / Groundwater",
+          "drainage_condition": "Underground Closed Drain",
+          "distance_to_drain_m": 132.5,
+          "distance_to_waterbody_m": 1735.7,
+          "distance_to_hospital_m": 314.6,
+          "market_crowd_index": 10.0,
+          "norm_drain_risk": 0.598,
+          "norm_waste_risk": 0.35,
+          "composite_geo_risk_score": 59.16,
+          "risk_level": "High Risk",
+          "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
+          "marker_color": "#f77f00",
+          "ai_predicted_risk": "High Risk",
+          "ai_prediction_confidence": 81.2,
+          "ai_concurrence": "True"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.985605,
+            14.447303
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-011",
+          "shop_name": "Annapurna Mutton Stall (Stonehousepet)",
+          "cluster_hub": "Stonehousepet Fish & Mutton Hub",
+          "mandal_zone": "Nellore Urban (NMC)",
+          "latitude": 14.448695,
+          "longitude": 79.992547,
+          "category": "Mutton / Sheep / Goat",
+          "animal_origin": "Atmakur Cattle & Sheep Market",
+          "animal_destination": "Local Ward Neighborhood Households",
+          "daily_animals_handled": 394,
+          "slaughter_on_site": "No",
+          "refrigeration_available": "Yes",
+          "waste_disposal_method": "Municipal Waste Bin",
+          "water_source": "Borewell / Groundwater",
+          "drainage_condition": "Underground Closed Drain",
+          "distance_to_drain_m": 552.5,
+          "distance_to_waterbody_m": 1581.8,
+          "distance_to_hospital_m": 230.3,
+          "market_crowd_index": 10.0,
+          "norm_drain_risk": 0.0,
+          "norm_waste_risk": 0.35,
+          "composite_geo_risk_score": 36.5,
+          "risk_level": "Low Risk",
+          "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
+          "marker_color": "#06d6a0",
+          "ai_predicted_risk": "Low Risk",
+          "ai_prediction_confidence": 83.6,
+          "ai_concurrence": "True"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.992547,
+            14.448695
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-012",
+          "shop_name": "Gouthami Mutton Stall (Stonehousepet)",
+          "cluster_hub": "Stonehousepet Fish & Mutton Hub",
+          "mandal_zone": "Nellore Urban (NMC)",
+          "latitude": 14.447601,
+          "longitude": 79.992426,
+          "category": "Mutton / Sheep / Goat",
+          "animal_origin": "Kadapa / Badvel Livestock Shandy",
+          "animal_destination": "Hotel & Catering Aggregators",
+          "daily_animals_handled": 415,
+          "slaughter_on_site": "Yes",
+          "refrigeration_available": "No",
+          "waste_disposal_method": "Open Dumping on Ground",
+          "water_source": "Stored Tank Water (Untreated)",
+          "drainage_condition": "Underground Closed Drain",
+          "distance_to_drain_m": 607.4,
+          "distance_to_waterbody_m": 1702.7,
+          "distance_to_hospital_m": 337.5,
+          "market_crowd_index": 7.3,
+          "norm_drain_risk": 0.0,
+          "norm_waste_risk": 0.85,
+          "composite_geo_risk_score": 63.91,
+          "risk_level": "High Risk",
+          "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
+          "marker_color": "#f77f00",
+          "ai_predicted_risk": "High Risk",
+          "ai_prediction_confidence": 58.9,
+          "ai_concurrence": "True"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.992426,
+            14.447601
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-013",
+          "shop_name": "Balaji Poultry Stall (Stonehousepet)",
+          "cluster_hub": "Stonehousepet Fish & Mutton Hub",
+          "mandal_zone": "Nellore Urban (NMC)",
+          "latitude": 14.44934,
+          "longitude": 79.99139,
+          "category": "Poultry (Broiler/Country Chicken)",
+          "animal_origin": "Allur Broiler Breeding Units",
+          "animal_destination": "Trunk Road & Gandhi Nagar Restaurants",
+          "daily_animals_handled": 54,
+          "slaughter_on_site": "Yes",
+          "refrigeration_available": "No",
+          "waste_disposal_method": "Municipal Waste Bin",
+          "water_source": "Piped Municipal Supply",
+          "drainage_condition": "Underground Closed Drain",
+          "distance_to_drain_m": 408.9,
+          "distance_to_waterbody_m": 1510.5,
+          "distance_to_hospital_m": 129.6,
+          "market_crowd_index": 9.8,
+          "norm_drain_risk": 0.0,
+          "norm_waste_risk": 0.35,
+          "composite_geo_risk_score": 50.05,
+          "risk_level": "Moderate Risk",
+          "recommended_intervention": "Monthly routine surveillance; water potability testing; solid waste collection compliance.",
+          "marker_color": "#ffd166",
+          "ai_predicted_risk": "Moderate Risk",
+          "ai_prediction_confidence": 82.4,
+          "ai_concurrence": "True"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.99139,
+            14.44934
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-014",
+          "shop_name": "National Mixed Stall (Stonehousepet)",
+          "cluster_hub": "Stonehousepet Fish & Mutton Hub",
+          "mandal_zone": "Nellore Urban (NMC)",
+          "latitude": 14.444949,
+          "longitude": 79.991115,
+          "category": "Mixed Live Meat & Fish",
+          "animal_origin": "Combined Regional Traders & Local Shandy",
+          "animal_destination": "Hotel & Catering Aggregators",
+          "daily_animals_handled": 295,
+          "slaughter_on_site": "No",
+          "refrigeration_available": "No",
+          "waste_disposal_method": "Municipal Waste Bin",
+          "water_source": "Piped Municipal Supply",
+          "drainage_condition": "Underground Closed Drain",
+          "distance_to_drain_m": 748.6,
+          "distance_to_waterbody_m": 1996.0,
+          "distance_to_hospital_m": 553.0,
+          "market_crowd_index": 7.9,
+          "norm_drain_risk": 0.0,
+          "norm_waste_risk": 0.35,
+          "composite_geo_risk_score": 38.75,
+          "risk_level": "Low Risk",
+          "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
+          "marker_color": "#06d6a0",
+          "ai_predicted_risk": "Low Risk",
+          "ai_prediction_confidence": 80.7,
+          "ai_concurrence": "True"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.991115,
+            14.444949
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-015",
+          "shop_name": "Sri Venkateswara Mixed Stall (Stonehousepet)",
+          "cluster_hub": "Stonehousepet Fish & Mutton Hub",
+          "mandal_zone": "Nellore Urban (NMC)",
+          "latitude": 14.448451,
+          "longitude": 79.987769,
+          "category": "Mixed Live Meat & Fish",
+          "animal_origin": "Multi-Source Livestock Distributors",
+          "animal_destination": "Local Street Food Vendors",
+          "daily_animals_handled": 289,
+          "slaughter_on_site": "Yes",
+          "refrigeration_available": "Yes",
+          "waste_disposal_method": "Municipal Waste Bin",
+          "water_source": "Borewell / Groundwater",
+          "drainage_condition": "Underground Closed Drain",
+          "distance_to_drain_m": 283.0,
+          "distance_to_waterbody_m": 1608.8,
+          "distance_to_hospital_m": 461.8,
+          "market_crowd_index": 7.0,
+          "norm_drain_risk": 0.061,
+          "norm_waste_risk": 0.35,
+          "composite_geo_risk_score": 43.88,
+          "risk_level": "Moderate Risk",
+          "recommended_intervention": "Monthly routine surveillance; water potability testing; solid waste collection compliance.",
+          "marker_color": "#ffd166",
+          "ai_predicted_risk": "Moderate Risk",
+          "ai_prediction_confidence": 67.1,
+          "ai_concurrence": "True"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.987769,
+            14.448451
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-016",
+          "shop_name": "Pennar Quality Mutton Stall (Stonehousepet)",
+          "cluster_hub": "Stonehousepet Fish & Mutton Hub",
+          "mandal_zone": "Nellore Urban (NMC)",
+          "latitude": 14.448703,
+          "longitude": 79.993803,
+          "category": "Mutton / Sheep / Goat",
+          "animal_origin": "Kadapa / Badvel Livestock Shandy",
+          "animal_destination": "Local Ward Neighborhood Households",
+          "daily_animals_handled": 194,
+          "slaughter_on_site": "Yes",
+          "refrigeration_available": "Yes",
+          "waste_disposal_method": "Closed Bin Collection",
+          "water_source": "Borewell / Groundwater",
+          "drainage_condition": "Underground Closed Drain",
+          "distance_to_drain_m": 675.2,
+          "distance_to_waterbody_m": 1580.9,
+          "distance_to_hospital_m": 318.5,
+          "market_crowd_index": 9.2,
+          "norm_drain_risk": 0.0,
+          "norm_waste_risk": 0.1,
+          "composite_geo_risk_score": 38.61,
+          "risk_level": "Low Risk",
+          "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
+          "marker_color": "#06d6a0",
+          "ai_predicted_risk": "Low Risk",
+          "ai_prediction_confidence": 78.3,
+          "ai_concurrence": "True"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.993803,
+            14.448703
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-017",
+          "shop_name": "Sai Krupa Poultry Stall (Santhapet)",
+          "cluster_hub": "Santhapet Central Meat Market",
+          "mandal_zone": "Nellore Urban (NMC)",
+          "latitude": 14.438879,
+          "longitude": 79.976012,
+          "category": "Poultry (Broiler/Country Chicken)",
+          "animal_origin": "Local Nellore Poultry Farms (Podalakur Road)",
+          "animal_destination": "Local Street Food Vendors",
+          "daily_animals_handled": 233,
+          "slaughter_on_site": "Yes",
+          "refrigeration_available": "Yes",
+          "waste_disposal_method": "Municipal Waste Bin",
+          "water_source": "Borewell / Groundwater",
+          "drainage_condition": "Underground Closed Drain",
+          "distance_to_drain_m": 296.8,
+          "distance_to_waterbody_m": 2667.1,
+          "distance_to_hospital_m": 442.9,
+          "market_crowd_index": 5.6,
+          "norm_drain_risk": 0.011,
+          "norm_waste_risk": 0.35,
+          "composite_geo_risk_score": 37.36,
+          "risk_level": "Low Risk",
+          "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
+          "marker_color": "#06d6a0",
+          "ai_predicted_risk": "Low Risk",
+          "ai_prediction_confidence": 71.8,
+          "ai_concurrence": "True"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.976012,
+            14.438879
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-018",
+          "shop_name": "Annapurna Mutton Stall (Santhapet)",
+          "cluster_hub": "Santhapet Central Meat Market",
+          "mandal_zone": "Nellore Urban (NMC)",
+          "latitude": 14.440098,
+          "longitude": 79.978692,
+          "category": "Mutton / Sheep / Goat",
+          "animal_origin": "Atmakur Cattle & Sheep Market",
+          "animal_destination": "Hotel & Catering Aggregators",
+          "daily_animals_handled": 80,
+          "slaughter_on_site": "Yes",
+          "refrigeration_available": "Yes",
+          "waste_disposal_method": "Municipal Waste Bin",
+          "water_source": "Borewell / Groundwater",
+          "drainage_condition": "Underground Closed Drain",
+          "distance_to_drain_m": 151.9,
+          "distance_to_waterbody_m": 2532.3,
+          "distance_to_hospital_m": 276.9,
+          "market_crowd_index": 6.1,
+          "norm_drain_risk": 0.529,
+          "norm_waste_risk": 0.35,
+          "composite_geo_risk_score": 47.65,
+          "risk_level": "Moderate Risk",
+          "recommended_intervention": "Monthly routine surveillance; water potability testing; solid waste collection compliance.",
+          "marker_color": "#ffd166",
+          "ai_predicted_risk": "High Risk",
+          "ai_prediction_confidence": 57.9,
+          "ai_concurrence": "False"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.978692,
+            14.440098
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-019",
+          "shop_name": "Pennar Quality Mutton Stall (Santhapet)",
+          "cluster_hub": "Santhapet Central Meat Market",
+          "mandal_zone": "Nellore Urban (NMC)",
+          "latitude": 14.435933,
+          "longitude": 79.981543,
+          "category": "Mutton / Sheep / Goat",
+          "animal_origin": "Atmakur Cattle & Sheep Market",
+          "animal_destination": "Inter-Mandal Retail Stalls",
+          "daily_animals_handled": 75,
+          "slaughter_on_site": "Yes",
+          "refrigeration_available": "No",
+          "waste_disposal_method": "Closed Bin Collection",
+          "water_source": "Stored Tank Water (Untreated)",
+          "drainage_condition": "Underground Closed Drain",
+          "distance_to_drain_m": 373.7,
+          "distance_to_waterbody_m": 2992.9,
+          "distance_to_hospital_m": 346.0,
+          "market_crowd_index": 9.6,
+          "norm_drain_risk": 0.0,
+          "norm_waste_risk": 0.1,
+          "composite_geo_risk_score": 43.07,
+          "risk_level": "Moderate Risk",
+          "recommended_intervention": "Monthly routine surveillance; water potability testing; solid waste collection compliance.",
+          "marker_color": "#ffd166",
+          "ai_predicted_risk": "Moderate Risk",
+          "ai_prediction_confidence": 73.2,
+          "ai_concurrence": "True"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.981543,
+            14.435933
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-020",
+          "shop_name": "Annapurna Poultry Stall (Santhapet)",
+          "cluster_hub": "Santhapet Central Meat Market",
+          "mandal_zone": "Nellore Urban (NMC)",
+          "latitude": 14.437939,
+          "longitude": 79.978402,
+          "category": "Poultry (Broiler/Country Chicken)",
+          "animal_origin": "Local Nellore Poultry Farms (Podalakur Road)",
+          "animal_destination": "Trunk Road & Gandhi Nagar Restaurants",
+          "daily_animals_handled": 219,
+          "slaughter_on_site": "Yes",
+          "refrigeration_available": "No",
+          "waste_disposal_method": "Municipal Waste Bin",
+          "water_source": "Piped Municipal Supply",
+          "drainage_condition": "Open Stagnant Drain",
+          "distance_to_drain_m": 29.6,
+          "distance_to_waterbody_m": 2771.1,
+          "distance_to_hospital_m": 303.6,
+          "market_crowd_index": 8.3,
+          "norm_drain_risk": 0.966,
+          "norm_waste_risk": 0.35,
+          "composite_geo_risk_score": 73.46,
+          "risk_level": "Very High Risk",
+          "recommended_intervention": "Immediate bio-sanitation audit; mandatory effluent interceptor; drain covering within 50m; live slaughter inspection.",
+          "marker_color": "#d90429",
+          "ai_predicted_risk": "Very High Risk",
+          "ai_prediction_confidence": 56.5,
+          "ai_concurrence": "True"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.978402,
+            14.437939
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-021",
+          "shop_name": "Coastal Choice Poultry Stall (Santhapet)",
+          "cluster_hub": "Santhapet Central Meat Market",
+          "mandal_zone": "Nellore Urban (NMC)",
+          "latitude": 14.435498,
+          "longitude": 79.98307,
+          "category": "Poultry (Broiler/Country Chicken)",
+          "animal_origin": "Local Nellore Poultry Farms (Podalakur Road)",
+          "animal_destination": "Trunk Road & Gandhi Nagar Restaurants",
+          "daily_animals_handled": 176,
+          "slaughter_on_site": "Yes",
+          "refrigeration_available": "Yes",
+          "waste_disposal_method": "Closed Bin Collection",
+          "water_source": "Borewell / Groundwater",
+          "drainage_condition": "Underground Closed Drain",
+          "distance_to_drain_m": 533.1,
+          "distance_to_waterbody_m": 3041.0,
+          "distance_to_hospital_m": 448.7,
+          "market_crowd_index": 7.4,
+          "norm_drain_risk": 0.0,
+          "norm_waste_risk": 0.1,
+          "composite_geo_risk_score": 33.51,
+          "risk_level": "Low Risk",
+          "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
+          "marker_color": "#06d6a0",
+          "ai_predicted_risk": "Low Risk",
+          "ai_prediction_confidence": 81.3,
+          "ai_concurrence": "True"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.98307,
+            14.435498
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-022",
+          "shop_name": "Al-Madina Mutton Stall (Santhapet)",
+          "cluster_hub": "Santhapet Central Meat Market",
+          "mandal_zone": "Nellore Urban (NMC)",
+          "latitude": 14.440032,
+          "longitude": 79.976195,
+          "category": "Mutton / Sheep / Goat",
+          "animal_origin": "Kadapa / Badvel Livestock Shandy",
+          "animal_destination": "Inter-Mandal Retail Stalls",
+          "daily_animals_handled": 66,
+          "slaughter_on_site": "No",
+          "refrigeration_available": "Yes",
+          "waste_disposal_method": "Municipal Waste Bin",
+          "water_source": "Stored Tank Water (Untreated)",
+          "drainage_condition": "Underground Closed Drain",
+          "distance_to_drain_m": 359.6,
+          "distance_to_waterbody_m": 2539.7,
+          "distance_to_hospital_m": 505.1,
+          "market_crowd_index": 7.5,
+          "norm_drain_risk": 0.0,
+          "norm_waste_risk": 0.35,
+          "composite_geo_risk_score": 23.47,
+          "risk_level": "Low Risk",
+          "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
+          "marker_color": "#06d6a0",
+          "ai_predicted_risk": "Low Risk",
+          "ai_prediction_confidence": 91.5,
+          "ai_concurrence": "True"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.976195,
+            14.440032
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-023",
+          "shop_name": "National Mutton Stall (Santhapet)",
+          "cluster_hub": "Santhapet Central Meat Market",
+          "mandal_zone": "Nellore Urban (NMC)",
+          "latitude": 14.44226,
+          "longitude": 79.983664,
+          "category": "Mutton / Sheep / Goat",
+          "animal_origin": "Nellore Local Herders (Pennar Basin)",
+          "animal_destination": "Inter-Mandal Retail Stalls",
+          "daily_animals_handled": 45,
+          "slaughter_on_site": "Yes",
+          "refrigeration_available": "No",
+          "waste_disposal_method": "Municipal Waste Bin",
+          "water_source": "Piped Municipal Supply",
+          "drainage_condition": "Underground Closed Drain",
+          "distance_to_drain_m": 154.4,
+          "distance_to_waterbody_m": 2293.3,
+          "distance_to_hospital_m": 354.0,
+          "market_crowd_index": 8.2,
+          "norm_drain_risk": 0.52,
+          "norm_waste_risk": 0.35,
+          "composite_geo_risk_score": 58.75,
+          "risk_level": "High Risk",
+          "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
+          "marker_color": "#f77f00",
+          "ai_predicted_risk": "High Risk",
+          "ai_prediction_confidence": 80.6,
+          "ai_concurrence": "True"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.983664,
+            14.44226
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-024",
+          "shop_name": "Gouthami Mutton Stall (Santhapet)",
+          "cluster_hub": "Santhapet Central Meat Market",
+          "mandal_zone": "Nellore Urban (NMC)",
+          "latitude": 14.439015,
+          "longitude": 79.979822,
+          "category": "Mutton / Sheep / Goat",
+          "animal_origin": "Nellore Local Herders (Pennar Basin)",
+          "animal_destination": "Hotel & Catering Aggregators",
+          "daily_animals_handled": 259,
+          "slaughter_on_site": "Yes",
+          "refrigeration_available": "No",
+          "waste_disposal_method": "Direct Open Drain Discharge",
+          "water_source": "Piped Municipal Supply",
+          "drainage_condition": "Open Stagnant Drain",
+          "distance_to_drain_m": 17.8,
+          "distance_to_waterbody_m": 2652.2,
+          "distance_to_hospital_m": 126.9,
+          "market_crowd_index": 8.4,
+          "norm_drain_risk": 1.0,
+          "norm_waste_risk": 1.0,
+          "composite_geo_risk_score": 88.36,
+          "risk_level": "Very High Risk",
+          "recommended_intervention": "Immediate bio-sanitation audit; mandatory effluent interceptor; drain covering within 50m; live slaughter inspection.",
+          "marker_color": "#d90429",
+          "ai_predicted_risk": "Very High Risk",
+          "ai_prediction_confidence": 59.3,
+          "ai_concurrence": "True"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.979822,
+            14.439015
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-025",
+          "shop_name": "National Mutton Stall (Santhapet)",
+          "cluster_hub": "Santhapet Central Meat Market",
+          "mandal_zone": "Nellore Urban (NMC)",
+          "latitude": 14.440202,
+          "longitude": 79.980479,
+          "category": "Mutton / Sheep / Goat",
+          "animal_origin": "Nellore Local Herders (Pennar Basin)",
+          "animal_destination": "Hotel & Catering Aggregators",
+          "daily_animals_handled": 92,
+          "slaughter_on_site": "No",
+          "refrigeration_available": "No",
+          "waste_disposal_method": "Open Dumping on Ground",
+          "water_source": "Borewell / Groundwater",
+          "drainage_condition": "Open Stagnant Drain",
+          "distance_to_drain_m": 7.0,
+          "distance_to_waterbody_m": 2520.9,
+          "distance_to_hospital_m": 144.9,
+          "market_crowd_index": 8.7,
+          "norm_drain_risk": 1.0,
+          "norm_waste_risk": 0.85,
+          "composite_geo_risk_score": 69.34,
+          "risk_level": "High Risk",
+          "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
+          "marker_color": "#f77f00",
+          "ai_predicted_risk": "High Risk",
+          "ai_prediction_confidence": 81.7,
+          "ai_concurrence": "True"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.980479,
+            14.440202
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-026",
+          "shop_name": "Nellore Fresh Mutton Stall (Santhapet)",
+          "cluster_hub": "Santhapet Central Meat Market",
+          "mandal_zone": "Nellore Urban (NMC)",
+          "latitude": 14.442353,
+          "longitude": 79.978452,
+          "category": "Mutton / Sheep / Goat",
+          "animal_origin": "Nellore Local Herders (Pennar Basin)",
+          "animal_destination": "Inter-Mandal Retail Stalls",
+          "daily_animals_handled": 178,
+          "slaughter_on_site": "No",
+          "refrigeration_available": "Yes",
+          "waste_disposal_method": "Closed Bin Collection",
+          "water_source": "Borewell / Groundwater",
+          "drainage_condition": "Underground Closed Drain",
+          "distance_to_drain_m": 325.6,
+          "distance_to_waterbody_m": 2283.0,
+          "distance_to_hospital_m": 462.9,
+          "market_crowd_index": 10.0,
+          "norm_drain_risk": 0.0,
+          "norm_waste_risk": 0.1,
+          "composite_geo_risk_score": 25.18,
+          "risk_level": "Low Risk",
+          "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
+          "marker_color": "#06d6a0",
+          "ai_predicted_risk": "Low Risk",
+          "ai_prediction_confidence": 79.0,
+          "ai_concurrence": "True"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.978452,
+            14.442353
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-027",
+          "shop_name": "Sri Venkateswara Poultry Stall (Santhapet)",
+          "cluster_hub": "Santhapet Central Meat Market",
+          "mandal_zone": "Nellore Urban (NMC)",
+          "latitude": 14.43945,
+          "longitude": 79.979223,
+          "category": "Poultry (Broiler/Country Chicken)",
+          "animal_origin": "Chittoor Hatcheries Supply",
+          "animal_destination": "Trunk Road & Gandhi Nagar Restaurants",
+          "daily_animals_handled": 392,
+          "slaughter_on_site": "Yes",
+          "refrigeration_available": "No",
+          "waste_disposal_method": "Open Dumping on Ground",
+          "water_source": "Piped Municipal Supply",
+          "drainage_condition": "Semi-Covered Municipal Drain",
+          "distance_to_drain_m": 62.7,
+          "distance_to_waterbody_m": 2604.0,
+          "distance_to_hospital_m": 197.8,
+          "market_crowd_index": 7.5,
+          "norm_drain_risk": 0.848,
+          "norm_waste_risk": 0.85,
+          "composite_geo_risk_score": 83.15,
+          "risk_level": "Very High Risk",
+          "recommended_intervention": "Immediate bio-sanitation audit; mandatory effluent interceptor; drain covering within 50m; live slaughter inspection.",
+          "marker_color": "#d90429",
+          "ai_predicted_risk": "Very High Risk",
+          "ai_prediction_confidence": 88.4,
+          "ai_concurrence": "True"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.979223,
+            14.43945
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-028",
+          "shop_name": "Balaji Poultry Stall (Santhapet)",
+          "cluster_hub": "Santhapet Central Meat Market",
+          "mandal_zone": "Nellore Urban (NMC)",
+          "latitude": 14.443433,
+          "longitude": 79.982432,
+          "category": "Poultry (Broiler/Country Chicken)",
+          "animal_origin": "Local Nellore Poultry Farms (Podalakur Road)",
+          "animal_destination": "Local Ward Neighborhood Households",
+          "daily_animals_handled": 195,
+          "slaughter_on_site": "No",
+          "refrigeration_available": "No",
+          "waste_disposal_method": "Direct Open Drain Discharge",
+          "water_source": "Piped Municipal Supply",
+          "drainage_condition": "Open Stagnant Drain",
+          "distance_to_drain_m": 18.2,
+          "distance_to_waterbody_m": 2163.6,
+          "distance_to_hospital_m": 402.1,
+          "market_crowd_index": 8.2,
+          "norm_drain_risk": 1.0,
+          "norm_waste_risk": 1.0,
+          "composite_geo_risk_score": 74.61,
+          "risk_level": "Very High Risk",
+          "recommended_intervention": "Immediate bio-sanitation audit; mandatory effluent interceptor; drain covering within 50m; live slaughter inspection.",
+          "marker_color": "#d90429",
+          "ai_predicted_risk": "Very High Risk",
+          "ai_prediction_confidence": 65.8,
+          "ai_concurrence": "True"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.982432,
+            14.443433
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-029",
+          "shop_name": "Star Mutton Stall (Santhapet)",
+          "cluster_hub": "Santhapet Central Meat Market",
+          "mandal_zone": "Nellore Urban (NMC)",
+          "latitude": 14.438865,
+          "longitude": 79.977786,
+          "category": "Mutton / Sheep / Goat",
+          "animal_origin": "Kadapa / Badvel Livestock Shandy",
+          "animal_destination": "Trunk Road & Gandhi Nagar Restaurants",
+          "daily_animals_handled": 304,
+          "slaughter_on_site": "Yes",
+          "refrigeration_available": "No",
+          "waste_disposal_method": "Municipal Waste Bin",
+          "water_source": "Borewell / Groundwater",
+          "drainage_condition": "Underground Closed Drain",
+          "distance_to_drain_m": 145.0,
+          "distance_to_waterbody_m": 2668.7,
+          "distance_to_hospital_m": 346.4,
+          "market_crowd_index": 8.6,
+          "norm_drain_risk": 0.554,
+          "norm_waste_risk": 0.35,
+          "composite_geo_risk_score": 65.49,
+          "risk_level": "High Risk",
+          "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
+          "marker_color": "#f77f00",
+          "ai_predicted_risk": "High Risk",
+          "ai_prediction_confidence": 70.1,
+          "ai_concurrence": "True"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.977786,
+            14.438865
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-030",
+          "shop_name": "Gouthami Poultry Stall (Santhapet)",
+          "cluster_hub": "Santhapet Central Meat Market",
+          "mandal_zone": "Nellore Urban (NMC)",
+          "latitude": 14.439945,
+          "longitude": 79.981118,
+          "category": "Poultry (Broiler/Country Chicken)",
+          "animal_origin": "Local Nellore Poultry Farms (Podalakur Road)",
+          "animal_destination": "Trunk Road & Gandhi Nagar Restaurants",
+          "daily_animals_handled": 366,
+          "slaughter_on_site": "Yes",
+          "refrigeration_available": "No",
+          "waste_disposal_method": "Open Dumping on Ground",
+          "water_source": "Borewell / Groundwater",
+          "drainage_condition": "Semi-Covered Municipal Drain",
+          "distance_to_drain_m": 64.8,
+          "distance_to_waterbody_m": 2549.2,
+          "distance_to_hospital_m": 105.9,
+          "market_crowd_index": 7.4,
+          "norm_drain_risk": 0.84,
+          "norm_waste_risk": 0.85,
+          "composite_geo_risk_score": 82.23,
+          "risk_level": "Very High Risk",
+          "recommended_intervention": "Immediate bio-sanitation audit; mandatory effluent interceptor; drain covering within 50m; live slaughter inspection.",
+          "marker_color": "#d90429",
+          "ai_predicted_risk": "Very High Risk",
+          "ai_prediction_confidence": 85.9,
+          "ai_concurrence": "True"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.981118,
+            14.439945
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-031",
+          "shop_name": "Star Poultry Stall (Ranganayakulapet)",
+          "cluster_hub": "Ranganayakulapet Riverside Stalls",
+          "mandal_zone": "Nellore Urban (NMC)",
+          "latitude": 14.453487,
+          "longitude": 79.982483,
+          "category": "Poultry (Broiler/Country Chicken)",
+          "animal_origin": "Local Nellore Poultry Farms (Podalakur Road)",
+          "animal_destination": "Trunk Road & Gandhi Nagar Restaurants",
+          "daily_animals_handled": 236,
+          "slaughter_on_site": "Yes",
+          "refrigeration_available": "No",
+          "waste_disposal_method": "Municipal Waste Bin",
+          "water_source": "Stored Tank Water (Untreated)",
+          "drainage_condition": "Underground Closed Drain",
+          "distance_to_drain_m": 154.1,
+          "distance_to_waterbody_m": 1051.9,
+          "distance_to_hospital_m": 489.7,
+          "market_crowd_index": 7.8,
+          "norm_drain_risk": 0.521,
+          "norm_waste_risk": 0.35,
+          "composite_geo_risk_score": 65.12,
+          "risk_level": "High Risk",
+          "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
+          "marker_color": "#f77f00",
+          "ai_predicted_risk": "High Risk",
+          "ai_prediction_confidence": 75.4,
+          "ai_concurrence": "True"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.982483,
+            14.453487
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-032",
+          "shop_name": "Star Poultry Stall (Ranganayakulapet)",
+          "cluster_hub": "Ranganayakulapet Riverside Stalls",
+          "mandal_zone": "Nellore Urban (NMC)",
+          "latitude": 14.450096,
+          "longitude": 79.987515,
+          "category": "Poultry (Broiler/Country Chicken)",
+          "animal_origin": "Allur Broiler Breeding Units",
+          "animal_destination": "Local Ward Neighborhood Households",
+          "daily_animals_handled": 265,
+          "slaughter_on_site": "Yes",
+          "refrigeration_available": "No",
+          "waste_disposal_method": "Municipal Waste Bin",
+          "water_source": "Borewell / Groundwater",
+          "drainage_condition": "Semi-Covered Municipal Drain",
+          "distance_to_drain_m": 112.8,
+          "distance_to_waterbody_m": 1426.9,
+          "distance_to_hospital_m": 431.4,
+          "market_crowd_index": 7.7,
+          "norm_drain_risk": 0.669,
+          "norm_waste_risk": 0.35,
+          "composite_geo_risk_score": 68.49,
+          "risk_level": "High Risk",
+          "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
+          "marker_color": "#f77f00",
+          "ai_predicted_risk": "High Risk",
+          "ai_prediction_confidence": 88.0,
+          "ai_concurrence": "True"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.987515,
+            14.450096
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-033",
+          "shop_name": "Balaji Poultry Stall (Ranganayakulapet)",
+          "cluster_hub": "Ranganayakulapet Riverside Stalls",
+          "mandal_zone": "Nellore Urban (NMC)",
+          "latitude": 14.454383,
+          "longitude": 79.98637,
+          "category": "Poultry (Broiler/Country Chicken)",
+          "animal_origin": "Allur Broiler Breeding Units",
+          "animal_destination": "Hotel & Catering Aggregators",
+          "daily_animals_handled": 167,
+          "slaughter_on_site": "No",
+          "refrigeration_available": "No",
+          "waste_disposal_method": "Direct Open Drain Discharge",
+          "water_source": "Piped Municipal Supply",
+          "drainage_condition": "Open Stagnant Drain",
+          "distance_to_drain_m": 18.3,
+          "distance_to_waterbody_m": 952.8,
+          "distance_to_hospital_m": 80.1,
+          "market_crowd_index": 4.3,
+          "norm_drain_risk": 1.0,
+          "norm_waste_risk": 1.0,
+          "composite_geo_risk_score": 70.77,
+          "risk_level": "High Risk",
+          "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
+          "marker_color": "#f77f00",
+          "ai_predicted_risk": "High Risk",
+          "ai_prediction_confidence": 77.3,
+          "ai_concurrence": "True"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.98637,
+            14.454383
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-034",
+          "shop_name": "Al-Madina Fish Stall (Ranganayakulapet)",
+          "cluster_hub": "Ranganayakulapet Riverside Stalls",
+          "mandal_zone": "Nellore Urban (NMC)",
+          "latitude": 14.45649,
+          "longitude": 79.987246,
+          "category": "Fish & Seafood",
+          "animal_origin": "Krishnapatnam Deep Sea Port Landing",
+          "animal_destination": "Inter-Mandal Retail Stalls",
+          "daily_animals_handled": 160,
+          "slaughter_on_site": "Yes",
+          "refrigeration_available": "No",
+          "waste_disposal_method": "Direct Open Drain Discharge",
+          "water_source": "Piped Municipal Supply",
+          "drainage_condition": "Semi-Covered Municipal Drain",
+          "distance_to_drain_m": 61.3,
+          "distance_to_waterbody_m": 719.8,
+          "distance_to_hospital_m": 278.1,
+          "market_crowd_index": 7.2,
+          "norm_drain_risk": 0.852,
+          "norm_waste_risk": 1.0,
+          "composite_geo_risk_score": 84.54,
+          "risk_level": "Very High Risk",
+          "recommended_intervention": "Immediate bio-sanitation audit; mandatory effluent interceptor; drain covering within 50m; live slaughter inspection.",
+          "marker_color": "#d90429",
+          "ai_predicted_risk": "Very High Risk",
+          "ai_prediction_confidence": 65.5,
+          "ai_concurrence": "True"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.987246,
+            14.45649
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-035",
+          "shop_name": "Sai Krupa Fish Stall (Ranganayakulapet)",
+          "cluster_hub": "Ranganayakulapet Riverside Stalls",
+          "mandal_zone": "Nellore Urban (NMC)",
+          "latitude": 14.451808,
+          "longitude": 79.98587,
+          "category": "Fish & Seafood",
+          "animal_origin": "Krishnapatnam Deep Sea Port Landing",
+          "animal_destination": "Hotel & Catering Aggregators",
+          "daily_animals_handled": 47,
+          "slaughter_on_site": "Yes",
+          "refrigeration_available": "Yes",
+          "waste_disposal_method": "Municipal Waste Bin",
+          "water_source": "Piped Municipal Supply",
+          "drainage_condition": "Open Stagnant Drain",
+          "distance_to_drain_m": 26.0,
+          "distance_to_waterbody_m": 1237.6,
+          "distance_to_hospital_m": 272.4,
+          "market_crowd_index": 6.6,
+          "norm_drain_risk": 0.979,
+          "norm_waste_risk": 0.35,
+          "composite_geo_risk_score": 61.65,
+          "risk_level": "High Risk",
+          "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
+          "marker_color": "#f77f00",
+          "ai_predicted_risk": "High Risk",
+          "ai_prediction_confidence": 60.3,
+          "ai_concurrence": "True"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.98587,
+            14.451808
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-036",
+          "shop_name": "National Fish Stall (Ranganayakulapet)",
+          "cluster_hub": "Ranganayakulapet Riverside Stalls",
+          "mandal_zone": "Nellore Urban (NMC)",
+          "latitude": 14.450592,
+          "longitude": 79.988264,
+          "category": "Fish & Seafood",
+          "animal_origin": "Mypadu Coastal Aquaculture Farms",
+          "animal_destination": "Local Ward Neighborhood Households",
+          "daily_animals_handled": 393,
+          "slaughter_on_site": "No",
+          "refrigeration_available": "No",
+          "waste_disposal_method": "Municipal Waste Bin",
+          "water_source": "Borewell / Groundwater",
+          "drainage_condition": "Semi-Covered Municipal Drain",
+          "distance_to_drain_m": 53.3,
+          "distance_to_waterbody_m": 1372.0,
+          "distance_to_hospital_m": 348.6,
+          "market_crowd_index": 8.2,
+          "norm_drain_risk": 0.881,
+          "norm_waste_risk": 0.35,
+          "composite_geo_risk_score": 64.76,
+          "risk_level": "High Risk",
+          "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
+          "marker_color": "#f77f00",
+          "ai_predicted_risk": "High Risk",
+          "ai_prediction_confidence": 88.9,
+          "ai_concurrence": "True"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.988264,
+            14.450592
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-037",
+          "shop_name": "Gouthami Fish Stall (Ranganayakulapet)",
+          "cluster_hub": "Ranganayakulapet Riverside Stalls",
+          "mandal_zone": "Nellore Urban (NMC)",
+          "latitude": 14.453234,
+          "longitude": 79.988601,
+          "category": "Fish & Seafood",
+          "animal_origin": "Pulicat Lake Brackish Water Source",
+          "animal_destination": "Trunk Road & Gandhi Nagar Restaurants",
+          "daily_animals_handled": 340,
+          "slaughter_on_site": "Yes",
+          "refrigeration_available": "No",
+          "waste_disposal_method": "Open Dumping on Ground",
+          "water_source": "Borewell / Groundwater",
+          "drainage_condition": "Open Stagnant Drain",
+          "distance_to_drain_m": 7.2,
+          "distance_to_waterbody_m": 1079.8,
+          "distance_to_hospital_m": 192.3,
+          "market_crowd_index": 7.5,
+          "norm_drain_risk": 1.0,
+          "norm_waste_risk": 0.85,
+          "composite_geo_risk_score": 88.89,
+          "risk_level": "Very High Risk",
+          "recommended_intervention": "Immediate bio-sanitation audit; mandatory effluent interceptor; drain covering within 50m; live slaughter inspection.",
+          "marker_color": "#d90429",
+          "ai_predicted_risk": "Very High Risk",
+          "ai_prediction_confidence": 76.5,
+          "ai_concurrence": "True"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.988601,
+            14.453234
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-038",
+          "shop_name": "Annapurna Fish Stall (Ranganayakulapet)",
+          "cluster_hub": "Ranganayakulapet Riverside Stalls",
+          "mandal_zone": "Nellore Urban (NMC)",
+          "latitude": 14.456561,
+          "longitude": 79.986113,
+          "category": "Fish & Seafood",
+          "animal_origin": "Krishnapatnam Deep Sea Port Landing",
+          "animal_destination": "Inter-Mandal Retail Stalls",
+          "daily_animals_handled": 267,
+          "slaughter_on_site": "No",
+          "refrigeration_available": "No",
+          "waste_disposal_method": "Municipal Waste Bin",
+          "water_source": "Piped Municipal Supply",
+          "drainage_condition": "Semi-Covered Municipal Drain",
+          "distance_to_drain_m": 59.7,
+          "distance_to_waterbody_m": 712.0,
+          "distance_to_hospital_m": 300.4,
+          "market_crowd_index": 5.9,
+          "norm_drain_risk": 0.858,
+          "norm_waste_risk": 0.35,
+          "composite_geo_risk_score": 59.38,
+          "risk_level": "High Risk",
+          "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
+          "marker_color": "#f77f00",
+          "ai_predicted_risk": "High Risk",
+          "ai_prediction_confidence": 86.2,
+          "ai_concurrence": "True"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.986113,
+            14.456561
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-039",
+          "shop_name": "Star Fish Stall (Ranganayakulapet)",
+          "cluster_hub": "Ranganayakulapet Riverside Stalls",
+          "mandal_zone": "Nellore Urban (NMC)",
+          "latitude": 14.450964,
+          "longitude": 79.987198,
+          "category": "Fish & Seafood",
+          "animal_origin": "Pennar River Catchment",
+          "animal_destination": "Trunk Road & Gandhi Nagar Restaurants",
+          "daily_animals_handled": 369,
+          "slaughter_on_site": "Yes",
+          "refrigeration_available": "No",
+          "waste_disposal_method": "Direct Open Drain Discharge",
+          "water_source": "Borewell / Groundwater",
+          "drainage_condition": "Semi-Covered Municipal Drain",
+          "distance_to_drain_m": 86.5,
+          "distance_to_waterbody_m": 1330.9,
+          "distance_to_hospital_m": 338.3,
+          "market_crowd_index": 8.6,
+          "norm_drain_risk": 0.762,
+          "norm_waste_risk": 1.0,
+          "composite_geo_risk_score": 87.7,
+          "risk_level": "Very High Risk",
+          "recommended_intervention": "Immediate bio-sanitation audit; mandatory effluent interceptor; drain covering within 50m; live slaughter inspection.",
+          "marker_color": "#d90429",
+          "ai_predicted_risk": "Very High Risk",
+          "ai_prediction_confidence": 75.4,
+          "ai_concurrence": "True"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.987198,
+            14.450964
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-040",
+          "shop_name": "Star Poultry Stall (Ranganayakulapet)",
+          "cluster_hub": "Ranganayakulapet Riverside Stalls",
+          "mandal_zone": "Nellore Urban (NMC)",
+          "latitude": 14.453251,
+          "longitude": 79.989542,
+          "category": "Poultry (Broiler/Country Chicken)",
+          "animal_origin": "Chittoor Hatcheries Supply",
+          "animal_destination": "Local Street Food Vendors",
+          "daily_animals_handled": 278,
+          "slaughter_on_site": "Yes",
+          "refrigeration_available": "Yes",
+          "waste_disposal_method": "Municipal Waste Bin",
+          "water_source": "Stored Tank Water (Untreated)",
+          "drainage_condition": "Semi-Covered Municipal Drain",
+          "distance_to_drain_m": 89.7,
+          "distance_to_waterbody_m": 1078.0,
+          "distance_to_hospital_m": 286.1,
+          "market_crowd_index": 7.5,
+          "norm_drain_risk": 0.751,
+          "norm_waste_risk": 0.35,
+          "composite_geo_risk_score": 62.8,
+          "risk_level": "High Risk",
+          "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
+          "marker_color": "#f77f00",
+          "ai_predicted_risk": "High Risk",
+          "ai_prediction_confidence": 81.3,
+          "ai_concurrence": "True"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.989542,
+            14.453251
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-041",
+          "shop_name": "Balaji Poultry Stall (Vedayapalem)",
+          "cluster_hub": "Vedayapalem - Ramalingapuram Meat Cluster",
+          "mandal_zone": "Nellore Urban (NMC)",
+          "latitude": 14.41985,
+          "longitude": 79.964983,
+          "category": "Poultry (Broiler/Country Chicken)",
+          "animal_origin": "Local Nellore Poultry Farms (Podalakur Road)",
+          "animal_destination": "Inter-Mandal Retail Stalls",
+          "daily_animals_handled": 262,
+          "slaughter_on_site": "Yes",
+          "refrigeration_available": "Yes",
+          "waste_disposal_method": "Municipal Waste Bin",
+          "water_source": "Piped Municipal Supply",
+          "drainage_condition": "Semi-Covered Municipal Drain",
+          "distance_to_drain_m": 45.6,
+          "distance_to_waterbody_m": 4771.3,
+          "distance_to_hospital_m": 384.2,
+          "market_crowd_index": 6.6,
+          "norm_drain_risk": 0.909,
+          "norm_waste_risk": 0.35,
+          "composite_geo_risk_score": 61.94,
+          "risk_level": "High Risk",
+          "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
+          "marker_color": "#f77f00",
+          "ai_predicted_risk": "High Risk",
+          "ai_prediction_confidence": 53.0,
+          "ai_concurrence": "True"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.964983,
+            14.41985
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-042",
+          "shop_name": "Coastal Choice Mutton Stall (Vedayapalem)",
+          "cluster_hub": "Vedayapalem - Ramalingapuram Meat Cluster",
+          "mandal_zone": "Nellore Urban (NMC)",
+          "latitude": 14.414967,
+          "longitude": 79.963054,
+          "category": "Mutton / Sheep / Goat",
+          "animal_origin": "Nellore Local Herders (Pennar Basin)",
+          "animal_destination": "Inter-Mandal Retail Stalls",
+          "daily_animals_handled": 243,
+          "slaughter_on_site": "No",
+          "refrigeration_available": "No",
+          "waste_disposal_method": "Open Dumping on Ground",
+          "water_source": "Piped Municipal Supply",
+          "drainage_condition": "Semi-Covered Municipal Drain",
+          "distance_to_drain_m": 87.0,
+          "distance_to_waterbody_m": 5311.2,
+          "distance_to_hospital_m": 481.3,
+          "market_crowd_index": 4.3,
+          "norm_drain_risk": 0.761,
+          "norm_waste_risk": 0.85,
+          "composite_geo_risk_score": 60.12,
+          "risk_level": "High Risk",
+          "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
+          "marker_color": "#f77f00",
+          "ai_predicted_risk": "High Risk",
+          "ai_prediction_confidence": 84.1,
+          "ai_concurrence": "True"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.963054,
+            14.414967
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-043",
+          "shop_name": "Nellore Fresh Mutton Stall (Vedayapalem)",
+          "cluster_hub": "Vedayapalem - Ramalingapuram Meat Cluster",
+          "mandal_zone": "Nellore Urban (NMC)",
+          "latitude": 14.414642,
+          "longitude": 79.968633,
+          "category": "Mutton / Sheep / Goat",
+          "animal_origin": "Nellore Local Herders (Pennar Basin)",
+          "animal_destination": "Local Street Food Vendors",
+          "daily_animals_handled": 345,
+          "slaughter_on_site": "Yes",
+          "refrigeration_available": "No",
+          "waste_disposal_method": "Closed Bin Collection",
+          "water_source": "Borewell / Groundwater",
+          "drainage_condition": "Underground Closed Drain",
+          "distance_to_drain_m": 604.1,
+          "distance_to_waterbody_m": 5347.2,
+          "distance_to_hospital_m": 315.8,
+          "market_crowd_index": 4.7,
+          "norm_drain_risk": 0.0,
+          "norm_waste_risk": 0.1,
+          "composite_geo_risk_score": 41.72,
+          "risk_level": "Moderate Risk",
+          "recommended_intervention": "Monthly routine surveillance; water potability testing; solid waste collection compliance.",
+          "marker_color": "#ffd166",
+          "ai_predicted_risk": "Moderate Risk",
+          "ai_prediction_confidence": 45.4,
+          "ai_concurrence": "True"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.968633,
+            14.414642
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-044",
+          "shop_name": "Al-Madina Poultry Stall (Vedayapalem)",
+          "cluster_hub": "Vedayapalem - Ramalingapuram Meat Cluster",
+          "mandal_zone": "Nellore Urban (NMC)",
+          "latitude": 14.420765,
+          "longitude": 79.96853,
+          "category": "Poultry (Broiler/Country Chicken)",
+          "animal_origin": "Chittoor Hatcheries Supply",
+          "animal_destination": "Trunk Road & Gandhi Nagar Restaurants",
+          "daily_animals_handled": 57,
+          "slaughter_on_site": "Yes",
+          "refrigeration_available": "Yes",
+          "waste_disposal_method": "Municipal Waste Bin",
+          "water_source": "Borewell / Groundwater",
+          "drainage_condition": "Underground Closed Drain",
+          "distance_to_drain_m": 213.1,
+          "distance_to_waterbody_m": 4670.0,
+          "distance_to_hospital_m": 449.9,
+          "market_crowd_index": 6.7,
+          "norm_drain_risk": 0.31,
+          "norm_waste_risk": 0.35,
+          "composite_geo_risk_score": 42.58,
+          "risk_level": "Moderate Risk",
+          "recommended_intervention": "Monthly routine surveillance; water potability testing; solid waste collection compliance.",
+          "marker_color": "#ffd166",
+          "ai_predicted_risk": "Moderate Risk",
+          "ai_prediction_confidence": 61.7,
+          "ai_concurrence": "True"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.96853,
+            14.420765
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-045",
+          "shop_name": "National Poultry Stall (Vedayapalem)",
+          "cluster_hub": "Vedayapalem - Ramalingapuram Meat Cluster",
+          "mandal_zone": "Nellore Urban (NMC)",
+          "latitude": 14.415129,
+          "longitude": 79.969913,
+          "category": "Poultry (Broiler/Country Chicken)",
+          "animal_origin": "Chittoor Hatcheries Supply",
+          "animal_destination": "Local Street Food Vendors",
+          "daily_animals_handled": 269,
+          "slaughter_on_site": "Yes",
+          "refrigeration_available": "No",
+          "waste_disposal_method": "Closed Bin Collection",
+          "water_source": "Stored Tank Water (Untreated)",
+          "drainage_condition": "Underground Closed Drain",
+          "distance_to_drain_m": 687.6,
+          "distance_to_waterbody_m": 5293.2,
+          "distance_to_hospital_m": 376.4,
+          "market_crowd_index": 7.2,
+          "norm_drain_risk": 0.0,
+          "norm_waste_risk": 0.1,
+          "composite_geo_risk_score": 43.78,
+          "risk_level": "Moderate Risk",
+          "recommended_intervention": "Monthly routine surveillance; water potability testing; solid waste collection compliance.",
+          "marker_color": "#ffd166",
+          "ai_predicted_risk": "Moderate Risk",
+          "ai_prediction_confidence": 64.1,
+          "ai_concurrence": "True"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.969913,
+            14.415129
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-046",
+          "shop_name": "Al-Madina Poultry Stall (Vedayapalem)",
+          "cluster_hub": "Vedayapalem - Ramalingapuram Meat Cluster",
+          "mandal_zone": "Nellore Urban (NMC)",
+          "latitude": 14.416959,
+          "longitude": 79.96712,
+          "category": "Poultry (Broiler/Country Chicken)",
+          "animal_origin": "Allur Broiler Breeding Units",
+          "animal_destination": "Trunk Road & Gandhi Nagar Restaurants",
+          "daily_animals_handled": 164,
+          "slaughter_on_site": "Yes",
+          "refrigeration_available": "Yes",
+          "waste_disposal_method": "Municipal Waste Bin",
+          "water_source": "Piped Municipal Supply",
+          "drainage_condition": "Underground Closed Drain",
+          "distance_to_drain_m": 324.9,
+          "distance_to_waterbody_m": 5090.9,
+          "distance_to_hospital_m": 13.7,
+          "market_crowd_index": 3.9,
+          "norm_drain_risk": 0.0,
+          "norm_waste_risk": 0.35,
+          "composite_geo_risk_score": 32.99,
+          "risk_level": "Low Risk",
+          "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
+          "marker_color": "#06d6a0",
+          "ai_predicted_risk": "Low Risk",
+          "ai_prediction_confidence": 74.3,
+          "ai_concurrence": "True"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.96712,
+            14.416959
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-047",
+          "shop_name": "Pennar Quality Poultry Stall (Vedayapalem)",
+          "cluster_hub": "Vedayapalem - Ramalingapuram Meat Cluster",
+          "mandal_zone": "Nellore Urban (NMC)",
+          "latitude": 14.416943,
+          "longitude": 79.96334,
+          "category": "Poultry (Broiler/Country Chicken)",
+          "animal_origin": "Chittoor Hatcheries Supply",
+          "animal_destination": "Inter-Mandal Retail Stalls",
+          "daily_animals_handled": 38,
+          "slaughter_on_site": "No",
+          "refrigeration_available": "No",
+          "waste_disposal_method": "Open Dumping on Ground",
+          "water_source": "Borewell / Groundwater",
+          "drainage_condition": "Open Stagnant Drain",
+          "distance_to_drain_m": 10.7,
+          "distance_to_waterbody_m": 5092.7,
+          "distance_to_hospital_m": 394.2,
+          "market_crowd_index": 3.8,
+          "norm_drain_risk": 1.0,
+          "norm_waste_risk": 0.85,
+          "composite_geo_risk_score": 60.79,
+          "risk_level": "High Risk",
+          "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
+          "marker_color": "#f77f00",
+          "ai_predicted_risk": "High Risk",
+          "ai_prediction_confidence": 85.4,
+          "ai_concurrence": "True"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.96334,
+            14.416943
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-048",
+          "shop_name": "Annapurna Poultry Stall (Vedayapalem)",
+          "cluster_hub": "Vedayapalem - Ramalingapuram Meat Cluster",
+          "mandal_zone": "Nellore Urban (NMC)",
+          "latitude": 14.419067,
+          "longitude": 79.969542,
+          "category": "Poultry (Broiler/Country Chicken)",
+          "animal_origin": "Allur Broiler Breeding Units",
+          "animal_destination": "Hotel & Catering Aggregators",
+          "daily_animals_handled": 197,
+          "slaughter_on_site": "No",
+          "refrigeration_available": "No",
+          "waste_disposal_method": "Closed Bin Collection",
+          "water_source": "Piped Municipal Supply",
+          "drainage_condition": "Underground Closed Drain",
+          "distance_to_drain_m": 409.1,
+          "distance_to_waterbody_m": 4857.8,
+          "distance_to_hospital_m": 357.4,
+          "market_crowd_index": 6.4,
+          "norm_drain_risk": 0.0,
+          "norm_waste_risk": 0.1,
+          "composite_geo_risk_score": 28.23,
+          "risk_level": "Low Risk",
+          "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
+          "marker_color": "#06d6a0",
+          "ai_predicted_risk": "Low Risk",
+          "ai_prediction_confidence": 69.1,
+          "ai_concurrence": "True"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.969542,
+            14.419067
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-049",
+          "shop_name": "Gouthami Poultry Stall (Vedayapalem)",
+          "cluster_hub": "Vedayapalem - Ramalingapuram Meat Cluster",
+          "mandal_zone": "Nellore Urban (NMC)",
+          "latitude": 14.418532,
+          "longitude": 79.965365,
+          "category": "Poultry (Broiler/Country Chicken)",
+          "animal_origin": "Allur Broiler Breeding Units",
+          "animal_destination": "Trunk Road & Gandhi Nagar Restaurants",
+          "daily_animals_handled": 357,
+          "slaughter_on_site": "Yes",
+          "refrigeration_available": "No",
+          "waste_disposal_method": "Direct Open Drain Discharge",
+          "water_source": "Borewell / Groundwater",
+          "drainage_condition": "Semi-Covered Municipal Drain",
+          "distance_to_drain_m": 70.5,
+          "distance_to_waterbody_m": 4917.0,
+          "distance_to_hospital_m": 245.0,
+          "market_crowd_index": 6.0,
+          "norm_drain_risk": 0.82,
+          "norm_waste_risk": 1.0,
+          "composite_geo_risk_score": 82.42,
+          "risk_level": "Very High Risk",
+          "recommended_intervention": "Immediate bio-sanitation audit; mandatory effluent interceptor; drain covering within 50m; live slaughter inspection.",
+          "marker_color": "#d90429",
+          "ai_predicted_risk": "Very High Risk",
+          "ai_prediction_confidence": 78.2,
+          "ai_concurrence": "True"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.965365,
+            14.418532
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-050",
+          "shop_name": "National Poultry Stall (Vedayapalem)",
+          "cluster_hub": "Vedayapalem - Ramalingapuram Meat Cluster",
+          "mandal_zone": "Nellore Urban (NMC)",
+          "latitude": 14.420941,
+          "longitude": 79.968158,
+          "category": "Poultry (Broiler/Country Chicken)",
+          "animal_origin": "Chittoor Hatcheries Supply",
+          "animal_destination": "Trunk Road & Gandhi Nagar Restaurants",
+          "daily_animals_handled": 263,
+          "slaughter_on_site": "Yes",
+          "refrigeration_available": "No",
+          "waste_disposal_method": "Municipal Waste Bin",
+          "water_source": "Piped Municipal Supply",
+          "drainage_condition": "Underground Closed Drain",
+          "distance_to_drain_m": 169.1,
+          "distance_to_waterbody_m": 4650.6,
+          "distance_to_hospital_m": 455.6,
+          "market_crowd_index": 6.5,
+          "norm_drain_risk": 0.468,
+          "norm_waste_risk": 0.35,
+          "composite_geo_risk_score": 59.28,
+          "risk_level": "High Risk",
+          "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
+          "marker_color": "#f77f00",
+          "ai_predicted_risk": "High Risk",
+          "ai_prediction_confidence": 67.3,
+          "ai_concurrence": "True"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.968158,
+            14.420941
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-051",
+          "shop_name": "Nellore Fresh Mutton Stall (Kovur)",
+          "cluster_hub": "Kovur Main Bazaar & Daily Market",
+          "mandal_zone": "Kovur Mandal",
+          "latitude": 14.493883,
+          "longitude": 79.974759,
+          "category": "Mutton / Sheep / Goat",
+          "animal_origin": "Atmakur Cattle & Sheep Market",
+          "animal_destination": "Local Ward Neighborhood Households",
+          "daily_animals_handled": 321,
+          "slaughter_on_site": "Yes",
+          "refrigeration_available": "Yes",
+          "waste_disposal_method": "Municipal Waste Bin",
+          "water_source": "Stored Tank Water (Untreated)",
+          "drainage_condition": "Semi-Covered Municipal Drain",
+          "distance_to_drain_m": 115.1,
+          "distance_to_waterbody_m": 3414.9,
+          "distance_to_hospital_m": 467.0,
+          "market_crowd_index": 6.5,
+          "norm_drain_risk": 0.66,
+          "norm_waste_risk": 0.35,
+          "composite_geo_risk_score": 56.89,
+          "risk_level": "High Risk",
+          "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
+          "marker_color": "#f77f00",
+          "ai_predicted_risk": "High Risk",
+          "ai_prediction_confidence": 51.2,
+          "ai_concurrence": "True"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.974759,
+            14.493883
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-052",
+          "shop_name": "Amma Mutton Stall (Kovur)",
+          "cluster_hub": "Kovur Main Bazaar & Daily Market",
+          "mandal_zone": "Kovur Mandal",
+          "latitude": 14.496225,
+          "longitude": 79.975029,
+          "category": "Mutton / Sheep / Goat",
+          "animal_origin": "Kadapa / Badvel Livestock Shandy",
+          "animal_destination": "Hotel & Catering Aggregators",
+          "daily_animals_handled": 375,
+          "slaughter_on_site": "Yes",
+          "refrigeration_available": "Yes",
+          "waste_disposal_method": "Open Dumping on Ground",
+          "water_source": "Piped Municipal Supply",
+          "drainage_condition": "Underground Closed Drain",
+          "distance_to_drain_m": 302.6,
+          "distance_to_waterbody_m": 3673.8,
+          "distance_to_hospital_m": 557.9,
+          "market_crowd_index": 6.8,
+          "norm_drain_risk": 0.0,
+          "norm_waste_risk": 0.85,
+          "composite_geo_risk_score": 52.03,
+          "risk_level": "Moderate Risk",
+          "recommended_intervention": "Monthly routine surveillance; water potability testing; solid waste collection compliance.",
+          "marker_color": "#ffd166",
+          "ai_predicted_risk": "Low Risk",
+          "ai_prediction_confidence": 51.4,
+          "ai_concurrence": "False"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.975029,
+            14.496225
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-053",
+          "shop_name": "National Poultry Stall (Kovur)",
+          "cluster_hub": "Kovur Main Bazaar & Daily Market",
+          "mandal_zone": "Kovur Mandal",
+          "latitude": 14.491906,
+          "longitude": 79.977838,
+          "category": "Poultry (Broiler/Country Chicken)",
+          "animal_origin": "Chittoor Hatcheries Supply",
+          "animal_destination": "Hotel & Catering Aggregators",
+          "daily_animals_handled": 31,
+          "slaughter_on_site": "No",
+          "refrigeration_available": "No",
+          "waste_disposal_method": "Municipal Waste Bin",
+          "water_source": "Stored Tank Water (Untreated)",
+          "drainage_condition": "Underground Closed Drain",
+          "distance_to_drain_m": 260.5,
+          "distance_to_waterbody_m": 3196.3,
+          "distance_to_hospital_m": 174.4,
+          "market_crowd_index": 6.5,
+          "norm_drain_risk": 0.141,
+          "norm_waste_risk": 0.35,
+          "composite_geo_risk_score": 33.22,
+          "risk_level": "Low Risk",
+          "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
+          "marker_color": "#06d6a0",
+          "ai_predicted_risk": "Low Risk",
+          "ai_prediction_confidence": 75.9,
+          "ai_concurrence": "True"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.977838,
+            14.491906
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-054",
+          "shop_name": "Nellore Fresh Fish Stall (Kovur)",
+          "cluster_hub": "Kovur Main Bazaar & Daily Market",
+          "mandal_zone": "Kovur Mandal",
+          "latitude": 14.491955,
+          "longitude": 79.979284,
+          "category": "Fish & Seafood",
+          "animal_origin": "Pulicat Lake Brackish Water Source",
+          "animal_destination": "Local Street Food Vendors",
+          "daily_animals_handled": 248,
+          "slaughter_on_site": "No",
+          "refrigeration_available": "No",
+          "waste_disposal_method": "Municipal Waste Bin",
+          "water_source": "Borewell / Groundwater",
+          "drainage_condition": "Underground Closed Drain",
+          "distance_to_drain_m": 351.2,
+          "distance_to_waterbody_m": 3201.7,
+          "distance_to_hospital_m": 120.1,
+          "market_crowd_index": 8.6,
+          "norm_drain_risk": 0.0,
+          "norm_waste_risk": 0.35,
+          "composite_geo_risk_score": 37.66,
+          "risk_level": "Low Risk",
+          "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
+          "marker_color": "#06d6a0",
+          "ai_predicted_risk": "Low Risk",
+          "ai_prediction_confidence": 83.8,
+          "ai_concurrence": "True"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.979284,
+            14.491955
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-055",
+          "shop_name": "Gouthami Mixed Stall (Kovur)",
+          "cluster_hub": "Kovur Main Bazaar & Daily Market",
+          "mandal_zone": "Kovur Mandal",
+          "latitude": 14.494144,
+          "longitude": 79.980869,
+          "category": "Mixed Live Meat & Fish",
+          "animal_origin": "Multi-Source Livestock Distributors",
+          "animal_destination": "Hotel & Catering Aggregators",
+          "daily_animals_handled": 39,
+          "slaughter_on_site": "Yes",
+          "refrigeration_available": "Yes",
+          "waste_disposal_method": "Municipal Waste Bin",
+          "water_source": "Borewell / Groundwater",
+          "drainage_condition": "Underground Closed Drain",
+          "distance_to_drain_m": 263.6,
+          "distance_to_waterbody_m": 3443.7,
+          "distance_to_hospital_m": 238.0,
+          "market_crowd_index": 7.9,
+          "norm_drain_risk": 0.13,
+          "norm_waste_risk": 0.35,
+          "composite_geo_risk_score": 39.47,
+          "risk_level": "Low Risk",
+          "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
+          "marker_color": "#06d6a0",
+          "ai_predicted_risk": "Moderate Risk",
+          "ai_prediction_confidence": 49.5,
+          "ai_concurrence": "False"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.980869,
+            14.494144
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-056",
+          "shop_name": "Coastal Choice Poultry Stall (Kovur)",
+          "cluster_hub": "Kovur Main Bazaar & Daily Market",
+          "mandal_zone": "Kovur Mandal",
+          "latitude": 14.495956,
+          "longitude": 79.977966,
+          "category": "Poultry (Broiler/Country Chicken)",
+          "animal_origin": "Chittoor Hatcheries Supply",
+          "animal_destination": "Trunk Road & Gandhi Nagar Restaurants",
+          "daily_animals_handled": 68,
+          "slaughter_on_site": "Yes",
+          "refrigeration_available": "No",
+          "waste_disposal_method": "Municipal Waste Bin",
+          "water_source": "Borewell / Groundwater",
+          "drainage_condition": "Semi-Covered Municipal Drain",
+          "distance_to_drain_m": 86.0,
+          "distance_to_waterbody_m": 3644.1,
+          "distance_to_hospital_m": 347.0,
+          "market_crowd_index": 7.1,
+          "norm_drain_risk": 0.764,
+          "norm_waste_risk": 0.35,
+          "composite_geo_risk_score": 63.27,
+          "risk_level": "High Risk",
+          "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
+          "marker_color": "#f77f00",
+          "ai_predicted_risk": "High Risk",
+          "ai_prediction_confidence": 71.6,
+          "ai_concurrence": "True"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.977966,
+            14.495956
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-057",
+          "shop_name": "National Poultry Stall (Kovur)",
+          "cluster_hub": "Kovur Main Bazaar & Daily Market",
+          "mandal_zone": "Kovur Mandal",
+          "latitude": 14.493228,
+          "longitude": 79.976471,
+          "category": "Poultry (Broiler/Country Chicken)",
+          "animal_origin": "Local Nellore Poultry Farms (Podalakur Road)",
+          "animal_destination": "Hotel & Catering Aggregators",
+          "daily_animals_handled": 138,
+          "slaughter_on_site": "Yes",
+          "refrigeration_available": "Yes",
+          "waste_disposal_method": "Municipal Waste Bin",
+          "water_source": "Borewell / Groundwater",
+          "drainage_condition": "Semi-Covered Municipal Drain",
+          "distance_to_drain_m": 54.9,
+          "distance_to_waterbody_m": 3342.4,
+          "distance_to_hospital_m": 273.4,
+          "market_crowd_index": 7.0,
+          "norm_drain_risk": 0.875,
+          "norm_waste_risk": 0.35,
+          "composite_geo_risk_score": 58.95,
+          "risk_level": "High Risk",
+          "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
+          "marker_color": "#f77f00",
+          "ai_predicted_risk": "High Risk",
+          "ai_prediction_confidence": 57.0,
+          "ai_concurrence": "True"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.976471,
+            14.493228
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-058",
+          "shop_name": "Star Mixed Stall (Kovur)",
+          "cluster_hub": "Kovur Main Bazaar & Daily Market",
+          "mandal_zone": "Kovur Mandal",
+          "latitude": 14.493955,
+          "longitude": 79.976553,
+          "category": "Mixed Live Meat & Fish",
+          "animal_origin": "Multi-Source Livestock Distributors",
+          "animal_destination": "Hotel & Catering Aggregators",
+          "daily_animals_handled": 153,
+          "slaughter_on_site": "Yes",
+          "refrigeration_available": "No",
+          "waste_disposal_method": "Direct Open Drain Discharge",
+          "water_source": "Piped Municipal Supply",
+          "drainage_condition": "Open Stagnant Drain",
+          "distance_to_drain_m": 5.0,
+          "distance_to_waterbody_m": 3422.9,
+          "distance_to_hospital_m": 284.0,
+          "market_crowd_index": 7.7,
+          "norm_drain_risk": 1.0,
+          "norm_waste_risk": 1.0,
+          "composite_geo_risk_score": 84.95,
+          "risk_level": "Very High Risk",
+          "recommended_intervention": "Immediate bio-sanitation audit; mandatory effluent interceptor; drain covering within 50m; live slaughter inspection.",
+          "marker_color": "#d90429",
+          "ai_predicted_risk": "Very High Risk",
+          "ai_prediction_confidence": 51.8,
+          "ai_concurrence": "True"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.976553,
+            14.493955
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-059",
+          "shop_name": "Sri Venkateswara Mixed Stall (Kovur)",
+          "cluster_hub": "Kovur Main Bazaar & Daily Market",
+          "mandal_zone": "Kovur Mandal",
+          "latitude": 14.494069,
+          "longitude": 79.977166,
+          "category": "Mixed Live Meat & Fish",
+          "animal_origin": "Multi-Source Livestock Distributors",
+          "animal_destination": "Inter-Mandal Retail Stalls",
+          "daily_animals_handled": 414,
+          "slaughter_on_site": "Yes",
+          "refrigeration_available": "Yes",
+          "waste_disposal_method": "Direct Open Drain Discharge",
+          "water_source": "Borewell / Groundwater",
+          "drainage_condition": "Open Stagnant Drain",
+          "distance_to_drain_m": 26.7,
+          "distance_to_waterbody_m": 3435.4,
+          "distance_to_hospital_m": 230.5,
+          "market_crowd_index": 8.1,
+          "norm_drain_risk": 0.976,
+          "norm_waste_risk": 1.0,
+          "composite_geo_risk_score": 82.25,
+          "risk_level": "Very High Risk",
+          "recommended_intervention": "Immediate bio-sanitation audit; mandatory effluent interceptor; drain covering within 50m; live slaughter inspection.",
+          "marker_color": "#d90429",
+          "ai_predicted_risk": "Very High Risk",
+          "ai_prediction_confidence": 54.8,
+          "ai_concurrence": "True"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.977166,
+            14.494069
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-060",
+          "shop_name": "Sri Venkateswara Poultry Stall (Kovur)",
+          "cluster_hub": "Kovur Main Bazaar & Daily Market",
+          "mandal_zone": "Kovur Mandal",
+          "latitude": 14.495621,
+          "longitude": 79.978202,
+          "category": "Poultry (Broiler/Country Chicken)",
+          "animal_origin": "Local Nellore Poultry Farms (Podalakur Road)",
+          "animal_destination": "Inter-Mandal Retail Stalls",
+          "daily_animals_handled": 174,
+          "slaughter_on_site": "Yes",
+          "refrigeration_available": "Yes",
+          "waste_disposal_method": "Open Dumping on Ground",
+          "water_source": "Piped Municipal Supply",
+          "drainage_condition": "Semi-Covered Municipal Drain",
+          "distance_to_drain_m": 41.2,
+          "distance_to_waterbody_m": 3607.0,
+          "distance_to_hospital_m": 303.8,
+          "market_crowd_index": 7.4,
+          "norm_drain_risk": 0.924,
+          "norm_waste_risk": 0.85,
+          "composite_geo_risk_score": 71.57,
+          "risk_level": "High Risk",
+          "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
+          "marker_color": "#f77f00",
+          "ai_predicted_risk": "High Risk",
+          "ai_prediction_confidence": 69.0,
+          "ai_concurrence": "True"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.978202,
+            14.495621
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-061",
+          "shop_name": "Sai Krupa Mixed Stall (Kovur)",
+          "cluster_hub": "Kovur Main Bazaar & Daily Market",
+          "mandal_zone": "Kovur Mandal",
+          "latitude": 14.492689,
+          "longitude": 79.977389,
+          "category": "Mixed Live Meat & Fish",
+          "animal_origin": "Multi-Source Livestock Distributors",
+          "animal_destination": "Trunk Road & Gandhi Nagar Restaurants",
+          "daily_animals_handled": 51,
+          "slaughter_on_site": "Yes",
+          "refrigeration_available": "No",
+          "waste_disposal_method": "Municipal Waste Bin",
+          "water_source": "Borewell / Groundwater",
+          "drainage_condition": "Underground Closed Drain",
+          "distance_to_drain_m": 162.3,
+          "distance_to_waterbody_m": 3282.8,
+          "distance_to_hospital_m": 176.9,
+          "market_crowd_index": 6.4,
+          "norm_drain_risk": 0.492,
+          "norm_waste_risk": 0.35,
+          "composite_geo_risk_score": 55.03,
+          "risk_level": "Moderate Risk",
+          "recommended_intervention": "Monthly routine surveillance; water potability testing; solid waste collection compliance.",
+          "marker_color": "#ffd166",
+          "ai_predicted_risk": "Moderate Risk",
+          "ai_prediction_confidence": 60.7,
+          "ai_concurrence": "True"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.977389,
+            14.492689
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-062",
+          "shop_name": "Star Fish Stall (Kovur)",
+          "cluster_hub": "Kovur Main Bazaar & Daily Market",
+          "mandal_zone": "Kovur Mandal",
+          "latitude": 14.494622,
+          "longitude": 79.97968,
+          "category": "Fish & Seafood",
+          "animal_origin": "Pennar River Catchment",
+          "animal_destination": "Trunk Road & Gandhi Nagar Restaurants",
+          "daily_animals_handled": 85,
+          "slaughter_on_site": "Yes",
+          "refrigeration_available": "No",
+          "waste_disposal_method": "Municipal Waste Bin",
+          "water_source": "Piped Municipal Supply",
+          "drainage_condition": "Underground Closed Drain",
+          "distance_to_drain_m": 143.5,
+          "distance_to_waterbody_m": 3496.6,
+          "distance_to_hospital_m": 194.7,
+          "market_crowd_index": 8.2,
+          "norm_drain_risk": 0.559,
+          "norm_waste_risk": 0.35,
+          "composite_geo_risk_score": 60.16,
+          "risk_level": "High Risk",
+          "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
+          "marker_color": "#f77f00",
+          "ai_predicted_risk": "High Risk",
+          "ai_prediction_confidence": 87.4,
+          "ai_concurrence": "True"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.97968,
+            14.494622
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-063",
+          "shop_name": "Kovur Royal Mixed Stall (Kovur)",
+          "cluster_hub": "Kovur Main Bazaar & Daily Market",
+          "mandal_zone": "Kovur Mandal",
+          "latitude": 14.49255,
+          "longitude": 79.97816,
+          "category": "Mixed Live Meat & Fish",
+          "animal_origin": "Multi-Source Livestock Distributors",
+          "animal_destination": "Inter-Mandal Retail Stalls",
+          "daily_animals_handled": 244,
+          "slaughter_on_site": "Yes",
+          "refrigeration_available": "No",
+          "waste_disposal_method": "Closed Bin Collection",
+          "water_source": "Piped Municipal Supply",
+          "drainage_condition": "Underground Closed Drain",
+          "distance_to_drain_m": 225.2,
+          "distance_to_waterbody_m": 3267.5,
+          "distance_to_hospital_m": 103.4,
+          "market_crowd_index": 8.8,
+          "norm_drain_risk": 0.267,
+          "norm_waste_risk": 0.1,
+          "composite_geo_risk_score": 52.3,
+          "risk_level": "Moderate Risk",
+          "recommended_intervention": "Monthly routine surveillance; water potability testing; solid waste collection compliance.",
+          "marker_color": "#ffd166",
+          "ai_predicted_risk": "Moderate Risk",
+          "ai_prediction_confidence": 83.3,
+          "ai_concurrence": "True"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.97816,
+            14.49255
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-064",
+          "shop_name": "Sri Venkateswara Mutton Stall (Kovur)",
+          "cluster_hub": "Kovur Main Bazaar & Daily Market",
+          "mandal_zone": "Kovur Mandal",
+          "latitude": 14.494103,
+          "longitude": 79.978417,
+          "category": "Mutton / Sheep / Goat",
+          "animal_origin": "Kadapa / Badvel Livestock Shandy",
+          "animal_destination": "Inter-Mandal Retail Stalls",
+          "daily_animals_handled": 63,
+          "slaughter_on_site": "Yes",
+          "refrigeration_available": "No",
+          "waste_disposal_method": "Municipal Waste Bin",
+          "water_source": "Piped Municipal Supply",
+          "drainage_condition": "Semi-Covered Municipal Drain",
+          "distance_to_drain_m": 106.0,
+          "distance_to_waterbody_m": 3439.2,
+          "distance_to_hospital_m": 137.8,
+          "market_crowd_index": 8.5,
+          "norm_drain_risk": 0.693,
+          "norm_waste_risk": 0.35,
+          "composite_geo_risk_score": 63.47,
+          "risk_level": "High Risk",
+          "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
+          "marker_color": "#f77f00",
+          "ai_predicted_risk": "High Risk",
+          "ai_prediction_confidence": 84.2,
+          "ai_concurrence": "True"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.978417,
+            14.494103
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-065",
+          "shop_name": "Sai Krupa Poultry Stall (Padugupadu)",
+          "cluster_hub": "Padugupadu Railway & Bridge Junction Stalls",
+          "mandal_zone": "Kovur Mandal",
+          "latitude": 14.475828,
+          "longitude": 79.987424,
+          "category": "Poultry (Broiler/Country Chicken)",
+          "animal_origin": "Local Nellore Poultry Farms (Podalakur Road)",
+          "animal_destination": "Trunk Road & Gandhi Nagar Restaurants",
+          "daily_animals_handled": 160,
+          "slaughter_on_site": "No",
+          "refrigeration_available": "No",
+          "waste_disposal_method": "Closed Bin Collection",
+          "water_source": "Stored Tank Water (Untreated)",
+          "drainage_condition": "Underground Closed Drain",
+          "distance_to_drain_m": 365.9,
+          "distance_to_waterbody_m": 1418.4,
+          "distance_to_hospital_m": 476.7,
+          "market_crowd_index": 5.2,
+          "norm_drain_risk": 0.0,
+          "norm_waste_risk": 0.1,
+          "composite_geo_risk_score": 27.96,
+          "risk_level": "Low Risk",
+          "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
+          "marker_color": "#06d6a0",
+          "ai_predicted_risk": "Low Risk",
+          "ai_prediction_confidence": 57.2,
+          "ai_concurrence": "True"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.987424,
+            14.475828
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-066",
+          "shop_name": "Coastal Choice Fish Stall (Padugupadu)",
+          "cluster_hub": "Padugupadu Railway & Bridge Junction Stalls",
+          "mandal_zone": "Kovur Mandal",
+          "latitude": 14.476523,
+          "longitude": 79.985025,
+          "category": "Fish & Seafood",
+          "animal_origin": "Pennar River Catchment",
+          "animal_destination": "Local Ward Neighborhood Households",
+          "daily_animals_handled": 109,
+          "slaughter_on_site": "No",
+          "refrigeration_available": "No",
+          "waste_disposal_method": "Municipal Waste Bin",
+          "water_source": "Stored Tank Water (Untreated)",
+          "drainage_condition": "Semi-Covered Municipal Drain",
+          "distance_to_drain_m": 97.4,
+          "distance_to_waterbody_m": 1495.3,
+          "distance_to_hospital_m": 225.6,
+          "market_crowd_index": 7.3,
+          "norm_drain_risk": 0.724,
+          "norm_waste_risk": 0.35,
+          "composite_geo_risk_score": 52.9,
+          "risk_level": "Moderate Risk",
+          "recommended_intervention": "Monthly routine surveillance; water potability testing; solid waste collection compliance.",
+          "marker_color": "#ffd166",
+          "ai_predicted_risk": "High Risk",
+          "ai_prediction_confidence": 77.3,
+          "ai_concurrence": "False"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.985025,
+            14.476523
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-067",
+          "shop_name": "Nellore Fresh Poultry Stall (Padugupadu)",
+          "cluster_hub": "Padugupadu Railway & Bridge Junction Stalls",
+          "mandal_zone": "Kovur Mandal",
+          "latitude": 14.477452,
+          "longitude": 79.986367,
+          "category": "Poultry (Broiler/Country Chicken)",
+          "animal_origin": "Allur Broiler Breeding Units",
+          "animal_destination": "Inter-Mandal Retail Stalls",
+          "daily_animals_handled": 301,
+          "slaughter_on_site": "Yes",
+          "refrigeration_available": "Yes",
+          "waste_disposal_method": "Municipal Waste Bin",
+          "water_source": "Borewell / Groundwater",
+          "drainage_condition": "Underground Closed Drain",
+          "distance_to_drain_m": 219.7,
+          "distance_to_waterbody_m": 1598.1,
+          "distance_to_hospital_m": 396.8,
+          "market_crowd_index": 6.1,
+          "norm_drain_risk": 0.287,
+          "norm_waste_risk": 0.35,
+          "composite_geo_risk_score": 48.47,
+          "risk_level": "Moderate Risk",
+          "recommended_intervention": "Monthly routine surveillance; water potability testing; solid waste collection compliance.",
+          "marker_color": "#ffd166",
+          "ai_predicted_risk": "Moderate Risk",
+          "ai_prediction_confidence": 76.1,
+          "ai_concurrence": "True"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.986367,
+            14.477452
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-068",
+          "shop_name": "Annapurna Fish Stall (Padugupadu)",
+          "cluster_hub": "Padugupadu Railway & Bridge Junction Stalls",
+          "mandal_zone": "Kovur Mandal",
+          "latitude": 14.476728,
+          "longitude": 79.984435,
+          "category": "Fish & Seafood",
+          "animal_origin": "Mypadu Coastal Aquaculture Farms",
+          "animal_destination": "Inter-Mandal Retail Stalls",
+          "daily_animals_handled": 45,
+          "slaughter_on_site": "No",
+          "refrigeration_available": "Yes",
+          "waste_disposal_method": "Direct Open Drain Discharge",
+          "water_source": "Borewell / Groundwater",
+          "drainage_condition": "Open Stagnant Drain",
+          "distance_to_drain_m": 30.6,
+          "distance_to_waterbody_m": 1517.9,
+          "distance_to_hospital_m": 174.4,
+          "market_crowd_index": 8.3,
+          "norm_drain_risk": 0.962,
+          "norm_waste_risk": 1.0,
+          "composite_geo_risk_score": 63.39,
+          "risk_level": "High Risk",
+          "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
+          "marker_color": "#f77f00",
+          "ai_predicted_risk": "High Risk",
+          "ai_prediction_confidence": 82.1,
+          "ai_concurrence": "True"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.984435,
+            14.476728
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-069",
+          "shop_name": "Sai Krupa Poultry Stall (Padugupadu)",
+          "cluster_hub": "Padugupadu Railway & Bridge Junction Stalls",
+          "mandal_zone": "Kovur Mandal",
+          "latitude": 14.476497,
+          "longitude": 79.986653,
+          "category": "Poultry (Broiler/Country Chicken)",
+          "animal_origin": "Local Nellore Poultry Farms (Podalakur Road)",
+          "animal_destination": "Local Street Food Vendors",
+          "daily_animals_handled": 203,
+          "slaughter_on_site": "Yes",
+          "refrigeration_available": "Yes",
+          "waste_disposal_method": "Municipal Waste Bin",
+          "water_source": "Borewell / Groundwater",
+          "drainage_condition": "Underground Closed Drain",
+          "distance_to_drain_m": 270.2,
+          "distance_to_waterbody_m": 1492.4,
+          "distance_to_hospital_m": 397.1,
+          "market_crowd_index": 5.3,
+          "norm_drain_risk": 0.106,
+          "norm_waste_risk": 0.35,
+          "composite_geo_risk_score": 40.81,
+          "risk_level": "Moderate Risk",
+          "recommended_intervention": "Monthly routine surveillance; water potability testing; solid waste collection compliance.",
+          "marker_color": "#ffd166",
+          "ai_predicted_risk": "Moderate Risk",
+          "ai_prediction_confidence": 79.6,
+          "ai_concurrence": "True"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.986653,
+            14.476497
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-070",
+          "shop_name": "Sri Venkateswara Fish Stall (Padugupadu)",
+          "cluster_hub": "Padugupadu Railway & Bridge Junction Stalls",
+          "mandal_zone": "Kovur Mandal",
+          "latitude": 14.47661,
+          "longitude": 79.987796,
+          "category": "Fish & Seafood",
+          "animal_origin": "Pulicat Lake Brackish Water Source",
+          "animal_destination": "Local Ward Neighborhood Households",
+          "daily_animals_handled": 186,
+          "slaughter_on_site": "Yes",
+          "refrigeration_available": "Yes",
+          "waste_disposal_method": "Closed Bin Collection",
+          "water_source": "Stored Tank Water (Untreated)",
+          "drainage_condition": "Underground Closed Drain",
+          "distance_to_drain_m": 388.7,
+          "distance_to_waterbody_m": 1504.9,
+          "distance_to_hospital_m": 520.7,
+          "market_crowd_index": 5.8,
+          "norm_drain_risk": 0.0,
+          "norm_waste_risk": 0.1,
+          "composite_geo_risk_score": 33.5,
+          "risk_level": "Low Risk",
+          "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
+          "marker_color": "#06d6a0",
+          "ai_predicted_risk": "Low Risk",
+          "ai_prediction_confidence": 77.7,
+          "ai_concurrence": "True"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.987796,
+            14.47661
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-071",
+          "shop_name": "Annapurna Poultry Stall (Padugupadu)",
+          "cluster_hub": "Padugupadu Railway & Bridge Junction Stalls",
+          "mandal_zone": "Kovur Mandal",
+          "latitude": 14.474266,
+          "longitude": 79.981699,
+          "category": "Poultry (Broiler/Country Chicken)",
+          "animal_origin": "Local Nellore Poultry Farms (Podalakur Road)",
+          "animal_destination": "Trunk Road & Gandhi Nagar Restaurants",
+          "daily_animals_handled": 290,
+          "slaughter_on_site": "Yes",
+          "refrigeration_available": "No",
+          "waste_disposal_method": "Closed Bin Collection",
+          "water_source": "Piped Municipal Supply",
+          "drainage_condition": "Underground Closed Drain",
+          "distance_to_drain_m": 139.0,
+          "distance_to_waterbody_m": 1245.7,
+          "distance_to_hospital_m": 238.4,
+          "market_crowd_index": 6.9,
+          "norm_drain_risk": 0.575,
+          "norm_waste_risk": 0.1,
+          "composite_geo_risk_score": 60.9,
+          "risk_level": "High Risk",
+          "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
+          "marker_color": "#f77f00",
+          "ai_predicted_risk": "High Risk",
+          "ai_prediction_confidence": 79.9,
+          "ai_concurrence": "True"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.981699,
+            14.474266
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-072",
+          "shop_name": "Kovur Royal Fish Stall (Padugupadu)",
+          "cluster_hub": "Padugupadu Railway & Bridge Junction Stalls",
+          "mandal_zone": "Kovur Mandal",
+          "latitude": 14.477676,
+          "longitude": 79.980849,
+          "category": "Fish & Seafood",
+          "animal_origin": "Pennar River Catchment",
+          "animal_destination": "Inter-Mandal Retail Stalls",
+          "daily_animals_handled": 147,
+          "slaughter_on_site": "Yes",
+          "refrigeration_available": "Yes",
+          "waste_disposal_method": "Municipal Waste Bin",
+          "water_source": "Borewell / Groundwater",
+          "drainage_condition": "Underground Closed Drain",
+          "distance_to_drain_m": 368.9,
+          "distance_to_waterbody_m": 1622.8,
+          "distance_to_hospital_m": 297.3,
+          "market_crowd_index": 7.2,
+          "norm_drain_risk": 0.0,
+          "norm_waste_risk": 0.35,
+          "composite_geo_risk_score": 39.47,
+          "risk_level": "Low Risk",
+          "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
+          "marker_color": "#06d6a0",
+          "ai_predicted_risk": "Low Risk",
+          "ai_prediction_confidence": 82.9,
+          "ai_concurrence": "True"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.980849,
+            14.477676
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-073",
+          "shop_name": "Coastal Choice Poultry Stall (Padugupadu)",
+          "cluster_hub": "Padugupadu Railway & Bridge Junction Stalls",
+          "mandal_zone": "Kovur Mandal",
+          "latitude": 14.479472,
+          "longitude": 79.983764,
+          "category": "Poultry (Broiler/Country Chicken)",
+          "animal_origin": "Local Nellore Poultry Farms (Podalakur Road)",
+          "animal_destination": "Trunk Road & Gandhi Nagar Restaurants",
+          "daily_animals_handled": 280,
+          "slaughter_on_site": "No",
+          "refrigeration_available": "Yes",
+          "waste_disposal_method": "Municipal Waste Bin",
+          "water_source": "Borewell / Groundwater",
+          "drainage_condition": "Semi-Covered Municipal Drain",
+          "distance_to_drain_m": 98.5,
+          "distance_to_waterbody_m": 1821.4,
+          "distance_to_hospital_m": 394.8,
+          "market_crowd_index": 5.2,
+          "norm_drain_risk": 0.72,
+          "norm_waste_risk": 0.35,
+          "composite_geo_risk_score": 44.24,
+          "risk_level": "Moderate Risk",
+          "recommended_intervention": "Monthly routine surveillance; water potability testing; solid waste collection compliance.",
+          "marker_color": "#ffd166",
+          "ai_predicted_risk": "Moderate Risk",
+          "ai_prediction_confidence": 56.4,
+          "ai_concurrence": "True"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.983764,
+            14.479472
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-074",
+          "shop_name": "Sri Venkateswara Mutton Stall (Inamadugu)",
+          "cluster_hub": "Inamadugu Rural Livestock & Poultry Market",
+          "mandal_zone": "Kovur Mandal",
+          "latitude": 14.491223,
+          "longitude": 80.001447,
+          "category": "Mutton / Sheep / Goat",
+          "animal_origin": "Kadapa / Badvel Livestock Shandy",
+          "animal_destination": "Hotel & Catering Aggregators",
+          "daily_animals_handled": 420,
+          "slaughter_on_site": "No",
+          "refrigeration_available": "No",
+          "waste_disposal_method": "Municipal Waste Bin",
+          "water_source": "Piped Municipal Supply",
+          "drainage_condition": "Open Stagnant Drain",
+          "distance_to_drain_m": 39.8,
+          "distance_to_waterbody_m": 3120.8,
+          "distance_to_hospital_m": 276.0,
+          "market_crowd_index": 5.1,
+          "norm_drain_risk": 0.929,
+          "norm_waste_risk": 0.35,
+          "composite_geo_risk_score": 59.47,
+          "risk_level": "High Risk",
+          "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
+          "marker_color": "#f77f00",
+          "ai_predicted_risk": "High Risk",
+          "ai_prediction_confidence": 85.5,
+          "ai_concurrence": "True"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            80.001447,
+            14.491223
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-075",
+          "shop_name": "National Poultry Stall (Inamadugu)",
+          "cluster_hub": "Inamadugu Rural Livestock & Poultry Market",
+          "mandal_zone": "Kovur Mandal",
+          "latitude": 14.490689,
+          "longitude": 80.005313,
+          "category": "Poultry (Broiler/Country Chicken)",
+          "animal_origin": "Local Nellore Poultry Farms (Podalakur Road)",
+          "animal_destination": "Local Street Food Vendors",
+          "daily_animals_handled": 300,
+          "slaughter_on_site": "Yes",
+          "refrigeration_available": "Yes",
+          "waste_disposal_method": "Closed Bin Collection",
+          "water_source": "Borewell / Groundwater",
+          "drainage_condition": "Underground Closed Drain",
+          "distance_to_drain_m": 272.2,
+          "distance_to_waterbody_m": 3061.7,
+          "distance_to_hospital_m": 145.6,
+          "market_crowd_index": 7.7,
+          "norm_drain_risk": 0.099,
+          "norm_waste_risk": 0.1,
+          "composite_geo_risk_score": 39.2,
+          "risk_level": "Low Risk",
+          "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
+          "marker_color": "#06d6a0",
+          "ai_predicted_risk": "Moderate Risk",
+          "ai_prediction_confidence": 46.7,
+          "ai_concurrence": "False"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            80.005313,
+            14.490689
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-076",
+          "shop_name": "Star Poultry Stall (Inamadugu)",
+          "cluster_hub": "Inamadugu Rural Livestock & Poultry Market",
+          "mandal_zone": "Kovur Mandal",
+          "latitude": 14.489512,
+          "longitude": 80.003652,
+          "category": "Poultry (Broiler/Country Chicken)",
+          "animal_origin": "Local Nellore Poultry Farms (Podalakur Road)",
+          "animal_destination": "Hotel & Catering Aggregators",
+          "daily_animals_handled": 406,
+          "slaughter_on_site": "Yes",
+          "refrigeration_available": "No",
+          "waste_disposal_method": "Municipal Waste Bin",
+          "water_source": "Stored Tank Water (Untreated)",
+          "drainage_condition": "Underground Closed Drain",
+          "distance_to_drain_m": 257.2,
+          "distance_to_waterbody_m": 2931.6,
+          "distance_to_hospital_m": 169.6,
+          "market_crowd_index": 6.7,
+          "norm_drain_risk": 0.153,
+          "norm_waste_risk": 0.35,
+          "composite_geo_risk_score": 54.89,
+          "risk_level": "Moderate Risk",
+          "recommended_intervention": "Monthly routine surveillance; water potability testing; solid waste collection compliance.",
+          "marker_color": "#ffd166",
+          "ai_predicted_risk": "Moderate Risk",
+          "ai_prediction_confidence": 66.5,
+          "ai_concurrence": "True"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            80.003652,
+            14.489512
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-077",
+          "shop_name": "Sri Venkateswara Poultry Stall (Inamadugu)",
+          "cluster_hub": "Inamadugu Rural Livestock & Poultry Market",
+          "mandal_zone": "Kovur Mandal",
+          "latitude": 14.493177,
+          "longitude": 79.997915,
+          "category": "Poultry (Broiler/Country Chicken)",
+          "animal_origin": "Local Nellore Poultry Farms (Podalakur Road)",
+          "animal_destination": "Trunk Road & Gandhi Nagar Restaurants",
+          "daily_animals_handled": 282,
+          "slaughter_on_site": "No",
+          "refrigeration_available": "Yes",
+          "waste_disposal_method": "Municipal Waste Bin",
+          "water_source": "Piped Municipal Supply",
+          "drainage_condition": "Underground Closed Drain",
+          "distance_to_drain_m": 448.3,
+          "distance_to_waterbody_m": 3336.8,
+          "distance_to_hospital_m": 698.4,
+          "market_crowd_index": 7.6,
+          "norm_drain_risk": 0.0,
+          "norm_waste_risk": 0.35,
+          "composite_geo_risk_score": 28.42,
+          "risk_level": "Low Risk",
+          "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
+          "marker_color": "#06d6a0",
+          "ai_predicted_risk": "Low Risk",
+          "ai_prediction_confidence": 92.8,
+          "ai_concurrence": "True"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.997915,
+            14.493177
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-078",
+          "shop_name": "Sai Krupa Mutton Stall (Inamadugu)",
+          "cluster_hub": "Inamadugu Rural Livestock & Poultry Market",
+          "mandal_zone": "Kovur Mandal",
+          "latitude": 14.493318,
+          "longitude": 80.003111,
+          "category": "Mutton / Sheep / Goat",
+          "animal_origin": "Kadapa / Badvel Livestock Shandy",
+          "animal_destination": "Local Street Food Vendors",
+          "daily_animals_handled": 160,
+          "slaughter_on_site": "Yes",
+          "refrigeration_available": "No",
+          "waste_disposal_method": "Municipal Waste Bin",
+          "water_source": "Stored Tank Water (Untreated)",
+          "drainage_condition": "Semi-Covered Municipal Drain",
+          "distance_to_drain_m": 103.1,
+          "distance_to_waterbody_m": 3352.4,
+          "distance_to_hospital_m": 275.0,
+          "market_crowd_index": 4.3,
+          "norm_drain_risk": 0.703,
+          "norm_waste_risk": 0.35,
+          "composite_geo_risk_score": 59.59,
+          "risk_level": "High Risk",
+          "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
+          "marker_color": "#f77f00",
+          "ai_predicted_risk": "High Risk",
+          "ai_prediction_confidence": 88.9,
+          "ai_concurrence": "True"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            80.003111,
+            14.493318
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-079",
+          "shop_name": "Al-Madina Poultry Stall (Inamadugu)",
+          "cluster_hub": "Inamadugu Rural Livestock & Poultry Market",
+          "mandal_zone": "Kovur Mandal",
+          "latitude": 14.492116,
+          "longitude": 80.001837,
+          "category": "Poultry (Broiler/Country Chicken)",
+          "animal_origin": "Chittoor Hatcheries Supply",
+          "animal_destination": "Local Street Food Vendors",
+          "daily_animals_handled": 302,
+          "slaughter_on_site": "Yes",
+          "refrigeration_available": "Yes",
+          "waste_disposal_method": "Municipal Waste Bin",
+          "water_source": "Stored Tank Water (Untreated)",
+          "drainage_condition": "Semi-Covered Municipal Drain",
+          "distance_to_drain_m": 89.5,
+          "distance_to_waterbody_m": 3219.5,
+          "distance_to_hospital_m": 263.9,
+          "market_crowd_index": 7.5,
+          "norm_drain_risk": 0.752,
+          "norm_waste_risk": 0.35,
+          "composite_geo_risk_score": 60.26,
+          "risk_level": "High Risk",
+          "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
+          "marker_color": "#f77f00",
+          "ai_predicted_risk": "High Risk",
+          "ai_prediction_confidence": 60.2,
+          "ai_concurrence": "True"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            80.001837,
+            14.492116
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-080",
+          "shop_name": "Amma Mutton Stall (Inamadugu)",
+          "cluster_hub": "Inamadugu Rural Livestock & Poultry Market",
+          "mandal_zone": "Kovur Mandal",
+          "latitude": 14.490952,
+          "longitude": 80.007184,
+          "category": "Mutton / Sheep / Goat",
+          "animal_origin": "Atmakur Cattle & Sheep Market",
+          "animal_destination": "Trunk Road & Gandhi Nagar Restaurants",
+          "daily_animals_handled": 380,
+          "slaughter_on_site": "Yes",
+          "refrigeration_available": "Yes",
+          "waste_disposal_method": "Municipal Waste Bin",
+          "water_source": "Borewell / Groundwater",
+          "drainage_condition": "Underground Closed Drain",
+          "distance_to_drain_m": 381.2,
+          "distance_to_waterbody_m": 3090.7,
+          "distance_to_hospital_m": 342.9,
+          "market_crowd_index": 5.2,
+          "norm_drain_risk": 0.0,
+          "norm_waste_risk": 0.35,
+          "composite_geo_risk_score": 39.74,
+          "risk_level": "Low Risk",
+          "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
+          "marker_color": "#06d6a0",
+          "ai_predicted_risk": "Low Risk",
+          "ai_prediction_confidence": 84.1,
+          "ai_concurrence": "True"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            80.007184,
+            14.490952
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-081",
+          "shop_name": "Kovur Royal Poultry Stall (Inamadugu)",
+          "cluster_hub": "Inamadugu Rural Livestock & Poultry Market",
+          "mandal_zone": "Kovur Mandal",
+          "latitude": 14.490287,
+          "longitude": 80.004373,
+          "category": "Poultry (Broiler/Country Chicken)",
+          "animal_origin": "Chittoor Hatcheries Supply",
+          "animal_destination": "Trunk Road & Gandhi Nagar Restaurants",
+          "daily_animals_handled": 112,
+          "slaughter_on_site": "Yes",
+          "refrigeration_available": "No",
+          "waste_disposal_method": "Municipal Waste Bin",
+          "water_source": "Piped Municipal Supply",
+          "drainage_condition": "Underground Closed Drain",
+          "distance_to_drain_m": 240.4,
+          "distance_to_waterbody_m": 3017.2,
+          "distance_to_hospital_m": 88.9,
+          "market_crowd_index": 3.9,
+          "norm_drain_risk": 0.213,
+          "norm_waste_risk": 0.35,
+          "composite_geo_risk_score": 45.66,
+          "risk_level": "Moderate Risk",
+          "recommended_intervention": "Monthly routine surveillance; water potability testing; solid waste collection compliance.",
+          "marker_color": "#ffd166",
+          "ai_predicted_risk": "Moderate Risk",
+          "ai_prediction_confidence": 79.2,
+          "ai_concurrence": "True"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            80.004373,
+            14.490287
+          ]
+        }
+      }
+    ]
+  },
+  "buffers_250": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-007",
+          "shop_name": "Coastal Choice Fish Stall (Stonehousepet)",
+          "risk_level": "High Risk",
+          "buffer_radius_m": 250,
+          "exposure_zone": "Immediate Bio-Exposure & Odor Vector Zone (250m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.989439,
+                14.448117
+              ],
+              [
+                79.98936,
+                14.448702
+              ],
+              [
+                79.989128,
+                14.449247
+              ],
+              [
+                79.98876,
+                14.449716
+              ],
+              [
+                79.98828,
+                14.450075
+              ],
+              [
+                79.98772,
+                14.450301
+              ],
+              [
+                79.98712,
+                14.450378
+              ],
+              [
+                79.98652,
+                14.450301
+              ],
+              [
+                79.98596,
+                14.450075
+              ],
+              [
+                79.98548,
+                14.449716
+              ],
+              [
+                79.985112,
+                14.449247
+              ],
+              [
+                79.98488,
+                14.448702
+              ],
+              [
+                79.984801,
+                14.448117
+              ],
+              [
+                79.98488,
+                14.447532
+              ],
+              [
+                79.985112,
+                14.446987
+              ],
+              [
+                79.98548,
+                14.446518
+              ],
+              [
+                79.98596,
+                14.446159
+              ],
+              [
+                79.98652,
+                14.445933
+              ],
+              [
+                79.98712,
+                14.445856
+              ],
+              [
+                79.98772,
+                14.445933
+              ],
+              [
+                79.98828,
+                14.446159
+              ],
+              [
+                79.98876,
+                14.446518
+              ],
+              [
+                79.989128,
+                14.446987
+              ],
+              [
+                79.98936,
+                14.447532
+              ],
+              [
+                79.989439,
+                14.448117
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-008",
+          "shop_name": "Gouthami Mixed Stall (Stonehousepet)",
+          "risk_level": "High Risk",
+          "buffer_radius_m": 250,
+          "exposure_zone": "Immediate Bio-Exposure & Odor Vector Zone (250m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.989451,
+                14.448281
+              ],
+              [
+                79.989372,
+                14.448866
+              ],
+              [
+                79.98914,
+                14.449411
+              ],
+              [
+                79.988772,
+                14.44988
+              ],
+              [
+                79.988292,
+                14.450239
+              ],
+              [
+                79.987732,
+                14.450465
+              ],
+              [
+                79.987132,
+                14.450542
+              ],
+              [
+                79.986532,
+                14.450465
+              ],
+              [
+                79.985972,
+                14.450239
+              ],
+              [
+                79.985492,
+                14.44988
+              ],
+              [
+                79.985124,
+                14.449411
+              ],
+              [
+                79.984892,
+                14.448866
+              ],
+              [
+                79.984813,
+                14.448281
+              ],
+              [
+                79.984892,
+                14.447696
+              ],
+              [
+                79.985124,
+                14.447151
+              ],
+              [
+                79.985492,
+                14.446682
+              ],
+              [
+                79.985972,
+                14.446323
+              ],
+              [
+                79.986532,
+                14.446097
+              ],
+              [
+                79.987132,
+                14.44602
+              ],
+              [
+                79.987732,
+                14.446097
+              ],
+              [
+                79.988292,
+                14.446323
+              ],
+              [
+                79.988772,
+                14.446682
+              ],
+              [
+                79.98914,
+                14.447151
+              ],
+              [
+                79.989372,
+                14.447696
+              ],
+              [
+                79.989451,
+                14.448281
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-010",
+          "shop_name": "Sai Krupa Poultry Stall (Stonehousepet)",
+          "risk_level": "High Risk",
+          "buffer_radius_m": 250,
+          "exposure_zone": "Immediate Bio-Exposure & Odor Vector Zone (250m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.987924,
+                14.447303
+              ],
+              [
+                79.987845,
+                14.447888
+              ],
+              [
+                79.987613,
+                14.448433
+              ],
+              [
+                79.987245,
+                14.448902
+              ],
+              [
+                79.986765,
+                14.449261
+              ],
+              [
+                79.986205,
+                14.449487
+              ],
+              [
+                79.985605,
+                14.449564
+              ],
+              [
+                79.985005,
+                14.449487
+              ],
+              [
+                79.984445,
+                14.449261
+              ],
+              [
+                79.983965,
+                14.448902
+              ],
+              [
+                79.983597,
+                14.448433
+              ],
+              [
+                79.983365,
+                14.447888
+              ],
+              [
+                79.983286,
+                14.447303
+              ],
+              [
+                79.983365,
+                14.446718
+              ],
+              [
+                79.983597,
+                14.446173
+              ],
+              [
+                79.983965,
+                14.445704
+              ],
+              [
+                79.984445,
+                14.445345
+              ],
+              [
+                79.985005,
+                14.445119
+              ],
+              [
+                79.985605,
+                14.445042
+              ],
+              [
+                79.986205,
+                14.445119
+              ],
+              [
+                79.986765,
+                14.445345
+              ],
+              [
+                79.987245,
+                14.445704
+              ],
+              [
+                79.987613,
+                14.446173
+              ],
+              [
+                79.987845,
+                14.446718
+              ],
+              [
+                79.987924,
+                14.447303
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-012",
+          "shop_name": "Gouthami Mutton Stall (Stonehousepet)",
+          "risk_level": "High Risk",
+          "buffer_radius_m": 250,
+          "exposure_zone": "Immediate Bio-Exposure & Odor Vector Zone (250m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.994745,
+                14.447601
+              ],
+              [
+                79.994666,
+                14.448186
+              ],
+              [
+                79.994434,
+                14.448731
+              ],
+              [
+                79.994066,
+                14.4492
+              ],
+              [
+                79.993586,
+                14.449559
+              ],
+              [
+                79.993026,
+                14.449785
+              ],
+              [
+                79.992426,
+                14.449862
+              ],
+              [
+                79.991826,
+                14.449785
+              ],
+              [
+                79.991266,
+                14.449559
+              ],
+              [
+                79.990786,
+                14.4492
+              ],
+              [
+                79.990418,
+                14.448731
+              ],
+              [
+                79.990186,
+                14.448186
+              ],
+              [
+                79.990107,
+                14.447601
+              ],
+              [
+                79.990186,
+                14.447016
+              ],
+              [
+                79.990418,
+                14.446471
+              ],
+              [
+                79.990786,
+                14.446002
+              ],
+              [
+                79.991266,
+                14.445643
+              ],
+              [
+                79.991826,
+                14.445417
+              ],
+              [
+                79.992426,
+                14.44534
+              ],
+              [
+                79.993026,
+                14.445417
+              ],
+              [
+                79.993586,
+                14.445643
+              ],
+              [
+                79.994066,
+                14.446002
+              ],
+              [
+                79.994434,
+                14.446471
+              ],
+              [
+                79.994666,
+                14.447016
+              ],
+              [
+                79.994745,
+                14.447601
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-020",
+          "shop_name": "Annapurna Poultry Stall (Santhapet)",
+          "risk_level": "Very High Risk",
+          "buffer_radius_m": 250,
+          "exposure_zone": "Immediate Bio-Exposure & Odor Vector Zone (250m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.980721,
+                14.437939
+              ],
+              [
+                79.980642,
+                14.438524
+              ],
+              [
+                79.98041,
+                14.439069
+              ],
+              [
+                79.980042,
+                14.439538
+              ],
+              [
+                79.979562,
+                14.439897
+              ],
+              [
+                79.979002,
+                14.440123
+              ],
+              [
+                79.978402,
+                14.4402
+              ],
+              [
+                79.977802,
+                14.440123
+              ],
+              [
+                79.977242,
+                14.439897
+              ],
+              [
+                79.976762,
+                14.439538
+              ],
+              [
+                79.976394,
+                14.439069
+              ],
+              [
+                79.976162,
+                14.438524
+              ],
+              [
+                79.976083,
+                14.437939
+              ],
+              [
+                79.976162,
+                14.437354
+              ],
+              [
+                79.976394,
+                14.436809
+              ],
+              [
+                79.976762,
+                14.43634
+              ],
+              [
+                79.977242,
+                14.435981
+              ],
+              [
+                79.977802,
+                14.435755
+              ],
+              [
+                79.978402,
+                14.435678
+              ],
+              [
+                79.979002,
+                14.435755
+              ],
+              [
+                79.979562,
+                14.435981
+              ],
+              [
+                79.980042,
+                14.43634
+              ],
+              [
+                79.98041,
+                14.436809
+              ],
+              [
+                79.980642,
+                14.437354
+              ],
+              [
+                79.980721,
+                14.437939
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-023",
+          "shop_name": "National Mutton Stall (Santhapet)",
+          "risk_level": "High Risk",
+          "buffer_radius_m": 250,
+          "exposure_zone": "Immediate Bio-Exposure & Odor Vector Zone (250m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.985983,
+                14.44226
+              ],
+              [
+                79.985904,
+                14.442845
+              ],
+              [
+                79.985672,
+                14.44339
+              ],
+              [
+                79.985304,
+                14.443859
+              ],
+              [
+                79.984824,
+                14.444218
+              ],
+              [
+                79.984264,
+                14.444444
+              ],
+              [
+                79.983664,
+                14.444521
+              ],
+              [
+                79.983064,
+                14.444444
+              ],
+              [
+                79.982504,
+                14.444218
+              ],
+              [
+                79.982024,
+                14.443859
+              ],
+              [
+                79.981656,
+                14.44339
+              ],
+              [
+                79.981424,
+                14.442845
+              ],
+              [
+                79.981345,
+                14.44226
+              ],
+              [
+                79.981424,
+                14.441675
+              ],
+              [
+                79.981656,
+                14.44113
+              ],
+              [
+                79.982024,
+                14.440661
+              ],
+              [
+                79.982504,
+                14.440302
+              ],
+              [
+                79.983064,
+                14.440076
+              ],
+              [
+                79.983664,
+                14.439999
+              ],
+              [
+                79.984264,
+                14.440076
+              ],
+              [
+                79.984824,
+                14.440302
+              ],
+              [
+                79.985304,
+                14.440661
+              ],
+              [
+                79.985672,
+                14.44113
+              ],
+              [
+                79.985904,
+                14.441675
+              ],
+              [
+                79.985983,
+                14.44226
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-024",
+          "shop_name": "Gouthami Mutton Stall (Santhapet)",
+          "risk_level": "Very High Risk",
+          "buffer_radius_m": 250,
+          "exposure_zone": "Immediate Bio-Exposure & Odor Vector Zone (250m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.982141,
+                14.439015
+              ],
+              [
+                79.982062,
+                14.4396
+              ],
+              [
+                79.98183,
+                14.440145
+              ],
+              [
+                79.981462,
+                14.440614
+              ],
+              [
+                79.980982,
+                14.440973
+              ],
+              [
+                79.980422,
+                14.441199
+              ],
+              [
+                79.979822,
+                14.441276
+              ],
+              [
+                79.979222,
+                14.441199
+              ],
+              [
+                79.978662,
+                14.440973
+              ],
+              [
+                79.978182,
+                14.440614
+              ],
+              [
+                79.977814,
+                14.440145
+              ],
+              [
+                79.977582,
+                14.4396
+              ],
+              [
+                79.977503,
+                14.439015
+              ],
+              [
+                79.977582,
+                14.43843
+              ],
+              [
+                79.977814,
+                14.437885
+              ],
+              [
+                79.978182,
+                14.437416
+              ],
+              [
+                79.978662,
+                14.437057
+              ],
+              [
+                79.979222,
+                14.436831
+              ],
+              [
+                79.979822,
+                14.436754
+              ],
+              [
+                79.980422,
+                14.436831
+              ],
+              [
+                79.980982,
+                14.437057
+              ],
+              [
+                79.981462,
+                14.437416
+              ],
+              [
+                79.98183,
+                14.437885
+              ],
+              [
+                79.982062,
+                14.43843
+              ],
+              [
+                79.982141,
+                14.439015
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-025",
+          "shop_name": "National Mutton Stall (Santhapet)",
+          "risk_level": "High Risk",
+          "buffer_radius_m": 250,
+          "exposure_zone": "Immediate Bio-Exposure & Odor Vector Zone (250m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.982798,
+                14.440202
+              ],
+              [
+                79.982719,
+                14.440787
+              ],
+              [
+                79.982487,
+                14.441332
+              ],
+              [
+                79.982119,
+                14.441801
+              ],
+              [
+                79.981639,
+                14.44216
+              ],
+              [
+                79.981079,
+                14.442386
+              ],
+              [
+                79.980479,
+                14.442463
+              ],
+              [
+                79.979879,
+                14.442386
+              ],
+              [
+                79.979319,
+                14.44216
+              ],
+              [
+                79.978839,
+                14.441801
+              ],
+              [
+                79.978471,
+                14.441332
+              ],
+              [
+                79.978239,
+                14.440787
+              ],
+              [
+                79.97816,
+                14.440202
+              ],
+              [
+                79.978239,
+                14.439617
+              ],
+              [
+                79.978471,
+                14.439072
+              ],
+              [
+                79.978839,
+                14.438603
+              ],
+              [
+                79.979319,
+                14.438244
+              ],
+              [
+                79.979879,
+                14.438018
+              ],
+              [
+                79.980479,
+                14.437941
+              ],
+              [
+                79.981079,
+                14.438018
+              ],
+              [
+                79.981639,
+                14.438244
+              ],
+              [
+                79.982119,
+                14.438603
+              ],
+              [
+                79.982487,
+                14.439072
+              ],
+              [
+                79.982719,
+                14.439617
+              ],
+              [
+                79.982798,
+                14.440202
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-027",
+          "shop_name": "Sri Venkateswara Poultry Stall (Santhapet)",
+          "risk_level": "Very High Risk",
+          "buffer_radius_m": 250,
+          "exposure_zone": "Immediate Bio-Exposure & Odor Vector Zone (250m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.981542,
+                14.43945
+              ],
+              [
+                79.981463,
+                14.440035
+              ],
+              [
+                79.981231,
+                14.44058
+              ],
+              [
+                79.980863,
+                14.441049
+              ],
+              [
+                79.980383,
+                14.441408
+              ],
+              [
+                79.979823,
+                14.441634
+              ],
+              [
+                79.979223,
+                14.441711
+              ],
+              [
+                79.978623,
+                14.441634
+              ],
+              [
+                79.978063,
+                14.441408
+              ],
+              [
+                79.977583,
+                14.441049
+              ],
+              [
+                79.977215,
+                14.44058
+              ],
+              [
+                79.976983,
+                14.440035
+              ],
+              [
+                79.976904,
+                14.43945
+              ],
+              [
+                79.976983,
+                14.438865
+              ],
+              [
+                79.977215,
+                14.43832
+              ],
+              [
+                79.977583,
+                14.437851
+              ],
+              [
+                79.978063,
+                14.437492
+              ],
+              [
+                79.978623,
+                14.437266
+              ],
+              [
+                79.979223,
+                14.437189
+              ],
+              [
+                79.979823,
+                14.437266
+              ],
+              [
+                79.980383,
+                14.437492
+              ],
+              [
+                79.980863,
+                14.437851
+              ],
+              [
+                79.981231,
+                14.43832
+              ],
+              [
+                79.981463,
+                14.438865
+              ],
+              [
+                79.981542,
+                14.43945
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-028",
+          "shop_name": "Balaji Poultry Stall (Santhapet)",
+          "risk_level": "Very High Risk",
+          "buffer_radius_m": 250,
+          "exposure_zone": "Immediate Bio-Exposure & Odor Vector Zone (250m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.984751,
+                14.443433
+              ],
+              [
+                79.984672,
+                14.444018
+              ],
+              [
+                79.98444,
+                14.444563
+              ],
+              [
+                79.984072,
+                14.445032
+              ],
+              [
+                79.983592,
+                14.445391
+              ],
+              [
+                79.983032,
+                14.445617
+              ],
+              [
+                79.982432,
+                14.445694
+              ],
+              [
+                79.981832,
+                14.445617
+              ],
+              [
+                79.981272,
+                14.445391
+              ],
+              [
+                79.980792,
+                14.445032
+              ],
+              [
+                79.980424,
+                14.444563
+              ],
+              [
+                79.980192,
+                14.444018
+              ],
+              [
+                79.980113,
+                14.443433
+              ],
+              [
+                79.980192,
+                14.442848
+              ],
+              [
+                79.980424,
+                14.442303
+              ],
+              [
+                79.980792,
+                14.441834
+              ],
+              [
+                79.981272,
+                14.441475
+              ],
+              [
+                79.981832,
+                14.441249
+              ],
+              [
+                79.982432,
+                14.441172
+              ],
+              [
+                79.983032,
+                14.441249
+              ],
+              [
+                79.983592,
+                14.441475
+              ],
+              [
+                79.984072,
+                14.441834
+              ],
+              [
+                79.98444,
+                14.442303
+              ],
+              [
+                79.984672,
+                14.442848
+              ],
+              [
+                79.984751,
+                14.443433
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-029",
+          "shop_name": "Star Mutton Stall (Santhapet)",
+          "risk_level": "High Risk",
+          "buffer_radius_m": 250,
+          "exposure_zone": "Immediate Bio-Exposure & Odor Vector Zone (250m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.980105,
+                14.438865
+              ],
+              [
+                79.980026,
+                14.43945
+              ],
+              [
+                79.979794,
+                14.439995
+              ],
+              [
+                79.979426,
+                14.440464
+              ],
+              [
+                79.978946,
+                14.440823
+              ],
+              [
+                79.978386,
+                14.441049
+              ],
+              [
+                79.977786,
+                14.441126
+              ],
+              [
+                79.977186,
+                14.441049
+              ],
+              [
+                79.976626,
+                14.440823
+              ],
+              [
+                79.976146,
+                14.440464
+              ],
+              [
+                79.975778,
+                14.439995
+              ],
+              [
+                79.975546,
+                14.43945
+              ],
+              [
+                79.975467,
+                14.438865
+              ],
+              [
+                79.975546,
+                14.43828
+              ],
+              [
+                79.975778,
+                14.437735
+              ],
+              [
+                79.976146,
+                14.437266
+              ],
+              [
+                79.976626,
+                14.436907
+              ],
+              [
+                79.977186,
+                14.436681
+              ],
+              [
+                79.977786,
+                14.436604
+              ],
+              [
+                79.978386,
+                14.436681
+              ],
+              [
+                79.978946,
+                14.436907
+              ],
+              [
+                79.979426,
+                14.437266
+              ],
+              [
+                79.979794,
+                14.437735
+              ],
+              [
+                79.980026,
+                14.43828
+              ],
+              [
+                79.980105,
+                14.438865
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-030",
+          "shop_name": "Gouthami Poultry Stall (Santhapet)",
+          "risk_level": "Very High Risk",
+          "buffer_radius_m": 250,
+          "exposure_zone": "Immediate Bio-Exposure & Odor Vector Zone (250m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.983437,
+                14.439945
+              ],
+              [
+                79.983358,
+                14.44053
+              ],
+              [
+                79.983126,
+                14.441075
+              ],
+              [
+                79.982758,
+                14.441544
+              ],
+              [
+                79.982278,
+                14.441903
+              ],
+              [
+                79.981718,
+                14.442129
+              ],
+              [
+                79.981118,
+                14.442206
+              ],
+              [
+                79.980518,
+                14.442129
+              ],
+              [
+                79.979958,
+                14.441903
+              ],
+              [
+                79.979478,
+                14.441544
+              ],
+              [
+                79.97911,
+                14.441075
+              ],
+              [
+                79.978878,
+                14.44053
+              ],
+              [
+                79.978799,
+                14.439945
+              ],
+              [
+                79.978878,
+                14.43936
+              ],
+              [
+                79.97911,
+                14.438815
+              ],
+              [
+                79.979478,
+                14.438346
+              ],
+              [
+                79.979958,
+                14.437987
+              ],
+              [
+                79.980518,
+                14.437761
+              ],
+              [
+                79.981118,
+                14.437684
+              ],
+              [
+                79.981718,
+                14.437761
+              ],
+              [
+                79.982278,
+                14.437987
+              ],
+              [
+                79.982758,
+                14.438346
+              ],
+              [
+                79.983126,
+                14.438815
+              ],
+              [
+                79.983358,
+                14.43936
+              ],
+              [
+                79.983437,
+                14.439945
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-031",
+          "shop_name": "Star Poultry Stall (Ranganayakulapet)",
+          "risk_level": "High Risk",
+          "buffer_radius_m": 250,
+          "exposure_zone": "Immediate Bio-Exposure & Odor Vector Zone (250m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.984802,
+                14.453487
+              ],
+              [
+                79.984723,
+                14.454072
+              ],
+              [
+                79.984491,
+                14.454617
+              ],
+              [
+                79.984123,
+                14.455086
+              ],
+              [
+                79.983643,
+                14.455445
+              ],
+              [
+                79.983083,
+                14.455671
+              ],
+              [
+                79.982483,
+                14.455748
+              ],
+              [
+                79.981883,
+                14.455671
+              ],
+              [
+                79.981323,
+                14.455445
+              ],
+              [
+                79.980843,
+                14.455086
+              ],
+              [
+                79.980475,
+                14.454617
+              ],
+              [
+                79.980243,
+                14.454072
+              ],
+              [
+                79.980164,
+                14.453487
+              ],
+              [
+                79.980243,
+                14.452902
+              ],
+              [
+                79.980475,
+                14.452357
+              ],
+              [
+                79.980843,
+                14.451888
+              ],
+              [
+                79.981323,
+                14.451529
+              ],
+              [
+                79.981883,
+                14.451303
+              ],
+              [
+                79.982483,
+                14.451226
+              ],
+              [
+                79.983083,
+                14.451303
+              ],
+              [
+                79.983643,
+                14.451529
+              ],
+              [
+                79.984123,
+                14.451888
+              ],
+              [
+                79.984491,
+                14.452357
+              ],
+              [
+                79.984723,
+                14.452902
+              ],
+              [
+                79.984802,
+                14.453487
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-032",
+          "shop_name": "Star Poultry Stall (Ranganayakulapet)",
+          "risk_level": "High Risk",
+          "buffer_radius_m": 250,
+          "exposure_zone": "Immediate Bio-Exposure & Odor Vector Zone (250m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.989834,
+                14.450096
+              ],
+              [
+                79.989755,
+                14.450681
+              ],
+              [
+                79.989523,
+                14.451226
+              ],
+              [
+                79.989155,
+                14.451695
+              ],
+              [
+                79.988675,
+                14.452054
+              ],
+              [
+                79.988115,
+                14.45228
+              ],
+              [
+                79.987515,
+                14.452357
+              ],
+              [
+                79.986915,
+                14.45228
+              ],
+              [
+                79.986355,
+                14.452054
+              ],
+              [
+                79.985875,
+                14.451695
+              ],
+              [
+                79.985507,
+                14.451226
+              ],
+              [
+                79.985275,
+                14.450681
+              ],
+              [
+                79.985196,
+                14.450096
+              ],
+              [
+                79.985275,
+                14.449511
+              ],
+              [
+                79.985507,
+                14.448966
+              ],
+              [
+                79.985875,
+                14.448497
+              ],
+              [
+                79.986355,
+                14.448138
+              ],
+              [
+                79.986915,
+                14.447912
+              ],
+              [
+                79.987515,
+                14.447835
+              ],
+              [
+                79.988115,
+                14.447912
+              ],
+              [
+                79.988675,
+                14.448138
+              ],
+              [
+                79.989155,
+                14.448497
+              ],
+              [
+                79.989523,
+                14.448966
+              ],
+              [
+                79.989755,
+                14.449511
+              ],
+              [
+                79.989834,
+                14.450096
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-033",
+          "shop_name": "Balaji Poultry Stall (Ranganayakulapet)",
+          "risk_level": "High Risk",
+          "buffer_radius_m": 250,
+          "exposure_zone": "Immediate Bio-Exposure & Odor Vector Zone (250m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.988689,
+                14.454383
+              ],
+              [
+                79.98861,
+                14.454968
+              ],
+              [
+                79.988378,
+                14.455513
+              ],
+              [
+                79.98801,
+                14.455982
+              ],
+              [
+                79.98753,
+                14.456341
+              ],
+              [
+                79.98697,
+                14.456567
+              ],
+              [
+                79.98637,
+                14.456644
+              ],
+              [
+                79.98577,
+                14.456567
+              ],
+              [
+                79.98521,
+                14.456341
+              ],
+              [
+                79.98473,
+                14.455982
+              ],
+              [
+                79.984362,
+                14.455513
+              ],
+              [
+                79.98413,
+                14.454968
+              ],
+              [
+                79.984051,
+                14.454383
+              ],
+              [
+                79.98413,
+                14.453798
+              ],
+              [
+                79.984362,
+                14.453253
+              ],
+              [
+                79.98473,
+                14.452784
+              ],
+              [
+                79.98521,
+                14.452425
+              ],
+              [
+                79.98577,
+                14.452199
+              ],
+              [
+                79.98637,
+                14.452122
+              ],
+              [
+                79.98697,
+                14.452199
+              ],
+              [
+                79.98753,
+                14.452425
+              ],
+              [
+                79.98801,
+                14.452784
+              ],
+              [
+                79.988378,
+                14.453253
+              ],
+              [
+                79.98861,
+                14.453798
+              ],
+              [
+                79.988689,
+                14.454383
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-034",
+          "shop_name": "Al-Madina Fish Stall (Ranganayakulapet)",
+          "risk_level": "Very High Risk",
+          "buffer_radius_m": 250,
+          "exposure_zone": "Immediate Bio-Exposure & Odor Vector Zone (250m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.989565,
+                14.45649
+              ],
+              [
+                79.989486,
+                14.457075
+              ],
+              [
+                79.989254,
+                14.45762
+              ],
+              [
+                79.988886,
+                14.458089
+              ],
+              [
+                79.988406,
+                14.458448
+              ],
+              [
+                79.987846,
+                14.458674
+              ],
+              [
+                79.987246,
+                14.458751
+              ],
+              [
+                79.986646,
+                14.458674
+              ],
+              [
+                79.986086,
+                14.458448
+              ],
+              [
+                79.985606,
+                14.458089
+              ],
+              [
+                79.985238,
+                14.45762
+              ],
+              [
+                79.985006,
+                14.457075
+              ],
+              [
+                79.984927,
+                14.45649
+              ],
+              [
+                79.985006,
+                14.455905
+              ],
+              [
+                79.985238,
+                14.45536
+              ],
+              [
+                79.985606,
+                14.454891
+              ],
+              [
+                79.986086,
+                14.454532
+              ],
+              [
+                79.986646,
+                14.454306
+              ],
+              [
+                79.987246,
+                14.454229
+              ],
+              [
+                79.987846,
+                14.454306
+              ],
+              [
+                79.988406,
+                14.454532
+              ],
+              [
+                79.988886,
+                14.454891
+              ],
+              [
+                79.989254,
+                14.45536
+              ],
+              [
+                79.989486,
+                14.455905
+              ],
+              [
+                79.989565,
+                14.45649
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-035",
+          "shop_name": "Sai Krupa Fish Stall (Ranganayakulapet)",
+          "risk_level": "High Risk",
+          "buffer_radius_m": 250,
+          "exposure_zone": "Immediate Bio-Exposure & Odor Vector Zone (250m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.988189,
+                14.451808
+              ],
+              [
+                79.98811,
+                14.452393
+              ],
+              [
+                79.987878,
+                14.452938
+              ],
+              [
+                79.98751,
+                14.453407
+              ],
+              [
+                79.98703,
+                14.453766
+              ],
+              [
+                79.98647,
+                14.453992
+              ],
+              [
+                79.98587,
+                14.454069
+              ],
+              [
+                79.98527,
+                14.453992
+              ],
+              [
+                79.98471,
+                14.453766
+              ],
+              [
+                79.98423,
+                14.453407
+              ],
+              [
+                79.983862,
+                14.452938
+              ],
+              [
+                79.98363,
+                14.452393
+              ],
+              [
+                79.983551,
+                14.451808
+              ],
+              [
+                79.98363,
+                14.451223
+              ],
+              [
+                79.983862,
+                14.450678
+              ],
+              [
+                79.98423,
+                14.450209
+              ],
+              [
+                79.98471,
+                14.44985
+              ],
+              [
+                79.98527,
+                14.449624
+              ],
+              [
+                79.98587,
+                14.449547
+              ],
+              [
+                79.98647,
+                14.449624
+              ],
+              [
+                79.98703,
+                14.44985
+              ],
+              [
+                79.98751,
+                14.450209
+              ],
+              [
+                79.987878,
+                14.450678
+              ],
+              [
+                79.98811,
+                14.451223
+              ],
+              [
+                79.988189,
+                14.451808
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-036",
+          "shop_name": "National Fish Stall (Ranganayakulapet)",
+          "risk_level": "High Risk",
+          "buffer_radius_m": 250,
+          "exposure_zone": "Immediate Bio-Exposure & Odor Vector Zone (250m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.990583,
+                14.450592
+              ],
+              [
+                79.990504,
+                14.451177
+              ],
+              [
+                79.990272,
+                14.451722
+              ],
+              [
+                79.989904,
+                14.452191
+              ],
+              [
+                79.989424,
+                14.45255
+              ],
+              [
+                79.988864,
+                14.452776
+              ],
+              [
+                79.988264,
+                14.452853
+              ],
+              [
+                79.987664,
+                14.452776
+              ],
+              [
+                79.987104,
+                14.45255
+              ],
+              [
+                79.986624,
+                14.452191
+              ],
+              [
+                79.986256,
+                14.451722
+              ],
+              [
+                79.986024,
+                14.451177
+              ],
+              [
+                79.985945,
+                14.450592
+              ],
+              [
+                79.986024,
+                14.450007
+              ],
+              [
+                79.986256,
+                14.449462
+              ],
+              [
+                79.986624,
+                14.448993
+              ],
+              [
+                79.987104,
+                14.448634
+              ],
+              [
+                79.987664,
+                14.448408
+              ],
+              [
+                79.988264,
+                14.448331
+              ],
+              [
+                79.988864,
+                14.448408
+              ],
+              [
+                79.989424,
+                14.448634
+              ],
+              [
+                79.989904,
+                14.448993
+              ],
+              [
+                79.990272,
+                14.449462
+              ],
+              [
+                79.990504,
+                14.450007
+              ],
+              [
+                79.990583,
+                14.450592
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-037",
+          "shop_name": "Gouthami Fish Stall (Ranganayakulapet)",
+          "risk_level": "Very High Risk",
+          "buffer_radius_m": 250,
+          "exposure_zone": "Immediate Bio-Exposure & Odor Vector Zone (250m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.99092,
+                14.453234
+              ],
+              [
+                79.990841,
+                14.453819
+              ],
+              [
+                79.990609,
+                14.454364
+              ],
+              [
+                79.990241,
+                14.454833
+              ],
+              [
+                79.989761,
+                14.455192
+              ],
+              [
+                79.989201,
+                14.455418
+              ],
+              [
+                79.988601,
+                14.455495
+              ],
+              [
+                79.988001,
+                14.455418
+              ],
+              [
+                79.987441,
+                14.455192
+              ],
+              [
+                79.986961,
+                14.454833
+              ],
+              [
+                79.986593,
+                14.454364
+              ],
+              [
+                79.986361,
+                14.453819
+              ],
+              [
+                79.986282,
+                14.453234
+              ],
+              [
+                79.986361,
+                14.452649
+              ],
+              [
+                79.986593,
+                14.452104
+              ],
+              [
+                79.986961,
+                14.451635
+              ],
+              [
+                79.987441,
+                14.451276
+              ],
+              [
+                79.988001,
+                14.45105
+              ],
+              [
+                79.988601,
+                14.450973
+              ],
+              [
+                79.989201,
+                14.45105
+              ],
+              [
+                79.989761,
+                14.451276
+              ],
+              [
+                79.990241,
+                14.451635
+              ],
+              [
+                79.990609,
+                14.452104
+              ],
+              [
+                79.990841,
+                14.452649
+              ],
+              [
+                79.99092,
+                14.453234
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-038",
+          "shop_name": "Annapurna Fish Stall (Ranganayakulapet)",
+          "risk_level": "High Risk",
+          "buffer_radius_m": 250,
+          "exposure_zone": "Immediate Bio-Exposure & Odor Vector Zone (250m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.988432,
+                14.456561
+              ],
+              [
+                79.988353,
+                14.457146
+              ],
+              [
+                79.988121,
+                14.457691
+              ],
+              [
+                79.987753,
+                14.45816
+              ],
+              [
+                79.987273,
+                14.458519
+              ],
+              [
+                79.986713,
+                14.458745
+              ],
+              [
+                79.986113,
+                14.458822
+              ],
+              [
+                79.985513,
+                14.458745
+              ],
+              [
+                79.984953,
+                14.458519
+              ],
+              [
+                79.984473,
+                14.45816
+              ],
+              [
+                79.984105,
+                14.457691
+              ],
+              [
+                79.983873,
+                14.457146
+              ],
+              [
+                79.983794,
+                14.456561
+              ],
+              [
+                79.983873,
+                14.455976
+              ],
+              [
+                79.984105,
+                14.455431
+              ],
+              [
+                79.984473,
+                14.454962
+              ],
+              [
+                79.984953,
+                14.454603
+              ],
+              [
+                79.985513,
+                14.454377
+              ],
+              [
+                79.986113,
+                14.4543
+              ],
+              [
+                79.986713,
+                14.454377
+              ],
+              [
+                79.987273,
+                14.454603
+              ],
+              [
+                79.987753,
+                14.454962
+              ],
+              [
+                79.988121,
+                14.455431
+              ],
+              [
+                79.988353,
+                14.455976
+              ],
+              [
+                79.988432,
+                14.456561
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-039",
+          "shop_name": "Star Fish Stall (Ranganayakulapet)",
+          "risk_level": "Very High Risk",
+          "buffer_radius_m": 250,
+          "exposure_zone": "Immediate Bio-Exposure & Odor Vector Zone (250m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.989517,
+                14.450964
+              ],
+              [
+                79.989438,
+                14.451549
+              ],
+              [
+                79.989206,
+                14.452094
+              ],
+              [
+                79.988838,
+                14.452563
+              ],
+              [
+                79.988358,
+                14.452922
+              ],
+              [
+                79.987798,
+                14.453148
+              ],
+              [
+                79.987198,
+                14.453225
+              ],
+              [
+                79.986598,
+                14.453148
+              ],
+              [
+                79.986038,
+                14.452922
+              ],
+              [
+                79.985558,
+                14.452563
+              ],
+              [
+                79.98519,
+                14.452094
+              ],
+              [
+                79.984958,
+                14.451549
+              ],
+              [
+                79.984879,
+                14.450964
+              ],
+              [
+                79.984958,
+                14.450379
+              ],
+              [
+                79.98519,
+                14.449834
+              ],
+              [
+                79.985558,
+                14.449365
+              ],
+              [
+                79.986038,
+                14.449006
+              ],
+              [
+                79.986598,
+                14.44878
+              ],
+              [
+                79.987198,
+                14.448703
+              ],
+              [
+                79.987798,
+                14.44878
+              ],
+              [
+                79.988358,
+                14.449006
+              ],
+              [
+                79.988838,
+                14.449365
+              ],
+              [
+                79.989206,
+                14.449834
+              ],
+              [
+                79.989438,
+                14.450379
+              ],
+              [
+                79.989517,
+                14.450964
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-040",
+          "shop_name": "Star Poultry Stall (Ranganayakulapet)",
+          "risk_level": "High Risk",
+          "buffer_radius_m": 250,
+          "exposure_zone": "Immediate Bio-Exposure & Odor Vector Zone (250m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.991861,
+                14.453251
+              ],
+              [
+                79.991782,
+                14.453836
+              ],
+              [
+                79.99155,
+                14.454381
+              ],
+              [
+                79.991182,
+                14.45485
+              ],
+              [
+                79.990702,
+                14.455209
+              ],
+              [
+                79.990142,
+                14.455435
+              ],
+              [
+                79.989542,
+                14.455512
+              ],
+              [
+                79.988942,
+                14.455435
+              ],
+              [
+                79.988382,
+                14.455209
+              ],
+              [
+                79.987902,
+                14.45485
+              ],
+              [
+                79.987534,
+                14.454381
+              ],
+              [
+                79.987302,
+                14.453836
+              ],
+              [
+                79.987223,
+                14.453251
+              ],
+              [
+                79.987302,
+                14.452666
+              ],
+              [
+                79.987534,
+                14.452121
+              ],
+              [
+                79.987902,
+                14.451652
+              ],
+              [
+                79.988382,
+                14.451293
+              ],
+              [
+                79.988942,
+                14.451067
+              ],
+              [
+                79.989542,
+                14.45099
+              ],
+              [
+                79.990142,
+                14.451067
+              ],
+              [
+                79.990702,
+                14.451293
+              ],
+              [
+                79.991182,
+                14.451652
+              ],
+              [
+                79.99155,
+                14.452121
+              ],
+              [
+                79.991782,
+                14.452666
+              ],
+              [
+                79.991861,
+                14.453251
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-041",
+          "shop_name": "Balaji Poultry Stall (Vedayapalem)",
+          "risk_level": "High Risk",
+          "buffer_radius_m": 250,
+          "exposure_zone": "Immediate Bio-Exposure & Odor Vector Zone (250m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.967302,
+                14.41985
+              ],
+              [
+                79.967223,
+                14.420435
+              ],
+              [
+                79.966991,
+                14.42098
+              ],
+              [
+                79.966623,
+                14.421449
+              ],
+              [
+                79.966143,
+                14.421808
+              ],
+              [
+                79.965583,
+                14.422034
+              ],
+              [
+                79.964983,
+                14.422111
+              ],
+              [
+                79.964383,
+                14.422034
+              ],
+              [
+                79.963823,
+                14.421808
+              ],
+              [
+                79.963343,
+                14.421449
+              ],
+              [
+                79.962975,
+                14.42098
+              ],
+              [
+                79.962743,
+                14.420435
+              ],
+              [
+                79.962664,
+                14.41985
+              ],
+              [
+                79.962743,
+                14.419265
+              ],
+              [
+                79.962975,
+                14.41872
+              ],
+              [
+                79.963343,
+                14.418251
+              ],
+              [
+                79.963823,
+                14.417892
+              ],
+              [
+                79.964383,
+                14.417666
+              ],
+              [
+                79.964983,
+                14.417589
+              ],
+              [
+                79.965583,
+                14.417666
+              ],
+              [
+                79.966143,
+                14.417892
+              ],
+              [
+                79.966623,
+                14.418251
+              ],
+              [
+                79.966991,
+                14.41872
+              ],
+              [
+                79.967223,
+                14.419265
+              ],
+              [
+                79.967302,
+                14.41985
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-042",
+          "shop_name": "Coastal Choice Mutton Stall (Vedayapalem)",
+          "risk_level": "High Risk",
+          "buffer_radius_m": 250,
+          "exposure_zone": "Immediate Bio-Exposure & Odor Vector Zone (250m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.965373,
+                14.414967
+              ],
+              [
+                79.965294,
+                14.415552
+              ],
+              [
+                79.965062,
+                14.416097
+              ],
+              [
+                79.964694,
+                14.416566
+              ],
+              [
+                79.964214,
+                14.416925
+              ],
+              [
+                79.963654,
+                14.417151
+              ],
+              [
+                79.963054,
+                14.417228
+              ],
+              [
+                79.962454,
+                14.417151
+              ],
+              [
+                79.961894,
+                14.416925
+              ],
+              [
+                79.961414,
+                14.416566
+              ],
+              [
+                79.961046,
+                14.416097
+              ],
+              [
+                79.960814,
+                14.415552
+              ],
+              [
+                79.960735,
+                14.414967
+              ],
+              [
+                79.960814,
+                14.414382
+              ],
+              [
+                79.961046,
+                14.413837
+              ],
+              [
+                79.961414,
+                14.413368
+              ],
+              [
+                79.961894,
+                14.413009
+              ],
+              [
+                79.962454,
+                14.412783
+              ],
+              [
+                79.963054,
+                14.412706
+              ],
+              [
+                79.963654,
+                14.412783
+              ],
+              [
+                79.964214,
+                14.413009
+              ],
+              [
+                79.964694,
+                14.413368
+              ],
+              [
+                79.965062,
+                14.413837
+              ],
+              [
+                79.965294,
+                14.414382
+              ],
+              [
+                79.965373,
+                14.414967
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-047",
+          "shop_name": "Pennar Quality Poultry Stall (Vedayapalem)",
+          "risk_level": "High Risk",
+          "buffer_radius_m": 250,
+          "exposure_zone": "Immediate Bio-Exposure & Odor Vector Zone (250m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.965659,
+                14.416943
+              ],
+              [
+                79.96558,
+                14.417528
+              ],
+              [
+                79.965348,
+                14.418073
+              ],
+              [
+                79.96498,
+                14.418542
+              ],
+              [
+                79.9645,
+                14.418901
+              ],
+              [
+                79.96394,
+                14.419127
+              ],
+              [
+                79.96334,
+                14.419204
+              ],
+              [
+                79.96274,
+                14.419127
+              ],
+              [
+                79.96218,
+                14.418901
+              ],
+              [
+                79.9617,
+                14.418542
+              ],
+              [
+                79.961332,
+                14.418073
+              ],
+              [
+                79.9611,
+                14.417528
+              ],
+              [
+                79.961021,
+                14.416943
+              ],
+              [
+                79.9611,
+                14.416358
+              ],
+              [
+                79.961332,
+                14.415813
+              ],
+              [
+                79.9617,
+                14.415344
+              ],
+              [
+                79.96218,
+                14.414985
+              ],
+              [
+                79.96274,
+                14.414759
+              ],
+              [
+                79.96334,
+                14.414682
+              ],
+              [
+                79.96394,
+                14.414759
+              ],
+              [
+                79.9645,
+                14.414985
+              ],
+              [
+                79.96498,
+                14.415344
+              ],
+              [
+                79.965348,
+                14.415813
+              ],
+              [
+                79.96558,
+                14.416358
+              ],
+              [
+                79.965659,
+                14.416943
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-049",
+          "shop_name": "Gouthami Poultry Stall (Vedayapalem)",
+          "risk_level": "Very High Risk",
+          "buffer_radius_m": 250,
+          "exposure_zone": "Immediate Bio-Exposure & Odor Vector Zone (250m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.967684,
+                14.418532
+              ],
+              [
+                79.967605,
+                14.419117
+              ],
+              [
+                79.967373,
+                14.419662
+              ],
+              [
+                79.967005,
+                14.420131
+              ],
+              [
+                79.966525,
+                14.42049
+              ],
+              [
+                79.965965,
+                14.420716
+              ],
+              [
+                79.965365,
+                14.420793
+              ],
+              [
+                79.964765,
+                14.420716
+              ],
+              [
+                79.964205,
+                14.42049
+              ],
+              [
+                79.963725,
+                14.420131
+              ],
+              [
+                79.963357,
+                14.419662
+              ],
+              [
+                79.963125,
+                14.419117
+              ],
+              [
+                79.963046,
+                14.418532
+              ],
+              [
+                79.963125,
+                14.417947
+              ],
+              [
+                79.963357,
+                14.417402
+              ],
+              [
+                79.963725,
+                14.416933
+              ],
+              [
+                79.964205,
+                14.416574
+              ],
+              [
+                79.964765,
+                14.416348
+              ],
+              [
+                79.965365,
+                14.416271
+              ],
+              [
+                79.965965,
+                14.416348
+              ],
+              [
+                79.966525,
+                14.416574
+              ],
+              [
+                79.967005,
+                14.416933
+              ],
+              [
+                79.967373,
+                14.417402
+              ],
+              [
+                79.967605,
+                14.417947
+              ],
+              [
+                79.967684,
+                14.418532
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-050",
+          "shop_name": "National Poultry Stall (Vedayapalem)",
+          "risk_level": "High Risk",
+          "buffer_radius_m": 250,
+          "exposure_zone": "Immediate Bio-Exposure & Odor Vector Zone (250m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.970477,
+                14.420941
+              ],
+              [
+                79.970398,
+                14.421526
+              ],
+              [
+                79.970166,
+                14.422071
+              ],
+              [
+                79.969798,
+                14.42254
+              ],
+              [
+                79.969318,
+                14.422899
+              ],
+              [
+                79.968758,
+                14.423125
+              ],
+              [
+                79.968158,
+                14.423202
+              ],
+              [
+                79.967558,
+                14.423125
+              ],
+              [
+                79.966998,
+                14.422899
+              ],
+              [
+                79.966518,
+                14.42254
+              ],
+              [
+                79.96615,
+                14.422071
+              ],
+              [
+                79.965918,
+                14.421526
+              ],
+              [
+                79.965839,
+                14.420941
+              ],
+              [
+                79.965918,
+                14.420356
+              ],
+              [
+                79.96615,
+                14.419811
+              ],
+              [
+                79.966518,
+                14.419342
+              ],
+              [
+                79.966998,
+                14.418983
+              ],
+              [
+                79.967558,
+                14.418757
+              ],
+              [
+                79.968158,
+                14.41868
+              ],
+              [
+                79.968758,
+                14.418757
+              ],
+              [
+                79.969318,
+                14.418983
+              ],
+              [
+                79.969798,
+                14.419342
+              ],
+              [
+                79.970166,
+                14.419811
+              ],
+              [
+                79.970398,
+                14.420356
+              ],
+              [
+                79.970477,
+                14.420941
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-051",
+          "shop_name": "Nellore Fresh Mutton Stall (Kovur)",
+          "risk_level": "High Risk",
+          "buffer_radius_m": 250,
+          "exposure_zone": "Immediate Bio-Exposure & Odor Vector Zone (250m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.977078,
+                14.493883
+              ],
+              [
+                79.976999,
+                14.494468
+              ],
+              [
+                79.976767,
+                14.495013
+              ],
+              [
+                79.976399,
+                14.495482
+              ],
+              [
+                79.975919,
+                14.495841
+              ],
+              [
+                79.975359,
+                14.496067
+              ],
+              [
+                79.974759,
+                14.496144
+              ],
+              [
+                79.974159,
+                14.496067
+              ],
+              [
+                79.973599,
+                14.495841
+              ],
+              [
+                79.973119,
+                14.495482
+              ],
+              [
+                79.972751,
+                14.495013
+              ],
+              [
+                79.972519,
+                14.494468
+              ],
+              [
+                79.97244,
+                14.493883
+              ],
+              [
+                79.972519,
+                14.493298
+              ],
+              [
+                79.972751,
+                14.492753
+              ],
+              [
+                79.973119,
+                14.492284
+              ],
+              [
+                79.973599,
+                14.491925
+              ],
+              [
+                79.974159,
+                14.491699
+              ],
+              [
+                79.974759,
+                14.491622
+              ],
+              [
+                79.975359,
+                14.491699
+              ],
+              [
+                79.975919,
+                14.491925
+              ],
+              [
+                79.976399,
+                14.492284
+              ],
+              [
+                79.976767,
+                14.492753
+              ],
+              [
+                79.976999,
+                14.493298
+              ],
+              [
+                79.977078,
+                14.493883
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-056",
+          "shop_name": "Coastal Choice Poultry Stall (Kovur)",
+          "risk_level": "High Risk",
+          "buffer_radius_m": 250,
+          "exposure_zone": "Immediate Bio-Exposure & Odor Vector Zone (250m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.980285,
+                14.495956
+              ],
+              [
+                79.980206,
+                14.496541
+              ],
+              [
+                79.979974,
+                14.497086
+              ],
+              [
+                79.979606,
+                14.497555
+              ],
+              [
+                79.979126,
+                14.497914
+              ],
+              [
+                79.978566,
+                14.49814
+              ],
+              [
+                79.977966,
+                14.498217
+              ],
+              [
+                79.977366,
+                14.49814
+              ],
+              [
+                79.976806,
+                14.497914
+              ],
+              [
+                79.976326,
+                14.497555
+              ],
+              [
+                79.975958,
+                14.497086
+              ],
+              [
+                79.975726,
+                14.496541
+              ],
+              [
+                79.975647,
+                14.495956
+              ],
+              [
+                79.975726,
+                14.495371
+              ],
+              [
+                79.975958,
+                14.494826
+              ],
+              [
+                79.976326,
+                14.494357
+              ],
+              [
+                79.976806,
+                14.493998
+              ],
+              [
+                79.977366,
+                14.493772
+              ],
+              [
+                79.977966,
+                14.493695
+              ],
+              [
+                79.978566,
+                14.493772
+              ],
+              [
+                79.979126,
+                14.493998
+              ],
+              [
+                79.979606,
+                14.494357
+              ],
+              [
+                79.979974,
+                14.494826
+              ],
+              [
+                79.980206,
+                14.495371
+              ],
+              [
+                79.980285,
+                14.495956
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-057",
+          "shop_name": "National Poultry Stall (Kovur)",
+          "risk_level": "High Risk",
+          "buffer_radius_m": 250,
+          "exposure_zone": "Immediate Bio-Exposure & Odor Vector Zone (250m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.97879,
+                14.493228
+              ],
+              [
+                79.978711,
+                14.493813
+              ],
+              [
+                79.978479,
+                14.494358
+              ],
+              [
+                79.978111,
+                14.494827
+              ],
+              [
+                79.977631,
+                14.495186
+              ],
+              [
+                79.977071,
+                14.495412
+              ],
+              [
+                79.976471,
+                14.495489
+              ],
+              [
+                79.975871,
+                14.495412
+              ],
+              [
+                79.975311,
+                14.495186
+              ],
+              [
+                79.974831,
+                14.494827
+              ],
+              [
+                79.974463,
+                14.494358
+              ],
+              [
+                79.974231,
+                14.493813
+              ],
+              [
+                79.974152,
+                14.493228
+              ],
+              [
+                79.974231,
+                14.492643
+              ],
+              [
+                79.974463,
+                14.492098
+              ],
+              [
+                79.974831,
+                14.491629
+              ],
+              [
+                79.975311,
+                14.49127
+              ],
+              [
+                79.975871,
+                14.491044
+              ],
+              [
+                79.976471,
+                14.490967
+              ],
+              [
+                79.977071,
+                14.491044
+              ],
+              [
+                79.977631,
+                14.49127
+              ],
+              [
+                79.978111,
+                14.491629
+              ],
+              [
+                79.978479,
+                14.492098
+              ],
+              [
+                79.978711,
+                14.492643
+              ],
+              [
+                79.97879,
+                14.493228
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-058",
+          "shop_name": "Star Mixed Stall (Kovur)",
+          "risk_level": "Very High Risk",
+          "buffer_radius_m": 250,
+          "exposure_zone": "Immediate Bio-Exposure & Odor Vector Zone (250m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.978872,
+                14.493955
+              ],
+              [
+                79.978793,
+                14.49454
+              ],
+              [
+                79.978561,
+                14.495085
+              ],
+              [
+                79.978193,
+                14.495554
+              ],
+              [
+                79.977713,
+                14.495913
+              ],
+              [
+                79.977153,
+                14.496139
+              ],
+              [
+                79.976553,
+                14.496216
+              ],
+              [
+                79.975953,
+                14.496139
+              ],
+              [
+                79.975393,
+                14.495913
+              ],
+              [
+                79.974913,
+                14.495554
+              ],
+              [
+                79.974545,
+                14.495085
+              ],
+              [
+                79.974313,
+                14.49454
+              ],
+              [
+                79.974234,
+                14.493955
+              ],
+              [
+                79.974313,
+                14.49337
+              ],
+              [
+                79.974545,
+                14.492825
+              ],
+              [
+                79.974913,
+                14.492356
+              ],
+              [
+                79.975393,
+                14.491997
+              ],
+              [
+                79.975953,
+                14.491771
+              ],
+              [
+                79.976553,
+                14.491694
+              ],
+              [
+                79.977153,
+                14.491771
+              ],
+              [
+                79.977713,
+                14.491997
+              ],
+              [
+                79.978193,
+                14.492356
+              ],
+              [
+                79.978561,
+                14.492825
+              ],
+              [
+                79.978793,
+                14.49337
+              ],
+              [
+                79.978872,
+                14.493955
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-059",
+          "shop_name": "Sri Venkateswara Mixed Stall (Kovur)",
+          "risk_level": "Very High Risk",
+          "buffer_radius_m": 250,
+          "exposure_zone": "Immediate Bio-Exposure & Odor Vector Zone (250m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.979485,
+                14.494069
+              ],
+              [
+                79.979406,
+                14.494654
+              ],
+              [
+                79.979174,
+                14.495199
+              ],
+              [
+                79.978806,
+                14.495668
+              ],
+              [
+                79.978326,
+                14.496027
+              ],
+              [
+                79.977766,
+                14.496253
+              ],
+              [
+                79.977166,
+                14.49633
+              ],
+              [
+                79.976566,
+                14.496253
+              ],
+              [
+                79.976006,
+                14.496027
+              ],
+              [
+                79.975526,
+                14.495668
+              ],
+              [
+                79.975158,
+                14.495199
+              ],
+              [
+                79.974926,
+                14.494654
+              ],
+              [
+                79.974847,
+                14.494069
+              ],
+              [
+                79.974926,
+                14.493484
+              ],
+              [
+                79.975158,
+                14.492939
+              ],
+              [
+                79.975526,
+                14.49247
+              ],
+              [
+                79.976006,
+                14.492111
+              ],
+              [
+                79.976566,
+                14.491885
+              ],
+              [
+                79.977166,
+                14.491808
+              ],
+              [
+                79.977766,
+                14.491885
+              ],
+              [
+                79.978326,
+                14.492111
+              ],
+              [
+                79.978806,
+                14.49247
+              ],
+              [
+                79.979174,
+                14.492939
+              ],
+              [
+                79.979406,
+                14.493484
+              ],
+              [
+                79.979485,
+                14.494069
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-060",
+          "shop_name": "Sri Venkateswara Poultry Stall (Kovur)",
+          "risk_level": "High Risk",
+          "buffer_radius_m": 250,
+          "exposure_zone": "Immediate Bio-Exposure & Odor Vector Zone (250m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.980521,
+                14.495621
+              ],
+              [
+                79.980442,
+                14.496206
+              ],
+              [
+                79.98021,
+                14.496751
+              ],
+              [
+                79.979842,
+                14.49722
+              ],
+              [
+                79.979362,
+                14.497579
+              ],
+              [
+                79.978802,
+                14.497805
+              ],
+              [
+                79.978202,
+                14.497882
+              ],
+              [
+                79.977602,
+                14.497805
+              ],
+              [
+                79.977042,
+                14.497579
+              ],
+              [
+                79.976562,
+                14.49722
+              ],
+              [
+                79.976194,
+                14.496751
+              ],
+              [
+                79.975962,
+                14.496206
+              ],
+              [
+                79.975883,
+                14.495621
+              ],
+              [
+                79.975962,
+                14.495036
+              ],
+              [
+                79.976194,
+                14.494491
+              ],
+              [
+                79.976562,
+                14.494022
+              ],
+              [
+                79.977042,
+                14.493663
+              ],
+              [
+                79.977602,
+                14.493437
+              ],
+              [
+                79.978202,
+                14.49336
+              ],
+              [
+                79.978802,
+                14.493437
+              ],
+              [
+                79.979362,
+                14.493663
+              ],
+              [
+                79.979842,
+                14.494022
+              ],
+              [
+                79.98021,
+                14.494491
+              ],
+              [
+                79.980442,
+                14.495036
+              ],
+              [
+                79.980521,
+                14.495621
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-062",
+          "shop_name": "Star Fish Stall (Kovur)",
+          "risk_level": "High Risk",
+          "buffer_radius_m": 250,
+          "exposure_zone": "Immediate Bio-Exposure & Odor Vector Zone (250m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.981999,
+                14.494622
+              ],
+              [
+                79.98192,
+                14.495207
+              ],
+              [
+                79.981688,
+                14.495752
+              ],
+              [
+                79.98132,
+                14.496221
+              ],
+              [
+                79.98084,
+                14.49658
+              ],
+              [
+                79.98028,
+                14.496806
+              ],
+              [
+                79.97968,
+                14.496883
+              ],
+              [
+                79.97908,
+                14.496806
+              ],
+              [
+                79.97852,
+                14.49658
+              ],
+              [
+                79.97804,
+                14.496221
+              ],
+              [
+                79.977672,
+                14.495752
+              ],
+              [
+                79.97744,
+                14.495207
+              ],
+              [
+                79.977361,
+                14.494622
+              ],
+              [
+                79.97744,
+                14.494037
+              ],
+              [
+                79.977672,
+                14.493492
+              ],
+              [
+                79.97804,
+                14.493023
+              ],
+              [
+                79.97852,
+                14.492664
+              ],
+              [
+                79.97908,
+                14.492438
+              ],
+              [
+                79.97968,
+                14.492361
+              ],
+              [
+                79.98028,
+                14.492438
+              ],
+              [
+                79.98084,
+                14.492664
+              ],
+              [
+                79.98132,
+                14.493023
+              ],
+              [
+                79.981688,
+                14.493492
+              ],
+              [
+                79.98192,
+                14.494037
+              ],
+              [
+                79.981999,
+                14.494622
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-064",
+          "shop_name": "Sri Venkateswara Mutton Stall (Kovur)",
+          "risk_level": "High Risk",
+          "buffer_radius_m": 250,
+          "exposure_zone": "Immediate Bio-Exposure & Odor Vector Zone (250m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.980736,
+                14.494103
+              ],
+              [
+                79.980657,
+                14.494688
+              ],
+              [
+                79.980425,
+                14.495233
+              ],
+              [
+                79.980057,
+                14.495702
+              ],
+              [
+                79.979577,
+                14.496061
+              ],
+              [
+                79.979017,
+                14.496287
+              ],
+              [
+                79.978417,
+                14.496364
+              ],
+              [
+                79.977817,
+                14.496287
+              ],
+              [
+                79.977257,
+                14.496061
+              ],
+              [
+                79.976777,
+                14.495702
+              ],
+              [
+                79.976409,
+                14.495233
+              ],
+              [
+                79.976177,
+                14.494688
+              ],
+              [
+                79.976098,
+                14.494103
+              ],
+              [
+                79.976177,
+                14.493518
+              ],
+              [
+                79.976409,
+                14.492973
+              ],
+              [
+                79.976777,
+                14.492504
+              ],
+              [
+                79.977257,
+                14.492145
+              ],
+              [
+                79.977817,
+                14.491919
+              ],
+              [
+                79.978417,
+                14.491842
+              ],
+              [
+                79.979017,
+                14.491919
+              ],
+              [
+                79.979577,
+                14.492145
+              ],
+              [
+                79.980057,
+                14.492504
+              ],
+              [
+                79.980425,
+                14.492973
+              ],
+              [
+                79.980657,
+                14.493518
+              ],
+              [
+                79.980736,
+                14.494103
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-068",
+          "shop_name": "Annapurna Fish Stall (Padugupadu)",
+          "risk_level": "High Risk",
+          "buffer_radius_m": 250,
+          "exposure_zone": "Immediate Bio-Exposure & Odor Vector Zone (250m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.986754,
+                14.476728
+              ],
+              [
+                79.986675,
+                14.477313
+              ],
+              [
+                79.986443,
+                14.477858
+              ],
+              [
+                79.986075,
+                14.478327
+              ],
+              [
+                79.985595,
+                14.478686
+              ],
+              [
+                79.985035,
+                14.478912
+              ],
+              [
+                79.984435,
+                14.478989
+              ],
+              [
+                79.983835,
+                14.478912
+              ],
+              [
+                79.983275,
+                14.478686
+              ],
+              [
+                79.982795,
+                14.478327
+              ],
+              [
+                79.982427,
+                14.477858
+              ],
+              [
+                79.982195,
+                14.477313
+              ],
+              [
+                79.982116,
+                14.476728
+              ],
+              [
+                79.982195,
+                14.476143
+              ],
+              [
+                79.982427,
+                14.475598
+              ],
+              [
+                79.982795,
+                14.475129
+              ],
+              [
+                79.983275,
+                14.47477
+              ],
+              [
+                79.983835,
+                14.474544
+              ],
+              [
+                79.984435,
+                14.474467
+              ],
+              [
+                79.985035,
+                14.474544
+              ],
+              [
+                79.985595,
+                14.47477
+              ],
+              [
+                79.986075,
+                14.475129
+              ],
+              [
+                79.986443,
+                14.475598
+              ],
+              [
+                79.986675,
+                14.476143
+              ],
+              [
+                79.986754,
+                14.476728
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-071",
+          "shop_name": "Annapurna Poultry Stall (Padugupadu)",
+          "risk_level": "High Risk",
+          "buffer_radius_m": 250,
+          "exposure_zone": "Immediate Bio-Exposure & Odor Vector Zone (250m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.984018,
+                14.474266
+              ],
+              [
+                79.983939,
+                14.474851
+              ],
+              [
+                79.983707,
+                14.475396
+              ],
+              [
+                79.983339,
+                14.475865
+              ],
+              [
+                79.982859,
+                14.476224
+              ],
+              [
+                79.982299,
+                14.47645
+              ],
+              [
+                79.981699,
+                14.476527
+              ],
+              [
+                79.981099,
+                14.47645
+              ],
+              [
+                79.980539,
+                14.476224
+              ],
+              [
+                79.980059,
+                14.475865
+              ],
+              [
+                79.979691,
+                14.475396
+              ],
+              [
+                79.979459,
+                14.474851
+              ],
+              [
+                79.97938,
+                14.474266
+              ],
+              [
+                79.979459,
+                14.473681
+              ],
+              [
+                79.979691,
+                14.473136
+              ],
+              [
+                79.980059,
+                14.472667
+              ],
+              [
+                79.980539,
+                14.472308
+              ],
+              [
+                79.981099,
+                14.472082
+              ],
+              [
+                79.981699,
+                14.472005
+              ],
+              [
+                79.982299,
+                14.472082
+              ],
+              [
+                79.982859,
+                14.472308
+              ],
+              [
+                79.983339,
+                14.472667
+              ],
+              [
+                79.983707,
+                14.473136
+              ],
+              [
+                79.983939,
+                14.473681
+              ],
+              [
+                79.984018,
+                14.474266
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-074",
+          "shop_name": "Sri Venkateswara Mutton Stall (Inamadugu)",
+          "risk_level": "High Risk",
+          "buffer_radius_m": 250,
+          "exposure_zone": "Immediate Bio-Exposure & Odor Vector Zone (250m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                80.003766,
+                14.491223
+              ],
+              [
+                80.003687,
+                14.491808
+              ],
+              [
+                80.003455,
+                14.492353
+              ],
+              [
+                80.003087,
+                14.492822
+              ],
+              [
+                80.002607,
+                14.493181
+              ],
+              [
+                80.002047,
+                14.493407
+              ],
+              [
+                80.001447,
+                14.493484
+              ],
+              [
+                80.000847,
+                14.493407
+              ],
+              [
+                80.000287,
+                14.493181
+              ],
+              [
+                79.999807,
+                14.492822
+              ],
+              [
+                79.999439,
+                14.492353
+              ],
+              [
+                79.999207,
+                14.491808
+              ],
+              [
+                79.999128,
+                14.491223
+              ],
+              [
+                79.999207,
+                14.490638
+              ],
+              [
+                79.999439,
+                14.490093
+              ],
+              [
+                79.999807,
+                14.489624
+              ],
+              [
+                80.000287,
+                14.489265
+              ],
+              [
+                80.000847,
+                14.489039
+              ],
+              [
+                80.001447,
+                14.488962
+              ],
+              [
+                80.002047,
+                14.489039
+              ],
+              [
+                80.002607,
+                14.489265
+              ],
+              [
+                80.003087,
+                14.489624
+              ],
+              [
+                80.003455,
+                14.490093
+              ],
+              [
+                80.003687,
+                14.490638
+              ],
+              [
+                80.003766,
+                14.491223
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-078",
+          "shop_name": "Sai Krupa Mutton Stall (Inamadugu)",
+          "risk_level": "High Risk",
+          "buffer_radius_m": 250,
+          "exposure_zone": "Immediate Bio-Exposure & Odor Vector Zone (250m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                80.00543,
+                14.493318
+              ],
+              [
+                80.005351,
+                14.493903
+              ],
+              [
+                80.005119,
+                14.494448
+              ],
+              [
+                80.004751,
+                14.494917
+              ],
+              [
+                80.004271,
+                14.495276
+              ],
+              [
+                80.003711,
+                14.495502
+              ],
+              [
+                80.003111,
+                14.495579
+              ],
+              [
+                80.002511,
+                14.495502
+              ],
+              [
+                80.001951,
+                14.495276
+              ],
+              [
+                80.001471,
+                14.494917
+              ],
+              [
+                80.001103,
+                14.494448
+              ],
+              [
+                80.000871,
+                14.493903
+              ],
+              [
+                80.000792,
+                14.493318
+              ],
+              [
+                80.000871,
+                14.492733
+              ],
+              [
+                80.001103,
+                14.492188
+              ],
+              [
+                80.001471,
+                14.491719
+              ],
+              [
+                80.001951,
+                14.49136
+              ],
+              [
+                80.002511,
+                14.491134
+              ],
+              [
+                80.003111,
+                14.491057
+              ],
+              [
+                80.003711,
+                14.491134
+              ],
+              [
+                80.004271,
+                14.49136
+              ],
+              [
+                80.004751,
+                14.491719
+              ],
+              [
+                80.005119,
+                14.492188
+              ],
+              [
+                80.005351,
+                14.492733
+              ],
+              [
+                80.00543,
+                14.493318
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-079",
+          "shop_name": "Al-Madina Poultry Stall (Inamadugu)",
+          "risk_level": "High Risk",
+          "buffer_radius_m": 250,
+          "exposure_zone": "Immediate Bio-Exposure & Odor Vector Zone (250m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                80.004156,
+                14.492116
+              ],
+              [
+                80.004077,
+                14.492701
+              ],
+              [
+                80.003845,
+                14.493246
+              ],
+              [
+                80.003477,
+                14.493715
+              ],
+              [
+                80.002997,
+                14.494074
+              ],
+              [
+                80.002437,
+                14.4943
+              ],
+              [
+                80.001837,
+                14.494377
+              ],
+              [
+                80.001237,
+                14.4943
+              ],
+              [
+                80.000677,
+                14.494074
+              ],
+              [
+                80.000197,
+                14.493715
+              ],
+              [
+                79.999829,
+                14.493246
+              ],
+              [
+                79.999597,
+                14.492701
+              ],
+              [
+                79.999518,
+                14.492116
+              ],
+              [
+                79.999597,
+                14.491531
+              ],
+              [
+                79.999829,
+                14.490986
+              ],
+              [
+                80.000197,
+                14.490517
+              ],
+              [
+                80.000677,
+                14.490158
+              ],
+              [
+                80.001237,
+                14.489932
+              ],
+              [
+                80.001837,
+                14.489855
+              ],
+              [
+                80.002437,
+                14.489932
+              ],
+              [
+                80.002997,
+                14.490158
+              ],
+              [
+                80.003477,
+                14.490517
+              ],
+              [
+                80.003845,
+                14.490986
+              ],
+              [
+                80.004077,
+                14.491531
+              ],
+              [
+                80.004156,
+                14.492116
+              ]
+            ]
+          ]
+        }
+      }
+    ]
+  },
+  "buffers_500": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-007",
+          "shop_name": "Coastal Choice Fish Stall (Stonehousepet)",
+          "risk_level": "High Risk",
+          "buffer_radius_m": 500,
+          "exposure_zone": "Secondary Vector & Human Transmission Reach (500m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.991758,
+                14.448117
+              ],
+              [
+                79.9916,
+                14.449287
+              ],
+              [
+                79.991137,
+                14.450378
+              ],
+              [
+                79.9904,
+                14.451314
+              ],
+              [
+                79.989439,
+                14.452033
+              ],
+              [
+                79.98832,
+                14.452485
+              ],
+              [
+                79.98712,
+                14.452639
+              ],
+              [
+                79.98592,
+                14.452485
+              ],
+              [
+                79.984801,
+                14.452033
+              ],
+              [
+                79.98384,
+                14.451314
+              ],
+              [
+                79.983103,
+                14.450378
+              ],
+              [
+                79.98264,
+                14.449287
+              ],
+              [
+                79.982482,
+                14.448117
+              ],
+              [
+                79.98264,
+                14.446947
+              ],
+              [
+                79.983103,
+                14.445856
+              ],
+              [
+                79.98384,
+                14.44492
+              ],
+              [
+                79.984801,
+                14.444201
+              ],
+              [
+                79.98592,
+                14.443749
+              ],
+              [
+                79.98712,
+                14.443595
+              ],
+              [
+                79.98832,
+                14.443749
+              ],
+              [
+                79.989439,
+                14.444201
+              ],
+              [
+                79.9904,
+                14.44492
+              ],
+              [
+                79.991137,
+                14.445856
+              ],
+              [
+                79.9916,
+                14.446947
+              ],
+              [
+                79.991758,
+                14.448117
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-008",
+          "shop_name": "Gouthami Mixed Stall (Stonehousepet)",
+          "risk_level": "High Risk",
+          "buffer_radius_m": 500,
+          "exposure_zone": "Secondary Vector & Human Transmission Reach (500m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.99177,
+                14.448281
+              ],
+              [
+                79.991612,
+                14.449451
+              ],
+              [
+                79.991149,
+                14.450542
+              ],
+              [
+                79.990412,
+                14.451478
+              ],
+              [
+                79.989451,
+                14.452197
+              ],
+              [
+                79.988332,
+                14.452649
+              ],
+              [
+                79.987132,
+                14.452803
+              ],
+              [
+                79.985932,
+                14.452649
+              ],
+              [
+                79.984813,
+                14.452197
+              ],
+              [
+                79.983852,
+                14.451478
+              ],
+              [
+                79.983115,
+                14.450542
+              ],
+              [
+                79.982652,
+                14.449451
+              ],
+              [
+                79.982494,
+                14.448281
+              ],
+              [
+                79.982652,
+                14.447111
+              ],
+              [
+                79.983115,
+                14.44602
+              ],
+              [
+                79.983852,
+                14.445084
+              ],
+              [
+                79.984813,
+                14.444365
+              ],
+              [
+                79.985932,
+                14.443913
+              ],
+              [
+                79.987132,
+                14.443759
+              ],
+              [
+                79.988332,
+                14.443913
+              ],
+              [
+                79.989451,
+                14.444365
+              ],
+              [
+                79.990412,
+                14.445084
+              ],
+              [
+                79.991149,
+                14.44602
+              ],
+              [
+                79.991612,
+                14.447111
+              ],
+              [
+                79.99177,
+                14.448281
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-010",
+          "shop_name": "Sai Krupa Poultry Stall (Stonehousepet)",
+          "risk_level": "High Risk",
+          "buffer_radius_m": 500,
+          "exposure_zone": "Secondary Vector & Human Transmission Reach (500m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.990243,
+                14.447303
+              ],
+              [
+                79.990085,
+                14.448473
+              ],
+              [
+                79.989622,
+                14.449564
+              ],
+              [
+                79.988885,
+                14.4505
+              ],
+              [
+                79.987924,
+                14.451219
+              ],
+              [
+                79.986805,
+                14.451671
+              ],
+              [
+                79.985605,
+                14.451825
+              ],
+              [
+                79.984405,
+                14.451671
+              ],
+              [
+                79.983286,
+                14.451219
+              ],
+              [
+                79.982325,
+                14.4505
+              ],
+              [
+                79.981588,
+                14.449564
+              ],
+              [
+                79.981125,
+                14.448473
+              ],
+              [
+                79.980967,
+                14.447303
+              ],
+              [
+                79.981125,
+                14.446133
+              ],
+              [
+                79.981588,
+                14.445042
+              ],
+              [
+                79.982325,
+                14.444106
+              ],
+              [
+                79.983286,
+                14.443387
+              ],
+              [
+                79.984405,
+                14.442935
+              ],
+              [
+                79.985605,
+                14.442781
+              ],
+              [
+                79.986805,
+                14.442935
+              ],
+              [
+                79.987924,
+                14.443387
+              ],
+              [
+                79.988885,
+                14.444106
+              ],
+              [
+                79.989622,
+                14.445042
+              ],
+              [
+                79.990085,
+                14.446133
+              ],
+              [
+                79.990243,
+                14.447303
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-012",
+          "shop_name": "Gouthami Mutton Stall (Stonehousepet)",
+          "risk_level": "High Risk",
+          "buffer_radius_m": 500,
+          "exposure_zone": "Secondary Vector & Human Transmission Reach (500m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.997064,
+                14.447601
+              ],
+              [
+                79.996906,
+                14.448771
+              ],
+              [
+                79.996443,
+                14.449862
+              ],
+              [
+                79.995706,
+                14.450798
+              ],
+              [
+                79.994745,
+                14.451517
+              ],
+              [
+                79.993626,
+                14.451969
+              ],
+              [
+                79.992426,
+                14.452123
+              ],
+              [
+                79.991226,
+                14.451969
+              ],
+              [
+                79.990107,
+                14.451517
+              ],
+              [
+                79.989146,
+                14.450798
+              ],
+              [
+                79.988409,
+                14.449862
+              ],
+              [
+                79.987946,
+                14.448771
+              ],
+              [
+                79.987788,
+                14.447601
+              ],
+              [
+                79.987946,
+                14.446431
+              ],
+              [
+                79.988409,
+                14.44534
+              ],
+              [
+                79.989146,
+                14.444404
+              ],
+              [
+                79.990107,
+                14.443685
+              ],
+              [
+                79.991226,
+                14.443233
+              ],
+              [
+                79.992426,
+                14.443079
+              ],
+              [
+                79.993626,
+                14.443233
+              ],
+              [
+                79.994745,
+                14.443685
+              ],
+              [
+                79.995706,
+                14.444404
+              ],
+              [
+                79.996443,
+                14.44534
+              ],
+              [
+                79.996906,
+                14.446431
+              ],
+              [
+                79.997064,
+                14.447601
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-020",
+          "shop_name": "Annapurna Poultry Stall (Santhapet)",
+          "risk_level": "Very High Risk",
+          "buffer_radius_m": 500,
+          "exposure_zone": "Secondary Vector & Human Transmission Reach (500m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.98304,
+                14.437939
+              ],
+              [
+                79.982882,
+                14.439109
+              ],
+              [
+                79.982419,
+                14.4402
+              ],
+              [
+                79.981682,
+                14.441136
+              ],
+              [
+                79.980721,
+                14.441855
+              ],
+              [
+                79.979602,
+                14.442307
+              ],
+              [
+                79.978402,
+                14.442461
+              ],
+              [
+                79.977202,
+                14.442307
+              ],
+              [
+                79.976083,
+                14.441855
+              ],
+              [
+                79.975122,
+                14.441136
+              ],
+              [
+                79.974385,
+                14.4402
+              ],
+              [
+                79.973922,
+                14.439109
+              ],
+              [
+                79.973764,
+                14.437939
+              ],
+              [
+                79.973922,
+                14.436769
+              ],
+              [
+                79.974385,
+                14.435678
+              ],
+              [
+                79.975122,
+                14.434742
+              ],
+              [
+                79.976083,
+                14.434023
+              ],
+              [
+                79.977202,
+                14.433571
+              ],
+              [
+                79.978402,
+                14.433417
+              ],
+              [
+                79.979602,
+                14.433571
+              ],
+              [
+                79.980721,
+                14.434023
+              ],
+              [
+                79.981682,
+                14.434742
+              ],
+              [
+                79.982419,
+                14.435678
+              ],
+              [
+                79.982882,
+                14.436769
+              ],
+              [
+                79.98304,
+                14.437939
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-023",
+          "shop_name": "National Mutton Stall (Santhapet)",
+          "risk_level": "High Risk",
+          "buffer_radius_m": 500,
+          "exposure_zone": "Secondary Vector & Human Transmission Reach (500m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.988302,
+                14.44226
+              ],
+              [
+                79.988144,
+                14.44343
+              ],
+              [
+                79.987681,
+                14.444521
+              ],
+              [
+                79.986944,
+                14.445457
+              ],
+              [
+                79.985983,
+                14.446176
+              ],
+              [
+                79.984864,
+                14.446628
+              ],
+              [
+                79.983664,
+                14.446782
+              ],
+              [
+                79.982464,
+                14.446628
+              ],
+              [
+                79.981345,
+                14.446176
+              ],
+              [
+                79.980384,
+                14.445457
+              ],
+              [
+                79.979647,
+                14.444521
+              ],
+              [
+                79.979184,
+                14.44343
+              ],
+              [
+                79.979026,
+                14.44226
+              ],
+              [
+                79.979184,
+                14.44109
+              ],
+              [
+                79.979647,
+                14.439999
+              ],
+              [
+                79.980384,
+                14.439063
+              ],
+              [
+                79.981345,
+                14.438344
+              ],
+              [
+                79.982464,
+                14.437892
+              ],
+              [
+                79.983664,
+                14.437738
+              ],
+              [
+                79.984864,
+                14.437892
+              ],
+              [
+                79.985983,
+                14.438344
+              ],
+              [
+                79.986944,
+                14.439063
+              ],
+              [
+                79.987681,
+                14.439999
+              ],
+              [
+                79.988144,
+                14.44109
+              ],
+              [
+                79.988302,
+                14.44226
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-024",
+          "shop_name": "Gouthami Mutton Stall (Santhapet)",
+          "risk_level": "Very High Risk",
+          "buffer_radius_m": 500,
+          "exposure_zone": "Secondary Vector & Human Transmission Reach (500m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.98446,
+                14.439015
+              ],
+              [
+                79.984302,
+                14.440185
+              ],
+              [
+                79.983839,
+                14.441276
+              ],
+              [
+                79.983102,
+                14.442212
+              ],
+              [
+                79.982141,
+                14.442931
+              ],
+              [
+                79.981022,
+                14.443383
+              ],
+              [
+                79.979822,
+                14.443537
+              ],
+              [
+                79.978622,
+                14.443383
+              ],
+              [
+                79.977503,
+                14.442931
+              ],
+              [
+                79.976542,
+                14.442212
+              ],
+              [
+                79.975805,
+                14.441276
+              ],
+              [
+                79.975342,
+                14.440185
+              ],
+              [
+                79.975184,
+                14.439015
+              ],
+              [
+                79.975342,
+                14.437845
+              ],
+              [
+                79.975805,
+                14.436754
+              ],
+              [
+                79.976542,
+                14.435818
+              ],
+              [
+                79.977503,
+                14.435099
+              ],
+              [
+                79.978622,
+                14.434647
+              ],
+              [
+                79.979822,
+                14.434493
+              ],
+              [
+                79.981022,
+                14.434647
+              ],
+              [
+                79.982141,
+                14.435099
+              ],
+              [
+                79.983102,
+                14.435818
+              ],
+              [
+                79.983839,
+                14.436754
+              ],
+              [
+                79.984302,
+                14.437845
+              ],
+              [
+                79.98446,
+                14.439015
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-025",
+          "shop_name": "National Mutton Stall (Santhapet)",
+          "risk_level": "High Risk",
+          "buffer_radius_m": 500,
+          "exposure_zone": "Secondary Vector & Human Transmission Reach (500m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.985117,
+                14.440202
+              ],
+              [
+                79.984959,
+                14.441372
+              ],
+              [
+                79.984496,
+                14.442463
+              ],
+              [
+                79.983759,
+                14.443399
+              ],
+              [
+                79.982798,
+                14.444118
+              ],
+              [
+                79.981679,
+                14.44457
+              ],
+              [
+                79.980479,
+                14.444724
+              ],
+              [
+                79.979279,
+                14.44457
+              ],
+              [
+                79.97816,
+                14.444118
+              ],
+              [
+                79.977199,
+                14.443399
+              ],
+              [
+                79.976462,
+                14.442463
+              ],
+              [
+                79.975999,
+                14.441372
+              ],
+              [
+                79.975841,
+                14.440202
+              ],
+              [
+                79.975999,
+                14.439032
+              ],
+              [
+                79.976462,
+                14.437941
+              ],
+              [
+                79.977199,
+                14.437005
+              ],
+              [
+                79.97816,
+                14.436286
+              ],
+              [
+                79.979279,
+                14.435834
+              ],
+              [
+                79.980479,
+                14.43568
+              ],
+              [
+                79.981679,
+                14.435834
+              ],
+              [
+                79.982798,
+                14.436286
+              ],
+              [
+                79.983759,
+                14.437005
+              ],
+              [
+                79.984496,
+                14.437941
+              ],
+              [
+                79.984959,
+                14.439032
+              ],
+              [
+                79.985117,
+                14.440202
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-027",
+          "shop_name": "Sri Venkateswara Poultry Stall (Santhapet)",
+          "risk_level": "Very High Risk",
+          "buffer_radius_m": 500,
+          "exposure_zone": "Secondary Vector & Human Transmission Reach (500m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.983861,
+                14.43945
+              ],
+              [
+                79.983703,
+                14.44062
+              ],
+              [
+                79.98324,
+                14.441711
+              ],
+              [
+                79.982503,
+                14.442647
+              ],
+              [
+                79.981542,
+                14.443366
+              ],
+              [
+                79.980423,
+                14.443818
+              ],
+              [
+                79.979223,
+                14.443972
+              ],
+              [
+                79.978023,
+                14.443818
+              ],
+              [
+                79.976904,
+                14.443366
+              ],
+              [
+                79.975943,
+                14.442647
+              ],
+              [
+                79.975206,
+                14.441711
+              ],
+              [
+                79.974743,
+                14.44062
+              ],
+              [
+                79.974585,
+                14.43945
+              ],
+              [
+                79.974743,
+                14.43828
+              ],
+              [
+                79.975206,
+                14.437189
+              ],
+              [
+                79.975943,
+                14.436253
+              ],
+              [
+                79.976904,
+                14.435534
+              ],
+              [
+                79.978023,
+                14.435082
+              ],
+              [
+                79.979223,
+                14.434928
+              ],
+              [
+                79.980423,
+                14.435082
+              ],
+              [
+                79.981542,
+                14.435534
+              ],
+              [
+                79.982503,
+                14.436253
+              ],
+              [
+                79.98324,
+                14.437189
+              ],
+              [
+                79.983703,
+                14.43828
+              ],
+              [
+                79.983861,
+                14.43945
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-028",
+          "shop_name": "Balaji Poultry Stall (Santhapet)",
+          "risk_level": "Very High Risk",
+          "buffer_radius_m": 500,
+          "exposure_zone": "Secondary Vector & Human Transmission Reach (500m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.98707,
+                14.443433
+              ],
+              [
+                79.986912,
+                14.444603
+              ],
+              [
+                79.986449,
+                14.445694
+              ],
+              [
+                79.985712,
+                14.44663
+              ],
+              [
+                79.984751,
+                14.447349
+              ],
+              [
+                79.983632,
+                14.447801
+              ],
+              [
+                79.982432,
+                14.447955
+              ],
+              [
+                79.981232,
+                14.447801
+              ],
+              [
+                79.980113,
+                14.447349
+              ],
+              [
+                79.979152,
+                14.44663
+              ],
+              [
+                79.978415,
+                14.445694
+              ],
+              [
+                79.977952,
+                14.444603
+              ],
+              [
+                79.977794,
+                14.443433
+              ],
+              [
+                79.977952,
+                14.442263
+              ],
+              [
+                79.978415,
+                14.441172
+              ],
+              [
+                79.979152,
+                14.440236
+              ],
+              [
+                79.980113,
+                14.439517
+              ],
+              [
+                79.981232,
+                14.439065
+              ],
+              [
+                79.982432,
+                14.438911
+              ],
+              [
+                79.983632,
+                14.439065
+              ],
+              [
+                79.984751,
+                14.439517
+              ],
+              [
+                79.985712,
+                14.440236
+              ],
+              [
+                79.986449,
+                14.441172
+              ],
+              [
+                79.986912,
+                14.442263
+              ],
+              [
+                79.98707,
+                14.443433
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-029",
+          "shop_name": "Star Mutton Stall (Santhapet)",
+          "risk_level": "High Risk",
+          "buffer_radius_m": 500,
+          "exposure_zone": "Secondary Vector & Human Transmission Reach (500m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.982424,
+                14.438865
+              ],
+              [
+                79.982266,
+                14.440035
+              ],
+              [
+                79.981803,
+                14.441126
+              ],
+              [
+                79.981066,
+                14.442062
+              ],
+              [
+                79.980105,
+                14.442781
+              ],
+              [
+                79.978986,
+                14.443233
+              ],
+              [
+                79.977786,
+                14.443387
+              ],
+              [
+                79.976586,
+                14.443233
+              ],
+              [
+                79.975467,
+                14.442781
+              ],
+              [
+                79.974506,
+                14.442062
+              ],
+              [
+                79.973769,
+                14.441126
+              ],
+              [
+                79.973306,
+                14.440035
+              ],
+              [
+                79.973148,
+                14.438865
+              ],
+              [
+                79.973306,
+                14.437695
+              ],
+              [
+                79.973769,
+                14.436604
+              ],
+              [
+                79.974506,
+                14.435668
+              ],
+              [
+                79.975467,
+                14.434949
+              ],
+              [
+                79.976586,
+                14.434497
+              ],
+              [
+                79.977786,
+                14.434343
+              ],
+              [
+                79.978986,
+                14.434497
+              ],
+              [
+                79.980105,
+                14.434949
+              ],
+              [
+                79.981066,
+                14.435668
+              ],
+              [
+                79.981803,
+                14.436604
+              ],
+              [
+                79.982266,
+                14.437695
+              ],
+              [
+                79.982424,
+                14.438865
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-030",
+          "shop_name": "Gouthami Poultry Stall (Santhapet)",
+          "risk_level": "Very High Risk",
+          "buffer_radius_m": 500,
+          "exposure_zone": "Secondary Vector & Human Transmission Reach (500m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.985756,
+                14.439945
+              ],
+              [
+                79.985598,
+                14.441115
+              ],
+              [
+                79.985135,
+                14.442206
+              ],
+              [
+                79.984398,
+                14.443142
+              ],
+              [
+                79.983437,
+                14.443861
+              ],
+              [
+                79.982318,
+                14.444313
+              ],
+              [
+                79.981118,
+                14.444467
+              ],
+              [
+                79.979918,
+                14.444313
+              ],
+              [
+                79.978799,
+                14.443861
+              ],
+              [
+                79.977838,
+                14.443142
+              ],
+              [
+                79.977101,
+                14.442206
+              ],
+              [
+                79.976638,
+                14.441115
+              ],
+              [
+                79.97648,
+                14.439945
+              ],
+              [
+                79.976638,
+                14.438775
+              ],
+              [
+                79.977101,
+                14.437684
+              ],
+              [
+                79.977838,
+                14.436748
+              ],
+              [
+                79.978799,
+                14.436029
+              ],
+              [
+                79.979918,
+                14.435577
+              ],
+              [
+                79.981118,
+                14.435423
+              ],
+              [
+                79.982318,
+                14.435577
+              ],
+              [
+                79.983437,
+                14.436029
+              ],
+              [
+                79.984398,
+                14.436748
+              ],
+              [
+                79.985135,
+                14.437684
+              ],
+              [
+                79.985598,
+                14.438775
+              ],
+              [
+                79.985756,
+                14.439945
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-031",
+          "shop_name": "Star Poultry Stall (Ranganayakulapet)",
+          "risk_level": "High Risk",
+          "buffer_radius_m": 500,
+          "exposure_zone": "Secondary Vector & Human Transmission Reach (500m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.987121,
+                14.453487
+              ],
+              [
+                79.986963,
+                14.454657
+              ],
+              [
+                79.9865,
+                14.455748
+              ],
+              [
+                79.985763,
+                14.456684
+              ],
+              [
+                79.984802,
+                14.457403
+              ],
+              [
+                79.983683,
+                14.457855
+              ],
+              [
+                79.982483,
+                14.458009
+              ],
+              [
+                79.981283,
+                14.457855
+              ],
+              [
+                79.980164,
+                14.457403
+              ],
+              [
+                79.979203,
+                14.456684
+              ],
+              [
+                79.978466,
+                14.455748
+              ],
+              [
+                79.978003,
+                14.454657
+              ],
+              [
+                79.977845,
+                14.453487
+              ],
+              [
+                79.978003,
+                14.452317
+              ],
+              [
+                79.978466,
+                14.451226
+              ],
+              [
+                79.979203,
+                14.45029
+              ],
+              [
+                79.980164,
+                14.449571
+              ],
+              [
+                79.981283,
+                14.449119
+              ],
+              [
+                79.982483,
+                14.448965
+              ],
+              [
+                79.983683,
+                14.449119
+              ],
+              [
+                79.984802,
+                14.449571
+              ],
+              [
+                79.985763,
+                14.45029
+              ],
+              [
+                79.9865,
+                14.451226
+              ],
+              [
+                79.986963,
+                14.452317
+              ],
+              [
+                79.987121,
+                14.453487
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-032",
+          "shop_name": "Star Poultry Stall (Ranganayakulapet)",
+          "risk_level": "High Risk",
+          "buffer_radius_m": 500,
+          "exposure_zone": "Secondary Vector & Human Transmission Reach (500m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.992153,
+                14.450096
+              ],
+              [
+                79.991995,
+                14.451266
+              ],
+              [
+                79.991532,
+                14.452357
+              ],
+              [
+                79.990795,
+                14.453293
+              ],
+              [
+                79.989834,
+                14.454012
+              ],
+              [
+                79.988715,
+                14.454464
+              ],
+              [
+                79.987515,
+                14.454618
+              ],
+              [
+                79.986315,
+                14.454464
+              ],
+              [
+                79.985196,
+                14.454012
+              ],
+              [
+                79.984235,
+                14.453293
+              ],
+              [
+                79.983498,
+                14.452357
+              ],
+              [
+                79.983035,
+                14.451266
+              ],
+              [
+                79.982877,
+                14.450096
+              ],
+              [
+                79.983035,
+                14.448926
+              ],
+              [
+                79.983498,
+                14.447835
+              ],
+              [
+                79.984235,
+                14.446899
+              ],
+              [
+                79.985196,
+                14.44618
+              ],
+              [
+                79.986315,
+                14.445728
+              ],
+              [
+                79.987515,
+                14.445574
+              ],
+              [
+                79.988715,
+                14.445728
+              ],
+              [
+                79.989834,
+                14.44618
+              ],
+              [
+                79.990795,
+                14.446899
+              ],
+              [
+                79.991532,
+                14.447835
+              ],
+              [
+                79.991995,
+                14.448926
+              ],
+              [
+                79.992153,
+                14.450096
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-033",
+          "shop_name": "Balaji Poultry Stall (Ranganayakulapet)",
+          "risk_level": "High Risk",
+          "buffer_radius_m": 500,
+          "exposure_zone": "Secondary Vector & Human Transmission Reach (500m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.991008,
+                14.454383
+              ],
+              [
+                79.99085,
+                14.455553
+              ],
+              [
+                79.990387,
+                14.456644
+              ],
+              [
+                79.98965,
+                14.45758
+              ],
+              [
+                79.988689,
+                14.458299
+              ],
+              [
+                79.98757,
+                14.458751
+              ],
+              [
+                79.98637,
+                14.458905
+              ],
+              [
+                79.98517,
+                14.458751
+              ],
+              [
+                79.984051,
+                14.458299
+              ],
+              [
+                79.98309,
+                14.45758
+              ],
+              [
+                79.982353,
+                14.456644
+              ],
+              [
+                79.98189,
+                14.455553
+              ],
+              [
+                79.981732,
+                14.454383
+              ],
+              [
+                79.98189,
+                14.453213
+              ],
+              [
+                79.982353,
+                14.452122
+              ],
+              [
+                79.98309,
+                14.451186
+              ],
+              [
+                79.984051,
+                14.450467
+              ],
+              [
+                79.98517,
+                14.450015
+              ],
+              [
+                79.98637,
+                14.449861
+              ],
+              [
+                79.98757,
+                14.450015
+              ],
+              [
+                79.988689,
+                14.450467
+              ],
+              [
+                79.98965,
+                14.451186
+              ],
+              [
+                79.990387,
+                14.452122
+              ],
+              [
+                79.99085,
+                14.453213
+              ],
+              [
+                79.991008,
+                14.454383
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-034",
+          "shop_name": "Al-Madina Fish Stall (Ranganayakulapet)",
+          "risk_level": "Very High Risk",
+          "buffer_radius_m": 500,
+          "exposure_zone": "Secondary Vector & Human Transmission Reach (500m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.991884,
+                14.45649
+              ],
+              [
+                79.991726,
+                14.45766
+              ],
+              [
+                79.991263,
+                14.458751
+              ],
+              [
+                79.990526,
+                14.459687
+              ],
+              [
+                79.989565,
+                14.460406
+              ],
+              [
+                79.988446,
+                14.460858
+              ],
+              [
+                79.987246,
+                14.461012
+              ],
+              [
+                79.986046,
+                14.460858
+              ],
+              [
+                79.984927,
+                14.460406
+              ],
+              [
+                79.983966,
+                14.459687
+              ],
+              [
+                79.983229,
+                14.458751
+              ],
+              [
+                79.982766,
+                14.45766
+              ],
+              [
+                79.982608,
+                14.45649
+              ],
+              [
+                79.982766,
+                14.45532
+              ],
+              [
+                79.983229,
+                14.454229
+              ],
+              [
+                79.983966,
+                14.453293
+              ],
+              [
+                79.984927,
+                14.452574
+              ],
+              [
+                79.986046,
+                14.452122
+              ],
+              [
+                79.987246,
+                14.451968
+              ],
+              [
+                79.988446,
+                14.452122
+              ],
+              [
+                79.989565,
+                14.452574
+              ],
+              [
+                79.990526,
+                14.453293
+              ],
+              [
+                79.991263,
+                14.454229
+              ],
+              [
+                79.991726,
+                14.45532
+              ],
+              [
+                79.991884,
+                14.45649
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-035",
+          "shop_name": "Sai Krupa Fish Stall (Ranganayakulapet)",
+          "risk_level": "High Risk",
+          "buffer_radius_m": 500,
+          "exposure_zone": "Secondary Vector & Human Transmission Reach (500m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.990508,
+                14.451808
+              ],
+              [
+                79.99035,
+                14.452978
+              ],
+              [
+                79.989887,
+                14.454069
+              ],
+              [
+                79.98915,
+                14.455005
+              ],
+              [
+                79.988189,
+                14.455724
+              ],
+              [
+                79.98707,
+                14.456176
+              ],
+              [
+                79.98587,
+                14.45633
+              ],
+              [
+                79.98467,
+                14.456176
+              ],
+              [
+                79.983551,
+                14.455724
+              ],
+              [
+                79.98259,
+                14.455005
+              ],
+              [
+                79.981853,
+                14.454069
+              ],
+              [
+                79.98139,
+                14.452978
+              ],
+              [
+                79.981232,
+                14.451808
+              ],
+              [
+                79.98139,
+                14.450638
+              ],
+              [
+                79.981853,
+                14.449547
+              ],
+              [
+                79.98259,
+                14.448611
+              ],
+              [
+                79.983551,
+                14.447892
+              ],
+              [
+                79.98467,
+                14.44744
+              ],
+              [
+                79.98587,
+                14.447286
+              ],
+              [
+                79.98707,
+                14.44744
+              ],
+              [
+                79.988189,
+                14.447892
+              ],
+              [
+                79.98915,
+                14.448611
+              ],
+              [
+                79.989887,
+                14.449547
+              ],
+              [
+                79.99035,
+                14.450638
+              ],
+              [
+                79.990508,
+                14.451808
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-036",
+          "shop_name": "National Fish Stall (Ranganayakulapet)",
+          "risk_level": "High Risk",
+          "buffer_radius_m": 500,
+          "exposure_zone": "Secondary Vector & Human Transmission Reach (500m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.992902,
+                14.450592
+              ],
+              [
+                79.992744,
+                14.451762
+              ],
+              [
+                79.992281,
+                14.452853
+              ],
+              [
+                79.991544,
+                14.453789
+              ],
+              [
+                79.990583,
+                14.454508
+              ],
+              [
+                79.989464,
+                14.45496
+              ],
+              [
+                79.988264,
+                14.455114
+              ],
+              [
+                79.987064,
+                14.45496
+              ],
+              [
+                79.985945,
+                14.454508
+              ],
+              [
+                79.984984,
+                14.453789
+              ],
+              [
+                79.984247,
+                14.452853
+              ],
+              [
+                79.983784,
+                14.451762
+              ],
+              [
+                79.983626,
+                14.450592
+              ],
+              [
+                79.983784,
+                14.449422
+              ],
+              [
+                79.984247,
+                14.448331
+              ],
+              [
+                79.984984,
+                14.447395
+              ],
+              [
+                79.985945,
+                14.446676
+              ],
+              [
+                79.987064,
+                14.446224
+              ],
+              [
+                79.988264,
+                14.44607
+              ],
+              [
+                79.989464,
+                14.446224
+              ],
+              [
+                79.990583,
+                14.446676
+              ],
+              [
+                79.991544,
+                14.447395
+              ],
+              [
+                79.992281,
+                14.448331
+              ],
+              [
+                79.992744,
+                14.449422
+              ],
+              [
+                79.992902,
+                14.450592
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-037",
+          "shop_name": "Gouthami Fish Stall (Ranganayakulapet)",
+          "risk_level": "Very High Risk",
+          "buffer_radius_m": 500,
+          "exposure_zone": "Secondary Vector & Human Transmission Reach (500m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.993239,
+                14.453234
+              ],
+              [
+                79.993081,
+                14.454404
+              ],
+              [
+                79.992618,
+                14.455495
+              ],
+              [
+                79.991881,
+                14.456431
+              ],
+              [
+                79.99092,
+                14.45715
+              ],
+              [
+                79.989801,
+                14.457602
+              ],
+              [
+                79.988601,
+                14.457756
+              ],
+              [
+                79.987401,
+                14.457602
+              ],
+              [
+                79.986282,
+                14.45715
+              ],
+              [
+                79.985321,
+                14.456431
+              ],
+              [
+                79.984584,
+                14.455495
+              ],
+              [
+                79.984121,
+                14.454404
+              ],
+              [
+                79.983963,
+                14.453234
+              ],
+              [
+                79.984121,
+                14.452064
+              ],
+              [
+                79.984584,
+                14.450973
+              ],
+              [
+                79.985321,
+                14.450037
+              ],
+              [
+                79.986282,
+                14.449318
+              ],
+              [
+                79.987401,
+                14.448866
+              ],
+              [
+                79.988601,
+                14.448712
+              ],
+              [
+                79.989801,
+                14.448866
+              ],
+              [
+                79.99092,
+                14.449318
+              ],
+              [
+                79.991881,
+                14.450037
+              ],
+              [
+                79.992618,
+                14.450973
+              ],
+              [
+                79.993081,
+                14.452064
+              ],
+              [
+                79.993239,
+                14.453234
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-038",
+          "shop_name": "Annapurna Fish Stall (Ranganayakulapet)",
+          "risk_level": "High Risk",
+          "buffer_radius_m": 500,
+          "exposure_zone": "Secondary Vector & Human Transmission Reach (500m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.990751,
+                14.456561
+              ],
+              [
+                79.990593,
+                14.457731
+              ],
+              [
+                79.99013,
+                14.458822
+              ],
+              [
+                79.989393,
+                14.459758
+              ],
+              [
+                79.988432,
+                14.460477
+              ],
+              [
+                79.987313,
+                14.460929
+              ],
+              [
+                79.986113,
+                14.461083
+              ],
+              [
+                79.984913,
+                14.460929
+              ],
+              [
+                79.983794,
+                14.460477
+              ],
+              [
+                79.982833,
+                14.459758
+              ],
+              [
+                79.982096,
+                14.458822
+              ],
+              [
+                79.981633,
+                14.457731
+              ],
+              [
+                79.981475,
+                14.456561
+              ],
+              [
+                79.981633,
+                14.455391
+              ],
+              [
+                79.982096,
+                14.4543
+              ],
+              [
+                79.982833,
+                14.453364
+              ],
+              [
+                79.983794,
+                14.452645
+              ],
+              [
+                79.984913,
+                14.452193
+              ],
+              [
+                79.986113,
+                14.452039
+              ],
+              [
+                79.987313,
+                14.452193
+              ],
+              [
+                79.988432,
+                14.452645
+              ],
+              [
+                79.989393,
+                14.453364
+              ],
+              [
+                79.99013,
+                14.4543
+              ],
+              [
+                79.990593,
+                14.455391
+              ],
+              [
+                79.990751,
+                14.456561
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-039",
+          "shop_name": "Star Fish Stall (Ranganayakulapet)",
+          "risk_level": "Very High Risk",
+          "buffer_radius_m": 500,
+          "exposure_zone": "Secondary Vector & Human Transmission Reach (500m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.991836,
+                14.450964
+              ],
+              [
+                79.991678,
+                14.452134
+              ],
+              [
+                79.991215,
+                14.453225
+              ],
+              [
+                79.990478,
+                14.454161
+              ],
+              [
+                79.989517,
+                14.45488
+              ],
+              [
+                79.988398,
+                14.455332
+              ],
+              [
+                79.987198,
+                14.455486
+              ],
+              [
+                79.985998,
+                14.455332
+              ],
+              [
+                79.984879,
+                14.45488
+              ],
+              [
+                79.983918,
+                14.454161
+              ],
+              [
+                79.983181,
+                14.453225
+              ],
+              [
+                79.982718,
+                14.452134
+              ],
+              [
+                79.98256,
+                14.450964
+              ],
+              [
+                79.982718,
+                14.449794
+              ],
+              [
+                79.983181,
+                14.448703
+              ],
+              [
+                79.983918,
+                14.447767
+              ],
+              [
+                79.984879,
+                14.447048
+              ],
+              [
+                79.985998,
+                14.446596
+              ],
+              [
+                79.987198,
+                14.446442
+              ],
+              [
+                79.988398,
+                14.446596
+              ],
+              [
+                79.989517,
+                14.447048
+              ],
+              [
+                79.990478,
+                14.447767
+              ],
+              [
+                79.991215,
+                14.448703
+              ],
+              [
+                79.991678,
+                14.449794
+              ],
+              [
+                79.991836,
+                14.450964
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-040",
+          "shop_name": "Star Poultry Stall (Ranganayakulapet)",
+          "risk_level": "High Risk",
+          "buffer_radius_m": 500,
+          "exposure_zone": "Secondary Vector & Human Transmission Reach (500m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.99418,
+                14.453251
+              ],
+              [
+                79.994022,
+                14.454421
+              ],
+              [
+                79.993559,
+                14.455512
+              ],
+              [
+                79.992822,
+                14.456448
+              ],
+              [
+                79.991861,
+                14.457167
+              ],
+              [
+                79.990742,
+                14.457619
+              ],
+              [
+                79.989542,
+                14.457773
+              ],
+              [
+                79.988342,
+                14.457619
+              ],
+              [
+                79.987223,
+                14.457167
+              ],
+              [
+                79.986262,
+                14.456448
+              ],
+              [
+                79.985525,
+                14.455512
+              ],
+              [
+                79.985062,
+                14.454421
+              ],
+              [
+                79.984904,
+                14.453251
+              ],
+              [
+                79.985062,
+                14.452081
+              ],
+              [
+                79.985525,
+                14.45099
+              ],
+              [
+                79.986262,
+                14.450054
+              ],
+              [
+                79.987223,
+                14.449335
+              ],
+              [
+                79.988342,
+                14.448883
+              ],
+              [
+                79.989542,
+                14.448729
+              ],
+              [
+                79.990742,
+                14.448883
+              ],
+              [
+                79.991861,
+                14.449335
+              ],
+              [
+                79.992822,
+                14.450054
+              ],
+              [
+                79.993559,
+                14.45099
+              ],
+              [
+                79.994022,
+                14.452081
+              ],
+              [
+                79.99418,
+                14.453251
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-041",
+          "shop_name": "Balaji Poultry Stall (Vedayapalem)",
+          "risk_level": "High Risk",
+          "buffer_radius_m": 500,
+          "exposure_zone": "Secondary Vector & Human Transmission Reach (500m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.969621,
+                14.41985
+              ],
+              [
+                79.969463,
+                14.42102
+              ],
+              [
+                79.969,
+                14.422111
+              ],
+              [
+                79.968263,
+                14.423047
+              ],
+              [
+                79.967302,
+                14.423766
+              ],
+              [
+                79.966183,
+                14.424218
+              ],
+              [
+                79.964983,
+                14.424372
+              ],
+              [
+                79.963783,
+                14.424218
+              ],
+              [
+                79.962664,
+                14.423766
+              ],
+              [
+                79.961703,
+                14.423047
+              ],
+              [
+                79.960966,
+                14.422111
+              ],
+              [
+                79.960503,
+                14.42102
+              ],
+              [
+                79.960345,
+                14.41985
+              ],
+              [
+                79.960503,
+                14.41868
+              ],
+              [
+                79.960966,
+                14.417589
+              ],
+              [
+                79.961703,
+                14.416653
+              ],
+              [
+                79.962664,
+                14.415934
+              ],
+              [
+                79.963783,
+                14.415482
+              ],
+              [
+                79.964983,
+                14.415328
+              ],
+              [
+                79.966183,
+                14.415482
+              ],
+              [
+                79.967302,
+                14.415934
+              ],
+              [
+                79.968263,
+                14.416653
+              ],
+              [
+                79.969,
+                14.417589
+              ],
+              [
+                79.969463,
+                14.41868
+              ],
+              [
+                79.969621,
+                14.41985
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-042",
+          "shop_name": "Coastal Choice Mutton Stall (Vedayapalem)",
+          "risk_level": "High Risk",
+          "buffer_radius_m": 500,
+          "exposure_zone": "Secondary Vector & Human Transmission Reach (500m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.967692,
+                14.414967
+              ],
+              [
+                79.967534,
+                14.416137
+              ],
+              [
+                79.967071,
+                14.417228
+              ],
+              [
+                79.966334,
+                14.418164
+              ],
+              [
+                79.965373,
+                14.418883
+              ],
+              [
+                79.964254,
+                14.419335
+              ],
+              [
+                79.963054,
+                14.419489
+              ],
+              [
+                79.961854,
+                14.419335
+              ],
+              [
+                79.960735,
+                14.418883
+              ],
+              [
+                79.959774,
+                14.418164
+              ],
+              [
+                79.959037,
+                14.417228
+              ],
+              [
+                79.958574,
+                14.416137
+              ],
+              [
+                79.958416,
+                14.414967
+              ],
+              [
+                79.958574,
+                14.413797
+              ],
+              [
+                79.959037,
+                14.412706
+              ],
+              [
+                79.959774,
+                14.41177
+              ],
+              [
+                79.960735,
+                14.411051
+              ],
+              [
+                79.961854,
+                14.410599
+              ],
+              [
+                79.963054,
+                14.410445
+              ],
+              [
+                79.964254,
+                14.410599
+              ],
+              [
+                79.965373,
+                14.411051
+              ],
+              [
+                79.966334,
+                14.41177
+              ],
+              [
+                79.967071,
+                14.412706
+              ],
+              [
+                79.967534,
+                14.413797
+              ],
+              [
+                79.967692,
+                14.414967
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-047",
+          "shop_name": "Pennar Quality Poultry Stall (Vedayapalem)",
+          "risk_level": "High Risk",
+          "buffer_radius_m": 500,
+          "exposure_zone": "Secondary Vector & Human Transmission Reach (500m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.967978,
+                14.416943
+              ],
+              [
+                79.96782,
+                14.418113
+              ],
+              [
+                79.967357,
+                14.419204
+              ],
+              [
+                79.96662,
+                14.42014
+              ],
+              [
+                79.965659,
+                14.420859
+              ],
+              [
+                79.96454,
+                14.421311
+              ],
+              [
+                79.96334,
+                14.421465
+              ],
+              [
+                79.96214,
+                14.421311
+              ],
+              [
+                79.961021,
+                14.420859
+              ],
+              [
+                79.96006,
+                14.42014
+              ],
+              [
+                79.959323,
+                14.419204
+              ],
+              [
+                79.95886,
+                14.418113
+              ],
+              [
+                79.958702,
+                14.416943
+              ],
+              [
+                79.95886,
+                14.415773
+              ],
+              [
+                79.959323,
+                14.414682
+              ],
+              [
+                79.96006,
+                14.413746
+              ],
+              [
+                79.961021,
+                14.413027
+              ],
+              [
+                79.96214,
+                14.412575
+              ],
+              [
+                79.96334,
+                14.412421
+              ],
+              [
+                79.96454,
+                14.412575
+              ],
+              [
+                79.965659,
+                14.413027
+              ],
+              [
+                79.96662,
+                14.413746
+              ],
+              [
+                79.967357,
+                14.414682
+              ],
+              [
+                79.96782,
+                14.415773
+              ],
+              [
+                79.967978,
+                14.416943
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-049",
+          "shop_name": "Gouthami Poultry Stall (Vedayapalem)",
+          "risk_level": "Very High Risk",
+          "buffer_radius_m": 500,
+          "exposure_zone": "Secondary Vector & Human Transmission Reach (500m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.970003,
+                14.418532
+              ],
+              [
+                79.969845,
+                14.419702
+              ],
+              [
+                79.969382,
+                14.420793
+              ],
+              [
+                79.968645,
+                14.421729
+              ],
+              [
+                79.967684,
+                14.422448
+              ],
+              [
+                79.966565,
+                14.4229
+              ],
+              [
+                79.965365,
+                14.423054
+              ],
+              [
+                79.964165,
+                14.4229
+              ],
+              [
+                79.963046,
+                14.422448
+              ],
+              [
+                79.962085,
+                14.421729
+              ],
+              [
+                79.961348,
+                14.420793
+              ],
+              [
+                79.960885,
+                14.419702
+              ],
+              [
+                79.960727,
+                14.418532
+              ],
+              [
+                79.960885,
+                14.417362
+              ],
+              [
+                79.961348,
+                14.416271
+              ],
+              [
+                79.962085,
+                14.415335
+              ],
+              [
+                79.963046,
+                14.414616
+              ],
+              [
+                79.964165,
+                14.414164
+              ],
+              [
+                79.965365,
+                14.41401
+              ],
+              [
+                79.966565,
+                14.414164
+              ],
+              [
+                79.967684,
+                14.414616
+              ],
+              [
+                79.968645,
+                14.415335
+              ],
+              [
+                79.969382,
+                14.416271
+              ],
+              [
+                79.969845,
+                14.417362
+              ],
+              [
+                79.970003,
+                14.418532
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-050",
+          "shop_name": "National Poultry Stall (Vedayapalem)",
+          "risk_level": "High Risk",
+          "buffer_radius_m": 500,
+          "exposure_zone": "Secondary Vector & Human Transmission Reach (500m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.972796,
+                14.420941
+              ],
+              [
+                79.972638,
+                14.422111
+              ],
+              [
+                79.972175,
+                14.423202
+              ],
+              [
+                79.971438,
+                14.424138
+              ],
+              [
+                79.970477,
+                14.424857
+              ],
+              [
+                79.969358,
+                14.425309
+              ],
+              [
+                79.968158,
+                14.425463
+              ],
+              [
+                79.966958,
+                14.425309
+              ],
+              [
+                79.965839,
+                14.424857
+              ],
+              [
+                79.964878,
+                14.424138
+              ],
+              [
+                79.964141,
+                14.423202
+              ],
+              [
+                79.963678,
+                14.422111
+              ],
+              [
+                79.96352,
+                14.420941
+              ],
+              [
+                79.963678,
+                14.419771
+              ],
+              [
+                79.964141,
+                14.41868
+              ],
+              [
+                79.964878,
+                14.417744
+              ],
+              [
+                79.965839,
+                14.417025
+              ],
+              [
+                79.966958,
+                14.416573
+              ],
+              [
+                79.968158,
+                14.416419
+              ],
+              [
+                79.969358,
+                14.416573
+              ],
+              [
+                79.970477,
+                14.417025
+              ],
+              [
+                79.971438,
+                14.417744
+              ],
+              [
+                79.972175,
+                14.41868
+              ],
+              [
+                79.972638,
+                14.419771
+              ],
+              [
+                79.972796,
+                14.420941
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-051",
+          "shop_name": "Nellore Fresh Mutton Stall (Kovur)",
+          "risk_level": "High Risk",
+          "buffer_radius_m": 500,
+          "exposure_zone": "Secondary Vector & Human Transmission Reach (500m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.979397,
+                14.493883
+              ],
+              [
+                79.979239,
+                14.495053
+              ],
+              [
+                79.978776,
+                14.496144
+              ],
+              [
+                79.978039,
+                14.49708
+              ],
+              [
+                79.977078,
+                14.497799
+              ],
+              [
+                79.975959,
+                14.498251
+              ],
+              [
+                79.974759,
+                14.498405
+              ],
+              [
+                79.973559,
+                14.498251
+              ],
+              [
+                79.97244,
+                14.497799
+              ],
+              [
+                79.971479,
+                14.49708
+              ],
+              [
+                79.970742,
+                14.496144
+              ],
+              [
+                79.970279,
+                14.495053
+              ],
+              [
+                79.970121,
+                14.493883
+              ],
+              [
+                79.970279,
+                14.492713
+              ],
+              [
+                79.970742,
+                14.491622
+              ],
+              [
+                79.971479,
+                14.490686
+              ],
+              [
+                79.97244,
+                14.489967
+              ],
+              [
+                79.973559,
+                14.489515
+              ],
+              [
+                79.974759,
+                14.489361
+              ],
+              [
+                79.975959,
+                14.489515
+              ],
+              [
+                79.977078,
+                14.489967
+              ],
+              [
+                79.978039,
+                14.490686
+              ],
+              [
+                79.978776,
+                14.491622
+              ],
+              [
+                79.979239,
+                14.492713
+              ],
+              [
+                79.979397,
+                14.493883
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-056",
+          "shop_name": "Coastal Choice Poultry Stall (Kovur)",
+          "risk_level": "High Risk",
+          "buffer_radius_m": 500,
+          "exposure_zone": "Secondary Vector & Human Transmission Reach (500m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.982604,
+                14.495956
+              ],
+              [
+                79.982446,
+                14.497126
+              ],
+              [
+                79.981983,
+                14.498217
+              ],
+              [
+                79.981246,
+                14.499153
+              ],
+              [
+                79.980285,
+                14.499872
+              ],
+              [
+                79.979166,
+                14.500324
+              ],
+              [
+                79.977966,
+                14.500478
+              ],
+              [
+                79.976766,
+                14.500324
+              ],
+              [
+                79.975647,
+                14.499872
+              ],
+              [
+                79.974686,
+                14.499153
+              ],
+              [
+                79.973949,
+                14.498217
+              ],
+              [
+                79.973486,
+                14.497126
+              ],
+              [
+                79.973328,
+                14.495956
+              ],
+              [
+                79.973486,
+                14.494786
+              ],
+              [
+                79.973949,
+                14.493695
+              ],
+              [
+                79.974686,
+                14.492759
+              ],
+              [
+                79.975647,
+                14.49204
+              ],
+              [
+                79.976766,
+                14.491588
+              ],
+              [
+                79.977966,
+                14.491434
+              ],
+              [
+                79.979166,
+                14.491588
+              ],
+              [
+                79.980285,
+                14.49204
+              ],
+              [
+                79.981246,
+                14.492759
+              ],
+              [
+                79.981983,
+                14.493695
+              ],
+              [
+                79.982446,
+                14.494786
+              ],
+              [
+                79.982604,
+                14.495956
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-057",
+          "shop_name": "National Poultry Stall (Kovur)",
+          "risk_level": "High Risk",
+          "buffer_radius_m": 500,
+          "exposure_zone": "Secondary Vector & Human Transmission Reach (500m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.981109,
+                14.493228
+              ],
+              [
+                79.980951,
+                14.494398
+              ],
+              [
+                79.980488,
+                14.495489
+              ],
+              [
+                79.979751,
+                14.496425
+              ],
+              [
+                79.97879,
+                14.497144
+              ],
+              [
+                79.977671,
+                14.497596
+              ],
+              [
+                79.976471,
+                14.49775
+              ],
+              [
+                79.975271,
+                14.497596
+              ],
+              [
+                79.974152,
+                14.497144
+              ],
+              [
+                79.973191,
+                14.496425
+              ],
+              [
+                79.972454,
+                14.495489
+              ],
+              [
+                79.971991,
+                14.494398
+              ],
+              [
+                79.971833,
+                14.493228
+              ],
+              [
+                79.971991,
+                14.492058
+              ],
+              [
+                79.972454,
+                14.490967
+              ],
+              [
+                79.973191,
+                14.490031
+              ],
+              [
+                79.974152,
+                14.489312
+              ],
+              [
+                79.975271,
+                14.48886
+              ],
+              [
+                79.976471,
+                14.488706
+              ],
+              [
+                79.977671,
+                14.48886
+              ],
+              [
+                79.97879,
+                14.489312
+              ],
+              [
+                79.979751,
+                14.490031
+              ],
+              [
+                79.980488,
+                14.490967
+              ],
+              [
+                79.980951,
+                14.492058
+              ],
+              [
+                79.981109,
+                14.493228
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-058",
+          "shop_name": "Star Mixed Stall (Kovur)",
+          "risk_level": "Very High Risk",
+          "buffer_radius_m": 500,
+          "exposure_zone": "Secondary Vector & Human Transmission Reach (500m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.981191,
+                14.493955
+              ],
+              [
+                79.981033,
+                14.495125
+              ],
+              [
+                79.98057,
+                14.496216
+              ],
+              [
+                79.979833,
+                14.497152
+              ],
+              [
+                79.978872,
+                14.497871
+              ],
+              [
+                79.977753,
+                14.498323
+              ],
+              [
+                79.976553,
+                14.498477
+              ],
+              [
+                79.975353,
+                14.498323
+              ],
+              [
+                79.974234,
+                14.497871
+              ],
+              [
+                79.973273,
+                14.497152
+              ],
+              [
+                79.972536,
+                14.496216
+              ],
+              [
+                79.972073,
+                14.495125
+              ],
+              [
+                79.971915,
+                14.493955
+              ],
+              [
+                79.972073,
+                14.492785
+              ],
+              [
+                79.972536,
+                14.491694
+              ],
+              [
+                79.973273,
+                14.490758
+              ],
+              [
+                79.974234,
+                14.490039
+              ],
+              [
+                79.975353,
+                14.489587
+              ],
+              [
+                79.976553,
+                14.489433
+              ],
+              [
+                79.977753,
+                14.489587
+              ],
+              [
+                79.978872,
+                14.490039
+              ],
+              [
+                79.979833,
+                14.490758
+              ],
+              [
+                79.98057,
+                14.491694
+              ],
+              [
+                79.981033,
+                14.492785
+              ],
+              [
+                79.981191,
+                14.493955
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-059",
+          "shop_name": "Sri Venkateswara Mixed Stall (Kovur)",
+          "risk_level": "Very High Risk",
+          "buffer_radius_m": 500,
+          "exposure_zone": "Secondary Vector & Human Transmission Reach (500m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.981804,
+                14.494069
+              ],
+              [
+                79.981646,
+                14.495239
+              ],
+              [
+                79.981183,
+                14.49633
+              ],
+              [
+                79.980446,
+                14.497266
+              ],
+              [
+                79.979485,
+                14.497985
+              ],
+              [
+                79.978366,
+                14.498437
+              ],
+              [
+                79.977166,
+                14.498591
+              ],
+              [
+                79.975966,
+                14.498437
+              ],
+              [
+                79.974847,
+                14.497985
+              ],
+              [
+                79.973886,
+                14.497266
+              ],
+              [
+                79.973149,
+                14.49633
+              ],
+              [
+                79.972686,
+                14.495239
+              ],
+              [
+                79.972528,
+                14.494069
+              ],
+              [
+                79.972686,
+                14.492899
+              ],
+              [
+                79.973149,
+                14.491808
+              ],
+              [
+                79.973886,
+                14.490872
+              ],
+              [
+                79.974847,
+                14.490153
+              ],
+              [
+                79.975966,
+                14.489701
+              ],
+              [
+                79.977166,
+                14.489547
+              ],
+              [
+                79.978366,
+                14.489701
+              ],
+              [
+                79.979485,
+                14.490153
+              ],
+              [
+                79.980446,
+                14.490872
+              ],
+              [
+                79.981183,
+                14.491808
+              ],
+              [
+                79.981646,
+                14.492899
+              ],
+              [
+                79.981804,
+                14.494069
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-060",
+          "shop_name": "Sri Venkateswara Poultry Stall (Kovur)",
+          "risk_level": "High Risk",
+          "buffer_radius_m": 500,
+          "exposure_zone": "Secondary Vector & Human Transmission Reach (500m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.98284,
+                14.495621
+              ],
+              [
+                79.982682,
+                14.496791
+              ],
+              [
+                79.982219,
+                14.497882
+              ],
+              [
+                79.981482,
+                14.498818
+              ],
+              [
+                79.980521,
+                14.499537
+              ],
+              [
+                79.979402,
+                14.499989
+              ],
+              [
+                79.978202,
+                14.500143
+              ],
+              [
+                79.977002,
+                14.499989
+              ],
+              [
+                79.975883,
+                14.499537
+              ],
+              [
+                79.974922,
+                14.498818
+              ],
+              [
+                79.974185,
+                14.497882
+              ],
+              [
+                79.973722,
+                14.496791
+              ],
+              [
+                79.973564,
+                14.495621
+              ],
+              [
+                79.973722,
+                14.494451
+              ],
+              [
+                79.974185,
+                14.49336
+              ],
+              [
+                79.974922,
+                14.492424
+              ],
+              [
+                79.975883,
+                14.491705
+              ],
+              [
+                79.977002,
+                14.491253
+              ],
+              [
+                79.978202,
+                14.491099
+              ],
+              [
+                79.979402,
+                14.491253
+              ],
+              [
+                79.980521,
+                14.491705
+              ],
+              [
+                79.981482,
+                14.492424
+              ],
+              [
+                79.982219,
+                14.49336
+              ],
+              [
+                79.982682,
+                14.494451
+              ],
+              [
+                79.98284,
+                14.495621
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-062",
+          "shop_name": "Star Fish Stall (Kovur)",
+          "risk_level": "High Risk",
+          "buffer_radius_m": 500,
+          "exposure_zone": "Secondary Vector & Human Transmission Reach (500m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.984318,
+                14.494622
+              ],
+              [
+                79.98416,
+                14.495792
+              ],
+              [
+                79.983697,
+                14.496883
+              ],
+              [
+                79.98296,
+                14.497819
+              ],
+              [
+                79.981999,
+                14.498538
+              ],
+              [
+                79.98088,
+                14.49899
+              ],
+              [
+                79.97968,
+                14.499144
+              ],
+              [
+                79.97848,
+                14.49899
+              ],
+              [
+                79.977361,
+                14.498538
+              ],
+              [
+                79.9764,
+                14.497819
+              ],
+              [
+                79.975663,
+                14.496883
+              ],
+              [
+                79.9752,
+                14.495792
+              ],
+              [
+                79.975042,
+                14.494622
+              ],
+              [
+                79.9752,
+                14.493452
+              ],
+              [
+                79.975663,
+                14.492361
+              ],
+              [
+                79.9764,
+                14.491425
+              ],
+              [
+                79.977361,
+                14.490706
+              ],
+              [
+                79.97848,
+                14.490254
+              ],
+              [
+                79.97968,
+                14.4901
+              ],
+              [
+                79.98088,
+                14.490254
+              ],
+              [
+                79.981999,
+                14.490706
+              ],
+              [
+                79.98296,
+                14.491425
+              ],
+              [
+                79.983697,
+                14.492361
+              ],
+              [
+                79.98416,
+                14.493452
+              ],
+              [
+                79.984318,
+                14.494622
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-064",
+          "shop_name": "Sri Venkateswara Mutton Stall (Kovur)",
+          "risk_level": "High Risk",
+          "buffer_radius_m": 500,
+          "exposure_zone": "Secondary Vector & Human Transmission Reach (500m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.983055,
+                14.494103
+              ],
+              [
+                79.982897,
+                14.495273
+              ],
+              [
+                79.982434,
+                14.496364
+              ],
+              [
+                79.981697,
+                14.4973
+              ],
+              [
+                79.980736,
+                14.498019
+              ],
+              [
+                79.979617,
+                14.498471
+              ],
+              [
+                79.978417,
+                14.498625
+              ],
+              [
+                79.977217,
+                14.498471
+              ],
+              [
+                79.976098,
+                14.498019
+              ],
+              [
+                79.975137,
+                14.4973
+              ],
+              [
+                79.9744,
+                14.496364
+              ],
+              [
+                79.973937,
+                14.495273
+              ],
+              [
+                79.973779,
+                14.494103
+              ],
+              [
+                79.973937,
+                14.492933
+              ],
+              [
+                79.9744,
+                14.491842
+              ],
+              [
+                79.975137,
+                14.490906
+              ],
+              [
+                79.976098,
+                14.490187
+              ],
+              [
+                79.977217,
+                14.489735
+              ],
+              [
+                79.978417,
+                14.489581
+              ],
+              [
+                79.979617,
+                14.489735
+              ],
+              [
+                79.980736,
+                14.490187
+              ],
+              [
+                79.981697,
+                14.490906
+              ],
+              [
+                79.982434,
+                14.491842
+              ],
+              [
+                79.982897,
+                14.492933
+              ],
+              [
+                79.983055,
+                14.494103
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-068",
+          "shop_name": "Annapurna Fish Stall (Padugupadu)",
+          "risk_level": "High Risk",
+          "buffer_radius_m": 500,
+          "exposure_zone": "Secondary Vector & Human Transmission Reach (500m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.989073,
+                14.476728
+              ],
+              [
+                79.988915,
+                14.477898
+              ],
+              [
+                79.988452,
+                14.478989
+              ],
+              [
+                79.987715,
+                14.479925
+              ],
+              [
+                79.986754,
+                14.480644
+              ],
+              [
+                79.985635,
+                14.481096
+              ],
+              [
+                79.984435,
+                14.48125
+              ],
+              [
+                79.983235,
+                14.481096
+              ],
+              [
+                79.982116,
+                14.480644
+              ],
+              [
+                79.981155,
+                14.479925
+              ],
+              [
+                79.980418,
+                14.478989
+              ],
+              [
+                79.979955,
+                14.477898
+              ],
+              [
+                79.979797,
+                14.476728
+              ],
+              [
+                79.979955,
+                14.475558
+              ],
+              [
+                79.980418,
+                14.474467
+              ],
+              [
+                79.981155,
+                14.473531
+              ],
+              [
+                79.982116,
+                14.472812
+              ],
+              [
+                79.983235,
+                14.47236
+              ],
+              [
+                79.984435,
+                14.472206
+              ],
+              [
+                79.985635,
+                14.47236
+              ],
+              [
+                79.986754,
+                14.472812
+              ],
+              [
+                79.987715,
+                14.473531
+              ],
+              [
+                79.988452,
+                14.474467
+              ],
+              [
+                79.988915,
+                14.475558
+              ],
+              [
+                79.989073,
+                14.476728
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-071",
+          "shop_name": "Annapurna Poultry Stall (Padugupadu)",
+          "risk_level": "High Risk",
+          "buffer_radius_m": 500,
+          "exposure_zone": "Secondary Vector & Human Transmission Reach (500m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                79.986337,
+                14.474266
+              ],
+              [
+                79.986179,
+                14.475436
+              ],
+              [
+                79.985716,
+                14.476527
+              ],
+              [
+                79.984979,
+                14.477463
+              ],
+              [
+                79.984018,
+                14.478182
+              ],
+              [
+                79.982899,
+                14.478634
+              ],
+              [
+                79.981699,
+                14.478788
+              ],
+              [
+                79.980499,
+                14.478634
+              ],
+              [
+                79.97938,
+                14.478182
+              ],
+              [
+                79.978419,
+                14.477463
+              ],
+              [
+                79.977682,
+                14.476527
+              ],
+              [
+                79.977219,
+                14.475436
+              ],
+              [
+                79.977061,
+                14.474266
+              ],
+              [
+                79.977219,
+                14.473096
+              ],
+              [
+                79.977682,
+                14.472005
+              ],
+              [
+                79.978419,
+                14.471069
+              ],
+              [
+                79.97938,
+                14.47035
+              ],
+              [
+                79.980499,
+                14.469898
+              ],
+              [
+                79.981699,
+                14.469744
+              ],
+              [
+                79.982899,
+                14.469898
+              ],
+              [
+                79.984018,
+                14.47035
+              ],
+              [
+                79.984979,
+                14.471069
+              ],
+              [
+                79.985716,
+                14.472005
+              ],
+              [
+                79.986179,
+                14.473096
+              ],
+              [
+                79.986337,
+                14.474266
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-074",
+          "shop_name": "Sri Venkateswara Mutton Stall (Inamadugu)",
+          "risk_level": "High Risk",
+          "buffer_radius_m": 500,
+          "exposure_zone": "Secondary Vector & Human Transmission Reach (500m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                80.006085,
+                14.491223
+              ],
+              [
+                80.005927,
+                14.492393
+              ],
+              [
+                80.005464,
+                14.493484
+              ],
+              [
+                80.004727,
+                14.49442
+              ],
+              [
+                80.003766,
+                14.495139
+              ],
+              [
+                80.002647,
+                14.495591
+              ],
+              [
+                80.001447,
+                14.495745
+              ],
+              [
+                80.000247,
+                14.495591
+              ],
+              [
+                79.999128,
+                14.495139
+              ],
+              [
+                79.998167,
+                14.49442
+              ],
+              [
+                79.99743,
+                14.493484
+              ],
+              [
+                79.996967,
+                14.492393
+              ],
+              [
+                79.996809,
+                14.491223
+              ],
+              [
+                79.996967,
+                14.490053
+              ],
+              [
+                79.99743,
+                14.488962
+              ],
+              [
+                79.998167,
+                14.488026
+              ],
+              [
+                79.999128,
+                14.487307
+              ],
+              [
+                80.000247,
+                14.486855
+              ],
+              [
+                80.001447,
+                14.486701
+              ],
+              [
+                80.002647,
+                14.486855
+              ],
+              [
+                80.003766,
+                14.487307
+              ],
+              [
+                80.004727,
+                14.488026
+              ],
+              [
+                80.005464,
+                14.488962
+              ],
+              [
+                80.005927,
+                14.490053
+              ],
+              [
+                80.006085,
+                14.491223
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-078",
+          "shop_name": "Sai Krupa Mutton Stall (Inamadugu)",
+          "risk_level": "High Risk",
+          "buffer_radius_m": 500,
+          "exposure_zone": "Secondary Vector & Human Transmission Reach (500m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                80.007749,
+                14.493318
+              ],
+              [
+                80.007591,
+                14.494488
+              ],
+              [
+                80.007128,
+                14.495579
+              ],
+              [
+                80.006391,
+                14.496515
+              ],
+              [
+                80.00543,
+                14.497234
+              ],
+              [
+                80.004311,
+                14.497686
+              ],
+              [
+                80.003111,
+                14.49784
+              ],
+              [
+                80.001911,
+                14.497686
+              ],
+              [
+                80.000792,
+                14.497234
+              ],
+              [
+                79.999831,
+                14.496515
+              ],
+              [
+                79.999094,
+                14.495579
+              ],
+              [
+                79.998631,
+                14.494488
+              ],
+              [
+                79.998473,
+                14.493318
+              ],
+              [
+                79.998631,
+                14.492148
+              ],
+              [
+                79.999094,
+                14.491057
+              ],
+              [
+                79.999831,
+                14.490121
+              ],
+              [
+                80.000792,
+                14.489402
+              ],
+              [
+                80.001911,
+                14.48895
+              ],
+              [
+                80.003111,
+                14.488796
+              ],
+              [
+                80.004311,
+                14.48895
+              ],
+              [
+                80.00543,
+                14.489402
+              ],
+              [
+                80.006391,
+                14.490121
+              ],
+              [
+                80.007128,
+                14.491057
+              ],
+              [
+                80.007591,
+                14.492148
+              ],
+              [
+                80.007749,
+                14.493318
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "shop_id": "NLR-HLTH-079",
+          "shop_name": "Al-Madina Poultry Stall (Inamadugu)",
+          "risk_level": "High Risk",
+          "buffer_radius_m": 500,
+          "exposure_zone": "Secondary Vector & Human Transmission Reach (500m)"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                80.006475,
+                14.492116
+              ],
+              [
+                80.006317,
+                14.493286
+              ],
+              [
+                80.005854,
+                14.494377
+              ],
+              [
+                80.005117,
+                14.495313
+              ],
+              [
+                80.004156,
+                14.496032
+              ],
+              [
+                80.003037,
+                14.496484
+              ],
+              [
+                80.001837,
+                14.496638
+              ],
+              [
+                80.000637,
+                14.496484
+              ],
+              [
+                79.999518,
+                14.496032
+              ],
+              [
+                79.998557,
+                14.495313
+              ],
+              [
+                79.99782,
+                14.494377
+              ],
+              [
+                79.997357,
+                14.493286
+              ],
+              [
+                79.997199,
+                14.492116
+              ],
+              [
+                79.997357,
+                14.490946
+              ],
+              [
+                79.99782,
+                14.489855
+              ],
+              [
+                79.998557,
+                14.488919
+              ],
+              [
+                79.999518,
+                14.4882
+              ],
+              [
+                80.000637,
+                14.487748
+              ],
+              [
+                80.001837,
+                14.487594
+              ],
+              [
+                80.003037,
+                14.487748
+              ],
+              [
+                80.004156,
+                14.4882
+              ],
+              [
+                80.005117,
+                14.488919
+              ],
+              [
+                80.005854,
+                14.489855
+              ],
+              [
+                80.006317,
+                14.490946
+              ],
+              [
+                80.006475,
+                14.492116
+              ]
+            ]
+          ]
+        }
+      }
+    ]
+  },
+  "ai_metrics": {
+    "model_type": "Random Forest Classifier (100 Estimators)",
+    "test_accuracy": 0.7619,
+    "cross_val_mean_accuracy": 0.6794,
+    "confusion_matrix": {
+      "labels": [
+        "High Risk",
+        "Low Risk",
+        "Moderate Risk",
+        "Very High Risk"
+      ],
+      "matrix": [
+        [
+          8,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          3,
+          2,
+          0
+        ],
+        [
+          2,
+          1,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          3
+        ]
+      ]
+    },
+    "classification_report": {
+      "High Risk": {
+        "precision": 0.8,
+        "recall": 1.0,
+        "f1-score": 0.888888888888889,
+        "support": 8.0
+      },
+      "Low Risk": {
+        "precision": 0.75,
+        "recall": 0.6,
+        "f1-score": 0.6666666666666665,
+        "support": 5.0
+      },
+      "Moderate Risk": {
+        "precision": 0.5,
+        "recall": 0.4,
+        "f1-score": 0.4444444444444445,
+        "support": 5.0
+      },
+      "Very High Risk": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 3.0
+      },
+      "accuracy": 0.7619047619047619,
+      "macro avg": {
+        "precision": 0.7625,
+        "recall": 0.75,
+        "f1-score": 0.75,
+        "support": 21.0
+      },
+      "weighted avg": {
+        "precision": 0.7452380952380953,
+        "recall": 0.7619047619047619,
+        "f1-score": 0.746031746031746,
+        "support": 21.0
+      }
+    },
+    "feature_importances": [
+      {
+        "feature": "distance_to_drain_m",
+        "importance": 0.3356
+      },
+      {
+        "feature": "distance_to_waterbody_m",
+        "importance": 0.1069
+      },
+      {
+        "feature": "daily_animals_handled",
+        "importance": 0.1055
+      },
+      {
+        "feature": "distance_to_hospital_m",
+        "importance": 0.1024
+      },
+      {
+        "feature": "waste_severity_score",
+        "importance": 0.0978
+      },
+      {
+        "feature": "market_crowd_index",
+        "importance": 0.0845
+      },
+      {
+        "feature": "slaughter_flag",
+        "importance": 0.0723
+      },
+      {
+        "feature": "refrig_flag",
+        "importance": 0.0572
+      },
+      {
+        "feature": "category_code",
+        "importance": 0.0377
+      }
+    ]
+  },
+  "feature_importance": [
+    {
+      "feature": "distance_to_drain_m",
+      "importance": 0.3356
+    },
+    {
+      "feature": "distance_to_waterbody_m",
+      "importance": 0.1069
+    },
+    {
+      "feature": "daily_animals_handled",
+      "importance": 0.1055
+    },
+    {
+      "feature": "distance_to_hospital_m",
+      "importance": 0.1024
+    },
+    {
+      "feature": "waste_severity_score",
+      "importance": 0.0978
+    },
+    {
+      "feature": "market_crowd_index",
+      "importance": 0.0845
+    },
+    {
+      "feature": "slaughter_flag",
+      "importance": 0.0723
+    },
+    {
+      "feature": "refrig_flag",
+      "importance": 0.0572
+    },
+    {
+      "feature": "category_code",
+      "importance": 0.0377
+    }
+  ]
+};

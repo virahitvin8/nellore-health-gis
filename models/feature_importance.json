@@ -1,0 +1,38 @@
+[
+  {
+    "feature": "distance_to_drain_m",
+    "importance": 0.3356
+  },
+  {
+    "feature": "distance_to_waterbody_m",
+    "importance": 0.1069
+  },
+  {
+    "feature": "daily_animals_handled",
+    "importance": 0.1055
+  },
+  {
+    "feature": "distance_to_hospital_m",
+    "importance": 0.1024
+  },
+  {
+    "feature": "waste_severity_score",
+    "importance": 0.0978
+  },
+  {
+    "feature": "market_crowd_index",
+    "importance": 0.0845
+  },
+  {
+    "feature": "slaughter_flag",
+    "importance": 0.0723
+  },
+  {
+    "feature": "refrig_flag",
+    "importance": 0.0572
+  },
+  {
+    "feature": "category_code",
+    "importance": 0.0377
+  }
+]

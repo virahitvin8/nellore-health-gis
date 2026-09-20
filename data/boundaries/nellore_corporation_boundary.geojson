@@ -1,0 +1,63 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Nellore Municipal Corporation",
+        "type": "Urban Local Body (NMC)",
+        "district": "SPSR Nellore",
+        "state": "Andhra Pradesh",
+        "area_sq_km": 150.4,
+        "population_est": 600000
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              79.945,
+              14.46
+            ],
+            [
+              79.965,
+              14.462
+            ],
+            [
+              79.99,
+              14.458
+            ],
+            [
+              80.015,
+              14.452
+            ],
+            [
+              80.025,
+              14.43
+            ],
+            [
+              80.015,
+              14.405
+            ],
+            [
+              79.98,
+              14.395
+            ],
+            [
+              79.95,
+              14.408
+            ],
+            [
+              79.935,
+              14.43
+            ],
+            [
+              79.945,
+              14.46
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Pennar River Basin (Penna)",
+        "category": "Major River",
+        "status": "Seasonal Flow / Sandbed / Urban Discharge Sink"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              79.92,
+              14.46
+            ],
+            [
+              79.94,
+              14.4615
+            ],
+            [
+              79.965,
+              14.463
+            ],
+            [
+              79.985,
+              14.462
+            ],
+            [
+              80.005,
+              14.459
+            ],
+            [
+              80.035,
+              14.456
+            ],
+            [
+              80.055,
+              14.453
+            ],
+            [
+              80.055,
+              14.46
+            ],
+            [
+              80.035,
+              14.463
+            ],
+            [
+              80.005,
+              14.466
+            ],
+            [
+              79.985,
+              14.469
+            ],
+            [
+              79.965,
+              14.47
+            ],
+            [
+              79.94,
+              14.4685
+            ],
+            [
+              79.92,
+              14.467
+            ],
+            [
+              79.92,
+              14.46
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sarvepalli Irrigation Canal",
+        "category": "Primary Canal",
+        "status": "Active Agricultural / Runoff Carrier"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            79.955,
+            14.455
+          ],
+          [
+            79.96,
+            14.435
+          ],
+          [
+            79.965,
+            14.415
+          ],
+          [
+            79.97,
+            14.395
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Buckingham Canal Feeder Channel",
+        "category": "Coastal Drainage & Canal",
+        "status": "High Silt & Urban Waste Effluent"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            80.01,
+            14.47
+          ],
+          [
+            80.012,
+            14.445
+          ],
+          [
+            80.014,
+            14.42
+          ],
+          [
+            80.016,
+            14.4
+          ]
+        ]
+      }
+    }
+  ]
+}

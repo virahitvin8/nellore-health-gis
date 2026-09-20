@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Health GIS & Geo-Risk Analytics | Nellore City & Kovur Mandal</title>
+  
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+  
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Custom Styling -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Navigation Header -->
+  <header class="app-header">
+    <div class="header-left">
+      <div class="logo-badge">
+        <i class="fa-solid fa-virus-covid"></i>
+      </div>
+      <div>
+        <h1 class="header-title">GeoHealth Sentinel <span class="badge-sub">AI & Health GIS</span></h1>
+        <p class="header-subtitle">Wet Market Zoonotic Vulnerability & Geo-Risk Assessment • Nellore City (NMC) & Kovur Mandal</p>
+      </div>
+    </div>
+    <div class="header-actions">
+      <div class="stat-pill" title="Total Wet Markets Mapped">
+        <i class="fa-solid fa-store"></i> <span id="stat-total-markets">81</span> Markets
+      </div>
+      <div class="stat-pill high-risk-pill" title="High & Very High Risk Markets">
+        <i class="fa-solid fa-triangle-exclamation"></i> <span id="stat-critical-markets">40</span> High Risk
+      </div>
+      <button class="nav-btn" id="btn-toggle-analytics">
+        <i class="fa-solid fa-chart-pie"></i> Analytics
+      </button>
+      <button class="nav-btn" id="btn-simulate-shop">
+        <i class="fa-solid fa-location-crosshairs"></i> Simulate Allotment
+      </button>
+      <button class="nav-btn" id="btn-export-data">
+        <i class="fa-solid fa-download"></i> Export
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Application Body -->
+  <div class="app-container">
+    
+    <!-- Sidebar / Filter & Inspection Panel -->
+    <aside class="sidebar" id="sidebar">
+      
+      <!-- Collapsible Search & Filter Section -->
+      <div class="sidebar-section">
+        <div class="search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="search-input" placeholder="Search shop name, ID, or ward...">
+        </div>
+
+        <div class="filter-group">
+          <label><i class="fa-solid fa-shield-virus"></i> Risk Classification</label>
+          <select id="filter-risk" class="custom-select">
+            <option value="ALL">All Risk Levels (81)</option>
+            <option value="Very High Risk">🚨 Very High Risk (Score ≥ 72)</option>
+            <option value="High Risk">⚠️ High Risk (Score 56 - 71)</option>
+            <option value="Moderate Risk">⚡ Moderate Risk (Score 40 - 55)</option>
+            <option value="Low Risk">✅ Low Risk (Score &lt; 40)</option>
+          </select>
+        </div>
+
+        <div class="filter-row">
+          <div class="filter-group half">
+            <label><i class="fa-solid fa-map-location-dot"></i> Zone / Mandal</label>
+            <select id="filter-zone" class="custom-select">
+              <option value="ALL">All Jurisdictions</option>
+              <option value="Nellore Urban (NMC)">Nellore City (NMC)</option>
+              <option value="Kovur Mandal">Kovur Mandal</option>
+            </select>
+          </div>
+          <div class="filter-group half">
+            <label><i class="fa-solid fa-drumstick-bite"></i> Commodity</label>
+            <select id="filter-category" class="custom-select">
+              <option value="ALL">All Commodities</option>
+              <option value="Poultry (Broiler/Country Chicken)">Poultry / Chicken</option>
+              <option value="Mutton / Sheep / Goat">Mutton / Sheep</option>
+              <option value="Fish & Seafood">Fish & Seafood</option>
+              <option value="Mixed Live Meat & Fish">Mixed Meat & Fish</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <div class="slider-header">
+            <label><i class="fa-solid fa-water"></i> Max Distance to Open Drain</label>
+            <span id="drain-dist-val">All</span>
+          </div>
+          <input type="range" id="filter-drain-dist" min="20" max="300" step="10" value="300">
+        </div>
+      </div>
+
+      <!-- Layer Control Section -->
+      <div class="sidebar-section layer-panel">
+        <h3 class="section-title"><i class="fa-solid fa-layer-group"></i> Spatial GIS Layers</h3>
+        <div class="layer-item">
+          <input type="checkbox" id="layer-markets" checked>
+          <label for="layer-markets"><span>Wet Markets (Risk Coded)</span></label>
+        </div>
+        <div class="layer-item">
+          <input type="checkbox" id="layer-buffers-250">
+          <label for="layer-buffers-250"><span>250m Bio-Hazard Buffers</span></label>
+        </div>
+        <div class="layer-item">
+          <input type="checkbox" id="layer-buffers-500">
+          <label for="layer-buffers-500"><span>500m Secondary Exposure Buffers</span></label>
+        </div>
+        <div class="layer-item">
+          <input type="checkbox" id="layer-drainage" checked>
+          <label for="layer-drainage"><span class="drain-badge">Open Sewage & Drains (Hazard)</span></label>
+        </div>
+        <div class="layer-item">
+          <input type="checkbox" id="layer-river" checked>
+          <label for="layer-river"><span>Pennar River Basin & Canals</span></label>
+        </div>
+        <div class="layer-item">
+          <input type="checkbox" id="layer-hospitals" checked>
+          <label for="layer-hospitals"><span>Hospitals & Health Centers</span></label>
+        </div>
+        <div class="layer-item">
+          <input type="checkbox" id="layer-boundaries" checked>
+          <label for="layer-boundaries"><span>Administrative Boundaries</span></label>
+        </div>
+      </div>
+
+      <!-- Selected Shop Details / Inspector Panel -->
+      <div class="sidebar-section inspector-panel" id="inspector-panel">
+        <div class="inspector-header">
+          <h3 class="section-title"><i class="fa-solid fa-clipboard-check"></i> Market Health Inspector</h3>
+          <span class="inspector-hint">Click any market on map to inspect</span>
+        </div>
+
+        <div id="inspector-content" class="inspector-content">
+          <div class="empty-state">
+            <i class="fa-solid fa-map-pin"></i>
+            <p>Select any wet market point on the map to review sanitary indicators, animal supply routes, drainage proximity, and AI predictions.</p>
+          </div>
+        </div>
+      </div>
+
+    </aside>
+
+    <!-- Map Container -->
+    <main class="map-viewport">
+      <div id="map"></div>
+
+      <!-- Map Legend Overlay -->
+      <div class="map-legend">
+        <h4><i class="fa-solid fa-circle-info"></i> Geo-Risk Scale</h4>
+        <div class="legend-row"><span class="legend-dot" style="background:#d90429;"></span> Very High (Score ≥ 72)</div>
+        <div class="legend-row"><span class="legend-dot" style="background:#f77f00;"></span> High (Score 56 - 71)</div>
+        <div class="legend-row"><span class="legend-dot" style="background:#ffd166;"></span> Moderate (Score 40 - 55)</div>
+        <div class="legend-row"><span class="legend-dot" style="background:#06d6a0;"></span> Low (Score &lt; 40)</div>
+        <hr class="legend-divider">
+        <div class="legend-row"><span class="legend-line" style="border-color:#ff3333;"></span> Open Sewer / Outfall Drain</div>
+        <div class="legend-row"><span class="legend-line" style="border-color:#0077b6;"></span> Pennar River / Canals</div>
+        <div class="legend-row"><span class="legend-icon"><i class="fa-solid fa-hospital" style="color:#0077b6;"></i></span> Health Facility</div>
+      </div>
+
+      <!-- Simulation Instructions Banner -->
+      <div id="simulation-banner" class="simulation-banner hidden">
+        <div class="sim-text">
+          <i class="fa-solid fa-crosshairs"></i> <strong>Simulation Mode Active:</strong> Click any point within Nellore or Kovur to evaluate a proposed shop location!
+        </div>
+        <button id="btn-cancel-sim" class="btn-cancel">Exit Simulation</button>
+      </div>
+    </main>
+
+  </div>
+
+  <!-- Analytics Modal Drawer -->
+  <div id="analytics-modal" class="modal-overlay hidden">
+    <div class="modal-window">
+      <div class="modal-header">
+        <h2><i class="fa-solid fa-chart-column"></i> Spatial Health & AI Model Analytics</h2>
+        <button class="modal-close" id="btn-close-analytics">&times;</button>
+      </div>
+      <div class="modal-body">
+        
+        <!-- Summary Stats Grid -->
+        <div class="analytics-grid">
+          <div class="kpi-card">
+            <span class="kpi-label">Total Surveyed Markets</span>
+            <span class="kpi-value" id="kpi-total">81</span>
+            <span class="kpi-sub">Nellore NMC & Kovur Mandal</span>
+          </div>
+          <div class="kpi-card danger">
+            <span class="kpi-label">Immediate Intervention Need</span>
+            <span class="kpi-value" id="kpi-very-high">11</span>
+            <span class="kpi-sub">Very High Risk (Score ≥ 72)</span>
+          </div>
+          <div class="kpi-card warning">
+            <span class="kpi-label">Drain Discharges</span>
+            <span class="kpi-value" id="kpi-drain-dumping">32</span>
+            <span class="kpi-sub">Direct waste effluent into open sewers</span>
+          </div>
+          <div class="kpi-card info">
+            <span class="kpi-label">AI Model Accuracy</span>
+            <span class="kpi-value" id="kpi-ai-acc">76.2%</span>
+            <span class="kpi-sub">Random Forest (100 Trees)</span>
+          </div>
+        </div>
+
+        <!-- Charts Row 1 -->
+        <div class="charts-row">
+          <div class="chart-container half">
+            <h3>Risk Classification Distribution</h3>
+            <canvas id="chart-risk-dist"></canvas>
+          </div>
+          <div class="chart-container half">
+            <h3>Commodity Breakdown</h3>
+            <canvas id="chart-categories"></canvas>
+          </div>
+        </div>
+
+        <!-- Charts Row 2 -->
+        <div class="charts-row">
+          <div class="chart-container half">
+            <h3>AI Feature Importance (Driving Factors)</h3>
+            <canvas id="chart-feature-imp"></canvas>
+          </div>
+          <div class="chart-container half">
+            <h3>Top Geographic Risk Clusters</h3>
+            <canvas id="chart-clusters"></canvas>
+          </div>
+        </div>
+
+        <!-- Recommendations Box -->
+        <div class="recommendations-box">
+          <h3><i class="fa-solid fa-building-shield"></i> Municipal Corporation Action Directives (NMC & Kovur)</h3>
+          <ul>
+            <li><strong>Stonehousepet Corridor:</strong> Prioritize construction of masonry cover over the 450m open outfall drain directly adjacent to the fish wholesale stalls.</li>
+            <li><strong>Live Slaughter Regulations:</strong> Transition 72% of shops doing on-premise live slaughter to standardized municipal abattoirs with effluent interceptor traps.</li>
+            <li><strong>Cold Storage Infrastructure:</strong> Introduce solar micro-cold rooms at Santhapet and Kovur Main Bazaar to eliminate perishable meat spoilage and bacterial proliferation.</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Simulation Evaluation Modal -->
+  <div id="sim-result-modal" class="modal-overlay hidden">
+    <div class="modal-window small-modal">
+      <div class="modal-header">
+        <h2><i class="fa-solid fa-calculator"></i> Simulated Allotment Assessment</h2>
+        <button class="modal-close" id="btn-close-sim">&times;</button>
+      </div>
+      <div class="modal-body" id="sim-result-content">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Export Modal -->
+  <div id="export-modal" class="modal-overlay hidden">
+    <div class="modal-window small-modal">
+      <div class="modal-header">
+        <h2><i class="fa-solid fa-file-arrow-down"></i> Export Spatial Data</h2>
+        <button class="modal-close" id="btn-close-export">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p class="export-desc">Download spatial datasets and analysis results for offline use in QGIS, ArcGIS, or statistical environments.</p>
+        <div class="export-buttons-list">
+          <button class="export-opt-btn" id="btn-dl-geojson">
+            <i class="fa-solid fa-code"></i>
+            <div>
+              <strong>Classified Wet Markets (GeoJSON)</strong>
+              <span>Includes Geo-Risk scores, AI predictions & coordinates</span>
+            </div>
+          </button>
+          <button class="export-opt-btn" id="btn-dl-csv">
+            <i class="fa-solid fa-file-csv"></i>
+            <div>
+              <strong>Inventory & Risk Attributes (CSV)</strong>
+              <span>Excel and Pandas compatible tabular data</span>
+            </div>
+          </button>
+          <button class="export-opt-btn" id="btn-dl-buffers">
+            <i class="fa-solid fa-circle-nodes"></i>
+            <div>
+              <strong>250m & 500m Hazard Buffers (GeoJSON)</strong>
+              <span>Bio-exposure polygon buffer layers</span>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  
+  <!-- Embedded Spatial Data Bundle -->
+  <script src="data/embedded_data.js"></script>
+
+  <!-- Custom Scripts -->
+  <script src="js/charts.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>

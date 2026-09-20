@@ -1,0 +1,116 @@
+{
+  "model_type": "Random Forest Classifier (100 Estimators)",
+  "test_accuracy": 0.7619,
+  "cross_val_mean_accuracy": 0.6794,
+  "confusion_matrix": {
+    "labels": [
+      "High Risk",
+      "Low Risk",
+      "Moderate Risk",
+      "Very High Risk"
+    ],
+    "matrix": [
+      [
+        8,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        3,
+        2,
+        0
+      ],
+      [
+        2,
+        1,
+        2,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        3
+      ]
+    ]
+  },
+  "classification_report": {
+    "High Risk": {
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1-score": 0.888888888888889,
+      "support": 8.0
+    },
+    "Low Risk": {
+      "precision": 0.75,
+      "recall": 0.6,
+      "f1-score": 0.6666666666666665,
+      "support": 5.0
+    },
+    "Moderate Risk": {
+      "precision": 0.5,
+      "recall": 0.4,
+      "f1-score": 0.4444444444444445,
+      "support": 5.0
+    },
+    "Very High Risk": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 3.0
+    },
+    "accuracy": 0.7619047619047619,
+    "macro avg": {
+      "precision": 0.7625,
+      "recall": 0.75,
+      "f1-score": 0.75,
+      "support": 21.0
+    },
+    "weighted avg": {
+      "precision": 0.7452380952380953,
+      "recall": 0.7619047619047619,
+      "f1-score": 0.746031746031746,
+      "support": 21.0
+    }
+  },
+  "feature_importances": [
+    {
+      "feature": "distance_to_drain_m",
+      "importance": 0.3356
+    },
+    {
+      "feature": "distance_to_waterbody_m",
+      "importance": 0.1069
+    },
+    {
+      "feature": "daily_animals_handled",
+      "importance": 0.1055
+    },
+    {
+      "feature": "distance_to_hospital_m",
+      "importance": 0.1024
+    },
+    {
+      "feature": "waste_severity_score",
+      "importance": 0.0978
+    },
+    {
+      "feature": "market_crowd_index",
+      "importance": 0.0845
+    },
+    {
+      "feature": "slaughter_flag",
+      "importance": 0.0723
+    },
+    {
+      "feature": "refrig_flag",
+      "importance": 0.0572
+    },
+    {
+      "feature": "category_code",
+      "importance": 0.0377
+    }
+  ]
+}
