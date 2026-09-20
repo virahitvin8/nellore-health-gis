@@ -1,0 +1,292 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "pipe_id": "NMC-WTR-PL-01",
+        "name": "Pennar Infiltration Gallery to Stonehousepet Trunk Main",
+        "jurisdiction": "Nellore Municipal Corporation",
+        "water_source": "Pennar River Infiltration Wells",
+        "diameter_mm": 450,
+        "material": "Ductile Iron (DI)",
+        "pressure_bar": 3.8,
+        "laying_year": 2018,
+        "cross_contamination_risk": "Moderate (Runs parallel to Stonehousepet masonry drain)"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            79.97,
+            14.464
+          ],
+          [
+            79.978,
+            14.458
+          ],
+          [
+            79.987,
+            14.452
+          ],
+          [
+            79.991,
+            14.449
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "pipe_id": "NMC-WTR-PL-02",
+        "name": "Stonehousepet - Santhapet Feeder Line",
+        "jurisdiction": "Nellore Municipal Corporation",
+        "water_source": "Municipal Water Headworks",
+        "diameter_mm": 300,
+        "material": "HDPE High-Density",
+        "pressure_bar": 3.2,
+        "laying_year": 2021,
+        "cross_contamination_risk": "High (Crosses central municipal drain near Trunk Road)"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            79.991,
+            14.449
+          ],
+          [
+            79.986,
+            14.444
+          ],
+          [
+            79.981,
+            14.439
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "pipe_id": "NMC-WTR-PL-03",
+        "name": "Somasila Drinking Water Scheme - Trunk Supply to Nellore South",
+        "jurisdiction": "Nellore Municipal Corporation",
+        "water_source": "Somasila Water Pipeline Project",
+        "diameter_mm": 600,
+        "material": "Mild Steel (MS)",
+        "pressure_bar": 4.5,
+        "laying_year": 2019,
+        "cross_contamination_risk": "Low (Dedicated deep utility corridor)"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            79.945,
+            14.445
+          ],
+          [
+            79.955,
+            14.435
+          ],
+          [
+            79.965,
+            14.425
+          ],
+          [
+            79.972,
+            14.417
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "pipe_id": "NMC-WTR-PL-04",
+        "name": "Ranganayakulapet Urban Water Distribution Branch",
+        "jurisdiction": "Nellore Municipal Corporation",
+        "water_source": "Overhead Reservoir (ELSR)",
+        "diameter_mm": 200,
+        "material": "uPVC Class-4",
+        "pressure_bar": 2.5,
+        "laying_year": 2015,
+        "cross_contamination_risk": "High (Aging pipe joints near riverbank sullage)"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            79.978,
+            14.458
+          ],
+          [
+            79.982,
+            14.456
+          ],
+          [
+            79.987,
+            14.454
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "pipe_id": "NMC-WTR-PL-05",
+        "name": "Vedayapalem - Ramalingapuram Sub-Trunk",
+        "jurisdiction": "Nellore Municipal Corporation",
+        "water_source": "Somasila Headworks Reservoir",
+        "diameter_mm": 350,
+        "material": "DI K9",
+        "pressure_bar": 3.5,
+        "laying_year": 2020,
+        "cross_contamination_risk": "Moderate"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            79.958,
+            14.428
+          ],
+          [
+            79.965,
+            14.42
+          ],
+          [
+            79.97,
+            14.415
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "pipe_id": "KVR-PNC-WTR-01",
+        "name": "Kovur Gram Panchayat Pennar Infiltration Supply Line",
+        "jurisdiction": "Kovur Mandal / Gram Panchayat",
+        "water_source": "Pennar North Bank Infiltration Wells",
+        "diameter_mm": 300,
+        "material": "Ductile Iron (DI)",
+        "pressure_bar": 3.0,
+        "laying_year": 2017,
+        "cross_contamination_risk": "Moderate (Main conduit along Kovur trunk road)"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            79.972,
+            14.469
+          ],
+          [
+            79.976,
+            14.48
+          ],
+          [
+            79.978,
+            14.494
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "pipe_id": "KVR-PNC-WTR-02",
+        "name": "Padugupadu Railway Colony Panchayati Pipeline",
+        "jurisdiction": "Kovur Mandal / Padugupadu GP",
+        "water_source": "Deep Community Borewell & GLSR",
+        "diameter_mm": 160,
+        "material": "HDPE PN-6",
+        "pressure_bar": 2.2,
+        "laying_year": 2019,
+        "cross_contamination_risk": "High (Intersected by open railway side drains)"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            79.976,
+            14.472
+          ],
+          [
+            79.982,
+            14.475
+          ],
+          [
+            79.986,
+            14.478
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "pipe_id": "KVR-PNC-WTR-03",
+        "name": "Kovur Main Bazaar Ward Distribution Pipeline",
+        "jurisdiction": "Kovur Mandal / Kovur GP",
+        "water_source": "Kovur Overhead Tank (OHT)",
+        "diameter_mm": 180,
+        "material": "uPVC",
+        "pressure_bar": 2.0,
+        "laying_year": 2016,
+        "cross_contamination_risk": "Very High (Directly submerged under bazaar sullage gutter during monsoon)"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            79.974,
+            14.493
+          ],
+          [
+            79.978,
+            14.496
+          ],
+          [
+            79.982,
+            14.497
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "pipe_id": "KVR-PNC-WTR-04",
+        "name": "Inamadugu Rural Water Supply Pipeline (RWSS)",
+        "jurisdiction": "Kovur Mandal / Inamadugu GP",
+        "water_source": "Inamadugu Gram Panchayat Tank",
+        "diameter_mm": 140,
+        "material": "HDPE PN-6",
+        "pressure_bar": 1.8,
+        "laying_year": 2020,
+        "cross_contamination_risk": "Low"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            79.988,
+            14.488
+          ],
+          [
+            79.996,
+            14.49
+          ],
+          [
+            80.004,
+            14.492
+          ]
+        ]
+      }
+    }
+  ]
+}

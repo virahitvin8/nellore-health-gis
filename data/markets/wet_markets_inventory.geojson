@@ -703,7 +703,7 @@
         "drainage_condition": "Underground Closed Drain",
         "distance_to_drain_m": 154.4,
         "distance_to_waterbody_m": 2293.3,
-        "distance_to_hospital_m": 354.0,
+        "distance_to_hospital_m": 46.4,
         "market_crowd_index": 8.2
       },
       "geometry": {
@@ -858,7 +858,7 @@
         "drainage_condition": "Open Stagnant Drain",
         "distance_to_drain_m": 18.2,
         "distance_to_waterbody_m": 2163.6,
-        "distance_to_hospital_m": 402.1,
+        "distance_to_hospital_m": 232.2,
         "market_crowd_index": 8.2
       },
       "geometry": {
@@ -1571,7 +1571,7 @@
         "drainage_condition": "Semi-Covered Municipal Drain",
         "distance_to_drain_m": 115.1,
         "distance_to_waterbody_m": 3414.9,
-        "distance_to_hospital_m": 467.0,
+        "distance_to_hospital_m": 300.8,
         "market_crowd_index": 6.5
       },
       "geometry": {
@@ -1602,7 +1602,7 @@
         "drainage_condition": "Underground Closed Drain",
         "distance_to_drain_m": 302.6,
         "distance_to_waterbody_m": 3673.8,
-        "distance_to_hospital_m": 557.9,
+        "distance_to_hospital_m": 160.3,
         "market_crowd_index": 6.8
       },
       "geometry": {
@@ -1726,7 +1726,7 @@
         "drainage_condition": "Semi-Covered Municipal Drain",
         "distance_to_drain_m": 86.0,
         "distance_to_waterbody_m": 3644.1,
-        "distance_to_hospital_m": 347.0,
+        "distance_to_hospital_m": 157.9,
         "market_crowd_index": 7.1
       },
       "geometry": {
@@ -1788,7 +1788,7 @@
         "drainage_condition": "Open Stagnant Drain",
         "distance_to_drain_m": 5.0,
         "distance_to_waterbody_m": 3422.9,
-        "distance_to_hospital_m": 284.0,
+        "distance_to_hospital_m": 227.4,
         "market_crowd_index": 7.7
       },
       "geometry": {
@@ -1819,7 +1819,7 @@
         "drainage_condition": "Open Stagnant Drain",
         "distance_to_drain_m": 26.7,
         "distance_to_waterbody_m": 3435.4,
-        "distance_to_hospital_m": 230.5,
+        "distance_to_hospital_m": 226.4,
         "market_crowd_index": 8.1
       },
       "geometry": {
@@ -1850,7 +1850,7 @@
         "drainage_condition": "Semi-Covered Municipal Drain",
         "distance_to_drain_m": 41.2,
         "distance_to_waterbody_m": 3607.0,
-        "distance_to_hospital_m": 303.8,
+        "distance_to_hospital_m": 188.0,
         "market_crowd_index": 7.4
       },
       "geometry": {

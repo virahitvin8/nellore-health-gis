@@ -9,7 +9,8 @@
         "district": "SPSR Nellore",
         "state": "Andhra Pradesh",
         "area_sq_km": 112.8,
-        "population_est": 125000
+        "population_est": 125000,
+        "gram_panchayats_count": 18
       },
       "geometry": {
         "type": "Polygon",

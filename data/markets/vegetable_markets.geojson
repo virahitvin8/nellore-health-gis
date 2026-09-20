@@ -1,0 +1,205 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "market_id": "VEG-NMC-01",
+        "market_name": "Stonehousepet Rythu Bazaar (Govt of AP)",
+        "type": "Govt Rythu Bazaar",
+        "jurisdiction": "Nellore Municipal Corporation",
+        "stalls_count": 85,
+        "daily_footfall": 4500,
+        "produce_origin": "Podalakur & Allur Farmers direct supply",
+        "proximity_to_meat_fish_m": 45,
+        "waste_management": "Municipal Compost Truck (Daily)",
+        "drain_dist_m": 35,
+        "cross_contamination_rating": "High (Flies & Runoff from Adjacent Fish Stalls)",
+        "lat": 14.4508,
+        "lon": 79.9918
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.9918,
+          14.4508
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "market_id": "VEG-NMC-02",
+        "market_name": "Santhapet Central Wholesale & Retail Vegetable Market",
+        "type": "Municipal Daily Market",
+        "jurisdiction": "Nellore Municipal Corporation",
+        "stalls_count": 120,
+        "daily_footfall": 7500,
+        "produce_origin": "Madanapalle, Bangalore & Local AP Mandis",
+        "proximity_to_meat_fish_m": 60,
+        "waste_management": "Open Central Dump Vats",
+        "drain_dist_m": 25,
+        "cross_contamination_rating": "High (Crowded Bazaar Congestion)",
+        "lat": 14.4388,
+        "lon": 79.9802
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.9802,
+          14.4388
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "market_id": "VEG-NMC-03",
+        "market_name": "Fateh Khan Pet Daily Vegetable Sub-Market",
+        "type": "Neighborhood Municipal Market",
+        "jurisdiction": "Nellore Municipal Corporation",
+        "stalls_count": 45,
+        "daily_footfall": 2200,
+        "produce_origin": "Local Peri-Urban Vegetable Growers",
+        "proximity_to_meat_fish_m": 85,
+        "waste_management": "Closed Bins",
+        "drain_dist_m": 70,
+        "cross_contamination_rating": "Moderate",
+        "lat": 14.4375,
+        "lon": 79.9925
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.9925,
+          14.4375
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "market_id": "VEG-NMC-04",
+        "market_name": "Dargamitta Rythu Bazaar (Govt of AP)",
+        "type": "Govt Rythu Bazaar",
+        "jurisdiction": "Nellore Municipal Corporation",
+        "stalls_count": 70,
+        "daily_footfall": 3800,
+        "produce_origin": "Nellore Rural & Kovur Horticultural Units",
+        "proximity_to_meat_fish_m": 220,
+        "waste_management": "Separate Bio-Degradable Processing",
+        "drain_dist_m": 140,
+        "cross_contamination_rating": "Low (Segregated from Meat Vendors)",
+        "lat": 14.431,
+        "lon": 79.9745
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.9745,
+          14.431
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "market_id": "VEG-NMC-05",
+        "market_name": "Vedayapalem Ramalingapuram Produce Hub",
+        "type": "Commercial Daily Market",
+        "jurisdiction": "Nellore Municipal Corporation",
+        "stalls_count": 55,
+        "daily_footfall": 2800,
+        "produce_origin": "Venkatagiri & Podalakur Farms",
+        "proximity_to_meat_fish_m": 75,
+        "waste_management": "Municipal Collection",
+        "drain_dist_m": 45,
+        "cross_contamination_rating": "Moderate",
+        "lat": 14.418,
+        "lon": 79.967
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.967,
+          14.418
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "market_id": "VEG-KVR-01",
+        "market_name": "Kovur Main Road Vegetable Market",
+        "type": "Panchayat Daily Market",
+        "jurisdiction": "Kovur Mandal / Kovur GP",
+        "stalls_count": 65,
+        "daily_footfall": 3400,
+        "produce_origin": "Pennar River Basin Fertile Silt Farms",
+        "proximity_to_meat_fish_m": 30,
+        "waste_management": "Roadside Open Dump",
+        "drain_dist_m": 18,
+        "cross_contamination_rating": "Very High (Adjacent to Broiler/Mutton Stalls & Drain)",
+        "lat": 14.4952,
+        "lon": 79.978
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.978,
+          14.4952
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "market_id": "VEG-KVR-02",
+        "market_name": "Padugupadu Railway Road Vegetable Stalls",
+        "type": "Informal Street Produce Hub",
+        "jurisdiction": "Kovur Mandal / Padugupadu GP",
+        "stalls_count": 30,
+        "daily_footfall": 1600,
+        "produce_origin": "Riverbank vegetable growers",
+        "proximity_to_meat_fish_m": 50,
+        "waste_management": "Open Ground Dumping",
+        "drain_dist_m": 22,
+        "cross_contamination_rating": "High",
+        "lat": 14.4762,
+        "lon": 79.9838
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.9838,
+          14.4762
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "market_id": "VEG-KVR-03",
+        "market_name": "Inamadugu Weekly Sunday Shandy (Santhe)",
+        "type": "Rural Weekly Shandy",
+        "jurisdiction": "Kovur Mandal / Inamadugu GP",
+        "stalls_count": 90,
+        "daily_footfall": 4200,
+        "produce_origin": "Multi-Village Rural Farmers",
+        "proximity_to_meat_fish_m": 40,
+        "waste_management": "Compost Clearing after Market Day",
+        "drain_dist_m": 55,
+        "cross_contamination_rating": "Moderate",
+        "lat": 14.4905,
+        "lon": 80.003
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.003,
+          14.4905
+        ]
+      }
+    }
+  ]
+}

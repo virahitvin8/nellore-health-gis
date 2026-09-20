@@ -30,7 +30,7 @@
         "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
         "marker_color": "#06d6a0",
         "ai_predicted_risk": "Low Risk",
-        "ai_prediction_confidence": 82.1,
+        "ai_prediction_confidence": 80.5,
         "ai_concurrence": "True"
       },
       "geometry": {
@@ -70,7 +70,7 @@
         "recommended_intervention": "Monthly routine surveillance; water potability testing; solid waste collection compliance.",
         "marker_color": "#ffd166",
         "ai_predicted_risk": "Moderate Risk",
-        "ai_prediction_confidence": 84.3,
+        "ai_prediction_confidence": 80.3,
         "ai_concurrence": "True"
       },
       "geometry": {
@@ -110,7 +110,7 @@
         "recommended_intervention": "Monthly routine surveillance; water potability testing; solid waste collection compliance.",
         "marker_color": "#ffd166",
         "ai_predicted_risk": "Moderate Risk",
-        "ai_prediction_confidence": 50.8,
+        "ai_prediction_confidence": 51.3,
         "ai_concurrence": "True"
       },
       "geometry": {
@@ -150,7 +150,7 @@
         "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
         "marker_color": "#06d6a0",
         "ai_predicted_risk": "Low Risk",
-        "ai_prediction_confidence": 84.4,
+        "ai_prediction_confidence": 82.0,
         "ai_concurrence": "True"
       },
       "geometry": {
@@ -190,7 +190,7 @@
         "recommended_intervention": "Monthly routine surveillance; water potability testing; solid waste collection compliance.",
         "marker_color": "#ffd166",
         "ai_predicted_risk": "Moderate Risk",
-        "ai_prediction_confidence": 80.5,
+        "ai_prediction_confidence": 78.7,
         "ai_concurrence": "True"
       },
       "geometry": {
@@ -230,7 +230,7 @@
         "recommended_intervention": "Monthly routine surveillance; water potability testing; solid waste collection compliance.",
         "marker_color": "#ffd166",
         "ai_predicted_risk": "Moderate Risk",
-        "ai_prediction_confidence": 69.9,
+        "ai_prediction_confidence": 69.3,
         "ai_concurrence": "True"
       },
       "geometry": {
@@ -270,7 +270,7 @@
         "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
         "marker_color": "#f77f00",
         "ai_predicted_risk": "High Risk",
-        "ai_prediction_confidence": 68.0,
+        "ai_prediction_confidence": 69.9,
         "ai_concurrence": "True"
       },
       "geometry": {
@@ -310,7 +310,7 @@
         "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
         "marker_color": "#f77f00",
         "ai_predicted_risk": "High Risk",
-        "ai_prediction_confidence": 62.9,
+        "ai_prediction_confidence": 66.0,
         "ai_concurrence": "True"
       },
       "geometry": {
@@ -350,7 +350,7 @@
         "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
         "marker_color": "#06d6a0",
         "ai_predicted_risk": "Low Risk",
-        "ai_prediction_confidence": 86.4,
+        "ai_prediction_confidence": 84.7,
         "ai_concurrence": "True"
       },
       "geometry": {
@@ -390,7 +390,7 @@
         "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
         "marker_color": "#f77f00",
         "ai_predicted_risk": "High Risk",
-        "ai_prediction_confidence": 81.2,
+        "ai_prediction_confidence": 79.6,
         "ai_concurrence": "True"
       },
       "geometry": {
@@ -430,7 +430,7 @@
         "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
         "marker_color": "#06d6a0",
         "ai_predicted_risk": "Low Risk",
-        "ai_prediction_confidence": 83.6,
+        "ai_prediction_confidence": 81.5,
         "ai_concurrence": "True"
       },
       "geometry": {
@@ -470,7 +470,7 @@
         "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
         "marker_color": "#f77f00",
         "ai_predicted_risk": "High Risk",
-        "ai_prediction_confidence": 58.9,
+        "ai_prediction_confidence": 62.4,
         "ai_concurrence": "True"
       },
       "geometry": {
@@ -510,7 +510,7 @@
         "recommended_intervention": "Monthly routine surveillance; water potability testing; solid waste collection compliance.",
         "marker_color": "#ffd166",
         "ai_predicted_risk": "Moderate Risk",
-        "ai_prediction_confidence": 82.4,
+        "ai_prediction_confidence": 82.7,
         "ai_concurrence": "True"
       },
       "geometry": {
@@ -550,7 +550,7 @@
         "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
         "marker_color": "#06d6a0",
         "ai_predicted_risk": "Low Risk",
-        "ai_prediction_confidence": 80.7,
+        "ai_prediction_confidence": 81.3,
         "ai_concurrence": "True"
       },
       "geometry": {
@@ -590,7 +590,7 @@
         "recommended_intervention": "Monthly routine surveillance; water potability testing; solid waste collection compliance.",
         "marker_color": "#ffd166",
         "ai_predicted_risk": "Moderate Risk",
-        "ai_prediction_confidence": 67.1,
+        "ai_prediction_confidence": 69.7,
         "ai_concurrence": "True"
       },
       "geometry": {
@@ -630,7 +630,7 @@
         "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
         "marker_color": "#06d6a0",
         "ai_predicted_risk": "Low Risk",
-        "ai_prediction_confidence": 78.3,
+        "ai_prediction_confidence": 78.4,
         "ai_concurrence": "True"
       },
       "geometry": {
@@ -670,7 +670,7 @@
         "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
         "marker_color": "#06d6a0",
         "ai_predicted_risk": "Low Risk",
-        "ai_prediction_confidence": 71.8,
+        "ai_prediction_confidence": 71.2,
         "ai_concurrence": "True"
       },
       "geometry": {
@@ -750,7 +750,7 @@
         "recommended_intervention": "Monthly routine surveillance; water potability testing; solid waste collection compliance.",
         "marker_color": "#ffd166",
         "ai_predicted_risk": "Moderate Risk",
-        "ai_prediction_confidence": 73.2,
+        "ai_prediction_confidence": 74.0,
         "ai_concurrence": "True"
       },
       "geometry": {
@@ -790,7 +790,7 @@
         "recommended_intervention": "Immediate bio-sanitation audit; mandatory effluent interceptor; drain covering within 50m; live slaughter inspection.",
         "marker_color": "#d90429",
         "ai_predicted_risk": "Very High Risk",
-        "ai_prediction_confidence": 56.5,
+        "ai_prediction_confidence": 56.7,
         "ai_concurrence": "True"
       },
       "geometry": {
@@ -830,7 +830,7 @@
         "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
         "marker_color": "#06d6a0",
         "ai_predicted_risk": "Low Risk",
-        "ai_prediction_confidence": 81.3,
+        "ai_prediction_confidence": 82.7,
         "ai_concurrence": "True"
       },
       "geometry": {
@@ -870,7 +870,7 @@
         "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
         "marker_color": "#06d6a0",
         "ai_predicted_risk": "Low Risk",
-        "ai_prediction_confidence": 91.5,
+        "ai_prediction_confidence": 90.9,
         "ai_concurrence": "True"
       },
       "geometry": {
@@ -901,7 +901,7 @@
         "drainage_condition": "Underground Closed Drain",
         "distance_to_drain_m": 154.4,
         "distance_to_waterbody_m": 2293.3,
-        "distance_to_hospital_m": 354.0,
+        "distance_to_hospital_m": 46.4,
         "market_crowd_index": 8.2,
         "norm_drain_risk": 0.52,
         "norm_waste_risk": 0.35,
@@ -910,7 +910,7 @@
         "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
         "marker_color": "#f77f00",
         "ai_predicted_risk": "High Risk",
-        "ai_prediction_confidence": 80.6,
+        "ai_prediction_confidence": 72.8,
         "ai_concurrence": "True"
       },
       "geometry": {
@@ -950,7 +950,7 @@
         "recommended_intervention": "Immediate bio-sanitation audit; mandatory effluent interceptor; drain covering within 50m; live slaughter inspection.",
         "marker_color": "#d90429",
         "ai_predicted_risk": "Very High Risk",
-        "ai_prediction_confidence": 59.3,
+        "ai_prediction_confidence": 56.8,
         "ai_concurrence": "True"
       },
       "geometry": {
@@ -990,7 +990,7 @@
         "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
         "marker_color": "#f77f00",
         "ai_predicted_risk": "High Risk",
-        "ai_prediction_confidence": 81.7,
+        "ai_prediction_confidence": 79.8,
         "ai_concurrence": "True"
       },
       "geometry": {
@@ -1030,7 +1030,7 @@
         "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
         "marker_color": "#06d6a0",
         "ai_predicted_risk": "Low Risk",
-        "ai_prediction_confidence": 79.0,
+        "ai_prediction_confidence": 77.7,
         "ai_concurrence": "True"
       },
       "geometry": {
@@ -1070,7 +1070,7 @@
         "recommended_intervention": "Immediate bio-sanitation audit; mandatory effluent interceptor; drain covering within 50m; live slaughter inspection.",
         "marker_color": "#d90429",
         "ai_predicted_risk": "Very High Risk",
-        "ai_prediction_confidence": 88.4,
+        "ai_prediction_confidence": 87.9,
         "ai_concurrence": "True"
       },
       "geometry": {
@@ -1101,7 +1101,7 @@
         "drainage_condition": "Open Stagnant Drain",
         "distance_to_drain_m": 18.2,
         "distance_to_waterbody_m": 2163.6,
-        "distance_to_hospital_m": 402.1,
+        "distance_to_hospital_m": 232.2,
         "market_crowd_index": 8.2,
         "norm_drain_risk": 1.0,
         "norm_waste_risk": 1.0,
@@ -1110,7 +1110,7 @@
         "recommended_intervention": "Immediate bio-sanitation audit; mandatory effluent interceptor; drain covering within 50m; live slaughter inspection.",
         "marker_color": "#d90429",
         "ai_predicted_risk": "Very High Risk",
-        "ai_prediction_confidence": 65.8,
+        "ai_prediction_confidence": 67.6,
         "ai_concurrence": "True"
       },
       "geometry": {
@@ -1150,7 +1150,7 @@
         "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
         "marker_color": "#f77f00",
         "ai_predicted_risk": "High Risk",
-        "ai_prediction_confidence": 70.1,
+        "ai_prediction_confidence": 70.0,
         "ai_concurrence": "True"
       },
       "geometry": {
@@ -1190,7 +1190,7 @@
         "recommended_intervention": "Immediate bio-sanitation audit; mandatory effluent interceptor; drain covering within 50m; live slaughter inspection.",
         "marker_color": "#d90429",
         "ai_predicted_risk": "Very High Risk",
-        "ai_prediction_confidence": 85.9,
+        "ai_prediction_confidence": 86.0,
         "ai_concurrence": "True"
       },
       "geometry": {
@@ -1230,7 +1230,7 @@
         "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
         "marker_color": "#f77f00",
         "ai_predicted_risk": "High Risk",
-        "ai_prediction_confidence": 75.4,
+        "ai_prediction_confidence": 74.0,
         "ai_concurrence": "True"
       },
       "geometry": {
@@ -1270,7 +1270,7 @@
         "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
         "marker_color": "#f77f00",
         "ai_predicted_risk": "High Risk",
-        "ai_prediction_confidence": 88.0,
+        "ai_prediction_confidence": 88.4,
         "ai_concurrence": "True"
       },
       "geometry": {
@@ -1310,7 +1310,7 @@
         "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
         "marker_color": "#f77f00",
         "ai_predicted_risk": "High Risk",
-        "ai_prediction_confidence": 77.3,
+        "ai_prediction_confidence": 73.8,
         "ai_concurrence": "True"
       },
       "geometry": {
@@ -1350,7 +1350,7 @@
         "recommended_intervention": "Immediate bio-sanitation audit; mandatory effluent interceptor; drain covering within 50m; live slaughter inspection.",
         "marker_color": "#d90429",
         "ai_predicted_risk": "Very High Risk",
-        "ai_prediction_confidence": 65.5,
+        "ai_prediction_confidence": 69.2,
         "ai_concurrence": "True"
       },
       "geometry": {
@@ -1390,7 +1390,7 @@
         "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
         "marker_color": "#f77f00",
         "ai_predicted_risk": "High Risk",
-        "ai_prediction_confidence": 60.3,
+        "ai_prediction_confidence": 58.8,
         "ai_concurrence": "True"
       },
       "geometry": {
@@ -1430,7 +1430,7 @@
         "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
         "marker_color": "#f77f00",
         "ai_predicted_risk": "High Risk",
-        "ai_prediction_confidence": 88.9,
+        "ai_prediction_confidence": 85.2,
         "ai_concurrence": "True"
       },
       "geometry": {
@@ -1470,7 +1470,7 @@
         "recommended_intervention": "Immediate bio-sanitation audit; mandatory effluent interceptor; drain covering within 50m; live slaughter inspection.",
         "marker_color": "#d90429",
         "ai_predicted_risk": "Very High Risk",
-        "ai_prediction_confidence": 76.5,
+        "ai_prediction_confidence": 80.5,
         "ai_concurrence": "True"
       },
       "geometry": {
@@ -1510,7 +1510,7 @@
         "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
         "marker_color": "#f77f00",
         "ai_predicted_risk": "High Risk",
-        "ai_prediction_confidence": 86.2,
+        "ai_prediction_confidence": 85.0,
         "ai_concurrence": "True"
       },
       "geometry": {
@@ -1550,7 +1550,7 @@
         "recommended_intervention": "Immediate bio-sanitation audit; mandatory effluent interceptor; drain covering within 50m; live slaughter inspection.",
         "marker_color": "#d90429",
         "ai_predicted_risk": "Very High Risk",
-        "ai_prediction_confidence": 75.4,
+        "ai_prediction_confidence": 73.7,
         "ai_concurrence": "True"
       },
       "geometry": {
@@ -1590,7 +1590,7 @@
         "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
         "marker_color": "#f77f00",
         "ai_predicted_risk": "High Risk",
-        "ai_prediction_confidence": 81.3,
+        "ai_prediction_confidence": 82.3,
         "ai_concurrence": "True"
       },
       "geometry": {
@@ -1630,7 +1630,7 @@
         "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
         "marker_color": "#f77f00",
         "ai_predicted_risk": "High Risk",
-        "ai_prediction_confidence": 53.0,
+        "ai_prediction_confidence": 53.7,
         "ai_concurrence": "True"
       },
       "geometry": {
@@ -1670,7 +1670,7 @@
         "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
         "marker_color": "#f77f00",
         "ai_predicted_risk": "High Risk",
-        "ai_prediction_confidence": 84.1,
+        "ai_prediction_confidence": 89.9,
         "ai_concurrence": "True"
       },
       "geometry": {
@@ -1710,7 +1710,7 @@
         "recommended_intervention": "Monthly routine surveillance; water potability testing; solid waste collection compliance.",
         "marker_color": "#ffd166",
         "ai_predicted_risk": "Moderate Risk",
-        "ai_prediction_confidence": 45.4,
+        "ai_prediction_confidence": 46.6,
         "ai_concurrence": "True"
       },
       "geometry": {
@@ -1750,7 +1750,7 @@
         "recommended_intervention": "Monthly routine surveillance; water potability testing; solid waste collection compliance.",
         "marker_color": "#ffd166",
         "ai_predicted_risk": "Moderate Risk",
-        "ai_prediction_confidence": 61.7,
+        "ai_prediction_confidence": 60.5,
         "ai_concurrence": "True"
       },
       "geometry": {
@@ -1790,7 +1790,7 @@
         "recommended_intervention": "Monthly routine surveillance; water potability testing; solid waste collection compliance.",
         "marker_color": "#ffd166",
         "ai_predicted_risk": "Moderate Risk",
-        "ai_prediction_confidence": 64.1,
+        "ai_prediction_confidence": 69.5,
         "ai_concurrence": "True"
       },
       "geometry": {
@@ -1830,7 +1830,7 @@
         "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
         "marker_color": "#06d6a0",
         "ai_predicted_risk": "Low Risk",
-        "ai_prediction_confidence": 74.3,
+        "ai_prediction_confidence": 75.7,
         "ai_concurrence": "True"
       },
       "geometry": {
@@ -1870,7 +1870,7 @@
         "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
         "marker_color": "#f77f00",
         "ai_predicted_risk": "High Risk",
-        "ai_prediction_confidence": 85.4,
+        "ai_prediction_confidence": 84.9,
         "ai_concurrence": "True"
       },
       "geometry": {
@@ -1910,7 +1910,7 @@
         "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
         "marker_color": "#06d6a0",
         "ai_predicted_risk": "Low Risk",
-        "ai_prediction_confidence": 69.1,
+        "ai_prediction_confidence": 69.7,
         "ai_concurrence": "True"
       },
       "geometry": {
@@ -1950,7 +1950,7 @@
         "recommended_intervention": "Immediate bio-sanitation audit; mandatory effluent interceptor; drain covering within 50m; live slaughter inspection.",
         "marker_color": "#d90429",
         "ai_predicted_risk": "Very High Risk",
-        "ai_prediction_confidence": 78.2,
+        "ai_prediction_confidence": 79.7,
         "ai_concurrence": "True"
       },
       "geometry": {
@@ -1990,7 +1990,7 @@
         "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
         "marker_color": "#f77f00",
         "ai_predicted_risk": "High Risk",
-        "ai_prediction_confidence": 67.3,
+        "ai_prediction_confidence": 68.6,
         "ai_concurrence": "True"
       },
       "geometry": {
@@ -2021,7 +2021,7 @@
         "drainage_condition": "Semi-Covered Municipal Drain",
         "distance_to_drain_m": 115.1,
         "distance_to_waterbody_m": 3414.9,
-        "distance_to_hospital_m": 467.0,
+        "distance_to_hospital_m": 300.8,
         "market_crowd_index": 6.5,
         "norm_drain_risk": 0.66,
         "norm_waste_risk": 0.35,
@@ -2030,7 +2030,7 @@
         "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
         "marker_color": "#f77f00",
         "ai_predicted_risk": "High Risk",
-        "ai_prediction_confidence": 51.2,
+        "ai_prediction_confidence": 55.9,
         "ai_concurrence": "True"
       },
       "geometry": {
@@ -2061,7 +2061,7 @@
         "drainage_condition": "Underground Closed Drain",
         "distance_to_drain_m": 302.6,
         "distance_to_waterbody_m": 3673.8,
-        "distance_to_hospital_m": 557.9,
+        "distance_to_hospital_m": 160.3,
         "market_crowd_index": 6.8,
         "norm_drain_risk": 0.0,
         "norm_waste_risk": 0.85,
@@ -2070,7 +2070,7 @@
         "recommended_intervention": "Monthly routine surveillance; water potability testing; solid waste collection compliance.",
         "marker_color": "#ffd166",
         "ai_predicted_risk": "Low Risk",
-        "ai_prediction_confidence": 51.4,
+        "ai_prediction_confidence": 37.3,
         "ai_concurrence": "False"
       },
       "geometry": {
@@ -2110,7 +2110,7 @@
         "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
         "marker_color": "#06d6a0",
         "ai_predicted_risk": "Low Risk",
-        "ai_prediction_confidence": 75.9,
+        "ai_prediction_confidence": 74.5,
         "ai_concurrence": "True"
       },
       "geometry": {
@@ -2150,7 +2150,7 @@
         "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
         "marker_color": "#06d6a0",
         "ai_predicted_risk": "Low Risk",
-        "ai_prediction_confidence": 83.8,
+        "ai_prediction_confidence": 82.5,
         "ai_concurrence": "True"
       },
       "geometry": {
@@ -2190,7 +2190,7 @@
         "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
         "marker_color": "#06d6a0",
         "ai_predicted_risk": "Moderate Risk",
-        "ai_prediction_confidence": 49.5,
+        "ai_prediction_confidence": 45.0,
         "ai_concurrence": "False"
       },
       "geometry": {
@@ -2221,7 +2221,7 @@
         "drainage_condition": "Semi-Covered Municipal Drain",
         "distance_to_drain_m": 86.0,
         "distance_to_waterbody_m": 3644.1,
-        "distance_to_hospital_m": 347.0,
+        "distance_to_hospital_m": 157.9,
         "market_crowd_index": 7.1,
         "norm_drain_risk": 0.764,
         "norm_waste_risk": 0.35,
@@ -2230,7 +2230,7 @@
         "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
         "marker_color": "#f77f00",
         "ai_predicted_risk": "High Risk",
-        "ai_prediction_confidence": 71.6,
+        "ai_prediction_confidence": 61.3,
         "ai_concurrence": "True"
       },
       "geometry": {
@@ -2270,7 +2270,7 @@
         "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
         "marker_color": "#f77f00",
         "ai_predicted_risk": "High Risk",
-        "ai_prediction_confidence": 57.0,
+        "ai_prediction_confidence": 55.3,
         "ai_concurrence": "True"
       },
       "geometry": {
@@ -2301,7 +2301,7 @@
         "drainage_condition": "Open Stagnant Drain",
         "distance_to_drain_m": 5.0,
         "distance_to_waterbody_m": 3422.9,
-        "distance_to_hospital_m": 284.0,
+        "distance_to_hospital_m": 227.4,
         "market_crowd_index": 7.7,
         "norm_drain_risk": 1.0,
         "norm_waste_risk": 1.0,
@@ -2310,7 +2310,7 @@
         "recommended_intervention": "Immediate bio-sanitation audit; mandatory effluent interceptor; drain covering within 50m; live slaughter inspection.",
         "marker_color": "#d90429",
         "ai_predicted_risk": "Very High Risk",
-        "ai_prediction_confidence": 51.8,
+        "ai_prediction_confidence": 57.7,
         "ai_concurrence": "True"
       },
       "geometry": {
@@ -2341,7 +2341,7 @@
         "drainage_condition": "Open Stagnant Drain",
         "distance_to_drain_m": 26.7,
         "distance_to_waterbody_m": 3435.4,
-        "distance_to_hospital_m": 230.5,
+        "distance_to_hospital_m": 226.4,
         "market_crowd_index": 8.1,
         "norm_drain_risk": 0.976,
         "norm_waste_risk": 1.0,
@@ -2350,7 +2350,7 @@
         "recommended_intervention": "Immediate bio-sanitation audit; mandatory effluent interceptor; drain covering within 50m; live slaughter inspection.",
         "marker_color": "#d90429",
         "ai_predicted_risk": "Very High Risk",
-        "ai_prediction_confidence": 54.8,
+        "ai_prediction_confidence": 57.2,
         "ai_concurrence": "True"
       },
       "geometry": {
@@ -2381,7 +2381,7 @@
         "drainage_condition": "Semi-Covered Municipal Drain",
         "distance_to_drain_m": 41.2,
         "distance_to_waterbody_m": 3607.0,
-        "distance_to_hospital_m": 303.8,
+        "distance_to_hospital_m": 188.0,
         "market_crowd_index": 7.4,
         "norm_drain_risk": 0.924,
         "norm_waste_risk": 0.85,
@@ -2390,7 +2390,7 @@
         "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
         "marker_color": "#f77f00",
         "ai_predicted_risk": "High Risk",
-        "ai_prediction_confidence": 69.0,
+        "ai_prediction_confidence": 69.3,
         "ai_concurrence": "True"
       },
       "geometry": {
@@ -2430,7 +2430,7 @@
         "recommended_intervention": "Monthly routine surveillance; water potability testing; solid waste collection compliance.",
         "marker_color": "#ffd166",
         "ai_predicted_risk": "Moderate Risk",
-        "ai_prediction_confidence": 60.7,
+        "ai_prediction_confidence": 61.0,
         "ai_concurrence": "True"
       },
       "geometry": {
@@ -2470,7 +2470,7 @@
         "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
         "marker_color": "#f77f00",
         "ai_predicted_risk": "High Risk",
-        "ai_prediction_confidence": 87.4,
+        "ai_prediction_confidence": 88.7,
         "ai_concurrence": "True"
       },
       "geometry": {
@@ -2510,7 +2510,7 @@
         "recommended_intervention": "Monthly routine surveillance; water potability testing; solid waste collection compliance.",
         "marker_color": "#ffd166",
         "ai_predicted_risk": "Moderate Risk",
-        "ai_prediction_confidence": 83.3,
+        "ai_prediction_confidence": 80.7,
         "ai_concurrence": "True"
       },
       "geometry": {
@@ -2550,7 +2550,7 @@
         "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
         "marker_color": "#f77f00",
         "ai_predicted_risk": "High Risk",
-        "ai_prediction_confidence": 84.2,
+        "ai_prediction_confidence": 87.3,
         "ai_concurrence": "True"
       },
       "geometry": {
@@ -2590,7 +2590,7 @@
         "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
         "marker_color": "#06d6a0",
         "ai_predicted_risk": "Low Risk",
-        "ai_prediction_confidence": 57.2,
+        "ai_prediction_confidence": 55.6,
         "ai_concurrence": "True"
       },
       "geometry": {
@@ -2630,7 +2630,7 @@
         "recommended_intervention": "Monthly routine surveillance; water potability testing; solid waste collection compliance.",
         "marker_color": "#ffd166",
         "ai_predicted_risk": "High Risk",
-        "ai_prediction_confidence": 77.3,
+        "ai_prediction_confidence": 77.4,
         "ai_concurrence": "False"
       },
       "geometry": {
@@ -2670,7 +2670,7 @@
         "recommended_intervention": "Monthly routine surveillance; water potability testing; solid waste collection compliance.",
         "marker_color": "#ffd166",
         "ai_predicted_risk": "Moderate Risk",
-        "ai_prediction_confidence": 76.1,
+        "ai_prediction_confidence": 76.7,
         "ai_concurrence": "True"
       },
       "geometry": {
@@ -2710,7 +2710,7 @@
         "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
         "marker_color": "#f77f00",
         "ai_predicted_risk": "High Risk",
-        "ai_prediction_confidence": 82.1,
+        "ai_prediction_confidence": 79.1,
         "ai_concurrence": "True"
       },
       "geometry": {
@@ -2750,7 +2750,7 @@
         "recommended_intervention": "Monthly routine surveillance; water potability testing; solid waste collection compliance.",
         "marker_color": "#ffd166",
         "ai_predicted_risk": "Moderate Risk",
-        "ai_prediction_confidence": 79.6,
+        "ai_prediction_confidence": 80.2,
         "ai_concurrence": "True"
       },
       "geometry": {
@@ -2790,7 +2790,7 @@
         "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
         "marker_color": "#06d6a0",
         "ai_predicted_risk": "Low Risk",
-        "ai_prediction_confidence": 77.7,
+        "ai_prediction_confidence": 77.5,
         "ai_concurrence": "True"
       },
       "geometry": {
@@ -2830,7 +2830,7 @@
         "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
         "marker_color": "#f77f00",
         "ai_predicted_risk": "High Risk",
-        "ai_prediction_confidence": 79.9,
+        "ai_prediction_confidence": 80.2,
         "ai_concurrence": "True"
       },
       "geometry": {
@@ -2870,7 +2870,7 @@
         "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
         "marker_color": "#06d6a0",
         "ai_predicted_risk": "Low Risk",
-        "ai_prediction_confidence": 82.9,
+        "ai_prediction_confidence": 78.2,
         "ai_concurrence": "True"
       },
       "geometry": {
@@ -2910,7 +2910,7 @@
         "recommended_intervention": "Monthly routine surveillance; water potability testing; solid waste collection compliance.",
         "marker_color": "#ffd166",
         "ai_predicted_risk": "Moderate Risk",
-        "ai_prediction_confidence": 56.4,
+        "ai_prediction_confidence": 56.8,
         "ai_concurrence": "True"
       },
       "geometry": {
@@ -2950,7 +2950,7 @@
         "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
         "marker_color": "#f77f00",
         "ai_predicted_risk": "High Risk",
-        "ai_prediction_confidence": 85.5,
+        "ai_prediction_confidence": 84.0,
         "ai_concurrence": "True"
       },
       "geometry": {
@@ -2990,7 +2990,7 @@
         "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
         "marker_color": "#06d6a0",
         "ai_predicted_risk": "Moderate Risk",
-        "ai_prediction_confidence": 46.7,
+        "ai_prediction_confidence": 46.1,
         "ai_concurrence": "False"
       },
       "geometry": {
@@ -3030,7 +3030,7 @@
         "recommended_intervention": "Monthly routine surveillance; water potability testing; solid waste collection compliance.",
         "marker_color": "#ffd166",
         "ai_predicted_risk": "Moderate Risk",
-        "ai_prediction_confidence": 66.5,
+        "ai_prediction_confidence": 67.4,
         "ai_concurrence": "True"
       },
       "geometry": {
@@ -3070,7 +3070,7 @@
         "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
         "marker_color": "#06d6a0",
         "ai_predicted_risk": "Low Risk",
-        "ai_prediction_confidence": 92.8,
+        "ai_prediction_confidence": 93.1,
         "ai_concurrence": "True"
       },
       "geometry": {
@@ -3110,7 +3110,7 @@
         "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
         "marker_color": "#f77f00",
         "ai_predicted_risk": "High Risk",
-        "ai_prediction_confidence": 88.9,
+        "ai_prediction_confidence": 89.5,
         "ai_concurrence": "True"
       },
       "geometry": {
@@ -3150,7 +3150,7 @@
         "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
         "marker_color": "#f77f00",
         "ai_predicted_risk": "High Risk",
-        "ai_prediction_confidence": 60.2,
+        "ai_prediction_confidence": 60.9,
         "ai_concurrence": "True"
       },
       "geometry": {
@@ -3190,7 +3190,7 @@
         "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
         "marker_color": "#06d6a0",
         "ai_predicted_risk": "Low Risk",
-        "ai_prediction_confidence": 84.1,
+        "ai_prediction_confidence": 84.0,
         "ai_concurrence": "True"
       },
       "geometry": {
@@ -3230,7 +3230,7 @@
         "recommended_intervention": "Monthly routine surveillance; water potability testing; solid waste collection compliance.",
         "marker_color": "#ffd166",
         "ai_predicted_risk": "Moderate Risk",
-        "ai_prediction_confidence": 79.2,
+        "ai_prediction_confidence": 76.6,
         "ai_concurrence": "True"
       },
       "geometry": {

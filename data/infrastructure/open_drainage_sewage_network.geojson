@@ -6,7 +6,7 @@
       "properties": {
         "drain_name": "Stonehousepet - Pennar Main Open Outfall Drain",
         "drain_type": "Open Masonry Drain (High Sullage)",
-        "bio_hazard_rating": "High (Stagnant Organic Waste)"
+        "bio_hazard_rating": "High (Stagnant Organic Waste & Sullage)"
       },
       "geometry": {
         "type": "LineString",
@@ -31,7 +31,7 @@
       "properties": {
         "drain_name": "Santhapet - Trunk Road Central Municipal Drain",
         "drain_type": "Semi-Covered Heavy Effluent Drain",
-        "bio_hazard_rating": "High (Stagnant Organic Waste)"
+        "bio_hazard_rating": "High (Stagnant Organic Waste & Sullage)"
       },
       "geometry": {
         "type": "LineString",
@@ -60,7 +60,7 @@
       "properties": {
         "drain_name": "Ranganayakulapet Riverbank Open Sewer Line",
         "drain_type": "Unlined Open Ditch",
-        "bio_hazard_rating": "High (Stagnant Organic Waste)"
+        "bio_hazard_rating": "High (Stagnant Organic Waste & Sullage)"
       },
       "geometry": {
         "type": "LineString",
@@ -83,9 +83,9 @@
     {
       "type": "Feature",
       "properties": {
-        "drain_name": "Vedayapalem - Ramalingapuram Stormwater & Wastewater Channel",
-        "drain_type": "Open Storm Drain with Sludge",
-        "bio_hazard_rating": "High (Stagnant Organic Waste)"
+        "drain_name": "Vedayapalem - Ramalingapuram Stormwater Drain",
+        "drain_type": "Open Storm Drain with Sullage",
+        "bio_hazard_rating": "High (Stagnant Organic Waste & Sullage)"
       },
       "geometry": {
         "type": "LineString",
@@ -108,9 +108,9 @@
     {
       "type": "Feature",
       "properties": {
-        "drain_name": "Kovur Padugupadu Rail-Line Open Sullage Drain",
+        "drain_name": "Kovur Padugupadu Rail-Line Open Drain",
         "drain_type": "Open Earthen Sullage Channel",
-        "bio_hazard_rating": "High (Stagnant Organic Waste)"
+        "bio_hazard_rating": "High (Stagnant Organic Waste & Sullage)"
       },
       "geometry": {
         "type": "LineString",
@@ -135,7 +135,7 @@
       "properties": {
         "drain_name": "Kovur Main Bazaar Central Open Gutter",
         "drain_type": "Open Roadside Sludge Drain",
-        "bio_hazard_rating": "High (Stagnant Organic Waste)"
+        "bio_hazard_rating": "High (Stagnant Organic Waste & Sullage)"
       },
       "geometry": {
         "type": "LineString",
@@ -160,7 +160,7 @@
       "properties": {
         "drain_name": "Inamadugu Village Bypass Open Drain",
         "drain_type": "Rural Runoff and Animal Waste Channel",
-        "bio_hazard_rating": "High (Stagnant Organic Waste)"
+        "bio_hazard_rating": "High (Stagnant Organic Waste & Sullage)"
       },
       "geometry": {
         "type": "LineString",

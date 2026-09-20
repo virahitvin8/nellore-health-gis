@@ -5,8 +5,8 @@
       "type": "Feature",
       "properties": {
         "name": "Pennar River Basin (Penna)",
-        "category": "Major River",
-        "status": "Seasonal Flow / Sandbed / Urban Discharge Sink"
+        "category": "Major River Basin",
+        "status": "Infiltration Wells Source & Urban Effluent Sink"
       },
       "geometry": {
         "type": "Polygon",
@@ -81,7 +81,7 @@
       "properties": {
         "name": "Sarvepalli Irrigation Canal",
         "category": "Primary Canal",
-        "status": "Active Agricultural / Runoff Carrier"
+        "status": "Active Agricultural & Runoff Channel"
       },
       "geometry": {
         "type": "LineString",

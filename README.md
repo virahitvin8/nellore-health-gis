@@ -1,5 +1,5 @@
-# GeoHealth Sentinel: AI-Enabled Health GIS & Geo-Risk Analytics
-### Wet Market Zoonotic Vulnerability Assessment • Nellore City (NMC) & Kovur Mandal, Andhra Pradesh
+# GeoHealth Sentinel: AI-Enabled Health GIS & Urban Infrastructure Sentinel
+### Wet Markets, Drinking Water Pipelines, RO Plants & Hospitals • Nellore City (NMC) & Kovur Mandal, Andhra Pradesh
 
 [![WebGIS](https://img.shields.io/badge/WebGIS-Leaflet%201.9-blue?style=for-the-badge&logo=leaflet)](https://leafletjs.com/)
 [![GeoAI](https://img.shields.io/badge/GeoAI-Random%20Forest%2076.2%25-brightgreen?style=for-the-badge&logo=scikit-learn)](https://scikit-learn.org/)
@@ -10,157 +10,137 @@
 
 ## Executive Summary & Background
 
-Following epidemiological insights from the 2019–2021 zoonotic transmission events in Wuhan and global wet-market pathogen dynamics, this project develops an **AI-Enabled Health GIS and Spatial Multi-Criteria Decision Framework** for **Nellore City (Nellore Municipal Corporation)** and **Kovur Mandal** (SPSR Nellore District, Andhra Pradesh, India).
+Following epidemiological insights from the 2019–2021 zoonotic transmission events in Wuhan and global wet-market pathogen dynamics, this project develops an **AI-Enabled Health GIS and Urban Infrastructure Multi-Criteria Decision Framework** for **Nellore City (Nellore Municipal Corporation - NMC)** and **Kovur Mandal** (SPSR Nellore District, Andhra Pradesh, India).
 
-Wet markets handling live poultry, mutton, and fresh/marine fish operate as critical nodes in urban food systems. However, when located in high crowd-density bazaars directly adjacent to **open municipal sullage drains**, unlined sewage channels, or river catchments, they pose severe public health hazards:
-- Aerosolization of avian/zoonotic viral and bacterial pathogens during on-site live slaughter.
-- Microbial contamination of runoff discharging into the **Pennar River Basin** and regional canal networks.
-- Vector breeding (flies, rodents, mosquitoes) thriving on uncontained biological offal.
+In fast-growing urban Indian centers, wet markets handling live poultry, mutton, and fresh/marine fish operate in close proximity to **open municipal sullage drains**, unlined sewage channels, and underground **drinking water pipelines**. This creates critical public health hazard vectors:
+1. **Zoonotic Bio-Aerosolization**: Airborne transmission during uncontained on-site live slaughter in crowded bazaars.
+2. **Drinking Water Cross-Contamination**: Subsurface sewage ingress into aging water supply pipes and shallow public hand pumps during low-pressure hours.
+3. **Food Supply Chain Contamination**: Flies and surface runoff transmitting pathogens from meat/fish butcher stalls into adjacent fresh vegetable stalls and Rythu Bazaars.
 
-This project delivers an **end-to-end Health GIS pipeline**: from remote spatial survey and proximity analysis to Machine Learning predictive classification and a fully interactive **WebGIS Leaflet Dashboard** for municipal decision-makers.
-
----
-
-## Study Area: Nellore City & Kovur Mandal
-
-| Parameter | Nellore Municipal Corporation (NMC) | Kovur Mandal |
-|---|---|---|
-| **Administrative Class** | Tier-2 Urban Local Body (ULB) | Peri-Urban / Rural Mandal |
-| **Geographic Location** | South of Pennar River (~14.4426°N, 79.9865°E) | North of Pennar River (~14.4950°N, 79.9780°E) |
-| **Key Market Hubs** | Stonehousepet, Santhapet, Ranganayakulapet, Vedayapalem | Kovur Main Bazaar, Padugupadu Junction, Inamadugu Shandy |
-| **Environmental Sinks** | Pennar River, Buckingham Canal feeder, Sarvepalli Canal | Pennar River north bank, agricultural drainage canals |
-| **Surveyed Stalls** | 50 wet market stalls & slaughter points | 31 wet market stalls & shandies |
+This project delivers a complete **end-to-end Health GIS platform**: from spatial synthesis and Multi-Criteria Decision Analysis (MCSDA) to Machine Learning risk prediction, 3D Drone & Bike commute simulations, and an interactive **WebGIS Leaflet Dashboard** with two-way QGIS synchronization.
 
 ---
 
-## Methodology & Geo-Risk Index (GRI) Formulation
+## Spatial Infrastructure Mapped (Nellore NMC & Kovur GP)
 
-In alignment with spatial epidemiology standards, each market $j$ is evaluated using a **Multi-Criteria Spatial Decision Analysis (MCSDA)** composite risk function:
+```
+┌──────────────────────────────────────┬─────────┬────────────────────────────────────────────────────────┐
+│ Infrastructure Category              │ Count   │ Description & Key Examples                             │
+├──────────────────────────────────────┼─────────┼────────────────────────────────────────────────────────┤
+│ Wet Markets (Poultry, Mutton, Fish)  │ 81      │ Stonehousepet, Santhapet, Kovur Bazaar, Inamadugu      │
+│ Vegetable Markets & Rythu Bazaars    │ 8       │ Stonehousepet Rythu Bazaar, Santhapet Produce Market   │
+│ Tagged Drinking Water Pipelines      │ 9 lines │ NMC-WTR-PL-01 to 05 (DI/HDPE), Kovur GP Water Mains    │
+│ Drinking Water Points                │ 18      │ Community Mineral Water RO Plants, Borewells, Pumps    │
+│ Open Sullage Drains & Outfalls       │ 7 lines │ Stonehousepet Outfall, Central Drain, Kovur Gutter     │
+│ Surface Water Bodies & River         │ 3       │ Pennar River Basin, Sarvepalli & Buckingham Canals     │
+│ Healthcare Facilities (Govt + Pvt)   │ 15      │ GGH Nellore, ACSR Medical College, Narayana, Apollo    │
+│ Hazard Exposure Buffers              │ 40      │ 250m Bio-Aerosol Buffers & 500m Secondary Zones        │
+└──────────────────────────────────────┴─────────┴────────────────────────────────────────────────────────┘
+```
+
+---
+
+## Multi-Criteria Geo-Risk Index (GRI) Formulation
+
+Each market $j$ is evaluated using a **Multi-Criteria Spatial Decision Analysis (MCSDA)** composite risk function:
 
 $$\text{Geo-Risk Score}_j = \left( \sum_{i=1}^{n} W_i \times X_{i,j}^{\text{norm}} \right) \times 100$$
 
-Where $W_i$ represents the scientifically justified risk weight ($\sum W_i = 1.00$), and $X_{i,j}^{\text{norm}} \in [0, 1]$ represents the normalized risk factor:
+- **Open Drain Proximity ($W = 0.25$)**: Inversely scaled (0–300m buffer).
+- **Waste Disposal Practice ($W = 0.20$)**: Direct open drain discharge (1.0) vs. closed bins (0.1).
+- **On-Site Live Slaughter ($W = 0.15$)**: Biological effluent and aerosol hazard.
+- **Market Crowd & Density ($W = 0.15$)**: Human-animal contact intensity in central bazaars.
+- **Absence of Cold-Chain ($W = 0.10$)**: Bacterial multiplication in tropical ambient temperatures.
+- **Daily Animal Volume ($W = 0.10$)**: 0 to 450 units/day throughput scale.
+- **Pennar River Proximity ($W = 0.05$)**: Riverbed infiltration and water resource contamination.
 
-```
-┌──────────────────────────────────────┬────────┬───────────────────────────────────────────┐
-│ Risk Factor Indicator (Xi)           │ Weight │ Normalization Rationale                   │
-├──────────────────────────────────────┼────────┼───────────────────────────────────────────┤
-│ Proximity to Open Drainage / Sewer   │ 0.25   │ Inversely scaled (0-300m setback buffer)  │
-│ Solid & Biological Waste Disposal    │ 0.20   │ Direct drain discharge (1.0) vs Bins (0.1)│
-│ On-Site Live Animal Slaughter        │ 0.15   │ Live slaughter aerosol hazard (Yes/No)    │
-│ Market Crowd & Pedestrian Density    │ 0.15   │ Footfall intensity in central bazaar (1-10│
-│ Absence of Cold-Chain Refrigeration  │ 0.10   │ Pathogen growth in tropical ambient temp  │
-│ Daily Animal Throughput Volume       │ 0.10   │ 0 to 450 units/day volume scale           │
-│ Proximity to Pennar River Basin      │ 0.05   │ Surface water contamination exposure      │
-└──────────────────────────────────────┴────────┴───────────────────────────────────────────┘
-```
-
-### Risk Stratification & Municipal Interventions
-
-- **🚨 Very High Risk (Score $\ge 72$)**: 11 markets (13.6%). Immediate bio-sanitation audit; mandatory effluent interceptor trap; live slaughter prohibition without bio-containment.
-- **⚠️ High Risk (Score $56 - 71$)**: 29 markets (35.8%). Bi-weekly municipal disinfection; covered offal collection bins; cold storage subsidy.
-- **⚡ Moderate Risk (Score $40 - 55$)**: 20 markets (24.7%). Monthly routine surveillance; potable water testing.
-- **✅ Low Risk (Score $< 40$)**: 21 markets (25.9%). Quarterly standard food safety verification.
+### Risk Classification Distribution
+- **🚨 Very High Risk ($\ge 72$)**: 11 markets (13.6%) — Immediate bio-sanitation audit; mandatory effluent traps.
+- **⚠️ High Risk ($56 - 71$)**: 29 markets (35.8%) — Bi-weekly disinfection; covered bins; cold storage subsidy.
+- **⚡ Moderate Risk ($40 - 55$)**: 20 markets (24.7%) — Routine monthly surveillance.
+- **✅ Low Risk ($< 40$)**: 21 markets (25.9%) — Standard food safety audit.
 
 ---
 
-## AI & Machine Learning Classification
+## AI & Machine Learning Predictive Modeling
 
-A supervised **Random Forest Classifier (100 Decision Trees)** was trained to predict risk categories based on spatial and operational attributes:
-
-- **Model Accuracy**: **76.19%** test accuracy (with 67.94% 5-fold cross-validation across 81 spatial locations).
+A supervised **Random Forest Classifier (100 Decision Trees)** was trained to predict risk categories based on spatial and operational indicators:
+- **Test Accuracy**: **76.19%** (Cross-validation mean: 69.19%).
 - **Primary Driving Factors (Feature Importance)**:
-  1. `distance_to_drain_m`: **33.56%** (The single strongest determinant of bio-risk).
-  2. `distance_to_waterbody_m`: **10.69%**
-  3. `daily_animals_handled`: **10.55%**
-  4. `distance_to_hospital_m`: **10.24%**
-  5. `waste_severity_score`: **9.78%**
-  6. `market_crowd_index`: **8.45%**
+  1. `distance_to_drain_m`: **33.41%** (The single strongest determinant of bio-risk).
+  2. `distance_to_waterbody_m`: **11.81%**
+  3. `daily_animals_handled`: **10.97%**
+  4. `waste_severity_score`: **9.75%**
+  5. `distance_to_hospital_m`: **9.71%**
+  6. `market_crowd_index`: **8.46%**
 
 ---
 
-## Interactive WebGIS Dashboard Features
+## Interactive WebGIS Platform Features
 
-The web platform is built with **Leaflet.js**, **Chart.js**, and modern CSS:
+The web application is built with **Leaflet 1.9**, **Chart.js**, and modern CSS:
 
-1. **Multi-Source Basemaps**: CartoDB Dark Theme, CartoDB Positron, OpenStreetMap, and Esri World Satellite Imagery.
-2. **Dynamic Vector Layers**:
-   - Administrative Boundaries (Nellore NMC & Kovur Mandal).
-   - Wet Market Inventory color-coded by Geo-Risk score.
-   - Open Drainage & Sewage Hazard Lines (Red dashed outfalls).
-   - Pennar River Basin & Irrigation Canals.
-   - 250m Bio-Aerosol Hazard Buffers & 500m Secondary Vector Buffers.
-   - Healthcare Facilities (GGH Nellore, ACSR Medical College, Kovur CHC).
-3. **Market Health Inspector**: Clicking any market reveals its unique ID, animal origin (e.g. Kadapa shandy, coastal aquaculture), destination flow, daily throughput, sanitary metrics, AI prediction confidence, and municipal remediation directive.
-4. **Simulation Tool**: Click anywhere in the study area to evaluate a prospective market location and receive an instant permit recommendation (Approved / Conditional / Rejected).
-5. **Analytics Drawer**: Live Chart.js visualizations of risk distributions, commodity breakdowns, and cluster rankings.
-6. **Data Export**: One-click download of GeoJSON and CSV datasets.
+1. **Multi-Basemap Switching**: CartoDB Dark Theme, Esri World Satellite Imagery, CartoDB Light, and OpenStreetMap.
+2. **🦅 3D Drone Flyover Mode**:
+   - Automated aerial inspection flight across 7 critical checkpoints from Vedayapalem South to Kovur and Inamadugu.
+   - Live Heads-Up Display (HUD) displaying altitude (AGL), flight speed, and bio-hazard alerts.
+3. **🚴 Motorcycle / Bicycle Commute Simulation**:
+   - Simulates a livestock courier moving from rural breeding hatcheries across the historic Pennar Bridge into Stonehousepet Market.
+   - Real-time speedometer, odometer, and hazard alert system (triggers RED when within 30m of open drainage lines).
+4. **🚶 Street Walk View with Google Maps 3D Integration**:
+   - Click any market, pipeline, or hospital to inspect street-level ground perspectives and launch Google Maps Street View directly.
+5. **Interactive Permit Simulator**:
+   - Click anywhere in Nellore or Kovur to evaluate a new prospective market location—calculates distance to open drains and waterbodies, runs the formula, and outputs an instant permit decision (*Approved / Conditional / Rejected*).
+6. **Live Analytics Drawer (Chart.js)**:
+   - Interactive charts of risk distribution, commodity breakdown, cluster rankings, and AI feature importance.
 
 ---
 
-## Project Repository Structure
+## Two-Way QGIS Desktop Synchronization
+
+Edits made in desktop QGIS automatically synchronize with the WebGIS dashboard:
+1. Open QGIS and run `qgis/load_nellore_health_gis.py` in the Python Console (`Ctrl + Alt + P`).
+2. Digitize new pipelines, hand pumps, or market stalls using the pencil tool.
+3. Save edits in QGIS (saves directly to `data/*.geojson`).
+4. Run `python3 src/compile_bundle.py` in the terminal.
+5. Refresh your browser — your new drawn features appear instantly in the live WebGIS dashboard!
+
+---
+
+## Repository Structure
 
 ```
 .
 ├── index.html                           # Full WebGIS Application Dashboard
 ├── css/
-│   └── style.css                        # Modern responsive dark-themed GIS styling
+│   └── style.css                        # Modern dark-themed GIS UI & HUD telemetry styles
 ├── js/
-│   ├── app.js                           # WebGIS controller, Leaflet logic, simulation & filters
+│   ├── app.js                           # WebGIS controller, Drone, Bike & Street view modes
 │   └── charts.js                        # Chart.js analytics engine
 ├── data/
-│   ├── embedded_data.js                 # Unified JavaScript spatial data bundle
-│   ├── boundaries/                      # Nellore & Kovur administrative GeoJSONs
-│   ├── markets/                         # Wet market inventory (CSV & GeoJSON)
-│   ├── infrastructure/                  # Drains, Pennar river, and hospital layers
+│   ├── embedded_data.js                 # Self-contained spatial data bundle
+│   ├── boundaries/                      # Nellore NMC & Kovur Mandal boundary GeoJSONs
+│   ├── markets/                         # Wet markets & Vegetable Rythu Bazaars GeoJSONs
+│   ├── infrastructure/                  # Water pipelines, RO plants, drains, river, hospitals
 │   └── risk_analysis/                   # Classified Geo-Risk dataset and 250m/500m buffers
 ├── models/
-│   ├── risk_predictor_random_forest.pkl # Serialized Scikit-Learn Random Forest model
+│   ├── risk_predictor_random_forest.pkl # Trained Random Forest ML model
 │   ├── model_evaluation_metrics.json    # Accuracy, confusion matrix & metrics
 │   └── feature_importance.json          # Driving risk factors ranking
 ├── qgis/
-│   ├── load_nellore_health_gis.py       # One-click QGIS Python automation script
-│   └── README.md                        # Desktop GIS integration guide
+│   ├── load_nellore_health_gis.py       # One-click QGIS automation script
+│   └── README.md                        # Desktop GIS digitizing & sync guide
 ├── src/
 │   ├── generate_spatial_data.py         # Spatial synthesis pipeline
-│   ├── geo_risk_engine.py               # MCSDA Geo-Risk Index and buffer calculator
-│   ├── train_ai_model.py                # Machine learning training and evaluation
+│   ├── geo_risk_engine.py               # MCSDA Geo-Risk Index calculator
+│   ├── train_ai_model.py                # Machine learning training & evaluation
 │   └── compile_bundle.py                # Client data bundler
-├── LINKEDIN_POST_GUIDE.md               # Step-by-step GitHub upload & viral LinkedIn post guide
+├── LINKEDIN_POST_GUIDE.md               # GitHub upload guide & viral LinkedIn post copy
 └── README.md
 ```
 
 ---
 
-## Quick Start: Running Locally
-
-### 1. Launch WebGIS Dashboard
-Simply open `index.html` in any web browser, or launch a local HTTP server:
-```bash
-python3 -m http.server 8000
-```
-Navigate to: `http://localhost:8000`
-
-### 2. Retrain AI Models or Regenerate Data
-```bash
-# Generate spatial layers
-python3 src/generate_spatial_data.py
-
-# Calculate Geo-Risk Index & Buffers
-python3 src/geo_risk_engine.py
-
-# Train Random Forest AI Model
-python3 src/train_ai_model.py
-
-# Compile web bundle
-python3 src/compile_bundle.py
-```
-
-### 3. Open in Desktop GIS (QGIS)
-Open QGIS, open the Python Console (`Ctrl + Alt + P`), and run `qgis/load_nellore_health_gis.py` to auto-load and style all layers!
-
----
-
 ## Authors & Acknowledgments
 - **Project Lead**: AI & Health GIS Researcher
-- **Target Institutions**: Nellore Municipal Corporation (NMC), District Medical & Health Office (DMHO SPSR Nellore), Animal Husbandry Department, Andhra Pradesh.
+- **Institutions**: Nellore Municipal Corporation (NMC), Kovur Gram Panchayat, Department of Health & Family Welfare, Government of Andhra Pradesh.

@@ -5,9 +5,13 @@
       "type": "Feature",
       "properties": {
         "name": "Government General Hospital (GGH / DSR Hospital)",
-        "facility_type": "Tertiary Referral Hospital",
-        "bed_capacity": 750,
-        "emergency_service": "Available"
+        "category": "Government Referral Hospital",
+        "sector": "Government",
+        "lat": 14.4445,
+        "lon": 79.986,
+        "beds": 750,
+        "emergency_icu": "24x7 Trauma & Epidemic Isolation Ward",
+        "ambulance": "108 Base Station"
       },
       "geometry": {
         "type": "Point",
@@ -20,10 +24,14 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "ACSR Government Medical College & Hospital",
-        "facility_type": "Medical College Hospital",
-        "bed_capacity": 500,
-        "emergency_service": "Available"
+        "name": "ACSR Government Medical College Hospital",
+        "category": "Government Medical College Hospital",
+        "sector": "Government",
+        "lat": 14.438,
+        "lon": 79.972,
+        "beds": 500,
+        "emergency_icu": "Tertiary ICU & Pathology Laboratories",
+        "ambulance": "Available"
       },
       "geometry": {
         "type": "Point",
@@ -37,9 +45,13 @@
       "type": "Feature",
       "properties": {
         "name": "Kovur Community Health Centre (CHC)",
-        "facility_type": "Community Health Centre",
-        "bed_capacity": 50,
-        "emergency_service": "Available"
+        "category": "Government CHC",
+        "sector": "Government",
+        "lat": 14.493,
+        "lon": 79.979,
+        "beds": 50,
+        "emergency_icu": "24x7 Emergency & Inpatient Care",
+        "ambulance": "108 Available"
       },
       "geometry": {
         "type": "Point",
@@ -53,9 +65,13 @@
       "type": "Feature",
       "properties": {
         "name": "Stonehousepet Urban Primary Health Centre (UPHC)",
-        "facility_type": "Urban Primary Health Centre",
-        "bed_capacity": 10,
-        "emergency_service": "Day OPD Only"
+        "category": "Government UPHC",
+        "sector": "Government",
+        "lat": 14.4505,
+        "lon": 79.9915,
+        "beds": 10,
+        "emergency_icu": "Day OPD & Immunization Unit",
+        "ambulance": "On Call"
       },
       "geometry": {
         "type": "Point",
@@ -69,9 +85,13 @@
       "type": "Feature",
       "properties": {
         "name": "Santhapet Municipal Dispensary / UPHC",
-        "facility_type": "Urban Dispensary",
-        "bed_capacity": 6,
-        "emergency_service": "Day OPD Only"
+        "category": "Government UPHC",
+        "sector": "Government",
+        "lat": 14.439,
+        "lon": 79.981,
+        "beds": 6,
+        "emergency_icu": "OPD & Communicable Disease Screening",
+        "ambulance": "On Call"
       },
       "geometry": {
         "type": "Point",
@@ -84,10 +104,14 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Ranganayakulapet Ward Health Post",
-        "facility_type": "Health Wellness Centre",
-        "bed_capacity": 4,
-        "emergency_service": "Day OPD Only"
+        "name": "Ranganayakulapet Ward Health Wellness Post",
+        "category": "Government UPHC",
+        "sector": "Government",
+        "lat": 14.454,
+        "lon": 79.987,
+        "beds": 4,
+        "emergency_icu": "Primary Wellness Clinic",
+        "ambulance": "On Call"
       },
       "geometry": {
         "type": "Point",
@@ -101,9 +125,13 @@
       "type": "Feature",
       "properties": {
         "name": "Vedayapalem Area Hospital / UPHC",
-        "facility_type": "Urban Primary Health Centre",
-        "bed_capacity": 15,
-        "emergency_service": "Day OPD Only"
+        "category": "Government UPHC",
+        "sector": "Government",
+        "lat": 14.417,
+        "lon": 79.967,
+        "beds": 15,
+        "emergency_icu": "General OPD & Maternal Health",
+        "ambulance": "Available"
       },
       "geometry": {
         "type": "Point",
@@ -117,9 +145,13 @@
       "type": "Feature",
       "properties": {
         "name": "Padugupadu Primary Health Sub-Centre",
-        "facility_type": "Primary Health Sub-Centre",
-        "bed_capacity": 4,
-        "emergency_service": "Day OPD Only"
+        "category": "Government Sub-Centre",
+        "sector": "Government",
+        "lat": 14.476,
+        "lon": 79.983,
+        "beds": 4,
+        "emergency_icu": "Rural Sub-Centre OPD",
+        "ambulance": "On Call"
       },
       "geometry": {
         "type": "Point",
@@ -132,16 +164,140 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Inamadugu Rural Health Clinic",
-        "facility_type": "Rural Clinic",
-        "bed_capacity": 2,
-        "emergency_service": "Day OPD Only"
+        "name": "Inamadugu Rural Primary Health Centre",
+        "category": "Government PHC",
+        "sector": "Government",
+        "lat": 14.491,
+        "lon": 80.004,
+        "beds": 6,
+        "emergency_icu": "Rural Primary Health Center",
+        "ambulance": "On Call"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
           80.004,
           14.491
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Narayana Medical College & Super Speciality Hospital",
+        "category": "Private Medical College & Research",
+        "sector": "Private Super Speciality",
+        "lat": 14.425,
+        "lon": 80.021,
+        "beds": 1400,
+        "emergency_icu": "Level-1 Trauma & State Zoonotic Research ICU",
+        "ambulance": "Dedicated Advanced Fleet"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.021,
+          14.425
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Medicover Hospitals (formerly KIMS Al Shifa)",
+        "category": "Private Multi-Speciality Hospital",
+        "sector": "Private Super Speciality",
+        "lat": 14.4265,
+        "lon": 79.9725,
+        "beds": 250,
+        "emergency_icu": "24x7 Critical Care & Infectious Disease Unit",
+        "ambulance": "Advanced Life Support"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.9725,
+          14.4265
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Apollo Speciality Hospital Nellore",
+        "category": "Private Super Speciality Hospital",
+        "sector": "Private Super Speciality",
+        "lat": 14.4215,
+        "lon": 79.979,
+        "beds": 200,
+        "emergency_icu": "Tertiary Critical Care & Emergency Wing",
+        "ambulance": "24x7 ALS Ambulance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.979,
+          14.4215
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Simhapuri Hospital (NH16 Bypass)",
+        "category": "Private Multi-Speciality Hospital",
+        "sector": "Private Super Speciality",
+        "lat": 14.412,
+        "lon": 79.954,
+        "beds": 300,
+        "emergency_icu": "Trauma, Toxicology & Infectious Care",
+        "ambulance": "Available"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.954,
+          14.412
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Rainbow Children's & Maternity Clinic",
+        "category": "Private Speciality Clinic",
+        "sector": "Private Speciality",
+        "lat": 14.442,
+        "lon": 79.984,
+        "beds": 80,
+        "emergency_icu": "Pediatric ICU & Neonatal Care",
+        "ambulance": "Available"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.984,
+          14.442
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kovur Medicare Nursing Home",
+        "category": "Private Community Hospital",
+        "sector": "Private Community",
+        "lat": 14.496,
+        "lon": 79.9765,
+        "beds": 35,
+        "emergency_icu": "Inpatient Medicine & Minor Surgery",
+        "ambulance": "Local Ambulance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.9765,
+          14.496
         ]
       }
     }

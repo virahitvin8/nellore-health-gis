@@ -1,4 +1,4 @@
-// Auto-generated Health GIS Nellore & Kovur Spatial Data Bundle
+// Auto-generated Comprehensive Health GIS Nellore & Kovur Spatial Data Bundle
 const HEALTH_GIS_DATA = {
   "aoi": {
     "type": "FeatureCollection",
@@ -11,7 +11,8 @@ const HEALTH_GIS_DATA = {
           "district": "SPSR Nellore",
           "state": "Andhra Pradesh",
           "area_sq_km": 150.4,
-          "population_est": 600000
+          "population_est": 600000,
+          "wards_count": 54
         },
         "geometry": {
           "type": "Polygon",
@@ -69,7 +70,8 @@ const HEALTH_GIS_DATA = {
           "district": "SPSR Nellore",
           "state": "Andhra Pradesh",
           "area_sq_km": 112.8,
-          "population_est": 125000
+          "population_est": 125000,
+          "gram_panchayats_count": 18
         },
         "geometry": {
           "type": "Polygon",
@@ -128,7 +130,8 @@ const HEALTH_GIS_DATA = {
           "district": "SPSR Nellore",
           "state": "Andhra Pradesh",
           "area_sq_km": 150.4,
-          "population_est": 600000
+          "population_est": 600000,
+          "wards_count": 54
         },
         "geometry": {
           "type": "Polygon",
@@ -191,7 +194,8 @@ const HEALTH_GIS_DATA = {
           "district": "SPSR Nellore",
           "state": "Andhra Pradesh",
           "area_sq_km": 112.8,
-          "population_est": 125000
+          "population_est": 125000,
+          "gram_panchayats_count": 18
         },
         "geometry": {
           "type": "Polygon",
@@ -246,8 +250,8 @@ const HEALTH_GIS_DATA = {
         "type": "Feature",
         "properties": {
           "name": "Pennar River Basin (Penna)",
-          "category": "Major River",
-          "status": "Seasonal Flow / Sandbed / Urban Discharge Sink"
+          "category": "Major River Basin",
+          "status": "Infiltration Wells Source & Urban Effluent Sink"
         },
         "geometry": {
           "type": "Polygon",
@@ -322,7 +326,7 @@ const HEALTH_GIS_DATA = {
         "properties": {
           "name": "Sarvepalli Irrigation Canal",
           "category": "Primary Canal",
-          "status": "Active Agricultural / Runoff Carrier"
+          "status": "Active Agricultural & Runoff Channel"
         },
         "geometry": {
           "type": "LineString",
@@ -385,7 +389,7 @@ const HEALTH_GIS_DATA = {
         "properties": {
           "drain_name": "Stonehousepet - Pennar Main Open Outfall Drain",
           "drain_type": "Open Masonry Drain (High Sullage)",
-          "bio_hazard_rating": "High (Stagnant Organic Waste)"
+          "bio_hazard_rating": "High (Stagnant Organic Waste & Sullage)"
         },
         "geometry": {
           "type": "LineString",
@@ -410,7 +414,7 @@ const HEALTH_GIS_DATA = {
         "properties": {
           "drain_name": "Santhapet - Trunk Road Central Municipal Drain",
           "drain_type": "Semi-Covered Heavy Effluent Drain",
-          "bio_hazard_rating": "High (Stagnant Organic Waste)"
+          "bio_hazard_rating": "High (Stagnant Organic Waste & Sullage)"
         },
         "geometry": {
           "type": "LineString",
@@ -439,7 +443,7 @@ const HEALTH_GIS_DATA = {
         "properties": {
           "drain_name": "Ranganayakulapet Riverbank Open Sewer Line",
           "drain_type": "Unlined Open Ditch",
-          "bio_hazard_rating": "High (Stagnant Organic Waste)"
+          "bio_hazard_rating": "High (Stagnant Organic Waste & Sullage)"
         },
         "geometry": {
           "type": "LineString",
@@ -462,9 +466,9 @@ const HEALTH_GIS_DATA = {
       {
         "type": "Feature",
         "properties": {
-          "drain_name": "Vedayapalem - Ramalingapuram Stormwater & Wastewater Channel",
-          "drain_type": "Open Storm Drain with Sludge",
-          "bio_hazard_rating": "High (Stagnant Organic Waste)"
+          "drain_name": "Vedayapalem - Ramalingapuram Stormwater Drain",
+          "drain_type": "Open Storm Drain with Sullage",
+          "bio_hazard_rating": "High (Stagnant Organic Waste & Sullage)"
         },
         "geometry": {
           "type": "LineString",
@@ -487,9 +491,9 @@ const HEALTH_GIS_DATA = {
       {
         "type": "Feature",
         "properties": {
-          "drain_name": "Kovur Padugupadu Rail-Line Open Sullage Drain",
+          "drain_name": "Kovur Padugupadu Rail-Line Open Drain",
           "drain_type": "Open Earthen Sullage Channel",
-          "bio_hazard_rating": "High (Stagnant Organic Waste)"
+          "bio_hazard_rating": "High (Stagnant Organic Waste & Sullage)"
         },
         "geometry": {
           "type": "LineString",
@@ -514,7 +518,7 @@ const HEALTH_GIS_DATA = {
         "properties": {
           "drain_name": "Kovur Main Bazaar Central Open Gutter",
           "drain_type": "Open Roadside Sludge Drain",
-          "bio_hazard_rating": "High (Stagnant Organic Waste)"
+          "bio_hazard_rating": "High (Stagnant Organic Waste & Sullage)"
         },
         "geometry": {
           "type": "LineString",
@@ -539,7 +543,7 @@ const HEALTH_GIS_DATA = {
         "properties": {
           "drain_name": "Inamadugu Village Bypass Open Drain",
           "drain_type": "Rural Runoff and Animal Waste Channel",
-          "bio_hazard_rating": "High (Stagnant Organic Waste)"
+          "bio_hazard_rating": "High (Stagnant Organic Waste & Sullage)"
         },
         "geometry": {
           "type": "LineString",
@@ -568,9 +572,13 @@ const HEALTH_GIS_DATA = {
         "type": "Feature",
         "properties": {
           "name": "Government General Hospital (GGH / DSR Hospital)",
-          "facility_type": "Tertiary Referral Hospital",
-          "bed_capacity": 750,
-          "emergency_service": "Available"
+          "category": "Government Referral Hospital",
+          "sector": "Government",
+          "lat": 14.4445,
+          "lon": 79.986,
+          "beds": 750,
+          "emergency_icu": "24x7 Trauma & Epidemic Isolation Ward",
+          "ambulance": "108 Base Station"
         },
         "geometry": {
           "type": "Point",
@@ -583,10 +591,14 @@ const HEALTH_GIS_DATA = {
       {
         "type": "Feature",
         "properties": {
-          "name": "ACSR Government Medical College & Hospital",
-          "facility_type": "Medical College Hospital",
-          "bed_capacity": 500,
-          "emergency_service": "Available"
+          "name": "ACSR Government Medical College Hospital",
+          "category": "Government Medical College Hospital",
+          "sector": "Government",
+          "lat": 14.438,
+          "lon": 79.972,
+          "beds": 500,
+          "emergency_icu": "Tertiary ICU & Pathology Laboratories",
+          "ambulance": "Available"
         },
         "geometry": {
           "type": "Point",
@@ -600,9 +612,13 @@ const HEALTH_GIS_DATA = {
         "type": "Feature",
         "properties": {
           "name": "Kovur Community Health Centre (CHC)",
-          "facility_type": "Community Health Centre",
-          "bed_capacity": 50,
-          "emergency_service": "Available"
+          "category": "Government CHC",
+          "sector": "Government",
+          "lat": 14.493,
+          "lon": 79.979,
+          "beds": 50,
+          "emergency_icu": "24x7 Emergency & Inpatient Care",
+          "ambulance": "108 Available"
         },
         "geometry": {
           "type": "Point",
@@ -616,9 +632,13 @@ const HEALTH_GIS_DATA = {
         "type": "Feature",
         "properties": {
           "name": "Stonehousepet Urban Primary Health Centre (UPHC)",
-          "facility_type": "Urban Primary Health Centre",
-          "bed_capacity": 10,
-          "emergency_service": "Day OPD Only"
+          "category": "Government UPHC",
+          "sector": "Government",
+          "lat": 14.4505,
+          "lon": 79.9915,
+          "beds": 10,
+          "emergency_icu": "Day OPD & Immunization Unit",
+          "ambulance": "On Call"
         },
         "geometry": {
           "type": "Point",
@@ -632,9 +652,13 @@ const HEALTH_GIS_DATA = {
         "type": "Feature",
         "properties": {
           "name": "Santhapet Municipal Dispensary / UPHC",
-          "facility_type": "Urban Dispensary",
-          "bed_capacity": 6,
-          "emergency_service": "Day OPD Only"
+          "category": "Government UPHC",
+          "sector": "Government",
+          "lat": 14.439,
+          "lon": 79.981,
+          "beds": 6,
+          "emergency_icu": "OPD & Communicable Disease Screening",
+          "ambulance": "On Call"
         },
         "geometry": {
           "type": "Point",
@@ -647,10 +671,14 @@ const HEALTH_GIS_DATA = {
       {
         "type": "Feature",
         "properties": {
-          "name": "Ranganayakulapet Ward Health Post",
-          "facility_type": "Health Wellness Centre",
-          "bed_capacity": 4,
-          "emergency_service": "Day OPD Only"
+          "name": "Ranganayakulapet Ward Health Wellness Post",
+          "category": "Government UPHC",
+          "sector": "Government",
+          "lat": 14.454,
+          "lon": 79.987,
+          "beds": 4,
+          "emergency_icu": "Primary Wellness Clinic",
+          "ambulance": "On Call"
         },
         "geometry": {
           "type": "Point",
@@ -664,9 +692,13 @@ const HEALTH_GIS_DATA = {
         "type": "Feature",
         "properties": {
           "name": "Vedayapalem Area Hospital / UPHC",
-          "facility_type": "Urban Primary Health Centre",
-          "bed_capacity": 15,
-          "emergency_service": "Day OPD Only"
+          "category": "Government UPHC",
+          "sector": "Government",
+          "lat": 14.417,
+          "lon": 79.967,
+          "beds": 15,
+          "emergency_icu": "General OPD & Maternal Health",
+          "ambulance": "Available"
         },
         "geometry": {
           "type": "Point",
@@ -680,9 +712,13 @@ const HEALTH_GIS_DATA = {
         "type": "Feature",
         "properties": {
           "name": "Padugupadu Primary Health Sub-Centre",
-          "facility_type": "Primary Health Sub-Centre",
-          "bed_capacity": 4,
-          "emergency_service": "Day OPD Only"
+          "category": "Government Sub-Centre",
+          "sector": "Government",
+          "lat": 14.476,
+          "lon": 79.983,
+          "beds": 4,
+          "emergency_icu": "Rural Sub-Centre OPD",
+          "ambulance": "On Call"
         },
         "geometry": {
           "type": "Point",
@@ -695,16 +731,851 @@ const HEALTH_GIS_DATA = {
       {
         "type": "Feature",
         "properties": {
-          "name": "Inamadugu Rural Health Clinic",
-          "facility_type": "Rural Clinic",
-          "bed_capacity": 2,
-          "emergency_service": "Day OPD Only"
+          "name": "Inamadugu Rural Primary Health Centre",
+          "category": "Government PHC",
+          "sector": "Government",
+          "lat": 14.491,
+          "lon": 80.004,
+          "beds": 6,
+          "emergency_icu": "Rural Primary Health Center",
+          "ambulance": "On Call"
         },
         "geometry": {
           "type": "Point",
           "coordinates": [
             80.004,
             14.491
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Narayana Medical College & Super Speciality Hospital",
+          "category": "Private Medical College & Research",
+          "sector": "Private Super Speciality",
+          "lat": 14.425,
+          "lon": 80.021,
+          "beds": 1400,
+          "emergency_icu": "Level-1 Trauma & State Zoonotic Research ICU",
+          "ambulance": "Dedicated Advanced Fleet"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            80.021,
+            14.425
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Medicover Hospitals (formerly KIMS Al Shifa)",
+          "category": "Private Multi-Speciality Hospital",
+          "sector": "Private Super Speciality",
+          "lat": 14.4265,
+          "lon": 79.9725,
+          "beds": 250,
+          "emergency_icu": "24x7 Critical Care & Infectious Disease Unit",
+          "ambulance": "Advanced Life Support"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.9725,
+            14.4265
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Apollo Speciality Hospital Nellore",
+          "category": "Private Super Speciality Hospital",
+          "sector": "Private Super Speciality",
+          "lat": 14.4215,
+          "lon": 79.979,
+          "beds": 200,
+          "emergency_icu": "Tertiary Critical Care & Emergency Wing",
+          "ambulance": "24x7 ALS Ambulance"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.979,
+            14.4215
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Simhapuri Hospital (NH16 Bypass)",
+          "category": "Private Multi-Speciality Hospital",
+          "sector": "Private Super Speciality",
+          "lat": 14.412,
+          "lon": 79.954,
+          "beds": 300,
+          "emergency_icu": "Trauma, Toxicology & Infectious Care",
+          "ambulance": "Available"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.954,
+            14.412
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Rainbow Children's & Maternity Clinic",
+          "category": "Private Speciality Clinic",
+          "sector": "Private Speciality",
+          "lat": 14.442,
+          "lon": 79.984,
+          "beds": 80,
+          "emergency_icu": "Pediatric ICU & Neonatal Care",
+          "ambulance": "Available"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.984,
+            14.442
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Kovur Medicare Nursing Home",
+          "category": "Private Community Hospital",
+          "sector": "Private Community",
+          "lat": 14.496,
+          "lon": 79.9765,
+          "beds": 35,
+          "emergency_icu": "Inpatient Medicine & Minor Surgery",
+          "ambulance": "Local Ambulance"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.9765,
+            14.496
+          ]
+        }
+      }
+    ]
+  },
+  "pipelines": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "pipe_id": "NMC-WTR-PL-01",
+          "name": "Pennar Infiltration Gallery to Stonehousepet Trunk Main",
+          "jurisdiction": "Nellore Municipal Corporation",
+          "water_source": "Pennar River Infiltration Wells",
+          "diameter_mm": 450,
+          "material": "Ductile Iron (DI)",
+          "pressure_bar": 3.8,
+          "laying_year": 2018,
+          "cross_contamination_risk": "Moderate (Runs parallel to Stonehousepet masonry drain)"
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              79.97,
+              14.464
+            ],
+            [
+              79.978,
+              14.458
+            ],
+            [
+              79.987,
+              14.452
+            ],
+            [
+              79.991,
+              14.449
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "pipe_id": "NMC-WTR-PL-02",
+          "name": "Stonehousepet - Santhapet Feeder Line",
+          "jurisdiction": "Nellore Municipal Corporation",
+          "water_source": "Municipal Water Headworks",
+          "diameter_mm": 300,
+          "material": "HDPE High-Density",
+          "pressure_bar": 3.2,
+          "laying_year": 2021,
+          "cross_contamination_risk": "High (Crosses central municipal drain near Trunk Road)"
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              79.991,
+              14.449
+            ],
+            [
+              79.986,
+              14.444
+            ],
+            [
+              79.981,
+              14.439
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "pipe_id": "NMC-WTR-PL-03",
+          "name": "Somasila Drinking Water Scheme - Trunk Supply to Nellore South",
+          "jurisdiction": "Nellore Municipal Corporation",
+          "water_source": "Somasila Water Pipeline Project",
+          "diameter_mm": 600,
+          "material": "Mild Steel (MS)",
+          "pressure_bar": 4.5,
+          "laying_year": 2019,
+          "cross_contamination_risk": "Low (Dedicated deep utility corridor)"
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              79.945,
+              14.445
+            ],
+            [
+              79.955,
+              14.435
+            ],
+            [
+              79.965,
+              14.425
+            ],
+            [
+              79.972,
+              14.417
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "pipe_id": "NMC-WTR-PL-04",
+          "name": "Ranganayakulapet Urban Water Distribution Branch",
+          "jurisdiction": "Nellore Municipal Corporation",
+          "water_source": "Overhead Reservoir (ELSR)",
+          "diameter_mm": 200,
+          "material": "uPVC Class-4",
+          "pressure_bar": 2.5,
+          "laying_year": 2015,
+          "cross_contamination_risk": "High (Aging pipe joints near riverbank sullage)"
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              79.978,
+              14.458
+            ],
+            [
+              79.982,
+              14.456
+            ],
+            [
+              79.987,
+              14.454
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "pipe_id": "NMC-WTR-PL-05",
+          "name": "Vedayapalem - Ramalingapuram Sub-Trunk",
+          "jurisdiction": "Nellore Municipal Corporation",
+          "water_source": "Somasila Headworks Reservoir",
+          "diameter_mm": 350,
+          "material": "DI K9",
+          "pressure_bar": 3.5,
+          "laying_year": 2020,
+          "cross_contamination_risk": "Moderate"
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              79.958,
+              14.428
+            ],
+            [
+              79.965,
+              14.42
+            ],
+            [
+              79.97,
+              14.415
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "pipe_id": "KVR-PNC-WTR-01",
+          "name": "Kovur Gram Panchayat Pennar Infiltration Supply Line",
+          "jurisdiction": "Kovur Mandal / Gram Panchayat",
+          "water_source": "Pennar North Bank Infiltration Wells",
+          "diameter_mm": 300,
+          "material": "Ductile Iron (DI)",
+          "pressure_bar": 3.0,
+          "laying_year": 2017,
+          "cross_contamination_risk": "Moderate (Main conduit along Kovur trunk road)"
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              79.972,
+              14.469
+            ],
+            [
+              79.976,
+              14.48
+            ],
+            [
+              79.978,
+              14.494
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "pipe_id": "KVR-PNC-WTR-02",
+          "name": "Padugupadu Railway Colony Panchayati Pipeline",
+          "jurisdiction": "Kovur Mandal / Padugupadu GP",
+          "water_source": "Deep Community Borewell & GLSR",
+          "diameter_mm": 160,
+          "material": "HDPE PN-6",
+          "pressure_bar": 2.2,
+          "laying_year": 2019,
+          "cross_contamination_risk": "High (Intersected by open railway side drains)"
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              79.976,
+              14.472
+            ],
+            [
+              79.982,
+              14.475
+            ],
+            [
+              79.986,
+              14.478
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "pipe_id": "KVR-PNC-WTR-03",
+          "name": "Kovur Main Bazaar Ward Distribution Pipeline",
+          "jurisdiction": "Kovur Mandal / Kovur GP",
+          "water_source": "Kovur Overhead Tank (OHT)",
+          "diameter_mm": 180,
+          "material": "uPVC",
+          "pressure_bar": 2.0,
+          "laying_year": 2016,
+          "cross_contamination_risk": "Very High (Directly submerged under bazaar sullage gutter during monsoon)"
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              79.974,
+              14.493
+            ],
+            [
+              79.978,
+              14.496
+            ],
+            [
+              79.982,
+              14.497
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "pipe_id": "KVR-PNC-WTR-04",
+          "name": "Inamadugu Rural Water Supply Pipeline (RWSS)",
+          "jurisdiction": "Kovur Mandal / Inamadugu GP",
+          "water_source": "Inamadugu Gram Panchayat Tank",
+          "diameter_mm": 140,
+          "material": "HDPE PN-6",
+          "pressure_bar": 1.8,
+          "laying_year": 2020,
+          "cross_contamination_risk": "Low"
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              79.988,
+              14.488
+            ],
+            [
+              79.996,
+              14.49
+            ],
+            [
+              80.004,
+              14.492
+            ]
+          ]
+        }
+      }
+    ]
+  },
+  "water_points": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "RO-NMC-01",
+          "name": "NTR Sujala / Community RO Plant - Stonehousepet",
+          "type": "Mineral Water RO Plant",
+          "ward": "Stonehousepet (NMC)",
+          "lat": 14.4502,
+          "lon": 79.9905,
+          "capacity_lph": 2000,
+          "tds_ppm": 85,
+          "potability": "Potable (Certified Safe)",
+          "drain_dist_m": 45,
+          "risk": "Low"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.9905,
+            14.4502
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "RO-NMC-02",
+          "name": "Santhapet Municipal Community RO Water Station",
+          "type": "Mineral Water RO Plant",
+          "ward": "Santhapet (NMC)",
+          "lat": 14.4385,
+          "lon": 79.9795,
+          "capacity_lph": 1500,
+          "tds_ppm": 92,
+          "potability": "Potable (Certified Safe)",
+          "drain_dist_m": 80,
+          "risk": "Low"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.9795,
+            14.4385
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "RO-NMC-03",
+          "name": "Ranganayakulapet Ward RO Dispenser",
+          "type": "Mineral Water RO Plant",
+          "ward": "Ranganayakulapet (NMC)",
+          "lat": 14.4542,
+          "lon": 79.9865,
+          "capacity_lph": 1000,
+          "tds_ppm": 110,
+          "potability": "Potable",
+          "drain_dist_m": 35,
+          "risk": "Moderate (Near Open Gutter)"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.9865,
+            14.4542
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "RO-NMC-04",
+          "name": "Vedayapalem Urban RO Purifier Unit",
+          "type": "Mineral Water RO Plant",
+          "ward": "Vedayapalem (NMC)",
+          "lat": 14.4168,
+          "lon": 79.968,
+          "capacity_lph": 2000,
+          "tds_ppm": 78,
+          "potability": "Potable (Certified Safe)",
+          "drain_dist_m": 120,
+          "risk": "Low"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.968,
+            14.4168
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "RO-KVR-01",
+          "name": "Kovur Main Bazaar Gram Panchayat RO Plant",
+          "type": "Mineral Water RO Plant",
+          "ward": "Kovur Bazaar (GP)",
+          "lat": 14.4948,
+          "lon": 79.9775,
+          "capacity_lph": 2500,
+          "tds_ppm": 95,
+          "potability": "Potable",
+          "drain_dist_m": 25,
+          "risk": "Moderate (Drainage Seepage Watch)"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.9775,
+            14.4948
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "RO-KVR-02",
+          "name": "Padugupadu Junction RO Water Hub",
+          "type": "Mineral Water RO Plant",
+          "ward": "Padugupadu (GP)",
+          "lat": 14.4752,
+          "lon": 79.9835,
+          "capacity_lph": 1000,
+          "tds_ppm": 105,
+          "potability": "Potable",
+          "drain_dist_m": 60,
+          "risk": "Low"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.9835,
+            14.4752
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "RO-KVR-03",
+          "name": "Inamadugu Village Drinking Water Plant",
+          "type": "Mineral Water RO Plant",
+          "ward": "Inamadugu (GP)",
+          "lat": 14.4915,
+          "lon": 80.0025,
+          "capacity_lph": 1000,
+          "tds_ppm": 88,
+          "potability": "Potable",
+          "drain_dist_m": 110,
+          "risk": "Low"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            80.0025,
+            14.4915
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "BW-NMC-01",
+          "name": "Pennar South Riverbed Municipal Borewell Array",
+          "type": "Deep Public Borewell",
+          "ward": "Riverbank / Stonehousepet",
+          "lat": 14.461,
+          "lon": 79.975,
+          "capacity_lph": 8000,
+          "tds_ppm": 240,
+          "potability": "Raw Water (Piped to Treatment)",
+          "drain_dist_m": 180,
+          "risk": "Low"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.975,
+            14.461
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "BW-NMC-02",
+          "name": "Santhapet Market Municipal Extraction Well",
+          "type": "Deep Public Borewell",
+          "ward": "Santhapet (NMC)",
+          "lat": 14.441,
+          "lon": 79.982,
+          "capacity_lph": 4500,
+          "tds_ppm": 420,
+          "potability": "Moderate Hardness",
+          "drain_dist_m": 30,
+          "risk": "High (Microbial Intrusion Risk)"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.982,
+            14.441
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "BW-KVR-01",
+          "name": "Pennar North Bank Kovur Infiltration Borewell",
+          "type": "Deep Public Borewell",
+          "ward": "Pennar Basin North",
+          "lat": 14.467,
+          "lon": 79.974,
+          "capacity_lph": 6000,
+          "tds_ppm": 210,
+          "potability": "Raw Water",
+          "drain_dist_m": 220,
+          "risk": "Low"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.974,
+            14.467
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "BW-KVR-02",
+          "name": "Inamadugu Agricultural & Public Well",
+          "type": "Deep Public Borewell",
+          "ward": "Inamadugu (GP)",
+          "lat": 14.4925,
+          "lon": 80.006,
+          "capacity_lph": 3500,
+          "tds_ppm": 380,
+          "potability": "Potable with boiling",
+          "drain_dist_m": 90,
+          "risk": "Moderate"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            80.006,
+            14.4925
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "HP-NMC-01",
+          "name": "Stonehousepet Riverside Public Hand Pump #1",
+          "type": "Public Hand Pump",
+          "ward": "Stonehousepet Slum",
+          "lat": 14.4515,
+          "lon": 79.992,
+          "capacity_lph": 300,
+          "tds_ppm": 510,
+          "potability": "High Microbial Risk (Coliforms Detected)",
+          "drain_dist_m": 8,
+          "risk": "CRITICAL (8m from Open Sewer)"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.992,
+            14.4515
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "HP-NMC-02",
+          "name": "Stonehousepet Fish Market Worker Hand Pump",
+          "type": "Public Hand Pump",
+          "ward": "Stonehousepet Market",
+          "lat": 14.4498,
+          "lon": 79.9912,
+          "capacity_lph": 300,
+          "tds_ppm": 480,
+          "potability": "Unsafe without boiling",
+          "drain_dist_m": 12,
+          "risk": "CRITICAL (Direct Runoff Zone)"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.9912,
+            14.4498
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "HP-NMC-03",
+          "name": "Santhapet Gutter Lane Public Hand Pump",
+          "type": "Public Hand Pump",
+          "ward": "Santhapet (NMC)",
+          "lat": 14.4392,
+          "lon": 79.9808,
+          "capacity_lph": 250,
+          "tds_ppm": 440,
+          "potability": "Unsafe for Drinking",
+          "drain_dist_m": 10,
+          "risk": "CRITICAL (Adjacent to Central Drain)"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.9808,
+            14.4392
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "HP-NMC-04",
+          "name": "Ranganayakulapet Fisherman Colony Hand Pump",
+          "type": "Public Hand Pump",
+          "ward": "Ranganayakulapet",
+          "lat": 14.4532,
+          "lon": 79.9882,
+          "capacity_lph": 350,
+          "tds_ppm": 390,
+          "potability": "Moderate Risk",
+          "drain_dist_m": 18,
+          "risk": "High (Submerged in rains)"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.9882,
+            14.4532
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "HP-KVR-01",
+          "name": "Kovur Bazaar Lane Hand Pump",
+          "type": "Public Hand Pump",
+          "ward": "Kovur Main Bazaar",
+          "lat": 14.4942,
+          "lon": 79.9782,
+          "capacity_lph": 300,
+          "tds_ppm": 460,
+          "potability": "Unsafe for Direct Drinking",
+          "drain_dist_m": 7,
+          "risk": "CRITICAL (7m from Open Sludge Gutter)"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.9782,
+            14.4942
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "HP-KVR-02",
+          "name": "Padugupadu Railway Slum Hand Pump",
+          "type": "Public Hand Pump",
+          "ward": "Padugupadu Rail Nagar",
+          "lat": 14.4758,
+          "lon": 79.9845,
+          "capacity_lph": 300,
+          "tds_ppm": 410,
+          "potability": "High Microbial Risk",
+          "drain_dist_m": 14,
+          "risk": "CRITICAL (Open Sullage Contamination)"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.9845,
+            14.4758
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "HP-KVR-03",
+          "name": "Inamadugu Dalitwada Public Hand Pump",
+          "type": "Public Hand Pump",
+          "ward": "Inamadugu (GP)",
+          "lat": 14.4895,
+          "lon": 80.0042,
+          "capacity_lph": 320,
+          "tds_ppm": 350,
+          "potability": "Marginal Potability",
+          "drain_dist_m": 45,
+          "risk": "Moderate"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            80.0042,
+            14.4895
           ]
         }
       }
@@ -742,7 +1613,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
           "marker_color": "#06d6a0",
           "ai_predicted_risk": "Low Risk",
-          "ai_prediction_confidence": 82.1,
+          "ai_prediction_confidence": 80.5,
           "ai_concurrence": "True"
         },
         "geometry": {
@@ -782,7 +1653,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Monthly routine surveillance; water potability testing; solid waste collection compliance.",
           "marker_color": "#ffd166",
           "ai_predicted_risk": "Moderate Risk",
-          "ai_prediction_confidence": 84.3,
+          "ai_prediction_confidence": 80.3,
           "ai_concurrence": "True"
         },
         "geometry": {
@@ -822,7 +1693,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Monthly routine surveillance; water potability testing; solid waste collection compliance.",
           "marker_color": "#ffd166",
           "ai_predicted_risk": "Moderate Risk",
-          "ai_prediction_confidence": 50.8,
+          "ai_prediction_confidence": 51.3,
           "ai_concurrence": "True"
         },
         "geometry": {
@@ -862,7 +1733,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
           "marker_color": "#06d6a0",
           "ai_predicted_risk": "Low Risk",
-          "ai_prediction_confidence": 84.4,
+          "ai_prediction_confidence": 82.0,
           "ai_concurrence": "True"
         },
         "geometry": {
@@ -902,7 +1773,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Monthly routine surveillance; water potability testing; solid waste collection compliance.",
           "marker_color": "#ffd166",
           "ai_predicted_risk": "Moderate Risk",
-          "ai_prediction_confidence": 80.5,
+          "ai_prediction_confidence": 78.7,
           "ai_concurrence": "True"
         },
         "geometry": {
@@ -942,7 +1813,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Monthly routine surveillance; water potability testing; solid waste collection compliance.",
           "marker_color": "#ffd166",
           "ai_predicted_risk": "Moderate Risk",
-          "ai_prediction_confidence": 69.9,
+          "ai_prediction_confidence": 69.3,
           "ai_concurrence": "True"
         },
         "geometry": {
@@ -982,7 +1853,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
           "marker_color": "#f77f00",
           "ai_predicted_risk": "High Risk",
-          "ai_prediction_confidence": 68.0,
+          "ai_prediction_confidence": 69.9,
           "ai_concurrence": "True"
         },
         "geometry": {
@@ -1022,7 +1893,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
           "marker_color": "#f77f00",
           "ai_predicted_risk": "High Risk",
-          "ai_prediction_confidence": 62.9,
+          "ai_prediction_confidence": 66.0,
           "ai_concurrence": "True"
         },
         "geometry": {
@@ -1062,7 +1933,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
           "marker_color": "#06d6a0",
           "ai_predicted_risk": "Low Risk",
-          "ai_prediction_confidence": 86.4,
+          "ai_prediction_confidence": 84.7,
           "ai_concurrence": "True"
         },
         "geometry": {
@@ -1102,7 +1973,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
           "marker_color": "#f77f00",
           "ai_predicted_risk": "High Risk",
-          "ai_prediction_confidence": 81.2,
+          "ai_prediction_confidence": 79.6,
           "ai_concurrence": "True"
         },
         "geometry": {
@@ -1142,7 +2013,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
           "marker_color": "#06d6a0",
           "ai_predicted_risk": "Low Risk",
-          "ai_prediction_confidence": 83.6,
+          "ai_prediction_confidence": 81.5,
           "ai_concurrence": "True"
         },
         "geometry": {
@@ -1182,7 +2053,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
           "marker_color": "#f77f00",
           "ai_predicted_risk": "High Risk",
-          "ai_prediction_confidence": 58.9,
+          "ai_prediction_confidence": 62.4,
           "ai_concurrence": "True"
         },
         "geometry": {
@@ -1222,7 +2093,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Monthly routine surveillance; water potability testing; solid waste collection compliance.",
           "marker_color": "#ffd166",
           "ai_predicted_risk": "Moderate Risk",
-          "ai_prediction_confidence": 82.4,
+          "ai_prediction_confidence": 82.7,
           "ai_concurrence": "True"
         },
         "geometry": {
@@ -1262,7 +2133,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
           "marker_color": "#06d6a0",
           "ai_predicted_risk": "Low Risk",
-          "ai_prediction_confidence": 80.7,
+          "ai_prediction_confidence": 81.3,
           "ai_concurrence": "True"
         },
         "geometry": {
@@ -1302,7 +2173,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Monthly routine surveillance; water potability testing; solid waste collection compliance.",
           "marker_color": "#ffd166",
           "ai_predicted_risk": "Moderate Risk",
-          "ai_prediction_confidence": 67.1,
+          "ai_prediction_confidence": 69.7,
           "ai_concurrence": "True"
         },
         "geometry": {
@@ -1342,7 +2213,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
           "marker_color": "#06d6a0",
           "ai_predicted_risk": "Low Risk",
-          "ai_prediction_confidence": 78.3,
+          "ai_prediction_confidence": 78.4,
           "ai_concurrence": "True"
         },
         "geometry": {
@@ -1382,7 +2253,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
           "marker_color": "#06d6a0",
           "ai_predicted_risk": "Low Risk",
-          "ai_prediction_confidence": 71.8,
+          "ai_prediction_confidence": 71.2,
           "ai_concurrence": "True"
         },
         "geometry": {
@@ -1462,7 +2333,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Monthly routine surveillance; water potability testing; solid waste collection compliance.",
           "marker_color": "#ffd166",
           "ai_predicted_risk": "Moderate Risk",
-          "ai_prediction_confidence": 73.2,
+          "ai_prediction_confidence": 74.0,
           "ai_concurrence": "True"
         },
         "geometry": {
@@ -1502,7 +2373,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Immediate bio-sanitation audit; mandatory effluent interceptor; drain covering within 50m; live slaughter inspection.",
           "marker_color": "#d90429",
           "ai_predicted_risk": "Very High Risk",
-          "ai_prediction_confidence": 56.5,
+          "ai_prediction_confidence": 56.7,
           "ai_concurrence": "True"
         },
         "geometry": {
@@ -1542,7 +2413,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
           "marker_color": "#06d6a0",
           "ai_predicted_risk": "Low Risk",
-          "ai_prediction_confidence": 81.3,
+          "ai_prediction_confidence": 82.7,
           "ai_concurrence": "True"
         },
         "geometry": {
@@ -1582,7 +2453,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
           "marker_color": "#06d6a0",
           "ai_predicted_risk": "Low Risk",
-          "ai_prediction_confidence": 91.5,
+          "ai_prediction_confidence": 90.9,
           "ai_concurrence": "True"
         },
         "geometry": {
@@ -1613,7 +2484,7 @@ const HEALTH_GIS_DATA = {
           "drainage_condition": "Underground Closed Drain",
           "distance_to_drain_m": 154.4,
           "distance_to_waterbody_m": 2293.3,
-          "distance_to_hospital_m": 354.0,
+          "distance_to_hospital_m": 46.4,
           "market_crowd_index": 8.2,
           "norm_drain_risk": 0.52,
           "norm_waste_risk": 0.35,
@@ -1622,7 +2493,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
           "marker_color": "#f77f00",
           "ai_predicted_risk": "High Risk",
-          "ai_prediction_confidence": 80.6,
+          "ai_prediction_confidence": 72.8,
           "ai_concurrence": "True"
         },
         "geometry": {
@@ -1662,7 +2533,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Immediate bio-sanitation audit; mandatory effluent interceptor; drain covering within 50m; live slaughter inspection.",
           "marker_color": "#d90429",
           "ai_predicted_risk": "Very High Risk",
-          "ai_prediction_confidence": 59.3,
+          "ai_prediction_confidence": 56.8,
           "ai_concurrence": "True"
         },
         "geometry": {
@@ -1702,7 +2573,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
           "marker_color": "#f77f00",
           "ai_predicted_risk": "High Risk",
-          "ai_prediction_confidence": 81.7,
+          "ai_prediction_confidence": 79.8,
           "ai_concurrence": "True"
         },
         "geometry": {
@@ -1742,7 +2613,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
           "marker_color": "#06d6a0",
           "ai_predicted_risk": "Low Risk",
-          "ai_prediction_confidence": 79.0,
+          "ai_prediction_confidence": 77.7,
           "ai_concurrence": "True"
         },
         "geometry": {
@@ -1782,7 +2653,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Immediate bio-sanitation audit; mandatory effluent interceptor; drain covering within 50m; live slaughter inspection.",
           "marker_color": "#d90429",
           "ai_predicted_risk": "Very High Risk",
-          "ai_prediction_confidence": 88.4,
+          "ai_prediction_confidence": 87.9,
           "ai_concurrence": "True"
         },
         "geometry": {
@@ -1813,7 +2684,7 @@ const HEALTH_GIS_DATA = {
           "drainage_condition": "Open Stagnant Drain",
           "distance_to_drain_m": 18.2,
           "distance_to_waterbody_m": 2163.6,
-          "distance_to_hospital_m": 402.1,
+          "distance_to_hospital_m": 232.2,
           "market_crowd_index": 8.2,
           "norm_drain_risk": 1.0,
           "norm_waste_risk": 1.0,
@@ -1822,7 +2693,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Immediate bio-sanitation audit; mandatory effluent interceptor; drain covering within 50m; live slaughter inspection.",
           "marker_color": "#d90429",
           "ai_predicted_risk": "Very High Risk",
-          "ai_prediction_confidence": 65.8,
+          "ai_prediction_confidence": 67.6,
           "ai_concurrence": "True"
         },
         "geometry": {
@@ -1862,7 +2733,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
           "marker_color": "#f77f00",
           "ai_predicted_risk": "High Risk",
-          "ai_prediction_confidence": 70.1,
+          "ai_prediction_confidence": 70.0,
           "ai_concurrence": "True"
         },
         "geometry": {
@@ -1902,7 +2773,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Immediate bio-sanitation audit; mandatory effluent interceptor; drain covering within 50m; live slaughter inspection.",
           "marker_color": "#d90429",
           "ai_predicted_risk": "Very High Risk",
-          "ai_prediction_confidence": 85.9,
+          "ai_prediction_confidence": 86.0,
           "ai_concurrence": "True"
         },
         "geometry": {
@@ -1942,7 +2813,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
           "marker_color": "#f77f00",
           "ai_predicted_risk": "High Risk",
-          "ai_prediction_confidence": 75.4,
+          "ai_prediction_confidence": 74.0,
           "ai_concurrence": "True"
         },
         "geometry": {
@@ -1982,7 +2853,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
           "marker_color": "#f77f00",
           "ai_predicted_risk": "High Risk",
-          "ai_prediction_confidence": 88.0,
+          "ai_prediction_confidence": 88.4,
           "ai_concurrence": "True"
         },
         "geometry": {
@@ -2022,7 +2893,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
           "marker_color": "#f77f00",
           "ai_predicted_risk": "High Risk",
-          "ai_prediction_confidence": 77.3,
+          "ai_prediction_confidence": 73.8,
           "ai_concurrence": "True"
         },
         "geometry": {
@@ -2062,7 +2933,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Immediate bio-sanitation audit; mandatory effluent interceptor; drain covering within 50m; live slaughter inspection.",
           "marker_color": "#d90429",
           "ai_predicted_risk": "Very High Risk",
-          "ai_prediction_confidence": 65.5,
+          "ai_prediction_confidence": 69.2,
           "ai_concurrence": "True"
         },
         "geometry": {
@@ -2102,7 +2973,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
           "marker_color": "#f77f00",
           "ai_predicted_risk": "High Risk",
-          "ai_prediction_confidence": 60.3,
+          "ai_prediction_confidence": 58.8,
           "ai_concurrence": "True"
         },
         "geometry": {
@@ -2142,7 +3013,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
           "marker_color": "#f77f00",
           "ai_predicted_risk": "High Risk",
-          "ai_prediction_confidence": 88.9,
+          "ai_prediction_confidence": 85.2,
           "ai_concurrence": "True"
         },
         "geometry": {
@@ -2182,7 +3053,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Immediate bio-sanitation audit; mandatory effluent interceptor; drain covering within 50m; live slaughter inspection.",
           "marker_color": "#d90429",
           "ai_predicted_risk": "Very High Risk",
-          "ai_prediction_confidence": 76.5,
+          "ai_prediction_confidence": 80.5,
           "ai_concurrence": "True"
         },
         "geometry": {
@@ -2222,7 +3093,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
           "marker_color": "#f77f00",
           "ai_predicted_risk": "High Risk",
-          "ai_prediction_confidence": 86.2,
+          "ai_prediction_confidence": 85.0,
           "ai_concurrence": "True"
         },
         "geometry": {
@@ -2262,7 +3133,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Immediate bio-sanitation audit; mandatory effluent interceptor; drain covering within 50m; live slaughter inspection.",
           "marker_color": "#d90429",
           "ai_predicted_risk": "Very High Risk",
-          "ai_prediction_confidence": 75.4,
+          "ai_prediction_confidence": 73.7,
           "ai_concurrence": "True"
         },
         "geometry": {
@@ -2302,7 +3173,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
           "marker_color": "#f77f00",
           "ai_predicted_risk": "High Risk",
-          "ai_prediction_confidence": 81.3,
+          "ai_prediction_confidence": 82.3,
           "ai_concurrence": "True"
         },
         "geometry": {
@@ -2342,7 +3213,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
           "marker_color": "#f77f00",
           "ai_predicted_risk": "High Risk",
-          "ai_prediction_confidence": 53.0,
+          "ai_prediction_confidence": 53.7,
           "ai_concurrence": "True"
         },
         "geometry": {
@@ -2382,7 +3253,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
           "marker_color": "#f77f00",
           "ai_predicted_risk": "High Risk",
-          "ai_prediction_confidence": 84.1,
+          "ai_prediction_confidence": 89.9,
           "ai_concurrence": "True"
         },
         "geometry": {
@@ -2422,7 +3293,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Monthly routine surveillance; water potability testing; solid waste collection compliance.",
           "marker_color": "#ffd166",
           "ai_predicted_risk": "Moderate Risk",
-          "ai_prediction_confidence": 45.4,
+          "ai_prediction_confidence": 46.6,
           "ai_concurrence": "True"
         },
         "geometry": {
@@ -2462,7 +3333,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Monthly routine surveillance; water potability testing; solid waste collection compliance.",
           "marker_color": "#ffd166",
           "ai_predicted_risk": "Moderate Risk",
-          "ai_prediction_confidence": 61.7,
+          "ai_prediction_confidence": 60.5,
           "ai_concurrence": "True"
         },
         "geometry": {
@@ -2502,7 +3373,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Monthly routine surveillance; water potability testing; solid waste collection compliance.",
           "marker_color": "#ffd166",
           "ai_predicted_risk": "Moderate Risk",
-          "ai_prediction_confidence": 64.1,
+          "ai_prediction_confidence": 69.5,
           "ai_concurrence": "True"
         },
         "geometry": {
@@ -2542,7 +3413,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
           "marker_color": "#06d6a0",
           "ai_predicted_risk": "Low Risk",
-          "ai_prediction_confidence": 74.3,
+          "ai_prediction_confidence": 75.7,
           "ai_concurrence": "True"
         },
         "geometry": {
@@ -2582,7 +3453,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
           "marker_color": "#f77f00",
           "ai_predicted_risk": "High Risk",
-          "ai_prediction_confidence": 85.4,
+          "ai_prediction_confidence": 84.9,
           "ai_concurrence": "True"
         },
         "geometry": {
@@ -2622,7 +3493,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
           "marker_color": "#06d6a0",
           "ai_predicted_risk": "Low Risk",
-          "ai_prediction_confidence": 69.1,
+          "ai_prediction_confidence": 69.7,
           "ai_concurrence": "True"
         },
         "geometry": {
@@ -2662,7 +3533,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Immediate bio-sanitation audit; mandatory effluent interceptor; drain covering within 50m; live slaughter inspection.",
           "marker_color": "#d90429",
           "ai_predicted_risk": "Very High Risk",
-          "ai_prediction_confidence": 78.2,
+          "ai_prediction_confidence": 79.7,
           "ai_concurrence": "True"
         },
         "geometry": {
@@ -2702,7 +3573,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
           "marker_color": "#f77f00",
           "ai_predicted_risk": "High Risk",
-          "ai_prediction_confidence": 67.3,
+          "ai_prediction_confidence": 68.6,
           "ai_concurrence": "True"
         },
         "geometry": {
@@ -2733,7 +3604,7 @@ const HEALTH_GIS_DATA = {
           "drainage_condition": "Semi-Covered Municipal Drain",
           "distance_to_drain_m": 115.1,
           "distance_to_waterbody_m": 3414.9,
-          "distance_to_hospital_m": 467.0,
+          "distance_to_hospital_m": 300.8,
           "market_crowd_index": 6.5,
           "norm_drain_risk": 0.66,
           "norm_waste_risk": 0.35,
@@ -2742,7 +3613,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
           "marker_color": "#f77f00",
           "ai_predicted_risk": "High Risk",
-          "ai_prediction_confidence": 51.2,
+          "ai_prediction_confidence": 55.9,
           "ai_concurrence": "True"
         },
         "geometry": {
@@ -2773,7 +3644,7 @@ const HEALTH_GIS_DATA = {
           "drainage_condition": "Underground Closed Drain",
           "distance_to_drain_m": 302.6,
           "distance_to_waterbody_m": 3673.8,
-          "distance_to_hospital_m": 557.9,
+          "distance_to_hospital_m": 160.3,
           "market_crowd_index": 6.8,
           "norm_drain_risk": 0.0,
           "norm_waste_risk": 0.85,
@@ -2782,7 +3653,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Monthly routine surveillance; water potability testing; solid waste collection compliance.",
           "marker_color": "#ffd166",
           "ai_predicted_risk": "Low Risk",
-          "ai_prediction_confidence": 51.4,
+          "ai_prediction_confidence": 37.3,
           "ai_concurrence": "False"
         },
         "geometry": {
@@ -2822,7 +3693,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
           "marker_color": "#06d6a0",
           "ai_predicted_risk": "Low Risk",
-          "ai_prediction_confidence": 75.9,
+          "ai_prediction_confidence": 74.5,
           "ai_concurrence": "True"
         },
         "geometry": {
@@ -2862,7 +3733,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
           "marker_color": "#06d6a0",
           "ai_predicted_risk": "Low Risk",
-          "ai_prediction_confidence": 83.8,
+          "ai_prediction_confidence": 82.5,
           "ai_concurrence": "True"
         },
         "geometry": {
@@ -2902,7 +3773,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
           "marker_color": "#06d6a0",
           "ai_predicted_risk": "Moderate Risk",
-          "ai_prediction_confidence": 49.5,
+          "ai_prediction_confidence": 45.0,
           "ai_concurrence": "False"
         },
         "geometry": {
@@ -2933,7 +3804,7 @@ const HEALTH_GIS_DATA = {
           "drainage_condition": "Semi-Covered Municipal Drain",
           "distance_to_drain_m": 86.0,
           "distance_to_waterbody_m": 3644.1,
-          "distance_to_hospital_m": 347.0,
+          "distance_to_hospital_m": 157.9,
           "market_crowd_index": 7.1,
           "norm_drain_risk": 0.764,
           "norm_waste_risk": 0.35,
@@ -2942,7 +3813,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
           "marker_color": "#f77f00",
           "ai_predicted_risk": "High Risk",
-          "ai_prediction_confidence": 71.6,
+          "ai_prediction_confidence": 61.3,
           "ai_concurrence": "True"
         },
         "geometry": {
@@ -2982,7 +3853,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
           "marker_color": "#f77f00",
           "ai_predicted_risk": "High Risk",
-          "ai_prediction_confidence": 57.0,
+          "ai_prediction_confidence": 55.3,
           "ai_concurrence": "True"
         },
         "geometry": {
@@ -3013,7 +3884,7 @@ const HEALTH_GIS_DATA = {
           "drainage_condition": "Open Stagnant Drain",
           "distance_to_drain_m": 5.0,
           "distance_to_waterbody_m": 3422.9,
-          "distance_to_hospital_m": 284.0,
+          "distance_to_hospital_m": 227.4,
           "market_crowd_index": 7.7,
           "norm_drain_risk": 1.0,
           "norm_waste_risk": 1.0,
@@ -3022,7 +3893,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Immediate bio-sanitation audit; mandatory effluent interceptor; drain covering within 50m; live slaughter inspection.",
           "marker_color": "#d90429",
           "ai_predicted_risk": "Very High Risk",
-          "ai_prediction_confidence": 51.8,
+          "ai_prediction_confidence": 57.7,
           "ai_concurrence": "True"
         },
         "geometry": {
@@ -3053,7 +3924,7 @@ const HEALTH_GIS_DATA = {
           "drainage_condition": "Open Stagnant Drain",
           "distance_to_drain_m": 26.7,
           "distance_to_waterbody_m": 3435.4,
-          "distance_to_hospital_m": 230.5,
+          "distance_to_hospital_m": 226.4,
           "market_crowd_index": 8.1,
           "norm_drain_risk": 0.976,
           "norm_waste_risk": 1.0,
@@ -3062,7 +3933,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Immediate bio-sanitation audit; mandatory effluent interceptor; drain covering within 50m; live slaughter inspection.",
           "marker_color": "#d90429",
           "ai_predicted_risk": "Very High Risk",
-          "ai_prediction_confidence": 54.8,
+          "ai_prediction_confidence": 57.2,
           "ai_concurrence": "True"
         },
         "geometry": {
@@ -3093,7 +3964,7 @@ const HEALTH_GIS_DATA = {
           "drainage_condition": "Semi-Covered Municipal Drain",
           "distance_to_drain_m": 41.2,
           "distance_to_waterbody_m": 3607.0,
-          "distance_to_hospital_m": 303.8,
+          "distance_to_hospital_m": 188.0,
           "market_crowd_index": 7.4,
           "norm_drain_risk": 0.924,
           "norm_waste_risk": 0.85,
@@ -3102,7 +3973,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
           "marker_color": "#f77f00",
           "ai_predicted_risk": "High Risk",
-          "ai_prediction_confidence": 69.0,
+          "ai_prediction_confidence": 69.3,
           "ai_concurrence": "True"
         },
         "geometry": {
@@ -3142,7 +4013,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Monthly routine surveillance; water potability testing; solid waste collection compliance.",
           "marker_color": "#ffd166",
           "ai_predicted_risk": "Moderate Risk",
-          "ai_prediction_confidence": 60.7,
+          "ai_prediction_confidence": 61.0,
           "ai_concurrence": "True"
         },
         "geometry": {
@@ -3182,7 +4053,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
           "marker_color": "#f77f00",
           "ai_predicted_risk": "High Risk",
-          "ai_prediction_confidence": 87.4,
+          "ai_prediction_confidence": 88.7,
           "ai_concurrence": "True"
         },
         "geometry": {
@@ -3222,7 +4093,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Monthly routine surveillance; water potability testing; solid waste collection compliance.",
           "marker_color": "#ffd166",
           "ai_predicted_risk": "Moderate Risk",
-          "ai_prediction_confidence": 83.3,
+          "ai_prediction_confidence": 80.7,
           "ai_concurrence": "True"
         },
         "geometry": {
@@ -3262,7 +4133,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
           "marker_color": "#f77f00",
           "ai_predicted_risk": "High Risk",
-          "ai_prediction_confidence": 84.2,
+          "ai_prediction_confidence": 87.3,
           "ai_concurrence": "True"
         },
         "geometry": {
@@ -3302,7 +4173,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
           "marker_color": "#06d6a0",
           "ai_predicted_risk": "Low Risk",
-          "ai_prediction_confidence": 57.2,
+          "ai_prediction_confidence": 55.6,
           "ai_concurrence": "True"
         },
         "geometry": {
@@ -3342,7 +4213,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Monthly routine surveillance; water potability testing; solid waste collection compliance.",
           "marker_color": "#ffd166",
           "ai_predicted_risk": "High Risk",
-          "ai_prediction_confidence": 77.3,
+          "ai_prediction_confidence": 77.4,
           "ai_concurrence": "False"
         },
         "geometry": {
@@ -3382,7 +4253,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Monthly routine surveillance; water potability testing; solid waste collection compliance.",
           "marker_color": "#ffd166",
           "ai_predicted_risk": "Moderate Risk",
-          "ai_prediction_confidence": 76.1,
+          "ai_prediction_confidence": 76.7,
           "ai_concurrence": "True"
         },
         "geometry": {
@@ -3422,7 +4293,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
           "marker_color": "#f77f00",
           "ai_predicted_risk": "High Risk",
-          "ai_prediction_confidence": 82.1,
+          "ai_prediction_confidence": 79.1,
           "ai_concurrence": "True"
         },
         "geometry": {
@@ -3462,7 +4333,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Monthly routine surveillance; water potability testing; solid waste collection compliance.",
           "marker_color": "#ffd166",
           "ai_predicted_risk": "Moderate Risk",
-          "ai_prediction_confidence": 79.6,
+          "ai_prediction_confidence": 80.2,
           "ai_concurrence": "True"
         },
         "geometry": {
@@ -3502,7 +4373,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
           "marker_color": "#06d6a0",
           "ai_predicted_risk": "Low Risk",
-          "ai_prediction_confidence": 77.7,
+          "ai_prediction_confidence": 77.5,
           "ai_concurrence": "True"
         },
         "geometry": {
@@ -3542,7 +4413,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
           "marker_color": "#f77f00",
           "ai_predicted_risk": "High Risk",
-          "ai_prediction_confidence": 79.9,
+          "ai_prediction_confidence": 80.2,
           "ai_concurrence": "True"
         },
         "geometry": {
@@ -3582,7 +4453,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
           "marker_color": "#06d6a0",
           "ai_predicted_risk": "Low Risk",
-          "ai_prediction_confidence": 82.9,
+          "ai_prediction_confidence": 78.2,
           "ai_concurrence": "True"
         },
         "geometry": {
@@ -3622,7 +4493,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Monthly routine surveillance; water potability testing; solid waste collection compliance.",
           "marker_color": "#ffd166",
           "ai_predicted_risk": "Moderate Risk",
-          "ai_prediction_confidence": 56.4,
+          "ai_prediction_confidence": 56.8,
           "ai_concurrence": "True"
         },
         "geometry": {
@@ -3662,7 +4533,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
           "marker_color": "#f77f00",
           "ai_predicted_risk": "High Risk",
-          "ai_prediction_confidence": 85.5,
+          "ai_prediction_confidence": 84.0,
           "ai_concurrence": "True"
         },
         "geometry": {
@@ -3702,7 +4573,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
           "marker_color": "#06d6a0",
           "ai_predicted_risk": "Moderate Risk",
-          "ai_prediction_confidence": 46.7,
+          "ai_prediction_confidence": 46.1,
           "ai_concurrence": "False"
         },
         "geometry": {
@@ -3742,7 +4613,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Monthly routine surveillance; water potability testing; solid waste collection compliance.",
           "marker_color": "#ffd166",
           "ai_predicted_risk": "Moderate Risk",
-          "ai_prediction_confidence": 66.5,
+          "ai_prediction_confidence": 67.4,
           "ai_concurrence": "True"
         },
         "geometry": {
@@ -3782,7 +4653,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
           "marker_color": "#06d6a0",
           "ai_predicted_risk": "Low Risk",
-          "ai_prediction_confidence": 92.8,
+          "ai_prediction_confidence": 93.1,
           "ai_concurrence": "True"
         },
         "geometry": {
@@ -3822,7 +4693,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
           "marker_color": "#f77f00",
           "ai_predicted_risk": "High Risk",
-          "ai_prediction_confidence": 88.9,
+          "ai_prediction_confidence": 89.5,
           "ai_concurrence": "True"
         },
         "geometry": {
@@ -3862,7 +4733,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Bi-weekly municipal disinfection; mandatory covered waste bins; offal disposal regulation; cold storage subsidy.",
           "marker_color": "#f77f00",
           "ai_predicted_risk": "High Risk",
-          "ai_prediction_confidence": 60.2,
+          "ai_prediction_confidence": 60.9,
           "ai_concurrence": "True"
         },
         "geometry": {
@@ -3902,7 +4773,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Quarterly standard food safety audit; maintain existing hygienic separation.",
           "marker_color": "#06d6a0",
           "ai_predicted_risk": "Low Risk",
-          "ai_prediction_confidence": 84.1,
+          "ai_prediction_confidence": 84.0,
           "ai_concurrence": "True"
         },
         "geometry": {
@@ -3942,7 +4813,7 @@ const HEALTH_GIS_DATA = {
           "recommended_intervention": "Monthly routine surveillance; water potability testing; solid waste collection compliance.",
           "marker_color": "#ffd166",
           "ai_predicted_risk": "Moderate Risk",
-          "ai_prediction_confidence": 79.2,
+          "ai_prediction_confidence": 76.6,
           "ai_concurrence": "True"
         },
         "geometry": {
@@ -3950,6 +4821,211 @@ const HEALTH_GIS_DATA = {
           "coordinates": [
             80.004373,
             14.490287
+          ]
+        }
+      }
+    ]
+  },
+  "veg_markets": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "market_id": "VEG-NMC-01",
+          "market_name": "Stonehousepet Rythu Bazaar (Govt of AP)",
+          "type": "Govt Rythu Bazaar",
+          "jurisdiction": "Nellore Municipal Corporation",
+          "stalls_count": 85,
+          "daily_footfall": 4500,
+          "produce_origin": "Podalakur & Allur Farmers direct supply",
+          "proximity_to_meat_fish_m": 45,
+          "waste_management": "Municipal Compost Truck (Daily)",
+          "drain_dist_m": 35,
+          "cross_contamination_rating": "High (Flies & Runoff from Adjacent Fish Stalls)",
+          "lat": 14.4508,
+          "lon": 79.9918
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.9918,
+            14.4508
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "market_id": "VEG-NMC-02",
+          "market_name": "Santhapet Central Wholesale & Retail Vegetable Market",
+          "type": "Municipal Daily Market",
+          "jurisdiction": "Nellore Municipal Corporation",
+          "stalls_count": 120,
+          "daily_footfall": 7500,
+          "produce_origin": "Madanapalle, Bangalore & Local AP Mandis",
+          "proximity_to_meat_fish_m": 60,
+          "waste_management": "Open Central Dump Vats",
+          "drain_dist_m": 25,
+          "cross_contamination_rating": "High (Crowded Bazaar Congestion)",
+          "lat": 14.4388,
+          "lon": 79.9802
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.9802,
+            14.4388
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "market_id": "VEG-NMC-03",
+          "market_name": "Fateh Khan Pet Daily Vegetable Sub-Market",
+          "type": "Neighborhood Municipal Market",
+          "jurisdiction": "Nellore Municipal Corporation",
+          "stalls_count": 45,
+          "daily_footfall": 2200,
+          "produce_origin": "Local Peri-Urban Vegetable Growers",
+          "proximity_to_meat_fish_m": 85,
+          "waste_management": "Closed Bins",
+          "drain_dist_m": 70,
+          "cross_contamination_rating": "Moderate",
+          "lat": 14.4375,
+          "lon": 79.9925
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.9925,
+            14.4375
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "market_id": "VEG-NMC-04",
+          "market_name": "Dargamitta Rythu Bazaar (Govt of AP)",
+          "type": "Govt Rythu Bazaar",
+          "jurisdiction": "Nellore Municipal Corporation",
+          "stalls_count": 70,
+          "daily_footfall": 3800,
+          "produce_origin": "Nellore Rural & Kovur Horticultural Units",
+          "proximity_to_meat_fish_m": 220,
+          "waste_management": "Separate Bio-Degradable Processing",
+          "drain_dist_m": 140,
+          "cross_contamination_rating": "Low (Segregated from Meat Vendors)",
+          "lat": 14.431,
+          "lon": 79.9745
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.9745,
+            14.431
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "market_id": "VEG-NMC-05",
+          "market_name": "Vedayapalem Ramalingapuram Produce Hub",
+          "type": "Commercial Daily Market",
+          "jurisdiction": "Nellore Municipal Corporation",
+          "stalls_count": 55,
+          "daily_footfall": 2800,
+          "produce_origin": "Venkatagiri & Podalakur Farms",
+          "proximity_to_meat_fish_m": 75,
+          "waste_management": "Municipal Collection",
+          "drain_dist_m": 45,
+          "cross_contamination_rating": "Moderate",
+          "lat": 14.418,
+          "lon": 79.967
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.967,
+            14.418
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "market_id": "VEG-KVR-01",
+          "market_name": "Kovur Main Road Vegetable Market",
+          "type": "Panchayat Daily Market",
+          "jurisdiction": "Kovur Mandal / Kovur GP",
+          "stalls_count": 65,
+          "daily_footfall": 3400,
+          "produce_origin": "Pennar River Basin Fertile Silt Farms",
+          "proximity_to_meat_fish_m": 30,
+          "waste_management": "Roadside Open Dump",
+          "drain_dist_m": 18,
+          "cross_contamination_rating": "Very High (Adjacent to Broiler/Mutton Stalls & Drain)",
+          "lat": 14.4952,
+          "lon": 79.978
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.978,
+            14.4952
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "market_id": "VEG-KVR-02",
+          "market_name": "Padugupadu Railway Road Vegetable Stalls",
+          "type": "Informal Street Produce Hub",
+          "jurisdiction": "Kovur Mandal / Padugupadu GP",
+          "stalls_count": 30,
+          "daily_footfall": 1600,
+          "produce_origin": "Riverbank vegetable growers",
+          "proximity_to_meat_fish_m": 50,
+          "waste_management": "Open Ground Dumping",
+          "drain_dist_m": 22,
+          "cross_contamination_rating": "High",
+          "lat": 14.4762,
+          "lon": 79.9838
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            79.9838,
+            14.4762
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "market_id": "VEG-KVR-03",
+          "market_name": "Inamadugu Weekly Sunday Shandy (Santhe)",
+          "type": "Rural Weekly Shandy",
+          "jurisdiction": "Kovur Mandal / Inamadugu GP",
+          "stalls_count": 90,
+          "daily_footfall": 4200,
+          "produce_origin": "Multi-Village Rural Farmers",
+          "proximity_to_meat_fish_m": 40,
+          "waste_management": "Compost Clearing after Market Day",
+          "drain_dist_m": 55,
+          "cross_contamination_rating": "Moderate",
+          "lat": 14.4905,
+          "lon": 80.003
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            80.003,
+            14.4905
           ]
         }
       }
@@ -13328,7 +14404,7 @@ const HEALTH_GIS_DATA = {
   "ai_metrics": {
     "model_type": "Random Forest Classifier (100 Estimators)",
     "test_accuracy": 0.7619,
-    "cross_val_mean_accuracy": 0.6794,
+    "cross_val_mean_accuracy": 0.6919,
     "confusion_matrix": {
       "labels": [
         "High Risk",
@@ -13405,78 +14481,78 @@ const HEALTH_GIS_DATA = {
     "feature_importances": [
       {
         "feature": "distance_to_drain_m",
-        "importance": 0.3356
+        "importance": 0.3341
       },
       {
         "feature": "distance_to_waterbody_m",
-        "importance": 0.1069
+        "importance": 0.1181
       },
       {
         "feature": "daily_animals_handled",
-        "importance": 0.1055
-      },
-      {
-        "feature": "distance_to_hospital_m",
-        "importance": 0.1024
+        "importance": 0.1097
       },
       {
         "feature": "waste_severity_score",
-        "importance": 0.0978
+        "importance": 0.0975
+      },
+      {
+        "feature": "distance_to_hospital_m",
+        "importance": 0.0971
       },
       {
         "feature": "market_crowd_index",
-        "importance": 0.0845
+        "importance": 0.0846
       },
       {
         "feature": "slaughter_flag",
-        "importance": 0.0723
+        "importance": 0.0651
       },
       {
         "feature": "refrig_flag",
-        "importance": 0.0572
+        "importance": 0.0538
       },
       {
         "feature": "category_code",
-        "importance": 0.0377
+        "importance": 0.04
       }
     ]
   },
   "feature_importance": [
     {
       "feature": "distance_to_drain_m",
-      "importance": 0.3356
+      "importance": 0.3341
     },
     {
       "feature": "distance_to_waterbody_m",
-      "importance": 0.1069
+      "importance": 0.1181
     },
     {
       "feature": "daily_animals_handled",
-      "importance": 0.1055
-    },
-    {
-      "feature": "distance_to_hospital_m",
-      "importance": 0.1024
+      "importance": 0.1097
     },
     {
       "feature": "waste_severity_score",
-      "importance": 0.0978
+      "importance": 0.0975
+    },
+    {
+      "feature": "distance_to_hospital_m",
+      "importance": 0.0971
     },
     {
       "feature": "market_crowd_index",
-      "importance": 0.0845
+      "importance": 0.0846
     },
     {
       "feature": "slaughter_flag",
-      "importance": 0.0723
+      "importance": 0.0651
     },
     {
       "feature": "refrig_flag",
-      "importance": 0.0572
+      "importance": 0.0538
     },
     {
       "feature": "category_code",
-      "importance": 0.0377
+      "importance": 0.04
     }
   ]
 };

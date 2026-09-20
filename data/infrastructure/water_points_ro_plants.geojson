@@ -1,0 +1,419 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "RO-NMC-01",
+        "name": "NTR Sujala / Community RO Plant - Stonehousepet",
+        "type": "Mineral Water RO Plant",
+        "ward": "Stonehousepet (NMC)",
+        "lat": 14.4502,
+        "lon": 79.9905,
+        "capacity_lph": 2000,
+        "tds_ppm": 85,
+        "potability": "Potable (Certified Safe)",
+        "drain_dist_m": 45,
+        "risk": "Low"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.9905,
+          14.4502
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "RO-NMC-02",
+        "name": "Santhapet Municipal Community RO Water Station",
+        "type": "Mineral Water RO Plant",
+        "ward": "Santhapet (NMC)",
+        "lat": 14.4385,
+        "lon": 79.9795,
+        "capacity_lph": 1500,
+        "tds_ppm": 92,
+        "potability": "Potable (Certified Safe)",
+        "drain_dist_m": 80,
+        "risk": "Low"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.9795,
+          14.4385
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "RO-NMC-03",
+        "name": "Ranganayakulapet Ward RO Dispenser",
+        "type": "Mineral Water RO Plant",
+        "ward": "Ranganayakulapet (NMC)",
+        "lat": 14.4542,
+        "lon": 79.9865,
+        "capacity_lph": 1000,
+        "tds_ppm": 110,
+        "potability": "Potable",
+        "drain_dist_m": 35,
+        "risk": "Moderate (Near Open Gutter)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.9865,
+          14.4542
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "RO-NMC-04",
+        "name": "Vedayapalem Urban RO Purifier Unit",
+        "type": "Mineral Water RO Plant",
+        "ward": "Vedayapalem (NMC)",
+        "lat": 14.4168,
+        "lon": 79.968,
+        "capacity_lph": 2000,
+        "tds_ppm": 78,
+        "potability": "Potable (Certified Safe)",
+        "drain_dist_m": 120,
+        "risk": "Low"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.968,
+          14.4168
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "RO-KVR-01",
+        "name": "Kovur Main Bazaar Gram Panchayat RO Plant",
+        "type": "Mineral Water RO Plant",
+        "ward": "Kovur Bazaar (GP)",
+        "lat": 14.4948,
+        "lon": 79.9775,
+        "capacity_lph": 2500,
+        "tds_ppm": 95,
+        "potability": "Potable",
+        "drain_dist_m": 25,
+        "risk": "Moderate (Drainage Seepage Watch)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.9775,
+          14.4948
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "RO-KVR-02",
+        "name": "Padugupadu Junction RO Water Hub",
+        "type": "Mineral Water RO Plant",
+        "ward": "Padugupadu (GP)",
+        "lat": 14.4752,
+        "lon": 79.9835,
+        "capacity_lph": 1000,
+        "tds_ppm": 105,
+        "potability": "Potable",
+        "drain_dist_m": 60,
+        "risk": "Low"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.9835,
+          14.4752
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "RO-KVR-03",
+        "name": "Inamadugu Village Drinking Water Plant",
+        "type": "Mineral Water RO Plant",
+        "ward": "Inamadugu (GP)",
+        "lat": 14.4915,
+        "lon": 80.0025,
+        "capacity_lph": 1000,
+        "tds_ppm": 88,
+        "potability": "Potable",
+        "drain_dist_m": 110,
+        "risk": "Low"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.0025,
+          14.4915
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "BW-NMC-01",
+        "name": "Pennar South Riverbed Municipal Borewell Array",
+        "type": "Deep Public Borewell",
+        "ward": "Riverbank / Stonehousepet",
+        "lat": 14.461,
+        "lon": 79.975,
+        "capacity_lph": 8000,
+        "tds_ppm": 240,
+        "potability": "Raw Water (Piped to Treatment)",
+        "drain_dist_m": 180,
+        "risk": "Low"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.975,
+          14.461
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "BW-NMC-02",
+        "name": "Santhapet Market Municipal Extraction Well",
+        "type": "Deep Public Borewell",
+        "ward": "Santhapet (NMC)",
+        "lat": 14.441,
+        "lon": 79.982,
+        "capacity_lph": 4500,
+        "tds_ppm": 420,
+        "potability": "Moderate Hardness",
+        "drain_dist_m": 30,
+        "risk": "High (Microbial Intrusion Risk)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.982,
+          14.441
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "BW-KVR-01",
+        "name": "Pennar North Bank Kovur Infiltration Borewell",
+        "type": "Deep Public Borewell",
+        "ward": "Pennar Basin North",
+        "lat": 14.467,
+        "lon": 79.974,
+        "capacity_lph": 6000,
+        "tds_ppm": 210,
+        "potability": "Raw Water",
+        "drain_dist_m": 220,
+        "risk": "Low"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.974,
+          14.467
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "BW-KVR-02",
+        "name": "Inamadugu Agricultural & Public Well",
+        "type": "Deep Public Borewell",
+        "ward": "Inamadugu (GP)",
+        "lat": 14.4925,
+        "lon": 80.006,
+        "capacity_lph": 3500,
+        "tds_ppm": 380,
+        "potability": "Potable with boiling",
+        "drain_dist_m": 90,
+        "risk": "Moderate"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.006,
+          14.4925
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "HP-NMC-01",
+        "name": "Stonehousepet Riverside Public Hand Pump #1",
+        "type": "Public Hand Pump",
+        "ward": "Stonehousepet Slum",
+        "lat": 14.4515,
+        "lon": 79.992,
+        "capacity_lph": 300,
+        "tds_ppm": 510,
+        "potability": "High Microbial Risk (Coliforms Detected)",
+        "drain_dist_m": 8,
+        "risk": "CRITICAL (8m from Open Sewer)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.992,
+          14.4515
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "HP-NMC-02",
+        "name": "Stonehousepet Fish Market Worker Hand Pump",
+        "type": "Public Hand Pump",
+        "ward": "Stonehousepet Market",
+        "lat": 14.4498,
+        "lon": 79.9912,
+        "capacity_lph": 300,
+        "tds_ppm": 480,
+        "potability": "Unsafe without boiling",
+        "drain_dist_m": 12,
+        "risk": "CRITICAL (Direct Runoff Zone)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.9912,
+          14.4498
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "HP-NMC-03",
+        "name": "Santhapet Gutter Lane Public Hand Pump",
+        "type": "Public Hand Pump",
+        "ward": "Santhapet (NMC)",
+        "lat": 14.4392,
+        "lon": 79.9808,
+        "capacity_lph": 250,
+        "tds_ppm": 440,
+        "potability": "Unsafe for Drinking",
+        "drain_dist_m": 10,
+        "risk": "CRITICAL (Adjacent to Central Drain)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.9808,
+          14.4392
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "HP-NMC-04",
+        "name": "Ranganayakulapet Fisherman Colony Hand Pump",
+        "type": "Public Hand Pump",
+        "ward": "Ranganayakulapet",
+        "lat": 14.4532,
+        "lon": 79.9882,
+        "capacity_lph": 350,
+        "tds_ppm": 390,
+        "potability": "Moderate Risk",
+        "drain_dist_m": 18,
+        "risk": "High (Submerged in rains)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.9882,
+          14.4532
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "HP-KVR-01",
+        "name": "Kovur Bazaar Lane Hand Pump",
+        "type": "Public Hand Pump",
+        "ward": "Kovur Main Bazaar",
+        "lat": 14.4942,
+        "lon": 79.9782,
+        "capacity_lph": 300,
+        "tds_ppm": 460,
+        "potability": "Unsafe for Direct Drinking",
+        "drain_dist_m": 7,
+        "risk": "CRITICAL (7m from Open Sludge Gutter)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.9782,
+          14.4942
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "HP-KVR-02",
+        "name": "Padugupadu Railway Slum Hand Pump",
+        "type": "Public Hand Pump",
+        "ward": "Padugupadu Rail Nagar",
+        "lat": 14.4758,
+        "lon": 79.9845,
+        "capacity_lph": 300,
+        "tds_ppm": 410,
+        "potability": "High Microbial Risk",
+        "drain_dist_m": 14,
+        "risk": "CRITICAL (Open Sullage Contamination)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.9845,
+          14.4758
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "HP-KVR-03",
+        "name": "Inamadugu Dalitwada Public Hand Pump",
+        "type": "Public Hand Pump",
+        "ward": "Inamadugu (GP)",
+        "lat": 14.4895,
+        "lon": 80.0042,
+        "capacity_lph": 320,
+        "tds_ppm": 350,
+        "potability": "Marginal Potability",
+        "drain_dist_m": 45,
+        "risk": "Moderate"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.0042,
+          14.4895
+        ]
+      }
+    }
+  ]
+}

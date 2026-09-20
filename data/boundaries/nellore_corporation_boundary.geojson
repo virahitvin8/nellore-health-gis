@@ -9,7 +9,8 @@
         "district": "SPSR Nellore",
         "state": "Andhra Pradesh",
         "area_sq_km": 150.4,
-        "population_est": 600000
+        "population_est": 600000,
+        "wards_count": 54
       },
       "geometry": {
         "type": "Polygon",

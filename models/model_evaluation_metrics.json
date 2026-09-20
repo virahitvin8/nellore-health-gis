@@ -1,7 +1,7 @@
 {
   "model_type": "Random Forest Classifier (100 Estimators)",
   "test_accuracy": 0.7619,
-  "cross_val_mean_accuracy": 0.6794,
+  "cross_val_mean_accuracy": 0.6919,
   "confusion_matrix": {
     "labels": [
       "High Risk",
@@ -78,39 +78,39 @@
   "feature_importances": [
     {
       "feature": "distance_to_drain_m",
-      "importance": 0.3356
+      "importance": 0.3341
     },
     {
       "feature": "distance_to_waterbody_m",
-      "importance": 0.1069
+      "importance": 0.1181
     },
     {
       "feature": "daily_animals_handled",
-      "importance": 0.1055
-    },
-    {
-      "feature": "distance_to_hospital_m",
-      "importance": 0.1024
+      "importance": 0.1097
     },
     {
       "feature": "waste_severity_score",
-      "importance": 0.0978
+      "importance": 0.0975
+    },
+    {
+      "feature": "distance_to_hospital_m",
+      "importance": 0.0971
     },
     {
       "feature": "market_crowd_index",
-      "importance": 0.0845
+      "importance": 0.0846
     },
     {
       "feature": "slaughter_flag",
-      "importance": 0.0723
+      "importance": 0.0651
     },
     {
       "feature": "refrig_flag",
-      "importance": 0.0572
+      "importance": 0.0538
     },
     {
       "feature": "category_code",
-      "importance": 0.0377
+      "importance": 0.04
     }
   ]
 }
