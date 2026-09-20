@@ -33,8 +33,8 @@ git commit -m "feat: complete Health GIS with drinking water pipelines, RO plant
 git branch -M main
 
 # 4. Connect to your GitHub repository
-# (REPLACE 'YOUR_USERNAME' with your actual GitHub username!)
-git remote add origin https://github.com/YOUR_USERNAME/nellore-health-gis.git
+# (REPLACE 'virahitvin8' with your actual GitHub username!)
+git remote add origin https://github.com/virahitvin8/nellore-health-gis.git
 
 # 5. Push code to GitHub
 git push -u origin main
@@ -52,7 +52,7 @@ git push -u origin main
 4. Wait 60 to 90 seconds, then refresh the page.
 5. Your live WebGIS site will be active at:
    ```
-   https://YOUR_USERNAME.github.io/nellore-health-gis/
+   https://virahitvin8.github.io/nellore-health-gis/
    ```
 
 ---
@@ -98,8 +98,8 @@ In rapidly growing urban centers, meat and seafood wet markets often operate adj
 • 11 markets (13.6%) categorized as "Very High Risk" (clustered near Stonehousepet and Kovur Bazaar).
 • Critical intervention: Replace aging uPVC pipeline joints running directly submerged under open gutters, and decommission 4 shallow hand pumps identified within 12m of open sewers.
 
-💻 Live Interactive WebGIS Demo: https://YOUR_USERNAME.github.io/nellore-health-gis/
-📁 GitHub Repository & Code: https://github.com/YOUR_USERNAME/nellore-health-gis
+💻 Live Interactive WebGIS Demo: https://virahitvin8.github.io/nellore-health-gis/
+📁 GitHub Repository & Code: https://github.com/virahitvin8/nellore-health-gis
 
 I would love to connect and hear feedback from GIS analysts, public health epidemiologists, and urban planners! 💬
 
