@@ -298,6 +298,24 @@
         </div>
       </div>
 
+      <!-- Floating Multi-Spectral Composite & NDVI Sync Indicator -->
+      <div class="map-composite-indicator" id="map-composite-indicator">
+        <span class="mci-badge" id="mci-active-name"><i class="fa-solid fa-satellite"></i> Sentinel-2: True Color</span>
+        <span style="color:#64748b;">•</span>
+        <span style="font-size:0.75rem; color:#34d399; font-weight:600;"><i class="fa-solid fa-seedling"></i> NDVI Sync: Active</span>
+        <div style="display:flex; gap:4px; margin-left:4px;">
+          <button class="mci-quick-btn active" data-comp="true-color" onclick="selectBandComposite('true-color')">RGB</button>
+          <button class="mci-quick-btn" data-comp="cir" onclick="selectBandComposite('cir')">CIR (Paddy)</button>
+          <button class="mci-quick-btn" data-comp="ndvi" onclick="selectBandComposite('ndvi')">NDVI Vigor</button>
+          <button class="mci-quick-btn" data-comp="ndre" onclick="selectBandComposite('ndre')">NDRE</button>
+          <button class="mci-quick-btn" data-comp="ndwi" onclick="selectBandComposite('ndwi')">NDWI (Water)</button>
+          <button class="mci-quick-btn" data-comp="swir" onclick="selectBandComposite('swir')">SWIR (Moisture)</button>
+        </div>
+        <button class="mci-quick-btn" style="background:rgba(16,185,129,0.2); border-color:#10b981; color:#34d399;" onclick="document.getElementById('sentinel-modal').classList.remove('hidden'); initSentinelStudio();" title="Open Full Multi-Spectral Sentinel Studio">
+          <i class="fa-solid fa-sliders"></i> Studio
+        </button>
+      </div>
+
       <!-- Water Distribution Legend Overlay -->
       <div class="map-legend">
         <h4><i class="fa-solid fa-circle-info"></i> Water Distribution Hierarchy</h4>
@@ -396,36 +414,55 @@
               <p>Quantifies photosynthetically active biomass, crop health in Kovur, and urban canopy vs built-up areas.</p>
               <button class="btn-apply-band">Inspect NDVI</button>
             </div>
+
+            <div class="band-card" data-composite="ndre">
+              <div class="band-code" style="color:#34d399;">(B08 - B05) / (B08 + B05)</div>
+              <h4>Red-Edge Chlorophyll (NDRE)</h4>
+              <p>Overcomes high canopy NDVI saturation in mature Kovur sugarcane and late-tillering paddy.</p>
+              <button class="btn-apply-band">Inspect NDRE</button>
+            </div>
           </div>
         </div>
 
-        <!-- NDVI Deep Analysis & Zonal Metrics Panel -->
+        <!-- NDVI Deep Analysis & Multi-Spectral Correlation Panel (Always Kept Persistent) -->
         <div class="ndvi-analytics-panel" id="ndvi-analytics-panel">
           <div class="ndvi-panel-header">
-            <h4><i class="fa-solid fa-seedling" style="color:#10b981;"></i> NDVI Vegetation Health & Biomass Index Analysis (Sentinel-2 MSI)</h4>
-            <span class="ndvi-formula-badge">NDVI = (NIR B08 - Red B04) / (NIR B08 + Red B04)</span>
+            <h4><i class="fa-solid fa-seedling" style="color:#10b981;"></i> Multi-Spectral Sentinel-2 NDVI Vegetation Health & Biomass Analysis</h4>
+            <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
+              <span class="ndvi-formula-badge" id="ndvi-active-formula-badge">NDVI = (NIR B08 - Red B04) / (NIR B08 + Red B04)</span>
+              <span class="ndvi-formula-badge" style="background:rgba(56,189,248,0.15); color:#38bdf8; border-color:rgba(56,189,248,0.4);">Tile T44NNC • 10m Ground Res</span>
+            </div>
+          </div>
+
+          <!-- Dynamic Multi-Spectral Composite Correlation Explainer -->
+          <div class="composite-ndvi-correlation" id="composite-ndvi-correlation">
+            <div class="cnc-icon"><i class="fa-solid fa-diagram-project"></i></div>
+            <div class="cnc-content">
+              <h5 id="cnc-title">Multi-Spectral Correlation: Natural True Color (RGB) vs NDVI Biomass</h5>
+              <p id="cnc-desc">Natural visual representation (B04 Red, B03 Green, B02 Blue) forms the baseline visible spectrum. By contrasting visible Red absorption by chlorophyll against Near-Infrared (B08) mesophyll scattering, NDVI quantifies photosynthetic activity and vegetation density across Kovur & Nellore.</p>
+            </div>
           </div>
 
           <div class="ndvi-metrics-grid">
             <div class="ndvi-stat-card">
               <span class="ndvi-stat-title">Kovur Rural Agricultural Belt</span>
-              <span class="ndvi-stat-val" style="color:#10b981;">+0.64 Mean NDVI</span>
-              <span class="ndvi-stat-desc">Healthy irrigated paddy, banana groves & sugarcane canopy</span>
+              <span class="ndvi-stat-val" style="color:#10b981;">+0.74 Mean NDVI</span>
+              <span class="ndvi-stat-desc">Wetland paddy (Nellore Masuri BPT 5204) in active panicle initiation • SPAD 44</span>
+            </div>
+            <div class="ndvi-stat-card">
+              <span class="ndvi-stat-title">Kovur Sugarcane & Banana</span>
+              <span class="ndvi-stat-val" style="color:#66bd63;">+0.66 Mean NDVI</span>
+              <span class="ndvi-stat-desc">Co 86032 sugarcane & Robusta banana groves in grand growth phase</span>
             </div>
             <div class="ndvi-stat-card">
               <span class="ndvi-stat-title">Nellore NMC Urban Core</span>
-              <span class="ndvi-stat-val" style="color:#f59e0b;">+0.21 Mean NDVI</span>
-              <span class="ndvi-stat-desc">Impervious concrete surfaces, roads & dense commercial stalls</span>
+              <span class="ndvi-stat-val" style="color:#dfc27d;">+0.18 Mean NDVI</span>
+              <span class="ndvi-stat-desc">Stonehousepet commercial stalls, asphalt roads & impervious surface</span>
             </div>
             <div class="ndvi-stat-card">
-              <span class="ndvi-stat-title">Pennar Riverbed Sand & Water</span>
-              <span class="ndvi-stat-val" style="color:#38bdf8;">-0.12 Mean NDVI</span>
-              <span class="ndvi-stat-desc">Surface water channel & dry coarse alluvial sand</span>
-            </div>
-            <div class="ndvi-stat-card">
-              <span class="ndvi-stat-title">Vegetative Health Status</span>
-              <span class="ndvi-stat-val alert-green">VIGOROUS / OPTIMAL</span>
-              <span class="ndvi-stat-desc">Delta irrigation scheme maintaining post-monsoon greenness</span>
+              <span class="ndvi-stat-title">Pennar Riverbed Water Channel</span>
+              <span class="ndvi-stat-val" style="color:#0077b6;">-0.14 Mean NDVI</span>
+              <span class="ndvi-stat-desc">Active water channel (NDWI +0.84) & coarse alluvial sand aquifer</span>
             </div>
           </div>
 
@@ -433,11 +470,45 @@
           <div class="ndvi-ramp-container">
             <div class="ndvi-ramp-bar"></div>
             <div class="ndvi-ramp-labels">
-              <span>-0.2 (Water / Wet Sand)</span>
-              <span>0.0 (Bare Soil)</span>
+              <span>-0.2 (Deep Water)</span>
+              <span>0.0 (Dry Sand / Soil)</span>
               <span>+0.2 (Urban Built-up)</span>
               <span>+0.5 (Moderate Crops)</span>
-              <span>+0.85 (Dense Canopy)</span>
+              <span>+0.74 (Optimal Paddy Canopy)</span>
+              <span>+0.85 (Dense Forest)</span>
+            </div>
+          </div>
+
+          <!-- Interactive Zonal Multi-Spectral & NDVI Calculator -->
+          <div class="zonal-calc-box">
+            <div class="zonal-calc-header">
+              <div style="display:flex; align-items:center; gap:8px;">
+                <i class="fa-solid fa-calculator" style="color:#10b981;"></i>
+                <span style="font-size:0.82rem; font-weight:700; color:#f1f5f9;">Interactive Sentinel-2 Band Calculator & Zonal Diagnostic</span>
+              </div>
+              <div style="display:flex; align-items:center; gap:8px;">
+                <label style="font-size:0.75rem; color:#94a3b8;">Select AOI Zone:</label>
+                <select id="zonal-spectral-select" class="zonal-select">
+                  <option value="NDVI-KVR-01">🌾 Kovur North Irrigated Paddy (+0.74 NDVI)</option>
+                  <option value="NDVI-KVR-02">🎋 Kovur Central Sugarcane Belt (+0.66 NDVI)</option>
+                  <option value="NDVI-PEN-01">🌊 Pennar Riverbed Surface Water (-0.14 NDVI)</option>
+                  <option value="NDVI-NMC-01">🏢 Nellore Urban Core Stonehousepet (+0.18 NDVI)</option>
+                  <option value="NDVI-NMC-02">🌿 Vedayapalem Suburban Green (+0.38 NDVI)</option>
+                </select>
+                <button id="btn-zoom-selected-zone" class="btn-card-action" style="padding:5px 12px; font-size:0.75rem; text-decoration:none;">
+                  <i class="fa-solid fa-crosshairs"></i> Zoom Zone
+                </button>
+              </div>
+            </div>
+
+            <!-- Band Reflectance Strip -->
+            <div class="spectral-bands-strip" id="zonal-bands-strip">
+              <!-- Dynamically populated via JavaScript -->
+            </div>
+
+            <!-- Mathematical Formula Computation Breakdown -->
+            <div class="formula-computation-row" id="zonal-formula-result">
+              <!-- Dynamically populated via JavaScript -->
             </div>
           </div>
         </div>

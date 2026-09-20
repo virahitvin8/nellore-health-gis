@@ -87,11 +87,14 @@ Directly connected to the **European Space Agency (ESA) Copernicus Data Space Ec
 * **Constellation**: Sentinel-2A & Sentinel-2B Multi-Spectral Instrument (MSI)
 * **Revisit Frequency**: 5 Days (10m Spatial Resolution)
 
-### False-Color Band Composites Available
-* **Natural True Color (B04 - B03 - B02)**: Real natural surface inspection.
-* **Color Infrared (CIR: B08 - B04 - B03)**: Highlights chlorophyll crop vigor in Kovur paddy fields in vivid red/magenta.
-* **Normalized Difference Water Index (NDWI: $(B03 - B08)/(B03 + B08)$)**: Zero-haze delineation of Pennar River and irrigation canals.
-* **Short-Wave Infrared (SWIR: B12 - B8A - B04)**: Measures soil moisture and discriminates riverbed alluvium.
+### Multi-Spectral False-Color Composites & Persistent NDVI Analysis
+* **Natural True Color (RGB: B04 - B03 - B02)**: Real natural surface inspection cross-referenced with agricultural baselines.
+* **Color Infrared (CIR - NIR: B08 - B04 - B03)**: Highlights active chlorophyll in Kovur paddy fields in vivid radiant crimson/magenta; provides direct empirical proof of the NDVI NIR/Red ratio.
+* **Normalized Difference Vegetation Index (NDVI: $(B08 - B04)/(B08 + B04)$)**: Quantifies photosynthetic biomass from $-0.2$ to $+0.85$ (Kovur North Paddy $+0.74$, Kovur Sugarcane $+0.66$, Urban core $+0.18$, Pennar River $-0.14$).
+* **Red-Edge Chlorophyll Index (NDRE: $(B08 - B05)/(B08 + B05)$)**: Employs Sentinel-2's 705nm Red Edge band (B05) to overcome dense canopy NDVI saturation during peak sugarcane and paddy maturity.
+* **Normalized Difference Water Index (NDWI: $(B03 - B08)/(B03 + B08)$)**: Zero-haze delineation of Pennar River surface water ($+0.84$) and irrigation canals.
+* **Short-Wave Infrared (SWIR: B12 - B8A - B04)**: Measures root-zone canopy moisture and discriminates wet alluvium from dry riverbed sand.
+* **Persistent NDVI Synchronizer**: The interactive NDVI analysis and zonal diagnostic calculator remain permanently active across all composite selections, correlating spectral band physics with ground truth crop health.
 
 ---
 

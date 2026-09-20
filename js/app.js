@@ -791,109 +791,425 @@ function stopMapboxOrbit() {
   }
 }
 
-// ---------------- 3. COPERNICUS SENTINEL-2 STUDIO ---------------- //
+// ---------------- 3. COPERNICUS SENTINEL-2 STUDIO & MULTI-SPECTRAL COMPOSITES ---------------- //
+
+let currentCompositeType = "true-color";
+
+const COMPOSITE_CONFIGS = {
+  "true-color": {
+    name: "Natural True Color (RGB)",
+    code: "B04 - B03 - B02 (10m)",
+    badgeText: "Sentinel-2: True Color (RGB)",
+    formula: "RGB = B04 (Red 665nm) + B03 (Green 560nm) + B02 (Blue 490nm)",
+    corrTitle: "Multi-Spectral Baseline: Visible Spectrum vs NDVI Biomass",
+    corrDesc: "Natural visual representation (B04 Red, B03 Green, B02 Blue) forms the baseline visible spectrum. By contrasting visible Red absorption by chlorophyll against Near-Infrared (B08) mesophyll scattering, NDVI quantifies photosynthetic activity and vegetation density across Kovur & Nellore.",
+    activeBandIndices: [1, 2, 3]
+  },
+  "cir": {
+    name: "Color Infrared (CIR - NIR)",
+    code: "B08 - B04 - B03 (10m)",
+    badgeText: "Sentinel-2: Color Infrared (CIR)",
+    formula: "CIR = NIR B08 (Red Gun) + Red B04 (Green Gun) + Green B03 (Blue Gun)",
+    corrTitle: "Multi-Spectral Correlation: Color Infrared (CIR) vs NDVI Vigor",
+    corrDesc: "Color Infrared directly utilizes the two critical bands of NDVI (B08 NIR and B04 Red). High chlorophyll in Kovur paddy fields reflects up to 47% of incoming NIR radiation while absorbing 96% of visible red light, creating brilliant radiant magenta/crimson tones that directly map to NDVI >= +0.65.",
+    activeBandIndices: [2, 3, 7]
+  },
+  "ndvi": {
+    name: "Normalized Difference Veg. Index (NDVI)",
+    code: "(B08 - B04) / (B08 + B04)",
+    badgeText: "Sentinel-2: NDVI Vegetation Vigor",
+    formula: "NDVI = (NIR B08 - Red B04) / (NIR B08 + Red B04)",
+    corrTitle: "Multi-Spectral Analytics: Pure Sentinel-2 NDVI Biomass Density",
+    corrDesc: "Normalized Difference Vegetation Index provides continuous radiometric measurement of vegetative vigor from -1.0 to +1.0. Kovur North Paddy scores +0.74 (optimal canopy), while Nellore commercial urban core drops to +0.18 (impervious concrete).",
+    activeBandIndices: [3, 7]
+  },
+  "ndre": {
+    name: "Red-Edge Chlorophyll Index (NDRE)",
+    code: "(B08 - B05) / (B08 + B05)",
+    badgeText: "Sentinel-2: Red-Edge (NDRE)",
+    formula: "NDRE = (NIR B08 - Red Edge B05) / (NIR B08 + Red Edge B05)",
+    corrTitle: "Multi-Spectral Correlation: Red Edge NDRE vs Dense Canopy Saturation",
+    corrDesc: "At peak vegetative density, mature paddy and sugarcane canopies cause standard NDVI to saturate near +0.75-+0.80. Sentinel-2's specialized 705nm Red Edge band (B05) penetrates deep into the lower leaf canopy, providing linear sensitivity to leaf nitrogen and chlorophyll content without saturation.",
+    activeBandIndices: [4, 7]
+  },
+  "ndwi": {
+    name: "Normalized Difference Water Index (NDWI)",
+    code: "(B03 - B08) / (B03 + B08)",
+    badgeText: "Sentinel-2: NDWI Water Index",
+    formula: "NDWI = (Green B03 - NIR B08) / (Green B03 + NIR B08)",
+    corrTitle: "Multi-Spectral Correlation: NDWI Water Extraction vs NDVI Vegetative Mask",
+    corrDesc: "Water features absorb Near-Infrared radiation almost completely while reflecting visible green light. NDWI produces positive values (+0.84) across the Pennar River and Kanigiri feeder canal while NDVI drops to negative (-0.14), enabling precise automated water boundary extraction.",
+    activeBandIndices: [2, 7]
+  },
+  "swir": {
+    name: "Short-Wave Infrared Composite (SWIR)",
+    code: "B12 - B8A - B04 (20m)",
+    badgeText: "Sentinel-2: SWIR Soil Moisture",
+    formula: "SWIR = B12 (2190nm) + B8A (865nm) + B04 (665nm)",
+    corrTitle: "Multi-Spectral Correlation: SWIR Soil Moisture vs NDVI Canopy Greenness",
+    corrDesc: "SWIR radiation penetrates atmospheric aerosols and is sensitive to leaf cellular water content and riverbed alluvial soil moisture. In combination with NDVI, SWIR differentiates water-stressed crops from well-irrigated paddy in the Kovur canal command area.",
+    activeBandIndices: [3, 8, 11]
+  }
+};
+
+const MULTISPECTRAL_STYLES = {
+  "true-color": {
+    "NDVI-KVR-01": { color: "#22c55e", fillColor: "#22c55e", opacity: 0.50, desc: "Kovur North Paddy (Natural Green)" },
+    "NDVI-KVR-02": { color: "#16a34a", fillColor: "#16a34a", opacity: 0.50, desc: "Kovur Sugarcane (Natural Green)" },
+    "NDVI-PEN-01": { color: "#eab308", fillColor: "#ca8a04", opacity: 0.45, desc: "Pennar Sandbed & Water (Natural Alluvium)" },
+    "NDVI-NMC-01": { color: "#94a3b8", fillColor: "#64748b", opacity: 0.40, desc: "Nellore Urban Core (Impervious Concrete)" },
+    "NDVI-NMC-02": { color: "#84cc16", fillColor: "#84cc16", opacity: 0.45, desc: "Vedayapalem Suburban Canopy" }
+  },
+  "cir": {
+    "NDVI-KVR-01": { color: "#e11d48", fillColor: "#e11d48", opacity: 0.70, desc: "Kovur North Paddy (Vivid CIR Magenta - High Chlorophyll)" },
+    "NDVI-KVR-02": { color: "#be123c", fillColor: "#be123c", opacity: 0.65, desc: "Kovur Sugarcane (Deep CIR Crimson - Dense Canopy)" },
+    "NDVI-PEN-01": { color: "#0f172a", fillColor: "#0284c7", opacity: 0.55, desc: "Pennar Riverbed (CIR Deep Navy / Water Absorption)" },
+    "NDVI-NMC-01": { color: "#64748b", fillColor: "#475569", opacity: 0.45, desc: "Nellore Urban Core (CIR Slate Cyan / Asphalt)" },
+    "NDVI-NMC-02": { color: "#fb7185", fillColor: "#f43f5e", opacity: 0.58, desc: "Vedayapalem Suburban (CIR Rose / Canopy)" }
+  },
+  "ndvi": {
+    "NDVI-KVR-01": { color: "#1a9850", fillColor: "#1a9850", opacity: 0.62, desc: "Kovur North Paddy (+0.74 Optimal NDVI Vigor)" },
+    "NDVI-KVR-02": { color: "#66bd63", fillColor: "#66bd63", opacity: 0.55, desc: "Kovur Sugarcane (+0.66 High NDVI Vigor)" },
+    "NDVI-PEN-01": { color: "#0077b6", fillColor: "#0077b6", opacity: 0.55, desc: "Pennar Riverbed (-0.14 Water / Wet Sand)" },
+    "NDVI-NMC-01": { color: "#dfc27d", fillColor: "#dfc27d", opacity: 0.48, desc: "Nellore Urban Core (+0.18 Urban Impervious)" },
+    "NDVI-NMC-02": { color: "#a6d96a", fillColor: "#a6d96a", opacity: 0.52, desc: "Vedayapalem (+0.38 Moderate Green Canopy)" }
+  },
+  "ndre": {
+    "NDVI-KVR-01": { color: "#006837", fillColor: "#006837", opacity: 0.65, desc: "Kovur North Paddy (+0.52 Red-Edge Chlorophyll)" },
+    "NDVI-KVR-02": { color: "#31a354", fillColor: "#31a354", opacity: 0.58, desc: "Kovur Sugarcane (+0.46 Red-Edge Chlorophyll)" },
+    "NDVI-PEN-01": { color: "#08519c", fillColor: "#08519c", opacity: 0.50, desc: "Pennar Riverbed (-0.08 Red-Edge Water)" },
+    "NDVI-NMC-01": { color: "#bdbdbd", fillColor: "#969696", opacity: 0.42, desc: "Nellore Urban Core (+0.12 Red-Edge Built-up)" },
+    "NDVI-NMC-02": { color: "#78c679", fillColor: "#78c679", opacity: 0.52, desc: "Vedayapalem (+0.28 Red-Edge Suburban)" }
+  },
+  "ndwi": {
+    "NDVI-KVR-01": { color: "#334155", fillColor: "#1e293b", opacity: 0.45, desc: "Kovur North Paddy (-0.71 Dry Vegetative Biomass)" },
+    "NDVI-KVR-02": { color: "#475569", fillColor: "#334155", opacity: 0.45, desc: "Kovur Sugarcane (-0.62 Canopy Biomass)" },
+    "NDVI-PEN-01": { color: "#00f0ff", fillColor: "#0284c7", opacity: 0.80, desc: "Pennar Riverbed (+0.84 Pure Surface Water)" },
+    "NDVI-NMC-01": { color: "#78716c", fillColor: "#57534e", opacity: 0.40, desc: "Nellore Urban Core (-0.22 Low Moisture Concrete)" },
+    "NDVI-NMC-02": { color: "#64748b", fillColor: "#475569", opacity: 0.40, desc: "Vedayapalem (-0.35 Mixed Suburban)" }
+  },
+  "swir": {
+    "NDVI-KVR-01": { color: "#22c55e", fillColor: "#15803d", opacity: 0.60, desc: "Kovur North Paddy (High Foliage Water Thickness)" },
+    "NDVI-KVR-02": { color: "#4ade80", fillColor: "#16a34a", opacity: 0.55, desc: "Kovur Sugarcane (Moist Agro-Canopy)" },
+    "NDVI-PEN-01": { color: "#f59e0b", fillColor: "#d97706", opacity: 0.72, desc: "Pennar Riverbed (Saturated Sand Aquifer Alluvium)" },
+    "NDVI-NMC-01": { color: "#6366f1", fillColor: "#4f46e5", opacity: 0.48, desc: "Nellore Urban Core (Dry Concrete SWIR Absorption)" },
+    "NDVI-NMC-02": { color: "#84cc16", fillColor: "#65a30d", opacity: 0.52, desc: "Vedayapalem (Suburban Canopy Moisture)" }
+  }
+};
+
+const ZONE_SPECTRAL_DATA = {
+  "NDVI-KVR-01": {
+    name: "Kovur North Irrigated Paddy Delta (Nellore Masuri Heartland)",
+    crop: "Wetland Paddy (Nellore Masuri BPT 5204)",
+    stage: "Panicle Initiation • SPAD 44",
+    bands: { B02: 0.038, B03: 0.082, B04: 0.041, B05: 0.185, B08: 0.472, B11: 0.221 },
+    ndvi: 0.74,
+    ndre: 0.52,
+    ndwi: -0.70,
+    coords: [14.505, 79.975],
+    zoom: 14,
+    diagnosis: "Optimal leaf chlorophyll (SPAD 44), 4.8 t/ha biomass. High vigor response across Sentinel-2 NIR & CIR channels."
+  },
+  "NDVI-KVR-02": {
+    name: "Kovur Central Sugarcane & Horticulture Belt",
+    crop: "Sugarcane (Co 86032) & Robusta Banana Groves",
+    stage: "Grand Growth Phase (Elongation)",
+    bands: { B02: 0.045, B03: 0.091, B04: 0.052, B05: 0.210, B08: 0.440, B11: 0.245 },
+    ndvi: 0.66,
+    ndre: 0.46,
+    ndwi: -0.66,
+    coords: [14.492, 79.988],
+    zoom: 14,
+    diagnosis: "Dense green canopy. Red-Edge NDRE (+0.46) confirms high stalk elongation with zero canopy moisture stress."
+  },
+  "NDVI-PEN-01": {
+    name: "Pennar Riverbed Surface Water & Sand Spits",
+    crop: "Non-Vegetated Sandbed & Infiltration Water Channel",
+    stage: "Subsurface Aquifer Recharge Basin",
+    bands: { B02: 0.092, B03: 0.074, B04: 0.031, B05: 0.015, B08: 0.007, B11: 0.002 },
+    ndvi: -0.14,
+    ndre: -0.08,
+    ndwi: +0.83,
+    coords: [14.468, 79.980],
+    zoom: 14,
+    diagnosis: "Strong NIR absorption (0.007) combined with visible water reflectance. NDWI (+0.83) confirms live municipal intake."
+  },
+  "NDVI-NMC-01": {
+    name: "Stonehousepet & Central Commercial Core",
+    crop: "Commercial Stalls, Pavements & Built-Up",
+    stage: "Dense Non-Agricultural Urban Core",
+    bands: { B02: 0.160, B03: 0.182, B04: 0.215, B05: 0.232, B08: 0.264, B11: 0.320 },
+    ndvi: 0.18,
+    ndre: 0.12,
+    ndwi: -0.18,
+    coords: [14.448, 79.988],
+    zoom: 15,
+    diagnosis: "Flat spectral slope characteristic of asphalt, concrete, and roof sheeting with minimal photosynthetic activity."
+  },
+  "NDVI-NMC-02": {
+    name: "Vedayapalem - Dargamitta Suburban Green & Fodder Pockets",
+    crop: "Hybrid Napier Fodder & Banana Backyards",
+    stage: "Continuous Harvest / Ratoon",
+    bands: { B02: 0.085, B03: 0.120, B04: 0.095, B05: 0.190, B08: 0.345, B11: 0.260 },
+    ndvi: 0.38,
+    ndre: 0.28,
+    ndwi: -0.48,
+    coords: [14.425, 79.970],
+    zoom: 14,
+    diagnosis: "Moderate canopy reflectance. Urban agriculture provides local dairy fodder and micro-climate temperature moderation."
+  }
+};
 
 function initSentinelStudio() {
   const ctx = document.getElementById('chart-spectral-signature');
-  if (!ctx || spectralChart) return;
+  if (ctx && !spectralChart) {
+    const bands = [
+      'B01 (443nm)', 'B02 (490nm)', 'B03 (560nm)', 'B04 (665nm)',
+      'B05 (705nm)', 'B06 (740nm)', 'B07 (783nm)', 'B08 (842nm)',
+      'B8A (865nm)', 'B09 (945nm)', 'B11 (1610nm)', 'B12 (2190nm)'
+    ];
 
-  const bands = [
-    'B01 (443nm)', 'B02 (490nm)', 'B03 (560nm)', 'B04 (665nm)',
-    'B05 (705nm)', 'B06 (740nm)', 'B07 (783nm)', 'B08 (842nm)',
-    'B8A (865nm)', 'B09 (945nm)', 'B11 (1610nm)', 'B12 (2190nm)'
-  ];
-
-  spectralChart = new Chart(ctx, {
-    type: 'line',
-    data: {
-      labels: bands,
-      datasets: [
-        {
-          label: 'Pennar River Water',
-          data: [0.08, 0.09, 0.07, 0.03, 0.015, 0.01, 0.008, 0.006, 0.005, 0.002, 0.001, 0.001],
-          borderColor: '#38bdf8',
-          backgroundColor: 'rgba(56, 189, 248, 0.1)',
-          borderWidth: 2.5,
-          tension: 0.3,
-          pointRadius: 4
-        },
-        {
-          label: 'Kovur Paddy Crop',
-          data: [0.03, 0.04, 0.08, 0.04, 0.18, 0.36, 0.44, 0.47, 0.48, 0.45, 0.22, 0.11],
-          borderColor: '#10b981',
-          backgroundColor: 'rgba(16, 185, 129, 0.1)',
-          borderWidth: 2.5,
-          tension: 0.3,
-          pointRadius: 4
-        },
-        {
-          label: 'Nellore Urban Concrete',
-          data: [0.14, 0.16, 0.18, 0.21, 0.23, 0.24, 0.25, 0.26, 0.27, 0.28, 0.32, 0.30],
-          borderColor: '#f43f5e',
-          backgroundColor: 'rgba(244, 63, 94, 0.1)',
-          borderWidth: 2.5,
-          tension: 0.3,
-          pointRadius: 4
-        },
-        {
-          label: 'River Alluvial Sand',
-          data: [0.18, 0.22, 0.27, 0.32, 0.36, 0.38, 0.40, 0.42, 0.43, 0.41, 0.54, 0.48],
-          borderColor: '#f59e0b',
-          backgroundColor: 'rgba(245, 158, 11, 0.1)',
-          borderWidth: 2.5,
-          tension: 0.3,
-          pointRadius: 4
-        }
-      ]
-    },
-    options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      scales: {
-        x: {
-          ticks: { color: '#94a3b8', font: { size: 10, family: 'JetBrains Mono' } },
-          grid: { color: '#1e293b' }
-        },
-        y: {
-          title: { display: true, text: 'Reflectance (0.0 to 1.0)', color: '#94a3b8', font: { size: 11 } },
-          ticks: { color: '#94a3b8', font: { size: 10, family: 'JetBrains Mono' } },
-          grid: { color: '#1e293b' },
-          min: 0,
-          max: 0.6
-        }
+    spectralChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: bands,
+        datasets: [
+          {
+            label: 'Pennar River Water',
+            data: [0.08, 0.09, 0.07, 0.03, 0.015, 0.01, 0.008, 0.006, 0.005, 0.002, 0.001, 0.001],
+            borderColor: '#38bdf8',
+            backgroundColor: 'rgba(56, 189, 248, 0.1)',
+            borderWidth: 2.5,
+            tension: 0.3,
+            pointRadius: 4
+          },
+          {
+            label: 'Kovur Paddy Crop',
+            data: [0.03, 0.04, 0.08, 0.04, 0.18, 0.36, 0.44, 0.47, 0.48, 0.45, 0.22, 0.11],
+            borderColor: '#10b981',
+            backgroundColor: 'rgba(16, 185, 129, 0.1)',
+            borderWidth: 2.5,
+            tension: 0.3,
+            pointRadius: 4
+          },
+          {
+            label: 'Nellore Urban Concrete',
+            data: [0.14, 0.16, 0.18, 0.21, 0.23, 0.24, 0.25, 0.26, 0.27, 0.28, 0.32, 0.30],
+            borderColor: '#f43f5e',
+            backgroundColor: 'rgba(244, 63, 94, 0.1)',
+            borderWidth: 2.5,
+            tension: 0.3,
+            pointRadius: 4
+          },
+          {
+            label: 'River Alluvial Sand',
+            data: [0.18, 0.22, 0.27, 0.32, 0.36, 0.38, 0.40, 0.42, 0.43, 0.41, 0.54, 0.48],
+            borderColor: '#f59e0b',
+            backgroundColor: 'rgba(245, 158, 11, 0.1)',
+            borderWidth: 2.5,
+            tension: 0.3,
+            pointRadius: 4
+          }
+        ]
       },
-      plugins: {
-        legend: {
-          labels: { color: '#e2e8f0', font: { size: 11 } }
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          x: {
+            ticks: { color: '#94a3b8', font: { size: 10, family: 'JetBrains Mono' } },
+            grid: { color: '#1e293b' }
+          },
+          y: {
+            title: { display: true, text: 'Reflectance (0.0 to 1.0)', color: '#94a3b8', font: { size: 11 } },
+            ticks: { color: '#94a3b8', font: { size: 10, family: 'JetBrains Mono' } },
+            grid: { color: '#1e293b' },
+            min: 0,
+            max: 0.6
+          }
+        },
+        plugins: {
+          legend: {
+            labels: { color: '#e2e8f0', font: { size: 11 } }
+          }
         }
       }
-    }
-  });
+    });
+  }
+
+  // Initialize Zonal Calculator with default zone
+  const selZone = document.getElementById('zonal-spectral-select');
+  if (selZone) {
+    updateZonalSpectralCalculator(selZone.value);
+  }
+
+  // Sync with current composite
+  selectBandComposite(currentCompositeType);
 }
 
 function selectBandComposite(compositeType) {
+  if (!COMPOSITE_CONFIGS[compositeType]) compositeType = "true-color";
+  currentCompositeType = compositeType;
+  const cfg = COMPOSITE_CONFIGS[compositeType];
+
+  // 1. Update Modal Band Card Buttons & Active State
   document.querySelectorAll('.band-card').forEach(c => {
     if (c.dataset.composite === compositeType) {
       c.classList.add('active');
-      c.querySelector('.btn-apply-band').innerHTML = '<i class="fa-solid fa-check"></i> Active Layer';
+      const btn = c.querySelector('.btn-apply-band');
+      if (btn) btn.innerHTML = '<i class="fa-solid fa-check"></i> Active Layer';
     } else {
       c.classList.remove('active');
-      c.querySelector('.btn-apply-band').textContent = 'Inspect';
+      const btn = c.querySelector('.btn-apply-band');
+      if (btn) {
+        const h4 = c.querySelector('h4');
+        const shortName = h4 ? h4.textContent.split(' ')[0] : 'Layer';
+        btn.textContent = 'Inspect ' + shortName;
+      }
     }
   });
 
+  // 2. Update Floating Quick Buttons on Map
+  document.querySelectorAll('.mci-quick-btn[data-comp]').forEach(b => {
+    b.classList.toggle('active', b.dataset.comp === compositeType);
+  });
+
+  // 3. Update Floating Map Indicator Badge
+  const mciBadge = document.getElementById('mci-active-name');
+  if (mciBadge) {
+    mciBadge.innerHTML = `<i class="fa-solid fa-satellite"></i> ${escapeHtml(cfg.badgeText)}`;
+  }
+
+  // 4. PERSISTENT NDVI ANALYTICS PANEL: Always Keep Visible & Active
   const ndviPanel = document.getElementById("ndvi-analytics-panel");
-  if (compositeType === "ndvi") {
-    if (ndviPanel) ndviPanel.style.display = "block";
-    if (layerNDVI && !map.hasLayer(layerNDVI)) {
+  if (ndviPanel) {
+    ndviPanel.style.display = "block";
+  }
+
+  // 5. Update Active Formula Badge & Correlation Banner
+  const formulaBadge = document.getElementById('ndvi-active-formula-badge');
+  if (formulaBadge) {
+    formulaBadge.textContent = cfg.formula;
+  }
+  const cncTitle = document.getElementById('cnc-title');
+  const cncDesc = document.getElementById('cnc-desc');
+  if (cncTitle) cncTitle.textContent = cfg.corrTitle;
+  if (cncDesc) cncDesc.textContent = cfg.corrDesc;
+
+  // 6. Dynamically Re-style Leaflet Layer with False-Color Multi-Spectral Palettes
+  if (layerNDVI) {
+    const styles = MULTISPECTRAL_STYLES[compositeType] || MULTISPECTRAL_STYLES["ndvi"];
+    layerNDVI.eachLayer(layer => {
+      if (layer.feature && layer.feature.properties) {
+        const zid = layer.feature.properties.zone_id;
+        const s = styles[zid];
+        if (s) {
+          layer.setStyle({
+            color: s.color,
+            fillColor: s.fillColor,
+            fillOpacity: s.opacity,
+            weight: 2.5
+          });
+          const p = layer.feature.properties;
+          layer.setTooltipContent(`
+            <strong>🛰️ Sentinel-2 MSI: ${escapeHtml(cfg.name)}</strong><br>
+            Zone: <strong>${escapeHtml(p.name)}</strong><br>
+            Spectral Signature: <strong style="color:${s.color};">${escapeHtml(s.desc)}</strong><br>
+            NDVI Biomass Vigor: <strong>${p.ndvi_mean > 0 ? '+' : ''}${p.ndvi_mean}</strong> (${p.ndvi_class})<br>
+            NDRE Red-Edge: <strong>+${p.ndre_red_edge}</strong> • Crop: <strong>${p.crop_type}</strong>
+          `);
+        }
+      }
+    });
+
+    if (!map.hasLayer(layerNDVI)) {
       map.addLayer(layerNDVI);
       const cb = document.getElementById("layer-ndvi");
       if (cb) cb.checked = true;
     }
-    map.setView([14.50, 79.98], 13, { animate: true });
-  } else {
-    if (ndviPanel) ndviPanel.style.display = "none";
   }
+
+  // 7. Update Mapbox 3D Terrain Layer if Active
+  if (mapbox3d && mapbox3d.getLayer('ndvi-3d-polygon')) {
+    const styles = MULTISPECTRAL_STYLES[compositeType] || MULTISPECTRAL_STYLES["ndvi"];
+    const matchExpr = ['match', ['get', 'zone_id']];
+    Object.keys(styles).forEach(zid => {
+      matchExpr.push(zid, styles[zid].fillColor);
+    });
+    matchExpr.push('#10b981');
+    mapbox3d.setPaintProperty('ndvi-3d-polygon', 'fill-color', matchExpr);
+  }
+
+  // 8. Update Interactive Zonal Calculator
+  const selZone = document.getElementById('zonal-spectral-select');
+  const zoneId = selZone ? selZone.value : 'NDVI-KVR-01';
+  updateZonalSpectralCalculator(zoneId);
+
+  // 9. Highlight Active Spectral Bands in Chart
+  highlightSpectralBands(cfg.activeBandIndices);
+}
+
+function updateZonalSpectralCalculator(zoneId) {
+  const z = ZONE_SPECTRAL_DATA[zoneId] || ZONE_SPECTRAL_DATA['NDVI-KVR-01'];
+  const strip = document.getElementById('zonal-bands-strip');
+  const resBox = document.getElementById('zonal-formula-result');
+  if (!strip || !resBox) return;
+
+  const b = z.bands;
+  const cfg = COMPOSITE_CONFIGS[currentCompositeType] || COMPOSITE_CONFIGS['true-color'];
+
+  const bandDefs = [
+    { code: 'B02', name: 'Blue 490nm', val: b.B02, idx: 1 },
+    { code: 'B03', name: 'Green 560nm', val: b.B03, idx: 2 },
+    { code: 'B04', name: 'Red 665nm', val: b.B04, idx: 3 },
+    { code: 'B05', name: 'RedEdge 705nm', val: b.B05, idx: 4 },
+    { code: 'B08', name: 'NIR 842nm', val: b.B08, idx: 7 },
+    { code: 'B11', name: 'SWIR 1610nm', val: b.B11, idx: 10 }
+  ];
+
+  strip.innerHTML = bandDefs.map(item => {
+    const isHigh = (cfg.activeBandIndices || []).includes(item.idx);
+    return `
+      <div class="sbs-item ${isHigh ? 'highlighted' : ''}">
+        <div class="sbs-band-code">${item.code}</div>
+        <div class="sbs-band-val">${(item.val * 100).toFixed(1)}%</div>
+        <div class="sbs-band-name">${item.name}</div>
+      </div>
+    `;
+  }).join('');
+
+  // Live Formula Calculation
+  const ndviCalc = ((b.B08 - b.B04) / (b.B08 + b.B04)).toFixed(3);
+  const ndreCalc = ((b.B08 - b.B05) / (b.B08 + b.B05)).toFixed(3);
+  const ndwiCalc = ((b.B03 - b.B08) / (b.B03 + b.B08)).toFixed(3);
+
+  resBox.innerHTML = `
+    <div>
+      <span style="color:#94a3b8;">Computed NDVI:</span>
+      <strong>(${b.B08} - ${b.B04}) / (${b.B08} + ${b.B04}) = </strong>
+      <span style="color:#10b981; font-weight:800; font-size:0.95rem;">${ndviCalc > 0 ? '+' : ''}${ndviCalc}</span>
+      <span style="color:#64748b; margin:0 8px;">|</span>
+      <span style="color:#94a3b8;">NDRE:</span>
+      <span style="color:#34d399; font-weight:700;">${ndreCalc > 0 ? '+' : ''}${ndreCalc}</span>
+      <span style="color:#64748b; margin:0 8px;">|</span>
+      <span style="color:#94a3b8;">NDWI:</span>
+      <span style="color:#38bdf8; font-weight:700;">${ndwiCalc > 0 ? '+' : ''}${ndwiCalc}</span>
+    </div>
+    <div style="color:#cbd5e1; font-size:0.74rem; font-family:inherit;">
+      <i class="fa-solid fa-circle-check" style="color:#10b981;"></i> ${escapeHtml(z.diagnosis)}
+    </div>
+  `;
+}
+
+function highlightSpectralBands(bandIndices) {
+  if (!spectralChart || !spectralChart.data || !spectralChart.data.datasets) return;
+  const indices = bandIndices || [];
+
+  spectralChart.data.datasets.forEach(ds => {
+    ds.pointRadius = ds.data.map((_, idx) => indices.includes(idx) ? 7 : 3);
+    ds.pointHoverRadius = ds.data.map((_, idx) => indices.includes(idx) ? 9 : 5);
+  });
+  spectralChart.update('none');
 }
 
 // ---------------- 4. SCADA HYDRAULIC SANDBOX & CONTAMINATION CRISIS ---------------- //
@@ -1661,6 +1977,30 @@ function setupEventListeners() {
       selectBandComposite(comp);
     });
   });
+
+  // Zonal Spectral Calculator Dropdown & Zoom
+  const zonalSel = document.getElementById("zonal-spectral-select");
+  if (zonalSel) {
+    zonalSel.addEventListener("change", (e) => {
+      updateZonalSpectralCalculator(e.target.value);
+    });
+  }
+
+  const btnZoomZone = document.getElementById("btn-zoom-selected-zone");
+  if (btnZoomZone && zonalSel) {
+    btnZoomZone.addEventListener("click", () => {
+      const zid = zonalSel.value;
+      const zdata = ZONE_SPECTRAL_DATA[zid];
+      if (zdata && zdata.coords) {
+        map.setView(zdata.coords, zdata.zoom || 14, { animate: true });
+        document.getElementById("sentinel-modal").classList.add("hidden");
+        if (allData && allData.ndvi_zones) {
+          const match = allData.ndvi_zones.features.find(f => f.properties.zone_id === zid);
+          if (match) inspectNDVIZone(match.properties);
+        }
+      }
+    });
+  }
 
   // SCADA Sandbox Modal
   document.getElementById("btn-scada-sandbox").addEventListener("click", () => {
