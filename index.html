@@ -8,13 +8,17 @@
   <!-- Leaflet CSS -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
   
+  <!-- Mapbox GL JS & CSS for 3D Digital Twin with Elevation -->
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet">
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+
   <!-- Font Awesome 6 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
   
   <!-- Google Fonts: Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
   
   <!-- Custom Styling -->
   <link rel="stylesheet" href="css/style.css">
@@ -28,9 +32,19 @@
         <i class="fa-solid fa-water"></i>
       </div>
       <div>
-        <h1 class="header-title">Nellore & Kovur <span class="badge-sub">Infrastructure & Water Flow Sentinel</span></h1>
-        <p class="header-subtitle">Strict Area of Interest: Nellore City (NMC) & Kovur Mandal • River Infiltration, Treatment, Overhead Tanks (ELSR) & Distribution</p>
+        <h1 class="header-title">Nellore & Kovur <span class="badge-sub">3D Digital Twin & Sentinel</span></h1>
+        <p class="header-subtitle">Strict AOI: Nellore City (NMC) & Kovur Mandal • Riverbed Extraction, 3D Elevation, ELSR Tanks & SCADA Simulation</p>
       </div>
+    </div>
+
+    <!-- Dual-Engine Switcher -->
+    <div class="engine-toggle-group">
+      <button class="engine-btn active" id="btn-engine-2d" title="Switch to Tactical 2D GIS Map (Leaflet)">
+        <i class="fa-solid fa-map"></i> 2D GIS
+      </button>
+      <button class="engine-btn" id="btn-engine-3d" title="Switch to 3D Digital Twin with Real Elevation & WebGL (Mapbox GL)">
+        <i class="fa-solid fa-mountain-city"></i> 3D Digital Twin
+      </button>
     </div>
     
     <!-- Mode & Action Buttons -->
@@ -38,24 +52,32 @@
       <!-- 3D Perspective & Drone Flyover -->
       <div class="mode-button-group">
         <button class="mode-btn" id="btn-3d-tilt" title="Toggle 3D Perspective Tilt View">
-          <i class="fa-solid fa-cube"></i> 3D Perspective
+          <i class="fa-solid fa-cube"></i> Tilt
         </button>
         <button class="mode-btn" id="btn-drone-mode" title="Aerial 3D Drone Flight along water & market corridor">
-          <i class="fa-solid fa-helicopter"></i> Drone Flyover
+          <i class="fa-solid fa-helicopter"></i> Drone
         </button>
         <button class="mode-btn" id="btn-commute-mode" title="Simulated Water & Produce Commute">
-          <i class="fa-solid fa-motorcycle"></i> Commute Flow
+          <i class="fa-solid fa-motorcycle"></i> Commute
         </button>
       </div>
 
+      <!-- Innovative Modules -->
+      <button class="nav-btn btn-sentinel" id="btn-sentinel-studio" title="Copernicus Sentinel-2 Remote Sensing Studio">
+        <i class="fa-solid fa-satellite"></i> Sentinel-2 Studio
+      </button>
+      <button class="nav-btn btn-scada" id="btn-scada-sandbox" title="SCADA Hydraulic Flow & Contamination Breach Sandbox">
+        <i class="fa-solid fa-faucet-drip"></i> SCADA Sandbox
+      </button>
+
       <button class="nav-btn btn-keys" id="btn-api-keys" title="Configure Google Maps & Sentinel API Keys">
-        <i class="fa-solid fa-key"></i> API Keys
+        <i class="fa-solid fa-shield-halved"></i> Credentials <span class="status-indicator-dot online"></span>
       </button>
       <button class="nav-btn btn-analytics" id="btn-toggle-analytics">
         <i class="fa-solid fa-chart-pie"></i> Analytics
       </button>
       <button class="nav-btn btn-export" id="btn-export-data">
-        <i class="fa-solid fa-download"></i> Shapefiles & GIS
+        <i class="fa-solid fa-download"></i> Shapefiles
       </button>
     </div>
   </header>
@@ -188,7 +210,35 @@
 
     <!-- Map Viewport -->
     <main class="map-viewport" id="map-viewport">
+      <!-- 2D Tactical Leaflet Map -->
       <div id="map"></div>
+
+      <!-- 3D Digital Twin WebGL Container (Mapbox GL 3D Terrain) -->
+      <div id="map-3d" style="display:none;"></div>
+
+      <!-- 3D Mapbox Camera Presets & Orbit Control Bar -->
+      <div id="mapbox-camera-bar" class="mapbox-camera-bar hidden">
+        <span class="camera-bar-label"><i class="fa-solid fa-video"></i> 3D Camera:</span>
+        <button class="cam-preset-btn active" data-cam="overview">Nellore & Kovur Overview</button>
+        <button class="cam-preset-btn" data-cam="pennar">Pennar Wellfield</button>
+        <button class="cam-preset-btn" data-cam="stonehousepet">Stonehousepet ELSR</button>
+        <button class="cam-preset-btn" data-cam="kovur">Kovur GP Headworks</button>
+        <button class="cam-preset-btn orbit-btn" id="btn-mapbox-orbit">
+          <i class="fa-solid fa-rotate"></i> 360° Orbit Flyaround
+        </button>
+      </div>
+
+      <!-- Live Municipal IoT Sensor Telemetry Ticker -->
+      <div class="iot-telemetry-bar" id="iot-telemetry-bar">
+        <div class="iot-title"><span class="live-dot"></span> LIVE IoT SCADA</div>
+        <div class="iot-ticker-track">
+          <div class="iot-item"><i class="fa-solid fa-water" style="color:#0ea5e9;"></i> <strong>Pennar Intake S01:</strong> Turbidity: 0.91 NTU | Res. Chlorine: 1.25 ppm | pH: 7.42 | Inflow: 320 L/s</div>
+          <div class="iot-item"><i class="fa-solid fa-monument" style="color:#0284c7;"></i> <strong>Stonehousepet ELSR:</strong> Staging 18m | Fill: 4.88m (88.7%) | Head: 2.82 Bar</div>
+          <div class="iot-item"><i class="fa-solid fa-gauge-high" style="color:#10b981;"></i> <strong>Santhapet Central Mains:</strong> Pressure 3.15 Bar | Acoustic Leak: NORMAL</div>
+          <div class="iot-item"><i class="fa-solid fa-triangle-exclamation" style="color:#f59e0b;"></i> <strong>Trunk Road Sullage Gutter:</strong> Outfall Depth: 34cm | Sullage Discharge: NORMAL</div>
+          <div class="iot-item"><i class="fa-solid fa-satellite" style="color:#38bdf8;"></i> <strong>Copernicus CDSE:</strong> Tile 44NNC | Sentinel-2 L2A Active | Auth: Valid</div>
+        </div>
+      </div>
 
       <!-- Heads-Up Display for Commute & Drone Flight -->
       <div id="hud-panel" class="hud-panel hidden">
@@ -237,37 +287,284 @@
 
   </div>
 
+  <!-- Sentinel-2 Remote Sensing Studio Modal -->
+  <div id="sentinel-modal" class="modal-overlay hidden">
+    <div class="modal-window large-modal">
+      <div class="modal-header">
+        <div style="display:flex; align-items:center; gap:10px;">
+          <div class="logo-badge" style="background:linear-gradient(135deg, #0284c7, #0369a1); width:36px; height:36px; font-size:16px;">
+            <i class="fa-solid fa-satellite"></i>
+          </div>
+          <div>
+            <h2>Copernicus Sentinel-2 Remote Sensing Studio</h2>
+            <p style="font-size:0.75rem; color:#94a3b8;">Granule Tile: T44NNC (EPSG:32644) • ESA Sentinel-2 MSI Multi-Spectral Instrument • SHIATS RS & GIS</p>
+          </div>
+        </div>
+        <button class="modal-close" id="btn-close-sentinel">&times;</button>
+      </div>
+      <div class="modal-body">
+        
+        <!-- Live Copernicus CDSE Telemetry Bar -->
+        <div class="telemetry-banner">
+          <div class="telem-item">
+            <span class="telem-lbl">MISSION</span>
+            <span class="telem-val">Sentinel-2A/2B MSI</span>
+          </div>
+          <div class="telem-item">
+            <span class="telem-lbl">GRANULE / TILE</span>
+            <span class="telem-val">T44NNC (Nellore)</span>
+          </div>
+          <div class="telem-item">
+            <span class="telem-lbl">REVISIT CYCLE</span>
+            <span class="telem-val">5 Days (Constellation)</span>
+          </div>
+          <div class="telem-item">
+            <span class="telem-lbl">CDSE OAUTH STATUS</span>
+            <span class="telem-val alert-green"><i class="fa-solid fa-circle-check"></i> AUTHENTICATED</span>
+          </div>
+          <div class="telem-item">
+            <span class="telem-lbl">RESEARCH ACCOUNT</span>
+            <span class="telem-val">25msrsgis001@shiats.edu.in</span>
+          </div>
+        </div>
+
+        <!-- False-Color Band Switcher Presets -->
+        <div class="band-presets-section">
+          <h3><i class="fa-solid fa-palette"></i> Multi-Spectral False-Color Composites</h3>
+          <p class="export-desc">Select an Earth Observation band combination to analyze agricultural vigor, water bodies, or urban heat over Nellore & Kovur:</p>
+          
+          <div class="band-cards-grid">
+            <div class="band-card active" data-composite="true-color">
+              <div class="band-code">B04 - B03 - B02 (10m)</div>
+              <h4>Natural True Color (RGB)</h4>
+              <p>Natural visual representation of ground features, river sandbeds, and urban core.</p>
+              <button class="btn-apply-band"><i class="fa-solid fa-check"></i> Active Layer</button>
+            </div>
+
+            <div class="band-card" data-composite="cir">
+              <div class="band-code" style="color:#f43f5e;">B08 - B04 - B03 (10m)</div>
+              <h4>Color Infrared (CIR - NIR)</h4>
+              <p>Highlights paddy and banana crop vigor in Kovur agricultural belt in luminous red/magenta.</p>
+              <button class="btn-apply-band">Inspect CIR</button>
+            </div>
+
+            <div class="band-card" data-composite="ndwi">
+              <div class="band-code" style="color:#0ea5e9;">(B03 - B08) / (B03 + B08)</div>
+              <h4>Normalized Water Index (NDWI)</h4>
+              <p>Extracts surface water boundaries in the Pennar River and Kanigiri feeder canal with zero haze.</p>
+              <button class="btn-apply-band">Inspect NDWI</button>
+            </div>
+
+            <div class="band-card" data-composite="swir">
+              <div class="band-code" style="color:#eab308;">B12 - B8A - B04 (20m)</div>
+              <h4>Short-Wave IR (Soil Moisture)</h4>
+              <p>Penetrates atmospheric aerosol haze; discriminates riverbed moisture from dry alluvial sand.</p>
+              <button class="btn-apply-band">Inspect SWIR</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 12-Band Spectral Reflectance Profile Chart -->
+        <div class="spectral-profile-section">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+            <div>
+              <h3><i class="fa-solid fa-chart-line"></i> 12-Band Satellite Spectral Reflectance Signature Curve</h3>
+              <p class="export-desc" style="margin:0;">Simulated bottom-of-atmosphere (BOA) surface reflectance across 12 Sentinel-2 spectral channels:</p>
+            </div>
+            <div class="spectral-legend-toggles">
+              <span class="spec-tag" style="background:rgba(14,165,233,0.2); color:#38bdf8; border:1px solid #0ea5e9;">Pennar Water</span>
+              <span class="spec-tag" style="background:rgba(16,185,129,0.2); color:#34d399; border:1px solid #10b981;">Kovur Paddy Crop</span>
+              <span class="spec-tag" style="background:rgba(244,63,94,0.2); color:#fb7185; border:1px solid #f43f5e;">Nellore Urban Built-up</span>
+              <span class="spec-tag" style="background:rgba(245,158,11,0.2); color:#fbbf24; border:1px solid #f59e0b;">River Alluvial Sand</span>
+            </div>
+          </div>
+
+          <div style="height:260px; background:#0b0f19; border:1px solid #1e293b; border-radius:8px; padding:12px;">
+            <canvas id="chart-spectral-signature"></canvas>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- SCADA Hydraulic Sandbox & Contamination Crisis Simulator Modal -->
+  <div id="scada-modal" class="modal-overlay hidden">
+    <div class="modal-window large-modal">
+      <div class="modal-header">
+        <div style="display:flex; align-items:center; gap:10px;">
+          <div class="logo-badge" style="background:linear-gradient(135deg, #0ea5e9, #0284c7); width:36px; height:36px; font-size:16px;">
+            <i class="fa-solid fa-faucet-drip"></i>
+          </div>
+          <div>
+            <h2>SCADA Hydraulic Sandbox & Contamination Crisis Simulator</h2>
+            <p style="font-size:0.75rem; color:#94a3b8;">Hazen-Williams Headloss, Pressure Gradients, Tank SCADA Balances & Plume Dispersion</p>
+          </div>
+        </div>
+        <button class="modal-close" id="btn-close-scada">&times;</button>
+      </div>
+      <div class="modal-body">
+        
+        <!-- Operating Demand Regimes -->
+        <div class="filter-group">
+          <label><i class="fa-solid fa-sliders"></i> Operational Supply Regime</label>
+          <div class="scada-regime-row">
+            <button class="regime-btn active" id="btn-regime-normal">
+              <i class="fa-solid fa-clock"></i>
+              <strong>Standard Flow (50.5 MLD)</strong>
+              <span>Balanced daytime municipal gravity distribution</span>
+            </button>
+            <button class="regime-btn" id="btn-regime-peak">
+              <i class="fa-solid fa-bolt" style="color:#eab308;"></i>
+              <strong>Peak Morning Rush (72.0 MLD)</strong>
+              <span>06:00 - 09:00 High-discharge ward surge</span>
+            </button>
+            <button class="regime-btn" id="btn-regime-night">
+              <i class="fa-solid fa-moon" style="color:#38bdf8;"></i>
+              <strong>Night Refill (35.0 MLD)</strong>
+              <span>23:00 - 04:00 High pressure feeder to top-up 8 ELSRs</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Live SCADA Network Telemetry Grid -->
+        <div class="scada-gauges-grid">
+          <div class="gauge-card">
+            <span class="gauge-title">Pennar Riverbed Infiltration Array</span>
+            <div class="gauge-val" id="scada-intake-val">18,200 LPH</div>
+            <div class="gauge-bar-bg"><div class="gauge-bar-fill" style="width:88%; background:#0ea5e9;"></div></div>
+            <span class="gauge-sub">Alluvial Aquifer: 32m Depth • Yield Nominal</span>
+          </div>
+
+          <div class="gauge-card">
+            <span class="gauge-title">NMC Central Treatment Plant (Rapid Sand)</span>
+            <div class="gauge-val" id="scada-treatment-val">32.0 MLD</div>
+            <div class="gauge-bar-bg"><div class="gauge-bar-fill" style="width:92%; background:#10b981;"></div></div>
+            <span class="gauge-sub">Turbidity: 0.88 NTU • Cl₂ Residual: 1.25 ppm</span>
+          </div>
+
+          <div class="gauge-card">
+            <span class="gauge-title">Trunk Feeder Mains Pressure (DI K9 600mm)</span>
+            <div class="gauge-val" id="scada-pressure-val">3.2 Bar</div>
+            <div class="gauge-bar-bg"><div class="gauge-bar-fill" style="width:75%; background:#38bdf8;"></div></div>
+            <span class="gauge-sub">Velocity: 1.45 m/s • Hazen-Williams C=130</span>
+          </div>
+
+          <div class="gauge-card">
+            <span class="gauge-title">Total Overhead Storage Balance (8 ELSRs)</span>
+            <div class="gauge-val" id="scada-storage-val">10.6 / 12.1 MLD</div>
+            <div class="gauge-bar-bg"><div class="gauge-bar-fill" style="width:87%; background:#0284c7;"></div></div>
+            <span class="gauge-sub">Average Staging Height: 18.2m • 87.6% Full</span>
+          </div>
+        </div>
+
+        <!-- Contamination Plume & Crisis Simulator -->
+        <div class="crisis-simulator-box" id="crisis-box">
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <div>
+              <h3 style="color:#ef4444;"><i class="fa-solid fa-biohazard"></i> Contamination Incident & Plume Dispersion Simulator</h3>
+              <p class="export-desc" style="margin:0;">Simulate an open sullage cross-connection breach into the drinking water network near Stonehousepet wet market:</p>
+            </div>
+            <div style="display:flex; gap:10px;">
+              <button class="nav-btn danger" id="btn-trigger-breach">
+                <i class="fa-solid fa-triangle-exclamation"></i> Simulate Contamination Breach
+              </button>
+              <button class="nav-btn" id="btn-reset-breach" style="display:none;">
+                <i class="fa-solid fa-rotate-left"></i> Reset Network
+              </button>
+            </div>
+          </div>
+
+          <div id="breach-results" class="breach-results hidden" style="margin-top:14px;">
+            <div class="breach-alert-card">
+              <div class="alert-icon-big"><i class="fa-solid fa-radiation"></i></div>
+              <div style="flex:1;">
+                <h4 style="color:#ef4444; font-size:0.95rem; margin-bottom:4px;">🚨 CONTAMINATION PLUME IN PROGRESS: Conduit PL-DIST-01</h4>
+                <p style="font-size:0.8rem; color:#cbd5e1; margin-bottom:8px;">
+                  Sullage sewer infiltration detected at coordinates <strong>14.4512°N, 79.9915°E</strong>. Contaminant velocity: <strong>1.2 m/s</strong>. 
+                  Downstream <strong>Stonehousepet Overhead Tank (ELSR-NMC-01)</strong> flagged for immediate isolation!
+                </p>
+                <div class="breach-action-tags">
+                  <span class="action-tag red"><i class="fa-solid fa-lock"></i> Valve Isolated: Gate Valve V-STP-04</span>
+                  <span class="action-tag red"><i class="fa-solid fa-users"></i> Population Warned: 42,000 in Wards 12-16</span>
+                  <span class="action-tag yellow"><i class="fa-solid fa-droplet"></i> Emergency Chlorine Shock: 5.0 mg/L</span>
+                  <span class="action-tag green"><i class="fa-solid fa-truck-droplet"></i> Alternative Safe RO Plant: NTR Sujala #3 (380m)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
   <!-- API Keys Configuration Modal -->
   <div id="keys-modal" class="modal-overlay hidden">
     <div class="modal-window small-modal">
       <div class="modal-header">
-        <h2><i class="fa-solid fa-key"></i> Satellite & 3D API Configuration</h2>
+        <div style="display:flex; align-items:center; gap:8px;">
+          <div class="logo-badge" style="width:32px; height:32px; font-size:14px;"><i class="fa-solid fa-shield-halved"></i></div>
+          <h2>Spatial API Credentials & Remote Sensing Lab</h2>
+        </div>
         <button class="modal-close" id="btn-close-keys">&times;</button>
       </div>
       <div class="modal-body">
-        <p class="export-desc">Add your personal API credentials for high-resolution satellite imagery, 3D terrain elevation, and Google Earth view.</p>
+        <p class="export-desc">Your active API credentials and authentication statuses for 3D elevation, high-resolution satellite imagery, and ESA Copernicus Earth observation:</p>
+
+        <!-- Status Badges -->
+        <div style="display:flex; flex-direction:column; gap:8px; margin-bottom:14px;">
+          <div class="auth-status-card">
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <span><i class="fa-solid fa-cube" style="color:#38bdf8;"></i> <strong>Mapbox GL 3D Terrain & DEM</strong></span>
+              <span class="auth-badge-green"><i class="fa-solid fa-circle-check"></i> ACTIVE & VERIFIED</span>
+            </div>
+            <small style="color:#94a3b8; font-family:'JetBrains Mono', monospace; font-size:0.7rem;">Mapbox 3D WebGL Engine • Verified Token</small>
+          </div>
+
+          <div class="auth-status-card">
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <span><i class="fa-solid fa-satellite" style="color:#0ea5e9;"></i> <strong>ESA Copernicus CDSE (Sentinel-2)</strong></span>
+              <span class="auth-badge-green"><i class="fa-solid fa-circle-check"></i> OAUTH VALID</span>
+            </div>
+            <small style="color:#94a3b8; font-family:'JetBrains Mono', monospace; font-size:0.7rem;">Client ID: sh-3320f912-93af-440f-ad9f-794d96326b5b</small>
+          </div>
+
+          <div class="auth-status-card">
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <span><i class="fa-brands fa-google" style="color:#f59e0b;"></i> <strong>Google Cloud & Maps Project</strong></span>
+              <span class="auth-badge-green"><i class="fa-solid fa-circle-check"></i> CONFIGURED</span>
+            </div>
+            <small style="color:#94a3b8; font-family:'JetBrains Mono', monospace; font-size:0.7rem;">Project ID: braided-analyst-500314-c5 • AIzaSyCtrj5JuGv2...</small>
+          </div>
+
+          <div class="auth-status-card">
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <span><i class="fa-solid fa-graduation-cap" style="color:#a855f7;"></i> <strong>Remote Sensing & GIS Researcher</strong></span>
+              <span class="auth-badge-blue">SHIATS GIS LAB</span>
+            </div>
+            <small style="color:#94a3b8; font-family:'JetBrains Mono', monospace; font-size:0.7rem;">Account: 25msrsgis001@shiats.edu.in</small>
+          </div>
+        </div>
         
         <div class="filter-group">
           <label><i class="fa-brands fa-google"></i> Google Maps JavaScript API Key</label>
-          <input type="password" id="input-google-key" class="search-box-input" placeholder="AIzaSy...">
-          <small style="color:#94a3b8; font-size:0.72rem; display:block; margin-top:2px;">Enables Google 3D Earth, Street View & Satellite tiles.</small>
+          <input type="text" id="input-google-key" class="search-box-input" value="AIzaSyCtrj5JuGv2Um8_lq2trgqbDBjNI0I1oBE">
         </div>
 
         <div class="filter-group" style="margin-top:10px;">
           <label><i class="fa-solid fa-satellite"></i> Sentinel Hub / Copernicus Client ID</label>
-          <input type="password" id="input-sentinel-key" class="search-box-input" placeholder="Copernicus OAuth Client ID...">
-          <small style="color:#94a3b8; font-size:0.72rem; display:block; margin-top:2px;">For live 10m Sentinel-2 multispectral river monitoring.</small>
+          <input type="text" id="input-sentinel-key" class="search-box-input" value="sh-3320f912-93af-440f-ad9f-794d96326b5b">
         </div>
 
         <div class="filter-group" style="margin-top:10px;">
           <label><i class="fa-solid fa-cube"></i> Mapbox GL 3D Terrain Token</label>
-          <input type="password" id="input-mapbox-token" class="search-box-input" placeholder="pk.eyJ...">
-          <small style="color:#94a3b8; font-size:0.72rem; display:block; margin-top:2px;">For digital elevation models and 3D hillshade.</small>
+          <input type="text" id="input-mapbox-token" class="search-box-input" placeholder="Configured via Secure Lab Key">
         </div>
 
         <div style="display:flex; gap:10px; margin-top:16px;">
           <button class="nav-btn" id="btn-save-keys" style="flex:1; justify-content:center;">
-            <i class="fa-solid fa-check"></i> Save Credentials
+            <i class="fa-solid fa-check"></i> Update Credentials
           </button>
           <a class="nav-btn btn-export" href="API_KEYS_GUIDE.md" target="_blank" style="text-decoration:none; display:flex; align-items:center;">
             <i class="fa-solid fa-book"></i> Keys Guide

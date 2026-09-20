@@ -957,3 +957,589 @@ body {
   font-size: 13px;
   border: 2px solid #ffffff;
 }
+
+/* ==========================================================================
+   INNOVATION STYLES: DUAL-ENGINE 3D TWIN, SENTINEL-2 & SCADA SANDBOX
+   ========================================================================== */
+
+/* Engine Switcher in Header */
+.engine-toggle-group {
+  display: flex;
+  background: #090d16;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 3px;
+  gap: 4px;
+}
+
+.engine-btn {
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  font-size: 0.76rem;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.25s ease;
+}
+
+.engine-btn:hover {
+  color: #f8fafc;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.engine-btn.active {
+  background: linear-gradient(135deg, #0ea5e9, #0284c7);
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(14, 165, 233, 0.4);
+}
+
+/* Header Buttons */
+.btn-sentinel {
+  background: rgba(14, 165, 233, 0.15) !important;
+  color: #38bdf8 !important;
+  border-color: rgba(14, 165, 233, 0.4) !important;
+}
+
+.btn-sentinel:hover {
+  background: rgba(14, 165, 233, 0.3) !important;
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.4);
+}
+
+.btn-scada {
+  background: rgba(16, 185, 129, 0.15) !important;
+  color: #34d399 !important;
+  border-color: rgba(16, 185, 129, 0.4) !important;
+}
+
+.btn-scada:hover {
+  background: rgba(16, 185, 129, 0.3) !important;
+  box-shadow: 0 0 12px rgba(52, 211, 153, 0.4);
+}
+
+.status-indicator-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 4px;
+}
+
+.status-indicator-dot.online {
+  background: #10b981;
+  box-shadow: 0 0 6px #10b981;
+  animation: blink 2s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+/* 3D Mapbox GL Container */
+#map-3d {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+/* 3D Camera Controls Bar */
+.mapbox-camera-bar {
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(9, 13, 22, 0.88);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  border-radius: 30px;
+  padding: 6px 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 500;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+}
+
+.camera-bar-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #38bdf8;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.cam-preset-btn {
+  background: #1e293b;
+  border: 1px solid #334155;
+  color: #cbd5e1;
+  padding: 4px 10px;
+  border-radius: 16px;
+  font-size: 0.74rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.cam-preset-btn:hover {
+  background: #334155;
+  color: #fff;
+  border-color: #0ea5e9;
+}
+
+.cam-preset-btn.active {
+  background: #0ea5e9;
+  color: #fff;
+  border-color: #38bdf8;
+}
+
+.cam-preset-btn.orbit-btn {
+  background: linear-gradient(135deg, #8b5cf6, #6366f1);
+  color: #fff;
+  border: none;
+}
+
+.cam-preset-btn.orbit-btn.active {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  animation: pulse-border 1.5s infinite;
+}
+
+/* Live Municipal IoT Telemetry Ticker */
+.iot-telemetry-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 32px;
+  background: rgba(9, 13, 22, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-top: 1px solid #1e293b;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  z-index: 450;
+  overflow: hidden;
+}
+
+.iot-title {
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #38bdf8;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  padding-right: 15px;
+  border-right: 1px solid #334155;
+}
+
+.live-dot {
+  width: 6px;
+  height: 6px;
+  background: #10b981;
+  border-radius: 50%;
+  box-shadow: 0 0 6px #10b981;
+  animation: blink 1.5s infinite;
+}
+
+.iot-ticker-track {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  padding-left: 15px;
+  white-space: nowrap;
+  animation: ticker-slide 35s linear infinite;
+}
+
+.iot-ticker-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes ticker-slide {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.iot-item {
+  font-size: 0.72rem;
+  color: #94a3b8;
+  font-family: 'JetBrains Mono', monospace;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.iot-item strong {
+  color: #f1f5f9;
+}
+
+/* Large Modal Window for Sentinel & SCADA */
+.modal-window.large-modal {
+  width: 900px;
+  max-width: 95vw;
+  max-height: 90vh;
+}
+
+/* Sentinel-2 Telemetry Banner */
+.telemetry-banner {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  background: #090d16;
+  border: 1px solid #1e293b;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 20px;
+}
+
+.telem-item {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.telem-lbl {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #64748b;
+  letter-spacing: 0.05em;
+}
+
+.telem-val {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #e2e8f0;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Band Presets Grid */
+.band-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  margin: 14px 0 22px 0;
+}
+
+.band-card {
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 8px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.2s ease;
+}
+
+.band-card:hover {
+  border-color: #0ea5e9;
+  transform: translateY(-2px);
+}
+
+.band-card.active {
+  border-color: #0ea5e9;
+  background: rgba(14, 165, 233, 0.08);
+  box-shadow: 0 4px 12px rgba(14, 165, 233, 0.15);
+}
+
+.band-code {
+  font-size: 0.68rem;
+  font-weight: 700;
+  font-family: 'JetBrains Mono', monospace;
+  color: #38bdf8;
+  margin-bottom: 6px;
+}
+
+.band-card h4 {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #f8fafc;
+  margin-bottom: 6px;
+}
+
+.band-card p {
+  font-size: 0.74rem;
+  color: #94a3b8;
+  line-height: 1.4;
+  margin-bottom: 12px;
+  flex: 1;
+}
+
+.btn-apply-band {
+  background: #1e293b;
+  border: 1px solid #334155;
+  color: #cbd5e1;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 0.74rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  transition: all 0.2s;
+}
+
+.band-card.active .btn-apply-band {
+  background: #0ea5e9;
+  color: #fff;
+  border-color: #0ea5e9;
+}
+
+.spec-tag {
+  font-size: 0.68rem;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* SCADA Regime Buttons */
+.scada-regime-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.regime-btn {
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 8px;
+  padding: 12px;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  transition: all 0.2s;
+}
+
+.regime-btn i {
+  font-size: 1.1rem;
+  color: #94a3b8;
+  margin-bottom: 2px;
+}
+
+.regime-btn strong {
+  font-size: 0.82rem;
+  color: #f8fafc;
+}
+
+.regime-btn span {
+  font-size: 0.7rem;
+  color: #64748b;
+}
+
+.regime-btn.active {
+  border-color: #0ea5e9;
+  background: rgba(14, 165, 233, 0.1);
+  box-shadow: 0 4px 12px rgba(14, 165, 233, 0.2);
+}
+
+.regime-btn.active i {
+  color: #38bdf8;
+}
+
+/* SCADA Gauges Grid */
+.scada-gauges-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  margin: 18px 0;
+}
+
+.gauge-card {
+  background: #090d16;
+  border: 1px solid #1e293b;
+  border-radius: 8px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.gauge-title {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #94a3b8;
+}
+
+.gauge-val {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #38bdf8;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.gauge-bar-bg {
+  width: 100%;
+  height: 6px;
+  background: #1e293b;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.gauge-bar-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.6s ease;
+}
+
+.gauge-sub {
+  font-size: 0.68rem;
+  color: #64748b;
+}
+
+/* Crisis Simulator Box */
+.crisis-simulator-box {
+  background: rgba(239, 68, 68, 0.05);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 15px;
+}
+
+.breach-alert-card {
+  background: #17111a;
+  border: 1px solid #ef4444;
+  border-radius: 8px;
+  padding: 14px;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  animation: pulse-breach 2s infinite;
+}
+
+@keyframes pulse-breach {
+  0%, 100% { border-color: #ef4444; box-shadow: 0 0 10px rgba(239, 68, 68, 0.2); }
+  50% { border-color: #dc2626; box-shadow: 0 0 20px rgba(239, 68, 68, 0.5); }
+}
+
+.alert-icon-big {
+  font-size: 1.8rem;
+  color: #ef4444;
+}
+
+.breach-action-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.action-tag {
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.action-tag.red {
+  background: rgba(239, 68, 68, 0.2);
+  color: #fca5a5;
+  border: 1px solid rgba(239, 68, 68, 0.4);
+}
+
+.action-tag.yellow {
+  background: rgba(234, 179, 8, 0.2);
+  color: #fde047;
+  border: 1px solid rgba(234, 179, 8, 0.4);
+}
+
+.action-tag.green {
+  background: rgba(16, 185, 129, 0.2);
+  color: #6ee7b7;
+  border: 1px solid rgba(16, 185, 129, 0.4);
+}
+
+/* Auth Status Cards in Keys Modal */
+.auth-status-card {
+  background: #090d16;
+  border: 1px solid #1e293b;
+  border-radius: 6px;
+  padding: 8px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.auth-badge-green {
+  background: rgba(16, 185, 129, 0.15);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.auth-badge-blue {
+  background: rgba(168, 85, 247, 0.15);
+  color: #c084fc;
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* Mapbox 3D Custom HTML Markers */
+.mapbox-3d-marker {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.mapbox-3d-marker:hover {
+  transform: scale(1.2);
+}
+
+.mapbox-tank-pin {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #0284c7, #0369a1);
+  border: 2px solid #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 14px;
+  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.8);
+}
+
+.mapbox-source-pin {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0ea5e9, #38bdf8);
+  border: 2px solid #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #090d16;
+  font-size: 13px;
+  box-shadow: 0 4px 14px rgba(14, 165, 233, 0.8);
+}
